@@ -131,6 +131,11 @@ WEAPON_NAMES = {
         "Mobile Barrikade", "Salve", "Säurebolzen", "Panzerbrecher", "Notkolben", "Sprengfalle",
         "Sturmspanner", "Schwarzer Donner", "Deckungssprung", "Synchronfeuer",
     ],
+    "longsword": [
+        "Gerader Hieb", "Halbschwert", "Klingenwacht", "Hohe Hut", "Mordschlag", "Blutrinne",
+        "Schützender Stahl", "Zornhau", "Geölte Klinge", "Durchwechseln", "Kronparade", "Klingenwall",
+        "Meisterhau", "Eidstahl", "Nachreisen", "Bund der Schwerter",
+    ],
 }
 
 MAGIC_NAMES = {
@@ -152,7 +157,7 @@ def rarity_for(index: int) -> str:
 
 
 def weapon_card(school: str, index: int, name: str) -> dict[str, Any]:
-    status = {"dual_blades": "bleeding", "axe": "exposed", "bow": "marked", "crossbow": "weakened"}[school]
+    status = {"dual_blades": "bleeding", "axe": "exposed", "bow": "marked", "crossbow": "weakened", "longsword": "exposed"}[school]
     pattern = index % 16
     phase, kind, cost = "attack", "weapon", 1 + (index % 3 == 1)
     effects: list[dict[str, Any]]
@@ -269,6 +274,7 @@ ITEM_NAMES = {
     "axe": ["Söldneraxt", "Krähenbeil", "Kupferhacke", "Moorspalter", "Dornbeißer", "Salzbeil", "Spiegelaxt", "Glutschneide", "Axt des Winterfürsten", "Donnerkeil", "Wurzelspalter", "Nachtbeil", "Fluthammer", "Knochenbrecher", "Sonnenaxt", "Aschenhenker", "Richtbeil", "Runenspalter", "Sternenfall", "Blutmondbeil", "Eidspalter", "Schweigende Axt", "Wegspalter", "Axt des ersten Namens"],
     "bow": ["Eschenbogen", "Krähenbogen", "Kupfersehne", "Moorweide", "Dornenbogen", "Salzläufer", "Spiegelbogen", "Glutsehne", "Frostweide", "Sturmbogen", "Wurzelbogen", "Nachtfeder", "Flutbogen", "Knochensehne", "Sonnenstecher", "Aschenbogen", "Jägerkönig", "Runenweide", "Sternenbogen", "Blutmondsehne", "Eidbogen", "Schweigende Sonne", "Horizontbrecher", "Bogen des ersten Lichts"],
     "crossbow": ["Feldarmbrust", "Krähenwerfer", "Kupferspanner", "Moorbolzer", "Dornspanner", "Salzwerfer", "Spiegelarmbrust", "Glutbolzer", "Frostspanner", "Sturmspanner", "Wurzelwerfer", "Nachtbolzen", "Flutspanner", "Knochenwerfer", "Sonnenarmbrust", "Aschenbolzer", "Belagerer", "Runenspanner", "Sternenwerfer", "Blutmondbolzer", "Eidarmbrust", "Schwarzer Donner", "Nahtspanner", "Armbrust des letzten Wortes"],
+    "longsword": ["Abgenutztes Langschwert", "Krähenschwert", "Kupferklinge", "Moorschwert", "Dornenschneide", "Salzstahl", "Spiegelschwert", "Glutklinge", "Froststahl", "Sturmklinge", "Wurzelschwert", "Nachtschneide", "Flutstahl", "Knochenschwert", "Sonnenklinge", "Aschenschwert", "Fechtmeister", "Runenstahl", "Sternenschwert", "Blutmondklinge", "Eidschwert", "Schweigende Klinge", "Nahtschwert", "Langschwert des ersten Eids"],
 }
 
 COUNTRY_IDS = ("nebelmark", "sonnenbruch", "frostreiche", "splitterinseln", "aschenlande", "dornwall", "glassteppe", "tiefenwald", "kupferkueste", "knochental", "nachtkrone", "sturmmarsch", "versunkener_bund", "weltennaht")
@@ -282,6 +288,7 @@ def make_weapon_items() -> list[dict[str, Any]]:
             identifier = {
                 ("dual_blades", 0): "worn_dual_blades", ("axe", 0): "worn_axe",
                 ("bow", 0): "worn_bow", ("crossbow", 0): "worn_crossbow",
+                ("longsword", 0): "worn_longsword",
                 ("dual_blades", 16): "duelist_hooks", ("axe", 8): "winter_lord_axe",
                 ("axe", 22): "worldsplitter", ("bow", 14): "sun_piercer",
                 ("crossbow", 9): "storm_crossbow",
@@ -459,8 +466,8 @@ def main() -> None:
     cards = make_cards()
     items = make_weapon_items() + make_support_items()
     enemies = make_enemies()
-    assert len(cards) == 128, len(cards)
-    assert len(items) == 128, len(items)
+    assert len(cards) == 144, len(cards)
+    assert len(items) == 152, len(items)
     assert len(enemies) == 140, len(enemies)
     assert len({entry["id"] for entry in cards}) == len(cards)
     assert len({entry["id"] for entry in items}) == len(items)

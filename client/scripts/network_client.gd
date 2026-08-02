@@ -124,8 +124,8 @@ func list_campaigns() -> void:
 	_request("list_campaigns", "/api/v1/campaigns", HTTPClient.METHOD_GET, null, true)
 
 
-func create_campaign(weapon: String, magic: String, campaign_length: String, seed: Variant = null) -> void:
-	var body := {"weapon": weapon, "magic": magic, "campaign_length": campaign_length}
+func create_campaign(weapon: String, magic: String, campaign_length: String, game_mode: String, seed: Variant = null) -> void:
+	var body := {"weapon": weapon, "magic": magic, "campaign_length": campaign_length, "game_mode": game_mode}
 	if seed != null:
 		body["seed"] = seed
 	_request("create_campaign", "/api/v1/campaigns", HTTPClient.METHOD_POST, body, true)

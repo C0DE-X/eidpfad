@@ -1654,6 +1654,418 @@
       ]
     },
     {
+      "id": "gerader_hieb",
+      "name": "Gerader Hieb",
+      "kind": "weapon",
+      "school": "longsword",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "3 w12 auf 7+; 2 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2
+        }
+      ],
+      "art": "res://assets/cards/gerader_hieb.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "halbschwert",
+      "name": "Halbschwert",
+      "kind": "weapon",
+      "school": "longsword",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "2 w12 auf 8+; 3 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 8,
+          "damage_per_success": 3
+        }
+      ],
+      "art": "res://assets/cards/halbschwert.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "klingenwacht",
+      "name": "Klingenwacht",
+      "kind": "weapon",
+      "school": "longsword",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 2,
+      "text": "2 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "armor_per_success": 1
+        }
+      ],
+      "art": "res://assets/cards/klingenwacht.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "hohe_hut",
+      "name": "Hohe Hut",
+      "kind": "defense",
+      "school": "longsword",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/hohe_hut.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "mordschlag",
+      "name": "Mordschlag",
+      "kind": "utility",
+      "school": "longsword",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 3,
+      "text": "Erhalte aimed 1.",
+      "effects": [
+        {
+          "type": "self_status",
+          "status": "aimed",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/mordschlag.svg",
+      "keywords": [
+        "aimed"
+      ]
+    },
+    {
+      "id": "blutrinne",
+      "name": "Blutrinne",
+      "kind": "weapon",
+      "school": "longsword",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "3 w12 auf 7+; 2 schaden je erfolg; verursache exposed 2.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2
+        },
+        {
+          "type": "enemy_status",
+          "status": "exposed",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/blutrinne.svg",
+      "keywords": [
+        "dice_attack",
+        "exposed"
+      ]
+    },
+    {
+      "id": "schutzender_stahl",
+      "name": "Schützender Stahl",
+      "kind": "defense",
+      "school": "longsword",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "+2 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/schutzender_stahl.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "zornhau",
+      "name": "Zornhau",
+      "kind": "weapon",
+      "school": "longsword",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "4 w12 auf 8+; 2 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 2
+        }
+      ],
+      "art": "res://assets/cards/zornhau.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "geolte_klinge",
+      "name": "Geölte Klinge",
+      "kind": "utility",
+      "school": "longsword",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Ätzöl mit 2 ladungen; erschöpfen.",
+      "effects": [
+        {
+          "type": "apply_weapon_coating",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/geolte_klinge.svg",
+      "keywords": [
+        "apply_weapon_coating",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "durchwechseln",
+      "name": "Durchwechseln",
+      "kind": "weapon",
+      "school": "longsword",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "3 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung; verursache exposed 1.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "armor_per_success": 1
+        },
+        {
+          "type": "enemy_status",
+          "status": "exposed",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/durchwechseln.svg",
+      "keywords": [
+        "dice_attack",
+        "exposed"
+      ]
+    },
+    {
+      "id": "kronparade",
+      "name": "Kronparade",
+      "kind": "defense",
+      "school": "longsword",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "+3 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 3
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/kronparade.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "klingenwall",
+      "name": "Klingenwall",
+      "kind": "utility",
+      "school": "longsword",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "Falle mit 2 w12; erschöpfen.",
+      "effects": [
+        {
+          "type": "set_trap",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/klingenwall.svg",
+      "keywords": [
+        "exhaust",
+        "set_trap"
+      ]
+    },
+    {
+      "id": "meisterhau",
+      "name": "Meisterhau",
+      "kind": "weapon",
+      "school": "longsword",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 3 schaden je erfolg, bricht 1 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "armor_per_success": 1
+        }
+      ],
+      "art": "res://assets/cards/meisterhau.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "eidstahl",
+      "name": "Eidstahl",
+      "kind": "weapon",
+      "school": "longsword",
+      "phase": "attack",
+      "action_point_cost": 3,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 3 schaden je erfolg; erschöpfen.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/eidstahl.svg",
+      "keywords": [
+        "dice_attack",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "nachreisen",
+      "name": "Nachreisen",
+      "kind": "reaction",
+      "school": "longsword",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/nachreisen.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "bund_der_schwerter",
+      "name": "Bund der Schwerter",
+      "kind": "cooperation",
+      "school": "longsword",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "coordinated",
+          "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/bund_der_schwerter.svg",
+      "keywords": [
+        "coordinated",
+        "draw_cards"
+      ]
+    },
+    {
       "id": "runenkafig",
       "name": "Runenkäfig",
       "kind": "magic",

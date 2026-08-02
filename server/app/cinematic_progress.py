@@ -33,8 +33,8 @@ class CinematicProgressState:
 
 class CinematicProgress:
     def __init__(self, state: CinematicProgressState) -> None:
-        if len(set(state.player_ids)) != 2:
-            raise RuleViolation("Cinematic progress requires exactly two players")
+        if len(set(state.player_ids)) not in {1, 2}:
+            raise RuleViolation("Cinematic progress requires one or two players")
         self.state = state
 
     @classmethod

@@ -16,6 +16,8 @@ from app.main import (
     _handle_message,
     _initialize_connection,
     _is_loopback_host,
+    create_campaign,
+    join_campaign,
     create_profile,
     recover_profile,
     rotate_profile_recovery_code,
@@ -23,7 +25,7 @@ from app.main import (
     runtime_games,
 )
 from app.models import Campaign, CampaignMember, Profile, ProfileRecovery
-from app.schemas import ProfileCreate, ProfileRecover, client_message_adapter
+from app.schemas import CampaignCreate, CampaignJoin, ProfileCreate, ProfileRecover, client_message_adapter
 
 
 class FakeWebSocket:
@@ -187,6 +189,42 @@ class MatchLifecycleTests(DatabaseMixin, unittest.IsolatedAsyncioTestCase):
         starts_after = sum(packet.get("type") == "game_started" for packet in first_socket.sent)
         self.assertEqual(starts_after, starts_before)
         self.assertEqual(self.campaign.status, "playing")
+
+    async def test_singleplayer_starts_with_one_connected_ready_profile(self) -> None:
+        solo = Campaign(
+            id="campaign-solo", invite_code="SOLO12", owner_profile_id=self.player_ids[0],
+            seed=7, campaign_length="expedition", game_mode="singleplayer",
+        )
+        self.db.add(solo)
+        self.db.add(CampaignMember(
+            campaign_id=solo.id, profile_id=self.player_ids[0], weapon="longsword", magic="rune",
+        ))
+        self.db.commit()
+        socket = FakeWebSocket()
+        lobbies.connections[solo.id][self.player_ids[0]] = socket
+        message = client_message_adapter.validate_python(
+            {"type": "ready", "protocol_version": 2, "ready": True}
+        )
+        await _handle_message(self.db, solo.id, self.player_ids[0], message)
+        self.db.refresh(solo)
+        self.assertEqual(solo.status, "playing")
+        self.assertEqual(len(runtime_games[solo.id].game.state.players), 1)
+
+    def test_singleplayer_campaign_rejects_join(self) -> None:
+        owner = self.db.get(Profile, self.player_ids[0])
+        created = create_campaign(
+            CampaignCreate(weapon="longsword", magic="rune", campaign_length="expedition", game_mode="singleplayer"),
+            owner,
+            self.db,
+        )
+        joining = self.db.get(Profile, self.player_ids[1])
+        with self.assertRaises(HTTPException) as failure:
+            join_campaign(
+                CampaignJoin(invite_code=created.invite_code, weapon="axe", magic="ember"),
+                joining,
+                self.db,
+            )
+        self.assertEqual(failure.exception.status_code, 409)
 
     async def test_disconnect_pauses_and_reconnect_gets_immediate_snapshot(self) -> None:
         await self._start()

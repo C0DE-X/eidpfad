@@ -145,6 +145,8 @@ class TargetRules:
             return [actor_id] if rule["side"] == "self" else list(state.turn_order)
         if rule["side"] == "ally":
             legal = [player_id for player_id in state.turn_order if player_id != actor_id]
+            if not legal:
+                legal = [actor_id]
         elif rule["side"] == "objective":
             legal = list(state.world.get("scenario_runtime", {}).get("protected_targets", {}))
         else:

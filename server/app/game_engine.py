@@ -54,8 +54,8 @@ class GameEngine:
         world_tier: int = 1,
         enemies: EnemyCatalog | None = None,
     ) -> GameEngine:
-        if len(loadouts) != 2:
-            raise RuleViolation("Eidpfad requires exactly two players")
+        if len(loadouts) not in {1, 2}:
+            raise RuleViolation("Eidpfad requires one or two players")
         card_catalog = catalog or CardCatalog()
         item_catalog = items or ItemCatalog()
         enemy_catalog = enemies or EnemyCatalog()
@@ -177,6 +177,8 @@ class GameEngine:
         if card["kind"] == "reaction":
             raise RuleViolation("Reaction cards can only be played in an open reaction window")
         if card["kind"] == "cooperation":
+            if len(self.state.players) == 1:
+                return self._resolve_card(actor_id, card, explicit_targets, cooperative=True)
             events = CooperationRules.propose(
                 self.state, actor_id, card_id, self.catalog, explicit_targets
             )
@@ -1375,4 +1377,4 @@ class GameEngine:
                 player.hand.append(player.deck.pop())
 
     def _ally(self, player_id: str) -> PlayerState:
-        return next(player for key, player in self.state.players.items() if key != player_id)
+        return next((player for key, player in self.state.players.items() if key != player_id), self.state.players[player_id])

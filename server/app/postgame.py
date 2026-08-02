@@ -112,8 +112,8 @@ class Postgame:
     """Reconnect-safe two-player postgame state machine."""
 
     def __init__(self, state: PostgameState) -> None:
-        if len(set(state.player_ids)) != 2:
-            raise RuleViolation("Postgame requires exactly two different players")
+        if len(set(state.player_ids)) not in {1, 2}:
+            raise RuleViolation("Postgame requires one or two different players")
         if state.phase not in POSTGAME_PHASES:
             raise RuleViolation(f"Unknown postgame phase: {state.phase}")
         if set(state.legacy_options) != set(state.player_ids):

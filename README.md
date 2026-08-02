@@ -51,6 +51,8 @@ Caddy fordert das TLS-Zertifikat automatisch an und leitet HTTPS sowie WSS an
 den internen Server weiter. Im Windows-Client wird danach
 `https://game.example.com` eingetragen. Weitere Details stehen in
 [`docs/deployment.md`](docs/deployment.md).
+Profilverwaltung, vollständige Backups und die Wiederherstellung einzelner
+Charaktere sind in [`docs/server-administration.md`](docs/server-administration.md) beschrieben.
 
 ## Windows-11-Client bauen
 

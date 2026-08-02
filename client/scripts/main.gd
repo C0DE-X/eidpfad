@@ -22,6 +22,7 @@ var recovery_edit: LineEdit
 var invite_edit: LineEdit
 var seed_edit: LineEdit
 var weapon_select: OptionButton
+var mode_select: OptionButton
 var magic_select: OptionButton
 var length_select: OptionButton
 var campaign_label: Label
@@ -187,12 +188,25 @@ func _build_connection_panel() -> Control:
 			network.recover_profile(name_edit.text, recovery_edit.text)
 	)
 	column.add_child(recover_button)
+	var mode_label := Label.new()
+	mode_label.text = "Spielmodus (nach Kampagnenerstellung nicht änderbar)"
+	mode_label.add_theme_color_override("font_color", Color("d7c49a"))
+	column.add_child(mode_label)
+	mode_select = OptionButton.new()
+	mode_select.add_item("Spielmodus wählen …")
+	mode_select.set_item_metadata(0, "")
+	mode_select.set_item_disabled(0, true)
+	mode_select.add_item("Singleplayer · allein spielen")
+	mode_select.set_item_metadata(1, "singleplayer")
+	mode_select.add_item("Multiplayer · zwei Spieler")
+	mode_select.set_item_metadata(2, "multiplayer")
+	column.add_child(mode_select)
 
 	var choices := HBoxContainer.new()
 	choices.add_theme_constant_override("separation", 7)
 	column.add_child(choices)
 	weapon_select = OptionButton.new()
-	for value in ["Zwei Klingen", "Axt", "Langbogen", "Armbrust"]:
+	for value in ["Zwei Klingen", "Axt", "Langbogen", "Armbrust", "Langschwert"]:
 		weapon_select.add_item(value)
 	weapon_select.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	choices.add_child(weapon_select)
@@ -438,13 +452,16 @@ func _create_profile() -> void:
 func _create_campaign() -> void:
 	if not network.configure(server_edit.text):
 		return
+	if _game_mode().is_empty():
+		_on_api_failed("create_campaign", "Bitte zuerst Singleplayer oder Multiplayer auswählen")
+		return
 	var seed: Variant = null
 	if not seed_edit.text.strip_edges().is_empty():
 		if not seed_edit.text.strip_edges().is_valid_int():
 			_on_api_failed("create_campaign", "Der Seed muss eine ganze Zahl sein")
 			return
 		seed = int(seed_edit.text)
-	network.create_campaign(_weapon_id(), _magic_id(), _campaign_length(), seed)
+	network.create_campaign(_weapon_id(), _magic_id(), _campaign_length(), _game_mode(), seed)
 
 
 func _join_campaign() -> void:
@@ -470,7 +487,11 @@ func _select_campaign(index: int) -> void:
 
 
 func _weapon_id() -> String:
-	return ["dual_blades", "axe", "bow", "crossbow"][weapon_select.selected]
+	return ["dual_blades", "axe", "bow", "crossbow", "longsword"][weapon_select.selected]
+
+
+func _game_mode() -> String:
+	return str(mode_select.get_item_metadata(mode_select.selected))
 
 
 func _magic_id() -> String:
@@ -668,6 +689,7 @@ func _render_state() -> void:
 		"axe": "res://assets/portraits/vanguard.png",
 		"bow": "res://assets/portraits/pathfinder.png",
 		"crossbow": "res://assets/portraits/arbalist.png",
+		"longsword": "res://assets/portraits/vanguard.png",
 	}.get(str(me.get("weapon", "")), "res://assets/portraits/vanguard.png"))
 	portrait_stats.text = "%s\n%s/%s LP  ·  %s AP\n%s + %s" % [
 		settings.display_name if not settings.display_name.is_empty() else "EIGENER SOELDNER",
@@ -877,7 +899,7 @@ func _campaign_text() -> String:
 
 
 func _weapon_name(value: String) -> String:
-	return {"dual_blades":"Zwillingsklingen","axe":"Axt","bow":"Langbogen","crossbow":"Armbrust"}.get(value, value)
+	return {"dual_blades":"Zwillingsklingen","axe":"Axt","bow":"Langbogen","crossbow":"Armbrust","longsword":"Langschwert"}.get(value, value)
 
 
 func _magic_name(value: String) -> String:

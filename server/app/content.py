@@ -89,7 +89,7 @@ class CardCatalog:
 
 class ItemCatalog:
     STARTING_WEAPONS = {
-        "dual_blades": "worn_dual_blades", "axe": "worn_axe", "bow": "worn_bow", "crossbow": "worn_crossbow",
+        "dual_blades": "worn_dual_blades", "axe": "worn_axe", "bow": "worn_bow", "crossbow": "worn_crossbow", "longsword": "worn_longsword",
     }
 
     def __init__(self, path: Path | None = None) -> None:

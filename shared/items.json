@@ -1714,6 +1714,434 @@
       "model": "res://assets/models/items/armbrust_des_letzten_wortes.glb"
     },
     {
+      "id": "worn_longsword",
+      "name": "Abgenutztes Langschwert",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "longsword",
+      "country_affinity": "nebelmark",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "gerader_hieb",
+      "art": "res://assets/items/worn_longsword.svg",
+      "model": "res://assets/models/items/longsword/worn_longsword.glb"
+    },
+    {
+      "id": "krahenschwert",
+      "name": "Krähenschwert",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "longsword",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine normal-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "halbschwert",
+      "art": "res://assets/items/krahenschwert.svg",
+      "model": "res://assets/models/items/longsword/krahenschwert.glb"
+    },
+    {
+      "id": "kupferklinge",
+      "name": "Kupferklinge",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "longsword",
+      "country_affinity": "frostreiche",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine normal-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "klingenwacht",
+      "art": "res://assets/items/kupferklinge.svg",
+      "model": "res://assets/models/items/longsword/kupferklinge.glb"
+    },
+    {
+      "id": "moorschwert",
+      "name": "Moorschwert",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "longsword",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "hohe_hut",
+      "art": "res://assets/items/moorschwert.svg",
+      "model": "res://assets/models/items/longsword/moorschwert.glb"
+    },
+    {
+      "id": "dornenschneide",
+      "name": "Dornenschneide",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "longsword",
+      "country_affinity": "aschenlande",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "mordschlag",
+      "art": "res://assets/items/dornenschneide.svg",
+      "model": "res://assets/models/items/longsword/dornenschneide.glb"
+    },
+    {
+      "id": "salzstahl",
+      "name": "Salzstahl",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "longsword",
+      "country_affinity": "dornwall",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine rare-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "blutrinne",
+      "art": "res://assets/items/salzstahl.svg",
+      "model": "res://assets/models/items/longsword/salzstahl.glb"
+    },
+    {
+      "id": "spiegelschwert",
+      "name": "Spiegelschwert",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "longsword",
+      "country_affinity": "glassteppe",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine rare-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schutzender_stahl",
+      "art": "res://assets/items/spiegelschwert.svg",
+      "model": "res://assets/models/items/longsword/spiegelschwert.glb"
+    },
+    {
+      "id": "glutklinge",
+      "name": "Glutklinge",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "longsword",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "zornhau",
+      "art": "res://assets/items/glutklinge.svg",
+      "model": "res://assets/models/items/longsword/glutklinge.glb"
+    },
+    {
+      "id": "froststahl",
+      "name": "Froststahl",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "longsword",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "geolte_klinge",
+      "art": "res://assets/items/froststahl.svg",
+      "model": "res://assets/models/items/longsword/froststahl.glb"
+    },
+    {
+      "id": "sturmklinge",
+      "name": "Sturmklinge",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "longsword",
+      "country_affinity": "knochental",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine enhanced-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "durchwechseln",
+      "art": "res://assets/items/sturmklinge.svg",
+      "model": "res://assets/models/items/longsword/sturmklinge.glb"
+    },
+    {
+      "id": "wurzelschwert",
+      "name": "Wurzelschwert",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "longsword",
+      "country_affinity": "nachtkrone",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_dice": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "kronparade",
+      "art": "res://assets/items/wurzelschwert.svg",
+      "model": "res://assets/models/items/longsword/wurzelschwert.glb"
+    },
+    {
+      "id": "nachtschneide",
+      "name": "Nachtschneide",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "longsword",
+      "country_affinity": "sturmmarsch",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "klingenwall",
+      "art": "res://assets/items/nachtschneide.svg",
+      "model": "res://assets/models/items/longsword/nachtschneide.glb"
+    },
+    {
+      "id": "flutstahl",
+      "name": "Flutstahl",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "longsword",
+      "country_affinity": "versunkener_bund",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0
+      },
+      "description": "Eine exceptional-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "meisterhau",
+      "art": "res://assets/items/flutstahl.svg",
+      "model": "res://assets/models/items/longsword/flutstahl.glb"
+    },
+    {
+      "id": "knochenschwert",
+      "name": "Knochenschwert",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "longsword",
+      "country_affinity": "weltennaht",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine exceptional-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "eidstahl",
+      "art": "res://assets/items/knochenschwert.svg",
+      "model": "res://assets/models/items/longsword/knochenschwert.glb"
+    },
+    {
+      "id": "sonnenklinge",
+      "name": "Sonnenklinge",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "longsword",
+      "country_affinity": "nebelmark",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "block_dice": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "nachreisen",
+      "art": "res://assets/items/sonnenklinge.svg",
+      "model": "res://assets/models/items/longsword/sonnenklinge.glb"
+    },
+    {
+      "id": "aschenschwert",
+      "name": "Aschenschwert",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "longsword",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_break": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "bund_der_schwerter",
+      "art": "res://assets/items/aschenschwert.svg",
+      "model": "res://assets/models/items/longsword/aschenschwert.glb"
+    },
+    {
+      "id": "fechtmeister",
+      "name": "Fechtmeister",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "longsword",
+      "country_affinity": "frostreiche",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "gerader_hieb",
+      "art": "res://assets/items/fechtmeister.svg",
+      "model": "res://assets/models/items/longsword/fechtmeister.glb"
+    },
+    {
+      "id": "runenstahl",
+      "name": "Runenstahl",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "longsword",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "halbschwert",
+      "art": "res://assets/items/runenstahl.svg",
+      "model": "res://assets/models/items/longsword/runenstahl.glb"
+    },
+    {
+      "id": "sternenschwert",
+      "name": "Sternenschwert",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "longsword",
+      "country_affinity": "aschenlande",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "klingenwacht",
+      "art": "res://assets/items/sternenschwert.svg",
+      "model": "res://assets/models/items/longsword/sternenschwert.glb"
+    },
+    {
+      "id": "blutmondklinge",
+      "name": "Blutmondklinge",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "longsword",
+      "country_affinity": "dornwall",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "hohe_hut",
+      "art": "res://assets/items/blutmondklinge.svg",
+      "model": "res://assets/models/items/longsword/blutmondklinge.glb"
+    },
+    {
+      "id": "eidschwert",
+      "name": "Eidschwert",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "longsword",
+      "country_affinity": "glassteppe",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "mordschlag",
+      "art": "res://assets/items/eidschwert.svg",
+      "model": "res://assets/models/items/longsword/eidschwert.glb"
+    },
+    {
+      "id": "schweigende_klinge",
+      "name": "Schweigende Klinge",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "longsword",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "blutrinne",
+      "art": "res://assets/items/schweigende_klinge.svg",
+      "model": "res://assets/models/items/longsword/schweigende_klinge.glb"
+    },
+    {
+      "id": "nahtschwert",
+      "name": "Nahtschwert",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "longsword",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schutzender_stahl",
+      "art": "res://assets/items/nahtschwert.svg",
+      "model": "res://assets/models/items/longsword/nahtschwert.glb"
+    },
+    {
+      "id": "langschwert_des_ersten_eids",
+      "name": "Langschwert des ersten Eids",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "longsword",
+      "country_affinity": "knochental",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule longsword; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "zornhau",
+      "art": "res://assets/items/langschwert_des_ersten_eids.svg",
+      "model": "res://assets/models/items/longsword/langschwert_des_ersten_eids.glb"
+    },
+    {
       "id": "travel_leathers",
       "name": "Reiseleder",
       "slot": "armor",

@@ -7,3 +7,6 @@
 client/assets/**/*.glb filter=lfs diff=lfs merge=lfs -text
 client/assets/**/*.png filter=lfs diff=lfs merge=lfs -text
 client/assets/**/*.wav filter=lfs diff=lfs merge=lfs -text
+
+# Small deterministic models generated for the longsword school stay in Git.
+client/assets/models/items/longsword/*.glb -filter -diff -merge -text

@@ -109,7 +109,7 @@ def validate(report_path: Path | None) -> dict[str, Any]:
     require(len({entry["art"] for entry in card_entries + item_entries + enemy_entries}) == len(card_entries + item_entries + enemy_entries), "Every catalog entry needs unique 2D art")
     require(len({entry["model"] for entry in item_entries + enemy_entries}) == len(item_entries + enemy_entries), "Every item and enemy needs a unique 3D model")
 
-    for weapon in ("dual_blades", "axe", "bow", "crossbow"):
+    for weapon in ("dual_blades", "axe", "bow", "crossbow", "longsword"):
         for magic in ("rune", "ember", "veil", "blood"):
             deck = cards.starter_deck(weapon, magic)
             require(len(deck) == 18, f"Starter deck {weapon}/{magic} needs 18 cards")

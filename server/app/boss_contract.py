@@ -202,8 +202,8 @@ class BossContract:
     """
 
     def __init__(self, state: BossContractState, *, world_tier: int = 1) -> None:
-        if len(set(state.player_ids)) != 2:
-            raise RuleViolation("The boss contract requires exactly two different players")
+        if len(set(state.player_ids)) not in {1, 2}:
+            raise RuleViolation("The boss contract requires one or two different players")
         if state.stage not in STAGES:
             raise RuleViolation(f"Unknown boss stage: {state.stage}")
         self.state = state

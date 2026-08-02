@@ -16,6 +16,9 @@ dependencies = [
   "uvicorn[standard]>=0.35,<1"
 ]
 
+[project.scripts]
+eidpfad-admin = "app.admin_cli:main"
+
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "httpx>=0.28,<1"]
 
