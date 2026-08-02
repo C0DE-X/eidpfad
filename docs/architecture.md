@@ -10,7 +10,7 @@ Godot zeigt Hauptmenue, Lobby, 2.5D-Welt, Karten, Portraits und W12-Animationen
 an. Der Client sendet nur Absichten wie `play_card`, `pass_phase` oder
 `claim_loot`. FastAPI prueft Phase, aktiven Spieler, Aktionspunkte, Kartenhand,
 Ziele und Beute. Erst danach wird der kanonische Zustand in PostgreSQL gesichert
-und an beide Clients verteilt.
+und an alle Teilnehmer der Kampagne verteilt.
 
 ## Transport und Authentifizierung
 

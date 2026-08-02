@@ -140,6 +140,16 @@ class BossContractTests(unittest.TestCase):
         self.assertEqual(self.contract.state.boss_hp, 0)
         self.assertTrue(self.contract.state.completed)
 
+    def test_singleplayer_final_oath_uses_half_the_joint_success_target(self) -> None:
+        self.contract = BossContract.new(17, ("solo",), world_tier=1)
+        self.reach_final_oath()
+
+        self.assertEqual(self.contract.public_view()["final_oath_required_successes"], 3)
+        events = self.contract.commit_final_oath("solo", available_action_points=5)
+        resolution = events[-1]
+        self.assertEqual(resolution["type"], "final_oath_resolved")
+        self.assertEqual(resolution["required_successes"], 3)
+
     def test_failed_joint_oath_can_be_retried_but_raises_threat(self) -> None:
         self.contract = BossContract.new(4404, ("player-one", "player-two"), world_tier=2)
         self.reach_final_oath()

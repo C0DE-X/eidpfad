@@ -329,6 +329,9 @@ async def _handle_message(db: Session, campaign_id: str, profile_id: str, messag
     if message.type == "ready":
         if campaign.status == "completed":
             raise RuleViolation("Completed campaigns cannot be readied or resumed")
+        if message.ready and not _all_required_players_connected(campaign, member_ids):
+            requirement = "the solo player" if campaign.game_mode == "singleplayer" else "both players"
+            raise RuleViolation(f"Cannot ready until {requirement} are connected")
 
         changed = lobbies.set_ready(campaign_id, profile_id, message.ready)
         transition_payload: dict | None = None
@@ -444,6 +447,7 @@ def _load_or_start_game(db: Session, campaign: Campaign) -> CampaignRuntime:
             items=content.items,
             enemies=content.enemies,
             fallback_loadouts=_campaign_loadouts(db, campaign.id),
+            game_mode=campaign.game_mode,
         )
     else:
         game = CampaignRuntime.new(
@@ -455,6 +459,7 @@ def _load_or_start_game(db: Session, campaign: Campaign) -> CampaignRuntime:
             enemies=content.enemies,
             campaign_length=campaign.campaign_length,
             world_tier=campaign.world_tier,
+            game_mode=campaign.game_mode,
         )
     runtime_games[campaign.id] = game
     return game

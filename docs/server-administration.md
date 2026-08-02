@@ -20,8 +20,10 @@ docker compose run --rm --no-deps server python -m app.admin_cli \
   delete-profile --profile-id UUID --confirm UUID
 ```
 
-Ein einzelnes Profil kann mit seinen Kampagnenmitgliedschaften und fehlenden
-Kampagnen aus einem vollständigen Backup wiederhergestellt werden:
+Ein einzelnes Profil kann aus einem vollständigen Backup wiederhergestellt werden.
+Eigene Kampagnen werden dabei zusammen mit allen zugehörigen Mitgliedschaften
+atomar rekonstruiert. Fehlt ein dafür benötigtes Partnerprofil, bricht der Vorgang
+ohne Teilwiederherstellung ab:
 
 ```bash
 docker compose run --rm --no-deps \
@@ -31,4 +33,6 @@ docker compose start server
 ```
 
 Backups enthalten Token- und Recovery-Hashes und müssen wie die Datenbank selbst
-geschützt werden. Vor jeder Löschung sollte ein neues Backup erstellt werden.
+geschützt werden. Das Werkzeug schreibt neue Dateien atomar mit Rechten `0600`;
+das Backupverzeichnis erhält `0700`. Vor jeder Löschung sollte ein neues Backup
+erstellt und seine Wiederherstellbarkeit geprüft werden.

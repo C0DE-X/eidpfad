@@ -302,6 +302,10 @@ class BossContract:
             "threat": self.state.threat,
             "oath_power": self.state.oath_power,
             "oath_power_required": FINAL_OATH_REQUIRED_POWER,
+            "final_oath_required_successes": max(
+                1,
+                FINAL_OATH_REQUIRED_SUCCESSES * len(self.state.player_ids) // 2,
+            ),
             "revealed_clues": list(self.state.revealed_clues),
             "unresolved_problem_echoes": list(self.state.unresolved_problems),
             "sovereign": copy.deepcopy(self.sovereign) if reveal_identity else None,
@@ -491,7 +495,11 @@ class BossContract:
         total_successes = sum(value.successes for value in self.state.final_oath_contributions.values())
         total_dice = sum(value.dice_count for value in self.state.final_oath_contributions.values())
         contributors = sorted(self.state.final_oath_contributions)
-        if total_successes >= FINAL_OATH_REQUIRED_SUCCESSES:
+        required_successes = max(
+            1,
+            FINAL_OATH_REQUIRED_SUCCESSES * len(self.state.player_ids) // 2,
+        )
+        if total_successes >= required_successes:
             self.state.boss_hp = 0
             self.state.stage = STAGE_DEFEATED
             self.state.completed = True
@@ -501,6 +509,7 @@ class BossContract:
                 "contributors": contributors,
                 "dice_count": total_dice,
                 "successes": total_successes,
+                "required_successes": required_successes,
                 "boss_defeated": True,
             })
         else:
@@ -513,6 +522,7 @@ class BossContract:
                 "contributors": contributors,
                 "dice_count": total_dice,
                 "successes": total_successes,
+                "required_successes": required_successes,
                 "boss_defeated": False,
                 "next_attempt": self.state.final_oath_attempt,
             })

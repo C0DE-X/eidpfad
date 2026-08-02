@@ -106,7 +106,7 @@
       "rarity": "enhanced",
       "starter": true,
       "unlock_level": 3,
-      "text": "Erhalte aimed 1.",
+      "text": "Erhalte fokus 1.",
       "effects": [
         {
           "type": "self_status",
@@ -129,7 +129,7 @@
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 3,
-      "text": "3 w12 auf 7+; 2 schaden je erfolg; verursache bleeding 2.",
+      "text": "3 w12 auf 7+; 2 schaden je erfolg; verursache blutung 2.",
       "effects": [
         {
           "type": "dice_attack",
@@ -236,7 +236,7 @@
       "rarity": "normal",
       "starter": false,
       "unlock_level": 5,
-      "text": "3 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung; verursache bleeding 1.",
+      "text": "3 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung; verursache blutung 1.",
       "effects": [
         {
           "type": "dice_attack",
@@ -395,7 +395,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 8,
-      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "text": "Beide erhalten abgestimmt 1; ziehe 1 karten.",
       "effects": [
         {
           "type": "team_status",
@@ -518,7 +518,7 @@
       "rarity": "enhanced",
       "starter": true,
       "unlock_level": 3,
-      "text": "Erhalte aimed 1.",
+      "text": "Erhalte fokus 1.",
       "effects": [
         {
           "type": "self_status",
@@ -541,7 +541,7 @@
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 3,
-      "text": "3 w12 auf 7+; 3 schaden je erfolg; verursache exposed 2.",
+      "text": "3 w12 auf 7+; 3 schaden je erfolg; verursache entblößt 2.",
       "effects": [
         {
           "type": "dice_attack",
@@ -648,7 +648,7 @@
       "rarity": "normal",
       "starter": false,
       "unlock_level": 5,
-      "text": "3 w12 auf 7+; 3 schaden je erfolg; zerbrich 2 rüstung; verursache exposed 1.",
+      "text": "3 w12 auf 7+; 3 schaden je erfolg; zerbrich 2 rüstung; verursache entblößt 1.",
       "effects": [
         {
           "type": "dice_attack",
@@ -811,7 +811,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 8,
-      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "text": "Beide erhalten abgestimmt 1; ziehe 1 karten.",
       "effects": [
         {
           "type": "team_status",
@@ -934,7 +934,7 @@
       "rarity": "enhanced",
       "starter": true,
       "unlock_level": 3,
-      "text": "Erhalte aimed 1.",
+      "text": "Erhalte fokus 1.",
       "effects": [
         {
           "type": "self_status",
@@ -957,7 +957,7 @@
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 3,
-      "text": "3 w12 auf 7+; 2 schaden je erfolg; verursache marked 2.",
+      "text": "3 w12 auf 7+; 2 schaden je erfolg; verursache markiert 2.",
       "effects": [
         {
           "type": "dice_attack",
@@ -1064,7 +1064,7 @@
       "rarity": "normal",
       "starter": false,
       "unlock_level": 5,
-      "text": "3 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung; verursache marked 1.",
+      "text": "3 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung; verursache markiert 1.",
       "effects": [
         {
           "type": "dice_attack",
@@ -1223,7 +1223,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 8,
-      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "text": "Beide erhalten abgestimmt 1; ziehe 1 karten.",
       "effects": [
         {
           "type": "team_status",
@@ -1346,7 +1346,7 @@
       "rarity": "enhanced",
       "starter": true,
       "unlock_level": 3,
-      "text": "Erhalte aimed 1.",
+      "text": "Erhalte fokus 1.",
       "effects": [
         {
           "type": "self_status",
@@ -1369,7 +1369,7 @@
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 3,
-      "text": "3 w12 auf 7+; 3 schaden je erfolg; verursache weakened 2.",
+      "text": "3 w12 auf 7+; 3 schaden je erfolg; verursache geschwächt 2.",
       "effects": [
         {
           "type": "dice_attack",
@@ -1476,7 +1476,7 @@
       "rarity": "normal",
       "starter": false,
       "unlock_level": 5,
-      "text": "3 w12 auf 7+; 3 schaden je erfolg, bricht 1 rüstung; verursache weakened 1.",
+      "text": "3 w12 auf 7+; 3 schaden je erfolg, bricht 1 rüstung; verursache geschwächt 1.",
       "effects": [
         {
           "type": "dice_attack",
@@ -1635,7 +1635,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 8,
-      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "text": "Beide erhalten abgestimmt 1; ziehe 1 karten.",
       "effects": [
         {
           "type": "team_status",
@@ -1663,13 +1663,13 @@
       "rarity": "normal",
       "starter": true,
       "unlock_level": 1,
-      "text": "3 w12 auf 7+; 2 schaden je erfolg.",
+      "text": "3 w12 auf 7+; 3 schaden je erfolg.",
       "effects": [
         {
           "type": "dice_attack",
           "count": 3,
           "threshold": 7,
-          "damage_per_success": 2
+          "damage_per_success": 3
         }
       ],
       "art": "res://assets/cards/gerader_hieb.svg",
@@ -1687,13 +1687,14 @@
       "rarity": "normal",
       "starter": false,
       "unlock_level": 1,
-      "text": "2 w12 auf 8+; 3 schaden je erfolg.",
+      "text": "2 w12 auf 6+; 2 schaden je erfolg, bricht 1 rüstung.",
       "effects": [
         {
           "type": "dice_attack",
           "count": 2,
-          "threshold": 8,
-          "damage_per_success": 3
+          "threshold": 6,
+          "damage_per_success": 2,
+          "armor_per_success": 1
         }
       ],
       "art": "res://assets/cards/halbschwert.svg",
@@ -1704,26 +1705,28 @@
     {
       "id": "klingenwacht",
       "name": "Klingenwacht",
-      "kind": "weapon",
+      "kind": "defense",
       "school": "longsword",
-      "phase": "attack",
+      "phase": "defense",
       "action_point_cost": 1,
       "rarity": "rare",
       "starter": false,
       "unlock_level": 2,
-      "text": "2 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung.",
+      "text": "+2 block-w12 für dich; erhalte 1 schutz.",
       "effects": [
         {
-          "type": "dice_attack",
-          "count": 2,
-          "threshold": 7,
-          "damage_per_success": 2,
-          "armor_per_success": 1
+          "type": "add_block_dice_self",
+          "amount": 2
+        },
+        {
+          "type": "guard_self",
+          "amount": 1
         }
       ],
       "art": "res://assets/cards/klingenwacht.svg",
       "keywords": [
-        "dice_attack"
+        "add_block_dice_self",
+        "guard_self"
       ]
     },
     {
@@ -1736,11 +1739,11 @@
       "rarity": "rare",
       "starter": true,
       "unlock_level": 2,
-      "text": "+2 block-w12 für dich.",
+      "text": "+3 block-w12 für dich.",
       "effects": [
         {
           "type": "add_block_dice_self",
-          "amount": 2
+          "amount": 3
         }
       ],
       "art": "res://assets/cards/hohe_hut.svg",
@@ -1758,17 +1761,22 @@
       "rarity": "enhanced",
       "starter": true,
       "unlock_level": 3,
-      "text": "Erhalte aimed 1.",
+      "text": "Erhalte fokus 1; ziehe 1 karten.",
       "effects": [
         {
           "type": "self_status",
           "status": "aimed",
           "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
         }
       ],
       "art": "res://assets/cards/mordschlag.svg",
       "keywords": [
-        "aimed"
+        "aimed",
+        "draw_cards"
       ]
     },
     {
@@ -1777,11 +1785,11 @@
       "kind": "weapon",
       "school": "longsword",
       "phase": "attack",
-      "action_point_cost": 1,
+      "action_point_cost": 2,
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 3,
-      "text": "3 w12 auf 7+; 2 schaden je erfolg; verursache exposed 2.",
+      "text": "3 w12 auf 7+; 2 schaden je erfolg; verursache blutung 2.",
       "effects": [
         {
           "type": "dice_attack",
@@ -1791,14 +1799,14 @@
         },
         {
           "type": "enemy_status",
-          "status": "exposed",
+          "status": "bleeding",
           "amount": 2
         }
       ],
       "art": "res://assets/cards/blutrinne.svg",
       "keywords": [
-        "dice_attack",
-        "exposed"
+        "bleeding",
+        "dice_attack"
       ]
     },
     {
@@ -1811,21 +1819,21 @@
       "rarity": "legendary",
       "starter": false,
       "unlock_level": 4,
-      "text": "+2 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "text": "+2 block-w12 für dich; erhalte 2 schutz.",
       "effects": [
         {
           "type": "add_block_dice_self",
           "amount": 2
         },
         {
-          "type": "add_block_dice_ally",
-          "amount": 1
+          "type": "guard_self",
+          "amount": 2
         }
       ],
       "art": "res://assets/cards/schutzender_stahl.svg",
       "keywords": [
-        "add_block_dice_ally",
-        "add_block_dice_self"
+        "add_block_dice_self",
+        "guard_self"
       ]
     },
     {
@@ -1834,22 +1842,26 @@
       "kind": "weapon",
       "school": "longsword",
       "phase": "attack",
-      "action_point_cost": 2,
+      "action_point_cost": 3,
       "rarity": "unique",
       "starter": false,
       "unlock_level": 4,
-      "text": "4 w12 auf 8+; 2 schaden je erfolg.",
+      "text": "5 w12 auf 9+; 4 schaden je erfolg; erschöpfen.",
       "effects": [
         {
           "type": "dice_attack",
-          "count": 4,
-          "threshold": 8,
-          "damage_per_success": 2
+          "count": 5,
+          "threshold": 9,
+          "damage_per_success": 4
+        },
+        {
+          "type": "exhaust"
         }
       ],
       "art": "res://assets/cards/zornhau.svg",
       "keywords": [
-        "dice_attack"
+        "dice_attack",
+        "exhaust"
       ]
     },
     {
@@ -1862,11 +1874,11 @@
       "rarity": "normal",
       "starter": false,
       "unlock_level": 5,
-      "text": "Ätzöl mit 2 ladungen; erschöpfen.",
+      "text": "Ätzöl mit 3 ladungen; erschöpfen.",
       "effects": [
         {
           "type": "apply_weapon_coating",
-          "amount": 2
+          "amount": 3
         },
         {
           "type": "exhaust"
@@ -1884,56 +1896,53 @@
       "kind": "weapon",
       "school": "longsword",
       "phase": "attack",
-      "action_point_cost": 1,
+      "action_point_cost": 2,
       "rarity": "normal",
       "starter": false,
       "unlock_level": 5,
-      "text": "3 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung; verursache exposed 1.",
+      "text": "3 w12 auf 6+; 2 schaden je erfolg; erhalte 1 ap.",
       "effects": [
         {
           "type": "dice_attack",
           "count": 3,
-          "threshold": 7,
-          "damage_per_success": 2,
-          "armor_per_success": 1
+          "threshold": 6,
+          "damage_per_success": 2
         },
         {
-          "type": "enemy_status",
-          "status": "exposed",
+          "type": "gain_action_points",
           "amount": 1
         }
       ],
       "art": "res://assets/cards/durchwechseln.svg",
       "keywords": [
         "dice_attack",
-        "exposed"
+        "gain_action_points"
       ]
     },
     {
       "id": "kronparade",
       "name": "Kronparade",
-      "kind": "defense",
+      "kind": "reaction",
       "school": "longsword",
       "phase": "defense",
       "action_point_cost": 1,
       "rarity": "rare",
       "starter": false,
       "unlock_level": 6,
-      "text": "+3 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "text": "+4 block-w12 für dich; erschöpfen.",
       "effects": [
         {
           "type": "add_block_dice_self",
-          "amount": 3
+          "amount": 4
         },
         {
-          "type": "add_block_dice_ally",
-          "amount": 1
+          "type": "exhaust"
         }
       ],
       "art": "res://assets/cards/kronparade.svg",
       "keywords": [
-        "add_block_dice_ally",
-        "add_block_dice_self"
+        "add_block_dice_self",
+        "exhaust"
       ]
     },
     {
@@ -1946,19 +1955,20 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 6,
-      "text": "Falle mit 2 w12; erschöpfen.",
+      "text": "Falle mit 3 w12; erhalte 2 schutz.",
       "effects": [
         {
           "type": "set_trap",
-          "amount": 2
+          "amount": 3
         },
         {
-          "type": "exhaust"
+          "type": "guard_self",
+          "amount": 2
         }
       ],
       "art": "res://assets/cards/klingenwall.svg",
       "keywords": [
-        "exhaust",
+        "guard_self",
         "set_trap"
       ]
     },
@@ -1968,16 +1978,16 @@
       "kind": "weapon",
       "school": "longsword",
       "phase": "attack",
-      "action_point_cost": 1,
+      "action_point_cost": 2,
       "rarity": "enhanced",
       "starter": false,
       "unlock_level": 7,
-      "text": "4 w12 auf 8+; 3 schaden je erfolg, bricht 1 rüstung.",
+      "text": "4 w12 auf 7+; 3 schaden je erfolg, bricht 1 rüstung.",
       "effects": [
         {
           "type": "dice_attack",
           "count": 4,
-          "threshold": 8,
+          "threshold": 7,
           "damage_per_success": 3,
           "armor_per_success": 1
         }
@@ -1997,22 +2007,23 @@
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 7,
-      "text": "4 w12 auf 8+; 3 schaden je erfolg; erschöpfen.",
+      "text": "4 w12 auf 7+; 4 schaden je erfolg; verliere 2 leben.",
       "effects": [
         {
           "type": "dice_attack",
           "count": 4,
-          "threshold": 8,
-          "damage_per_success": 3
+          "threshold": 7,
+          "damage_per_success": 4
         },
         {
-          "type": "exhaust"
+          "type": "self_damage",
+          "amount": 2
         }
       ],
       "art": "res://assets/cards/eidstahl.svg",
       "keywords": [
         "dice_attack",
-        "exhaust"
+        "self_damage"
       ]
     },
     {
@@ -2025,16 +2036,21 @@
       "rarity": "legendary",
       "starter": false,
       "unlock_level": 8,
-      "text": "+2 block-w12 für dich.",
+      "text": "+2 block-w12 für dich; ziehe 1 karten.",
       "effects": [
         {
           "type": "add_block_dice_self",
           "amount": 2
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
         }
       ],
       "art": "res://assets/cards/nachreisen.svg",
       "keywords": [
-        "add_block_dice_self"
+        "add_block_dice_self",
+        "draw_cards"
       ]
     },
     {
@@ -2043,20 +2059,20 @@
       "kind": "cooperation",
       "school": "longsword",
       "phase": "utility",
-      "action_point_cost": 1,
+      "action_point_cost": 2,
       "rarity": "unique",
       "starter": false,
       "unlock_level": 8,
-      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "text": "Beide erhalten abgestimmt 2; ziehe 2 karten.",
       "effects": [
         {
           "type": "team_status",
           "status": "coordinated",
-          "amount": 1
+          "amount": 2
         },
         {
           "type": "draw_cards",
-          "amount": 1
+          "amount": 2
         }
       ],
       "art": "res://assets/cards/bund_der_schwerter.svg",
@@ -2075,7 +2091,7 @@
       "rarity": "normal",
       "starter": true,
       "unlock_level": 1,
-      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bound 2.",
+      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und gebunden 2.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2101,7 +2117,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 1,
-      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und bound 1.",
+      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und gebunden 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2171,7 +2187,7 @@
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 3,
-      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und bound 1.",
+      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und gebunden 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2197,7 +2213,7 @@
       "rarity": "legendary",
       "starter": false,
       "unlock_level": 3,
-      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bound 1.",
+      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und gebunden 1.",
       "effects": [
         {
           "type": "self_damage",
@@ -2228,7 +2244,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 4,
-      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bound 2.",
+      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und gebunden 2.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2299,7 +2315,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 5,
-      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und bound 1.",
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und gebunden 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2325,7 +2341,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 6,
-      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und bound 1; erschöpfen.",
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und gebunden 1; erschöpfen.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2355,7 +2371,7 @@
       "rarity": "enhanced",
       "starter": false,
       "unlock_level": 6,
-      "text": "Beide erhalten arcane_link 1; ziehe 1 karten.",
+      "text": "Beide erhalten arkanes band 1; ziehe 1 karten.",
       "effects": [
         {
           "type": "team_status",
@@ -2383,7 +2399,7 @@
       "rarity": "normal",
       "starter": true,
       "unlock_level": 1,
-      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und burning 2.",
+      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und brennen 2.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2409,7 +2425,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 1,
-      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und burning 1.",
+      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und brennen 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2479,7 +2495,7 @@
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 3,
-      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und burning 1.",
+      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und brennen 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2505,7 +2521,7 @@
       "rarity": "legendary",
       "starter": false,
       "unlock_level": 3,
-      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und burning 1.",
+      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und brennen 1.",
       "effects": [
         {
           "type": "self_damage",
@@ -2536,7 +2552,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 4,
-      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und burning 2.",
+      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und brennen 2.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2607,7 +2623,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 5,
-      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und burning 1.",
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und brennen 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2633,7 +2649,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 6,
-      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und burning 1; erschöpfen.",
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und brennen 1; erschöpfen.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2663,7 +2679,7 @@
       "rarity": "enhanced",
       "starter": false,
       "unlock_level": 6,
-      "text": "Beide erhalten arcane_link 1; ziehe 1 karten.",
+      "text": "Beide erhalten arkanes band 1; ziehe 1 karten.",
       "effects": [
         {
           "type": "team_status",
@@ -2691,7 +2707,7 @@
       "rarity": "normal",
       "starter": true,
       "unlock_level": 1,
-      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und weakened 2.",
+      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und geschwächt 2.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2717,7 +2733,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 1,
-      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und weakened 1.",
+      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und geschwächt 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2787,7 +2803,7 @@
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 3,
-      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und weakened 1.",
+      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und geschwächt 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2813,7 +2829,7 @@
       "rarity": "legendary",
       "starter": false,
       "unlock_level": 3,
-      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und weakened 1.",
+      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und geschwächt 1.",
       "effects": [
         {
           "type": "self_damage",
@@ -2844,7 +2860,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 4,
-      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und weakened 2.",
+      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und geschwächt 2.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2915,7 +2931,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 5,
-      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und weakened 1.",
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und geschwächt 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2941,7 +2957,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 6,
-      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und weakened 1; erschöpfen.",
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und geschwächt 1; erschöpfen.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -2971,7 +2987,7 @@
       "rarity": "enhanced",
       "starter": false,
       "unlock_level": 6,
-      "text": "Beide erhalten arcane_link 1; ziehe 1 karten.",
+      "text": "Beide erhalten arkanes band 1; ziehe 1 karten.",
       "effects": [
         {
           "type": "team_status",
@@ -2999,7 +3015,7 @@
       "rarity": "normal",
       "starter": true,
       "unlock_level": 1,
-      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bleeding 2.",
+      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und blutung 2.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -3025,7 +3041,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 1,
-      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und bleeding 1.",
+      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und blutung 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -3095,7 +3111,7 @@
       "rarity": "exceptional",
       "starter": false,
       "unlock_level": 3,
-      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und bleeding 1.",
+      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und blutung 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -3121,7 +3137,7 @@
       "rarity": "legendary",
       "starter": false,
       "unlock_level": 3,
-      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bleeding 1.",
+      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und blutung 1.",
       "effects": [
         {
           "type": "self_damage",
@@ -3152,7 +3168,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 4,
-      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bleeding 2.",
+      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und blutung 2.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -3223,7 +3239,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 5,
-      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und bleeding 1.",
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und blutung 1.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -3249,7 +3265,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 6,
-      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und bleeding 1; erschöpfen.",
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und blutung 1; erschöpfen.",
       "effects": [
         {
           "type": "dice_magic_damage",
@@ -3279,7 +3295,7 @@
       "rarity": "enhanced",
       "starter": false,
       "unlock_level": 6,
-      "text": "Beide erhalten arcane_link 1; ziehe 1 karten.",
+      "text": "Beide erhalten arkanes band 1; ziehe 1 karten.",
       "effects": [
         {
           "type": "team_status",
@@ -3329,7 +3345,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 1,
-      "text": "Erhalte last_oath 1; erschöpfen.",
+      "text": "Erhalte letzter schwur 1; erschöpfen.",
       "effects": [
         {
           "type": "self_status",
@@ -3422,7 +3438,7 @@
       "rarity": "unique",
       "starter": true,
       "unlock_level": 3,
-      "text": "Verursache exposed 1.",
+      "text": "Verursache entblößt 1.",
       "effects": [
         {
           "type": "enemy_status",
@@ -3493,7 +3509,7 @@
       "rarity": "rare",
       "starter": false,
       "unlock_level": 5,
-      "text": "Beide erhalten coordinated 1.",
+      "text": "Beide erhalten abgestimmt 1.",
       "effects": [
         {
           "type": "team_status",
@@ -3590,7 +3606,7 @@
       "rarity": "legendary",
       "starter": false,
       "unlock_level": 7,
-      "text": "Beide erhalten oath_power 2.",
+      "text": "Beide erhalten eidkraft 2.",
       "effects": [
         {
           "type": "team_status",
@@ -3613,7 +3629,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 7,
-      "text": "Erhalte fury 1.",
+      "text": "Erhalte kampfrausch 1.",
       "effects": [
         {
           "type": "self_status",
@@ -3663,7 +3679,7 @@
       "rarity": "unique",
       "starter": false,
       "unlock_level": 8,
-      "text": "Beide erhalten final_oath 1; 8 w12 auf 7+; 4 schaden je erfolg; erschöpfen.",
+      "text": "Beide erhalten letzter eid 1; 8 w12 auf 7+; 4 schaden je erfolg; erschöpfen.",
       "effects": [
         {
           "type": "team_status",

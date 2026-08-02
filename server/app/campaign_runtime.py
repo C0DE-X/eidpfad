@@ -32,7 +32,7 @@ class RuntimeContent:
 
 
 class CampaignRuntime:
-    """Single persistence and dispatch boundary for a two-player campaign."""
+    """Single persistence and dispatch boundary for an authoritative campaign."""
 
     def __init__(
         self,
@@ -46,6 +46,7 @@ class CampaignRuntime:
         cinematics: CinematicProgress | None = None,
         cinematic_queue: list[dict[str, Any]] | None = None,
         pending_new_game_plus: dict[str, Any] | None = None,
+        game_mode: str = "multiplayer",
     ) -> None:
         self.campaign_id = campaign_id
         self.game = game
@@ -56,6 +57,7 @@ class CampaignRuntime:
         self.cinematics = cinematics or CinematicProgress.new(campaign_id, game.state.turn_order)
         self.cinematic_queue = list(cinematic_queue or [])
         self.pending_new_game_plus = copy.deepcopy(pending_new_game_plus)
+        self.game_mode = game_mode
         if self.boss_contract is not None:
             self.game.attach_boss_contract(self.boss_contract)
         self._ensure_final_contract()
@@ -72,6 +74,7 @@ class CampaignRuntime:
         enemies: EnemyCatalog,
         campaign_length: str,
         world_tier: int,
+        game_mode: str = "multiplayer",
     ) -> "CampaignRuntime":
         content = RuntimeContent(cards, items, enemies)
         game = GameEngine.new(
@@ -82,12 +85,14 @@ class CampaignRuntime:
             enemies=enemies,
             campaign_length=campaign_length,
             world_tier=world_tier,
+            game_mode=game_mode,
         )
         runtime = cls(
             campaign_id=campaign_id,
             game=game,
             content=content,
             loadouts=loadouts,
+            game_mode=game_mode,
         )
         runtime.cinematics.request("prologue", "campaign_started", blocking=True)
         runtime._enqueue_cinematic("departure", "campaign_departure", blocking=True)
@@ -103,6 +108,7 @@ class CampaignRuntime:
         items: ItemCatalog,
         enemies: EnemyCatalog,
         fallback_loadouts: Mapping[str, Mapping[str, str]],
+        game_mode: str = "multiplayer",
     ) -> "CampaignRuntime":
         content = RuntimeContent(cards, items, enemies)
         if int(value.get("runtime_version", 0)) != RUNTIME_VERSION:
@@ -116,6 +122,7 @@ class CampaignRuntime:
                 content=content,
                 loadouts=fallback_loadouts,
                 cinematics=cinematics,
+                game_mode=game.state.game_mode,
             )
         game = GameEngine.restore(value["game"], cards, items, enemies)
         boss = BossContract.restore(value["boss_contract"]) if value.get("boss_contract") else None
@@ -131,12 +138,14 @@ class CampaignRuntime:
             cinematics=cinematics,
             cinematic_queue=value.get("cinematic_queue", []),
             pending_new_game_plus=value.get("pending_new_game_plus"),
+            game_mode=str(value.get("game_mode", game.state.game_mode or game_mode)),
         )
 
     def export(self) -> dict[str, Any]:
         return {
             "runtime_version": RUNTIME_VERSION,
             "campaign_id": self.campaign_id,
+            "game_mode": self.game_mode,
             "loadouts": copy.deepcopy(self.loadouts),
             "game": self.game.export(),
             "boss_contract": self.boss_contract.export() if self.boss_contract else None,
@@ -150,6 +159,7 @@ class CampaignRuntime:
         if viewer_id not in self.game.state.players:
             raise RuleViolation("Unknown campaign member")
         view = self.game.client_view()
+        view["game_mode"] = self.game_mode
         view["boss_contract"] = self.boss_contract.public_view() if self.boss_contract else None
         view["postgame"] = self.postgame.public_view(viewer_id) if self.postgame else None
         view["cinematics"] = self.cinematics.public_view()
@@ -287,6 +297,7 @@ class CampaignRuntime:
             enemies=self.content.enemies,
             campaign_length=str(payload["campaign_length"]),
             world_tier=int(payload["world_tier"]),
+            game_mode=self.game_mode,
         )
         for profile_id, player in self.game.state.players.items():
             player.character_level = int(payload["character_levels"][profile_id])

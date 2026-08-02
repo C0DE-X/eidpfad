@@ -53,16 +53,21 @@ class GameEngine:
         campaign_length: str = "fieldzug",
         world_tier: int = 1,
         enemies: EnemyCatalog | None = None,
+        game_mode: str | None = None,
     ) -> GameEngine:
-        if len(loadouts) not in {1, 2}:
-            raise RuleViolation("Eidpfad requires one or two players")
+        game_mode = game_mode or ("singleplayer" if len(loadouts) == 1 else "multiplayer")
+        expected_players = 1 if game_mode == "singleplayer" else 2
+        if len(loadouts) != expected_players:
+            raise RuleViolation(f"{game_mode} requires exactly {expected_players} player(s)")
         card_catalog = catalog or CardCatalog()
         item_catalog = items or ItemCatalog()
         enemy_catalog = enemies or EnemyCatalog()
         rng = random.Random(seed)
         players: dict[str, PlayerState] = {}
         for profile_id, loadout in loadouts.items():
-            deck = card_catalog.starter_deck(loadout["weapon"], loadout["magic"])
+            deck = card_catalog.starter_deck(
+                loadout["weapon"], loadout["magic"], game_mode=game_mode
+            )
             rng.shuffle(deck)
             starting_weapon = item_catalog.STARTING_WEAPONS[loadout["weapon"]]
             players[profile_id] = PlayerState(
@@ -79,6 +84,7 @@ class GameEngine:
             seed=seed,
             players=players,
             turn_order=list(loadouts),
+            game_mode=game_mode,
             campaign_length=campaign_length,
             world_tier=world_tier,
             world=world,
@@ -177,8 +183,8 @@ class GameEngine:
         if card["kind"] == "reaction":
             raise RuleViolation("Reaction cards can only be played in an open reaction window")
         if card["kind"] == "cooperation":
-            if len(self.state.players) == 1:
-                return self._resolve_card(actor_id, card, explicit_targets, cooperative=True)
+            if self.state.game_mode == "singleplayer":
+                raise RuleViolation("Cooperation cards are unavailable in singleplayer")
             events = CooperationRules.propose(
                 self.state, actor_id, card_id, self.catalog, explicit_targets
             )
@@ -989,6 +995,10 @@ class GameEngine:
                 and card.get("school") in {player.weapon, player.magic, "universal"}
                 and int(card.get("unlock_level", 1)) <= self.state.scenario_index + 3
                 and card["id"] in filter_progression_rewards([card["id"]])
+                and (
+                    self.state.game_mode != "singleplayer"
+                    or self.catalog.is_solo_compatible(card)
+                )
             ]
             if not candidates:
                 candidates = [
@@ -996,6 +1006,10 @@ class GameEngine:
                     if card["id"] not in known
                     and card.get("school") in {player.weapon, player.magic, "universal"}
                     and card["id"] in filter_progression_rewards([card["id"]])
+                    and (
+                        self.state.game_mode != "singleplayer"
+                        or self.catalog.is_solo_compatible(card)
+                    )
                 ]
             if not candidates:
                 player.mastery_points += 1
@@ -1019,7 +1033,15 @@ class GameEngine:
         )
         owned = {item_id for player in self.state.players.values() for item_id in player.inventory}
         current_country = self.state.scenario["country_id"]
-        available = [item for item in self.items.items.values() if item["id"] not in owned]
+        available = [
+            item for item in self.items.items.values()
+            if item["id"] not in owned
+            and (
+                self.state.game_mode != "singleplayer"
+                or not item.get("granted_card")
+                or self.catalog.is_solo_compatible(self.catalog.get(str(item["granted_card"])))
+            )
+        ]
         guaranteed = [item for item in available if RARITY_RANK[item["rarity"]] >= minimum_rank]
         if not guaranteed:
             guaranteed = available
@@ -1256,10 +1278,28 @@ class GameEngine:
         difficulty = int(scenario["difficulty"])
         scaling = 1.0 + max(0, difficulty - 1) * 0.12 + max(0, self.state.world_tier - 1) * 0.15
         traits = list(definition["traits"])
-        hp = max(1, round(int(stats["hp"]) * scaling * (1.12 if "grave_resolve" in traits else 1.0)))
+        solo = self.state.game_mode == "singleplayer"
+        health_factor = 0.60 if solo else 1.0
+        hp = max(
+            1,
+            round(
+                int(stats["hp"])
+                * scaling
+                * (1.12 if "grave_resolve" in traits else 1.0)
+                * health_factor
+            ),
+        )
         armor = int(stats["armor"]) + difficulty // 3 + (2 if "salt_armor" in traits else 0) + (1 if "ember_skin" in traits else 0)
         ward_dice = min(MAX_DICE, int(stats["ward_dice"]) + difficulty // 6 + (1 if "prismatic_ward" in traits or "rift_shift" in traits else 0))
         block_dice = min(MAX_DICE, int(stats["block_dice"]) + difficulty // 5 + (1 if "thorn_rebuke" in traits else 0))
+        attack_dice = min(MAX_DICE, int(stats["attack_dice"]) + difficulty // 4)
+        damage_per_hit = int(stats["damage_per_hit"]) + difficulty // 5
+        if solo:
+            armor = max(0, armor - 1)
+            ward_dice = max(0, ward_dice - 1)
+            block_dice = max(0, block_dice - 1)
+            attack_dice = max(1, attack_dice - 1)
+            damage_per_hit = max(1, damage_per_hit - 1)
         block_threshold = 7 if "moon_veil" in traits else int(stats["block_threshold"])
         return EnemyState(
             enemy_id=enemy_id, name=definition["name"], role=definition["role"], hp=hp, max_hp=hp,
@@ -1268,9 +1308,9 @@ class GameEngine:
             block_threshold=block_threshold,
             ward_dice=ward_dice,
             ward_threshold=int(stats["ward_threshold"]),
-            attack_dice=min(MAX_DICE, int(stats["attack_dice"]) + difficulty // 4),
+            attack_dice=attack_dice,
             hit_threshold=int(stats["hit_threshold"]),
-            damage_per_hit=int(stats["damage_per_hit"]) + difficulty // 5,
+            damage_per_hit=damage_per_hit,
             elite=bool(definition.get("elite")), boss=bool(definition["boss"]),
             final_boss=bool(definition.get("final_boss")), traits=traits,
             intents=list(definition["intents"]), intent=str(definition["intents"][0]), art=str(definition["art"]),

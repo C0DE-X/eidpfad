@@ -58,11 +58,11 @@ def make_lines() -> list[dict[str, Any]]:
         "Doch jeder gebrochene Eid lockert eine Naht der Welt.",
         "Unser Auftrag klang einfach: einen Kartografen und seine Reliquie über die Grenze bringen.",
         "Dann kam der Hinterhalt, und mit ihm das Ende des Grauen Eids, wie wir ihn kannten.",
-        "Die Reliquie zerbrach zwischen uns und brannte ihr Zeichen in zwei Hände.",
-        "Seit dieser Nacht öffnet sich kein Eidpfad für einen von uns allein.",
-        "Wir sind keine Erwählten. Wir sind Söldner mit einem unbezahlten Auftrag.",
-        "Solange einer von uns steht, bleibt der Weg offen.",
-        "Solange beide zurückkehren, ist kein Scheitern endgültig.",
+        "Die Reliquie zerbrach und brannte ihr Zeichen in die Hand ihres letzten Trägers.",
+        "Seit dieser Nacht öffnet sich jeder Eidpfad nur noch für dieses Zeichen.",
+        "Hier marschieren keine Erwählten, sondern Söldner mit einem unbezahlten Auftrag.",
+        "Solange der Graue Eid steht, bleibt der Weg offen.",
+        "Solange sein Träger zurückkehrt, ist kein Scheitern endgültig.",
         "Also gehen wir weiter, Land für Land, bis zur Krone ohne Namen.",
         "Die letzte Wache fällt. Die Weltennaht liegt offen.",
         "Vor uns wartet kein König, sondern der Hunger aller vergessenen Namen.",
@@ -71,7 +71,7 @@ def make_lines() -> list[dict[str, Any]]:
         "Der erste Eidanker bricht. Die Festung verliert ihre Form.",
         "Der zweite Eidanker bricht. Fremde Länder stürzen in die Arena.",
         "Der dritte Eidanker bricht. Die Krone zeigt ihr wahres Gesicht.",
-        "Teilt den Schlag. Vereint die Würfel. Sprecht den letzten Eid.",
+        "Sammelt die Kraft. Werft die Würfel. Sprecht den letzten Eid.",
         "Die Krone ist gebrochen, doch die Pfade schweigen nicht.",
         "Hinter der Naht wartet eine andere Möglichkeit derselben Welt.",
         "Wir können sie versiegeln, zerstören, binden oder beherrschen.",
@@ -81,17 +81,17 @@ def make_lines() -> list[dict[str, Any]]:
         "Was wir nicht fanden, kann dort auf uns warten.",
         "Was wir nicht retteten, kann dort noch eine zweite Chance erhalten.",
         "Der Graue Eid endet nicht mit einem Sieg.",
-        "Er beginnt erneut, sobald zwei Schritte denselben Weg wählen.",
-        "Der Wegstein antwortet auf beide Zeichen.",
+        "Er beginnt erneut, sobald sein Zeichen den nächsten Weg wählt.",
+        "Der Wegstein antwortet auf das Zeichen.",
         "Eine neue Karte zeichnet sich aus Licht und Erinnerung.",
         "Die Grenzen verschieben sich. Der Seed der Welt steht fest.",
-        "Unsere Vorräte sind knapp, doch unser Eid ist vollständig.",
+        "Die Vorräte sind knapp, doch der Eid ist vollständig.",
         "Händler, Fraktionen und Bosse werden sich an unsere Entscheidungen erinnern.",
         "Die stärksten Relikte verändern Regeln, nicht nur Zahlen.",
-        "Ein Rückschlag führt uns zum letzten gemeinsamen Savepoint zurück.",
-        "Der Tod trennt uns nicht. Er zwingt uns nur, gemeinsam besser zu werden.",
-        "Atmet durch. Ordnet eure Karten. Der Pfad wartet.",
-        "Zwei Söldner. Ein Auftrag. Unzählige Welten.",
+        "Ein Rückschlag führt zum letzten sicheren Wegstein zurück.",
+        "Der Tod beendet den Auftrag nicht. Er verlangt nur einen besseren Versuch.",
+        "Atem holen. Karten ordnen. Der Pfad wartet.",
+        "Der Graue Eid. Ein Auftrag. Unzählige Welten.",
     ]
     for index, text in enumerate(plot_texts):
         speaker = "narrator" if index not in {8, 9, 11, 15, 19, 23, 29, 33, 38} else ("pathfinder" if index % 2 == 0 else "vanguard")
@@ -101,13 +101,13 @@ def make_lines() -> list[dict[str, Any]]:
         country_lines = [
             f"{country_name}. {hook}",
             f"Der Wegstein von {country_name} ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
-            "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+            "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
         ]
         for index, text in enumerate(country_lines):
             lines.append({"id": f"country_{country_id}_{index + 1}", "speaker": "narrator" if index == 0 else ("pathfinder" if index == 1 else "vanguard"), "text": text, "category": "country"})
 
     for kind, title, hook in SCENARIOS:
-        texts = [f"{title}. {hook}", "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.", "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam."]
+        texts = [f"{title}. {hook}", "Ausrüstung, Position und Aktionspunkte müssen vor dem ersten Zug stimmen.", "Schwächen lassen sich mit der richtigen Kartenfolge ausgleichen."]
         for index, text in enumerate(texts):
             lines.append({"id": f"scenario_{kind}_{index + 1}", "speaker": "pathfinder" if index != 1 else "vanguard", "text": text, "category": "scenario"})
 
@@ -133,20 +133,20 @@ def make_lines() -> list[dict[str, Any]]:
     hero_templates = {
         "pathfinder": [
             "Ich habe freie Sicht.", "Ziel markiert.", "Der Wind steht gut.", "Ich decke dich.", "Falle liegt.", "Ein Schritt nach links.",
-            "Rüstung gebrochen.", "Der nächste Pfeil sitzt.", "Bleib hinter mir.", "Ich brauche einen Augenblick.", "Magie sammelt sich.", "Der Pfad antwortet.",
-            "Noch eine Welle.", "Der Boss wechselt sein Muster.", "Jetzt gemeinsam.", "Ich bin getroffen.", "Es geht noch.", "Danke. Weiter.",
-            "Die Beute gehört uns beiden.", "Das ist selten.", "Dieser Weg ist neu.", "Ich kenne diese Spuren.", "Nicht stehen bleiben.", "Für den Grauen Eid.",
+            "Rüstung gebrochen.", "Der nächste Pfeil sitzt.", "Deckung halten.", "Ich brauche einen Augenblick.", "Magie sammelt sich.", "Der Pfad antwortet.",
+            "Noch eine Welle.", "Der Boss wechselt sein Muster.", "Jetzt zählt jeder Treffer.", "Ich bin getroffen.", "Es geht noch.", "Danke. Weiter.",
+            "Beute gesichert.", "Das ist selten.", "Dieser Weg ist neu.", "Ich kenne diese Spuren.", "Nicht stehen bleiben.", "Für den Grauen Eid.",
         ],
         "vanguard": [
             "Hinter meinen Schild.", "Ich halte die Linie.", "Jetzt kommt die Axt.", "Seine Deckung bricht.", "Ich ziehe den Angriff.", "Bleib an meiner Seite.",
             "Noch stehe ich.", "Der Schlag war nichts.", "Runen, jetzt.", "Ich brauche Heilung.", "Der Eid trägt uns.", "Keine Gnade für Eidbrecher.",
-            "Die nächste Welle gehört mir.", "Der Boss wird wütend.", "Gemeinsam zuschlagen.", "Das hat gesessen.", "Nur ein Kratzer.", "Gut abgefangen.",
+            "Die nächste Welle gehört mir.", "Der Boss wird wütend.", "Jetzt zuschlagen.", "Das hat gesessen.", "Nur ein Kratzer.", "Gut abgefangen.",
             "Wähle mit Bedacht.", "Eine starke Klinge.", "Der Wegstein erwacht.", "Hier stimmt etwas nicht.", "Vorwärts.", "Auftrag zu Ende bringen.",
         ],
         "duelist": [
             "Die linke Klinge zuerst.", "Zu langsam.", "Ich bin schon hinter ihm.", "Deckung ist nur eine Einladung.", "Wir schneiden einen Weg.", "Halte ihn einen Herzschlag.",
             "Meine Klingen antworten.", "Der nächste Schnitt entscheidet.", "Ich lenke sie ab.", "Ein kurzer Atemzug.", "Das Blutzeichen glüht.", "Der Pfad kennt meinen Schritt.",
-            "Noch mehr Ziele.", "Sein Rhythmus bricht.", "Beide Seiten, jetzt.", "Nur gestreift.", "Ich tanze noch.", "Sauber aufgefangen.",
+            "Noch mehr Ziele.", "Sein Rhythmus bricht.", "Doppelschlag, jetzt.", "Nur gestreift.", "Ich tanze noch.", "Sauber aufgefangen.",
             "Nimm, was zu deinem Stil passt.", "Diese Schneide hat Geschichte.", "Eine Abzweigung.", "Spuren auf Augenhöhe.", "Bleib in Bewegung.", "Unser Eid, unser Tempo.",
         ],
         "arbalist": [
@@ -154,6 +154,12 @@ def make_lines() -> list[dict[str, Any]]:
             "Panzerplatte gesprengt.", "Der nächste Bolzen durchschlägt.", "Ich halte Abstand.", "Nachladen.", "Runenladung bereit.", "Die Sehne antwortet.",
             "Welle bestätigt.", "Neue Bossfrequenz.", "Auf mein Signal.", "Treffer eingesteckt.", "System bleibt stabil.", "Gute Deckung.",
             "Prüf die Mechanik.", "Seltene Fertigung.", "Neue Route vermessen.", "Ich sehe den Hinterhalt.", "Position wechseln.", "Der Auftrag trifft ins Schwarze.",
+        ],
+        "swordmaster": [
+            "Die Klinge steht bereit.", "Gerade Linie.", "Halbschwertgriff.", "Die Hut hält.", "Der Ort ist gewählt.", "Kein Schritt zu viel.",
+            "Die Rüstung gibt nach.", "Der nächste Hieb entscheidet.", "Parade gesetzt.", "Ein Atemzug.", "Der Stahl trägt Runen.", "Der Pfad kennt diese Klinge.",
+            "Noch eine Welle.", "Das Muster ist erkannt.", "Jetzt fällt das Urteil.", "Der Treffer war flach.", "Der Stand bleibt fest.", "Saubere Parade.",
+            "Wähle nach Balance.", "Dieser Stahl erinnert sich.", "Ein neuer Pfad.", "Die Spur kreuzt sich.", "Im Maß bleiben.", "Für den ersten Eid.",
         ],
     }
     for speaker, texts in hero_templates.items():
@@ -175,13 +181,13 @@ def make_lines() -> list[dict[str, Any]]:
 
     tutorial = [
         "Jede Runde besitzt Angriff, Verteidigung, Magie und Vorbereitung.",
-        "Eure fünf Aktionspunkte gelten gemeinsam für alle vier Phasen.",
+        "Die fünf Aktionspunkte gelten übergreifend für alle vier Phasen.",
         "Ein Wurf von zwölf zählt als kritischer Doppelerfolg.",
         "Blockwürfel entfernen Treffer, Bannwürfel entfernen Magieerfolge.",
         "Ausrüstung kann Werte erhöhen und neue Karten freischalten.",
-        "Beide Spieler müssen ihre Beute wählen, bevor die Reise weitergeht.",
+        "Jeder Kampagnencharakter muss seine Beute wählen, bevor die Reise weitergeht.",
         "Nach einem Szenario werden Leben und Aktionspunkte vollständig erneuert.",
-        "Fällt ein Söldner, kehrt das Team zum letzten gemeinsamen Savepoint zurück.",
+        "Fällt ein Söldner, kehrt die Kampagne zum letzten sicheren Wegstein zurück.",
         "Untertitel, Stimmen und Dynamikbereich lassen sich getrennt einstellen.",
         "Cinematics können übersprungen werden; wichtige Hinweise bleiben im Log erhalten.",
     ]
@@ -191,18 +197,18 @@ def make_lines() -> list[dict[str, Any]]:
     ending_texts = {
         "seal": ("Wir versiegeln die Naht. Kein Name soll sie wieder öffnen.", "Die Pfade werden still, aber ihre Welt bleibt frei."),
         "destroy": ("Wir zerstören die Krone und jeden Weg, der zu ihr führt.", "Ein Teil der Welt vergeht, damit der Rest ohne Ketten leben kann."),
-        "bind": ("Wir binden die Krone an unseren gemeinsamen Eid.", "Ihre Macht bleibt, doch sie gehorcht fortan zwei Stimmen."),
+        "bind": ("Wir binden die Krone an den Grauen Eid.", "Ihre Macht bleibt, doch sie gehorcht fortan seinem Zeichen."),
         "dominate": ("Wir nehmen den namenlosen Thron für uns.", "Die Pfade knien – und jede kommende Welt wird unser Urteil kennen."),
     }
     for choice, texts in ending_texts.items():
         for index, text in enumerate(texts):
             lines.append({"id": f"ending_{choice}_{index + 1}", "speaker": "duelist" if index == 0 else "narrator", "text": text, "category": "ending"})
     lines.extend([
-        {"id": "legacy_1", "speaker": "arbalist", "text": "Ein Relikt pro Söldner übersteht das Weltenecho.", "category": "legacy"},
-        {"id": "legacy_2", "speaker": "narrator", "text": "Zwei Vermächtnisse werden in die Karte der nächsten Welt geschrieben.", "category": "legacy"},
+        {"id": "legacy_1", "speaker": "arbalist", "text": "Das stärkste Relikt jedes Söldners übersteht das Weltenecho.", "category": "legacy"},
+        {"id": "legacy_2", "speaker": "narrator", "text": "Die Vermächtnisse werden in die Karte der nächsten Welt geschrieben.", "category": "legacy"},
     ])
 
-    assert len(lines) == 336, len(lines)
+    assert len(lines) == 360, len(lines)
     assert len({line["id"] for line in lines}) == len(lines)
     return lines
 
@@ -259,6 +265,7 @@ def main() -> None:
         "vanguard": {"voice": "de+m4", "speed": 158, "pitch": 32},
         "duelist": {"voice": "de+f4", "speed": 181, "pitch": 61},
         "arbalist": {"voice": "de+m2", "speed": 148, "pitch": 27},
+        "swordmaster": {"voice": "de+m5", "speed": 154, "pitch": 34},
         "mentor": {"voice": "de+f2", "speed": 162, "pitch": 48},
     }
     for country_id, _name, _hook in COUNTRIES:
@@ -280,7 +287,7 @@ def main() -> None:
     write_json(CLIENT_NARRATIVE / "voice_manifest.de-DE.json", manifest)
     write_json(CLIENT_NARRATIVE / "de-DE.json", locale)
     write_json(CLIENT_NARRATIVE / "cinematics.json", cinematics)
-    print("Generated 48 cinematics and 336 German voice/subtitle lines")
+    print("Generated 48 cinematics and 360 German voice/subtitle lines")
 
 
 if __name__ == "__main__":

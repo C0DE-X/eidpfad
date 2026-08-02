@@ -1,23 +1,23 @@
 # GitHub-Repository einrichten
 
-Der Quellbaum ist fuer ein privates GitHub-Repository vorbereitet. Die grossen
-Laufzeitassets unter `client/assets/` werden ueber Git LFS versioniert. Lokale
+Der Quellbaum ist fuer ein privates GitHub-Repository vorbereitet. Binaere
+Laufzeitassets unter `client/assets/` werden reproduzierbar aus eingecheckten
+Python-/Node-Generatoren erzeugt und nicht im Repository gespeichert. Lokale
 Konfigurationen, virtuelle Umgebungen, Godot-Importdaten, Node-Module und
 Buildartefakte sind ausgeschlossen.
 
 ## Voraussetzungen
 
 - Git 2.28 oder neuer
-- Git LFS
 - Python 3.12 oder neuer fuer lokale Tests
+- Node.js 24 fuer die Offline-Voice-Erzeugung
 - Godot in der Version aus `.godot-version` fuer Clienttests und Exporte
 
 Unter Debian/WSL:
 
 ```bash
 sudo apt update
-sudo apt install git git-lfs make python3 python3-venv
-git lfs install
+sudo apt install git make python3 python3-venv nodejs npm
 ```
 
 ## Erster Import
@@ -27,8 +27,8 @@ README-, Lizenz- oder `.gitignore`-Datei anlegen. Danach im Projektwurzelverzeic
 
 ```bash
 git init -b main
-git lfs install
 make setup
+make content
 git add .
 make repository-check
 git status --short
@@ -38,37 +38,31 @@ git push -u origin main
 ```
 
 `make repository-check` muss nach `git add .` laufen. Es prueft den tatsaechlich
-zu commitenden Git-Index, lehnt lokale/generierte Dateien und zu grosse Git-Blobs
-ab und stellt sicher, dass `GLB`, `PNG` und `WAV` als LFS-Pointer gespeichert
-werden. Die erwartete Kontrolle zeigt 707 LFS-Assets.
+zu commitenden Git-Index, lehnt lokale und zu grosse Git-Blobs ab und stellt
+sicher, dass generierte `GLB`, `PNG` und `WAV` nicht versehentlich eingecheckt
+werden. Die CI erzeugt diese Dateien vor Assetvalidierung und Godot-Import neu.
 
 Vor dem Commit sollten insbesondere keine Eintraege aus `dist/`, `node_modules/`,
 `.venv/`, `.godot/` oder eine echte `.env` in `git status` erscheinen.
 
 ## Weitere Arbeitskopien
 
-Auf jedem Rechner Git LFS einmal installieren, bevor das Repository geklont wird:
+Auf jedem Rechner werden nach dem Klonen Abhaengigkeiten und Laufzeitassets erzeugt:
 
 ```bash
-git lfs install
 git clone git@github.com:BENUTZER/EIDPFAD-REPOSITORY.git
 cd EIDPFAD-REPOSITORY
 make setup
+make content
 make validate
-```
-
-Fehlen nach einem Clone Assets, koennen sie explizit nachgeladen werden:
-
-```bash
-git lfs pull
 ```
 
 ## GitHub Actions
 
 Der Workflow `CI` startet bei jedem Pull Request und bei Pushes nach `main`:
 
-- Repository- und LFS-Pruefung
-- 101 Server-Regressions- und Integrationstests plus Assetvalidator
+- Repository- und Generatorhygiene
+- 110 Server-Regressions- und Integrationstests plus Assetvalidator
 - Import mit der in `.godot-version` festgelegten Godot-Version, einschliesslich
   Ablehnung von GDScript-Parserfehlern
 - Compose-Konfigurationspruefung und Build des Servercontainers
@@ -83,13 +77,12 @@ Als Branch-Schutz fuer `main` sollten mindestens die vier CI-Checks
 `Repository hygiene`, `Rules and asset references`, `Godot import and GDScript
 parse` und `Server container` verpflichtend sein.
 
-## Bestehende Git-Historie
+## Reproduzierbarkeit
 
-Die obige Reihenfolge gilt fuer den ersten Commit. Falls die binaeren Assets
-bereits als normale Git-Blobs committed wurden, reicht ein spaeteres
-`.gitattributes` nicht aus. Dann muss die Historie mit `git lfs migrate import`
-neu geschrieben und anschliessend kontrolliert gepusht werden. Vor einer solchen
-Historienumschreibung ist ein separates Backup erforderlich.
+`make content` erzeugt Karten-/Gegenstandsdefinitionen, Rasterbilder, Audio,
+Voice und GLB-Modelle deterministisch. Aenderungen an eingecheckten generierten
+JSON-/SVG-Quellen werden von der CI mit `git diff --exit-code` erkannt. So bleibt
+ein frischer Clone ohne externe Assetablage vollstaendig baubar.
 
 ## Lizenz und Sichtbarkeit
 

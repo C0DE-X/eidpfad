@@ -40,7 +40,7 @@ anschließenden vollständigen Release-Bot-Lauf sichtbar und ebenfalls behoben:
 | P2.5 | Progression läuft aus | Kartenfreischaltung geht in Talent- und Charakterlevel-Fortschritt über; Legacy und Weltrang setzen danach fort. | Progressions-/Postgame-Tests |
 | P2.6 | Verlauf wächst unbeschränkt | Historie auf 500 Events begrenzt; Checkpoint enthält weder sich selbst noch alte Historie. | Export-/Größentest |
 | P2.7 | Schema und Pydantic driften | Strikt diskriminierte Nachrichtenunion deckt alle Kampf-, Auswahl-, Cinematic- und Postgame-Aktionen ab. | Protokolltests und JSON-Schema |
-| P2.8 | Cinematics nicht reconnectfest | Serverpersistierter Cinematic-Fortschritt mit blockierendem Zwei-Spieler-Ack, Queue, Skip und Viewer-State. | Cinematic-Progress- und Restore-Tests |
+| P2.8 | Cinematics nicht reconnectfest | Serverpersistierter Cinematic-Fortschritt mit blockierendem Teilnehmer-Ack, Queue, Skip und Viewer-State. | Cinematic-Progress- und Restore-Tests |
 
 ## Kollisionsrefactoring
 
@@ -64,22 +64,22 @@ anschließenden vollständigen Release-Bot-Lauf sichtbar und ebenfalls behoben:
 | Karten | 128 |
 | Gegenstände | 128 |
 | regionale Gegner | 140 |
-| GLB-Modelle | 309 |
-| SVG-Assets | 440 |
+| GLB-Modelle | 334 |
+| SVG-Assets | 480 |
 | PNG-Assets | 25 |
 | Audio ohne Voice | 37 |
-| deutsche Voice-Zeilen | 336 |
+| deutsche Voice-Zeilen | 360 |
 | Cinematics | 48 |
-| Manifestreferenzen | 1.151 |
+| Manifestreferenzen | 1.241 |
 
-Alle 309 GLBs besitzen gültige glTF-2.0-Strukturen. Figuren enthalten eine gebackene
+Alle 334 GLBs besitzen gültige glTF-2.0-Strukturen. Figuren enthalten eine gebackene
 Bind-Pose, sieben semantische Gelenke, Skins, Weights, inverse Bind-Matrizen, eingebettete
 Textur, Materialparameter, LOD-Metadaten und 14 benannte Animationsclips. Der offizielle
 Khronos-Validator meldet 0 Fehler und 0 Warnungen über die komplette Modellbibliothek.
 
 ## Abschlussprüfung
 
-- 101 Python-Regel-, Match-, Persistenz- und Integrationstests bestanden
+- 110 Python-Regel-, Match-, Persistenz- und Integrationstests bestanden
 - zehn GDScript-Dateien erfolgreich geparst
 - sämtliche JSON-Dateien und der Python-Quellcode erfolgreich geladen/kompiliert
 - frische Alembic-Migration auf SQLite erfolgreich ausgeführt

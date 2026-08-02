@@ -109,7 +109,7 @@ def character_levels_after_campaign(
 
 
 class Postgame:
-    """Reconnect-safe two-player postgame state machine."""
+    """Reconnect-safe postgame state machine for every campaign participant."""
 
     def __init__(self, state: PostgameState) -> None:
         if len(set(state.player_ids)) not in {1, 2}:

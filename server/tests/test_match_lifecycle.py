@@ -190,6 +190,15 @@ class MatchLifecycleTests(DatabaseMixin, unittest.IsolatedAsyncioTestCase):
         self.assertEqual(starts_after, starts_before)
         self.assertEqual(self.campaign.status, "playing")
 
+    async def test_multiplayer_ready_requires_both_connected_members(self) -> None:
+        lobbies.connections[self.campaign.id].pop(self.player_ids[1])
+
+        with self.assertRaisesRegex(RuleViolation, "both players"):
+            await self._ready(self.player_ids[0])
+
+        self.assertFalse(lobbies.ready.get(self.campaign.id, set()))
+        self.assertEqual(self.campaign.status, "waiting")
+
     async def test_singleplayer_starts_with_one_connected_ready_profile(self) -> None:
         solo = Campaign(
             id="campaign-solo", invite_code="SOLO12", owner_profile_id=self.player_ids[0],

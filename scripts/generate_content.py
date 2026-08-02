@@ -21,6 +21,44 @@ ROOT = Path(__file__).resolve().parents[1]
 SHARED = ROOT / "shared"
 CLIENT_ASSETS = ROOT / "client" / "assets"
 RARITIES = ("normal", "rare", "enhanced", "exceptional", "legendary", "unique")
+RARITY_LABELS = {
+    "normal": "gewöhnliche",
+    "rare": "seltene",
+    "enhanced": "verbesserte",
+    "exceptional": "außergewöhnliche",
+    "legendary": "legendäre",
+    "unique": "einzigartige",
+}
+SCHOOL_LABELS = {
+    "dual_blades": "Zwillingsklingen",
+    "axe": "Axt",
+    "bow": "Langbogen",
+    "crossbow": "Armbrust",
+    "longsword": "Langschwert",
+}
+STATUS_LABELS = {
+    "aimed": "Fokus",
+    "arcane_link": "Arkanes Band",
+    "bleeding": "Blutung",
+    "bound": "Gebunden",
+    "burning": "Brennen",
+    "coordinated": "Abgestimmt",
+    "exposed": "Entblößt",
+    "final_oath": "Letzter Eid",
+    "fury": "Kampfrausch",
+    "last_oath": "Letzter Schwur",
+    "marked": "Markiert",
+    "oath_power": "Eidkraft",
+    "weakened": "Geschwächt",
+}
+BONUS_LABELS = {
+    "attack_dice": "Angriffswürfel",
+    "block_break": "Blockbruch",
+    "block_dice": "Blockwürfel",
+    "critical_min": "kritische Treffer",
+    "damage_per_hit": "Trefferschaden",
+    "hit_threshold_modifier": "Trefferchance",
+}
 
 
 def slug(value: str) -> str:
@@ -84,7 +122,8 @@ def effect_text(effect: dict[str, Any]) -> str:
         extra = f", bricht {effect['armor_per_success']} Rüstung" if effect.get("armor_per_success") else ""
         return f"{effect['count']} W12 auf {effect['threshold']}+; {effect['damage_per_success']} Schaden je Erfolg{extra}"
     if kind == "dice_magic_damage":
-        status = f" und {effect['status'].title()} {amount}" if effect.get("status") else ""
+        status_name = STATUS_LABELS.get(str(effect.get("status", "")), str(effect.get("status", "")))
+        status = f" und {status_name} {amount}" if effect.get("status") else ""
         return f"{effect['count']} Magie-W12 auf {effect['threshold']}+; {effect['damage_per_success']} Schaden je ungebanntem Erfolg{status}"
     labels = {
         "add_block_dice_self": f"+{amount} Block-W12 für dich",
@@ -102,9 +141,9 @@ def effect_text(effect: dict[str, Any]) -> str:
         "guard_self": f"erhalte {amount} Schutz",
         "cleanse": "entferne einen negativen Zustand",
         "armor_break": f"zerbrich {amount} Rüstung",
-        "enemy_status": f"verursache {effect.get('status', 'Status').title()} {amount}",
-        "self_status": f"erhalte {effect.get('status', 'Status').title()} {amount}",
-        "team_status": f"beide erhalten {effect.get('status', 'Status').title()} {amount}",
+        "enemy_status": f"verursache {STATUS_LABELS.get(str(effect.get('status', '')), 'Status')} {amount}",
+        "self_status": f"erhalte {STATUS_LABELS.get(str(effect.get('status', '')), 'Status')} {amount}",
+        "team_status": f"beide erhalten {STATUS_LABELS.get(str(effect.get('status', '')), 'Status')} {amount}",
         "exhaust": "erschöpfen",
     }
     return labels.get(kind, kind)
@@ -157,6 +196,35 @@ def rarity_for(index: int) -> str:
 
 
 def weapon_card(school: str, index: int, name: str) -> dict[str, Any]:
+    if school == "longsword":
+        designs: list[tuple[str, str, int, list[dict[str, Any]]]] = [
+            ("attack", "weapon", 1, [{"type": "dice_attack", "count": 3, "threshold": 7, "damage_per_success": 3}]),
+            ("attack", "weapon", 2, [{"type": "dice_attack", "count": 2, "threshold": 6, "damage_per_success": 2, "armor_per_success": 1}]),
+            ("defense", "defense", 1, [{"type": "add_block_dice_self", "amount": 2}, {"type": "guard_self", "amount": 1}]),
+            ("defense", "defense", 1, [{"type": "add_block_dice_self", "amount": 3}]),
+            ("utility", "utility", 1, [{"type": "self_status", "status": "aimed", "amount": 1}, {"type": "draw_cards", "amount": 1}]),
+            ("attack", "weapon", 2, [{"type": "dice_attack", "count": 3, "threshold": 7, "damage_per_success": 2}, {"type": "enemy_status", "status": "bleeding", "amount": 2}]),
+            ("defense", "defense", 1, [{"type": "add_block_dice_self", "amount": 2}, {"type": "guard_self", "amount": 2}]),
+            ("attack", "weapon", 3, [{"type": "dice_attack", "count": 5, "threshold": 9, "damage_per_success": 4}, {"type": "exhaust"}]),
+            ("utility", "utility", 2, [{"type": "apply_weapon_coating", "amount": 3}, {"type": "exhaust"}]),
+            ("attack", "weapon", 2, [{"type": "dice_attack", "count": 3, "threshold": 6, "damage_per_success": 2}, {"type": "gain_action_points", "amount": 1}]),
+            ("defense", "reaction", 1, [{"type": "add_block_dice_self", "amount": 4}, {"type": "exhaust"}]),
+            ("utility", "utility", 2, [{"type": "set_trap", "amount": 3}, {"type": "guard_self", "amount": 2}]),
+            ("attack", "weapon", 2, [{"type": "dice_attack", "count": 4, "threshold": 7, "damage_per_success": 3, "armor_per_success": 1}]),
+            ("attack", "weapon", 3, [{"type": "dice_attack", "count": 4, "threshold": 7, "damage_per_success": 4}, {"type": "self_damage", "amount": 2}]),
+            ("defense", "reaction", 1, [{"type": "add_block_dice_self", "amount": 2}, {"type": "draw_cards", "amount": 1}]),
+            ("utility", "cooperation", 2, [{"type": "team_status", "status": "coordinated", "amount": 2}, {"type": "draw_cards", "amount": 2}]),
+        ]
+        phase, kind, cost, effects = designs[index]
+        identifier = slug(name)
+        return {
+            "id": identifier, "name": name, "kind": kind, "school": school,
+            "phase": phase, "action_point_cost": cost, "rarity": rarity_for(index),
+            "starter": index in {0, 3, 4}, "unlock_level": 1 + index // 2,
+            "text": "; ".join(effect_text(effect) for effect in effects).capitalize() + ".",
+            "effects": effects, "art": f"res://assets/cards/{identifier}.svg",
+            "keywords": sorted({effect.get("status", effect["type"]) for effect in effects}),
+        }
     status = {"dual_blades": "bleeding", "axe": "exposed", "bow": "marked", "crossbow": "weakened", "longsword": "exposed"}[school]
     pattern = index % 16
     phase, kind, cost = "attack", "weapon", 1 + (index % 3 == 1)
@@ -307,7 +375,12 @@ def make_weapon_items() -> list[dict[str, Any]]:
                 "id": identifier, "name": name, "slot": "weapon", "rarity": rarity,
                 "weapon_school": school, "country_affinity": COUNTRY_IDS[index % len(COUNTRY_IDS)],
                 "drop_weight": max(1, 10 - rank * 2), "bonuses": bonuses,
-                "description": f"Eine {rarity}-Waffe der Schule {school}; verändert Würfelpool und Kampfrhythmus.",
+                "description": (
+                    f"{name} ist eine {RARITY_LABELS[rarity]} {SCHOOL_LABELS[school]}-Waffe aus "
+                    f"{COUNTRY_IDS[index % len(COUNTRY_IDS)].replace('_', ' ').title()}. "
+                    f"Sie prägt den Kampfstil mit {', '.join(BONUS_LABELS[key] for key in sorted(bonuses))} und schaltet "
+                    f"„{WEAPON_NAMES[school][index % 16]}“ frei."
+                ),
                 "granted_card": slug(WEAPON_NAMES[school][index % 16]),
                 "art": f"res://assets/items/{identifier}.svg",
             })
