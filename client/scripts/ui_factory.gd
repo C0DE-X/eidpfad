@@ -14,6 +14,8 @@ static func button(caption: String) -> Button:
 	var result := Button.new()
 	result.text = caption
 	result.custom_minimum_size = Vector2(0, 38)
+	result.expand_icon = true
+	result.add_theme_constant_override("icon_max_width", 24)
 	return result
 
 

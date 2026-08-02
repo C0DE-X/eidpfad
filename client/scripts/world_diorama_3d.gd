@@ -44,10 +44,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_animation_time += delta
-	if _viewport != null:
-		var desired := Vector2i(maxi(640, int(size.x * _render_scale)), maxi(320, int(size.y * _render_scale)))
-		if _viewport.size != desired:
-			_viewport.size = desired
 	if _loot_root != null and _loot_root.visible:
 		for index in _loot_root.get_child_count():
 			var model := _loot_root.get_child(index) as Node3D
