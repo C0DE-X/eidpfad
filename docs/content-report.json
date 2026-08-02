@@ -5,30 +5,30 @@
     "enemies": 2
   },
   "counts": {
-    "cards": 128,
-    "items": 128,
+    "cards": 144,
+    "items": 152,
     "enemies": 140,
     "cinematics": 48,
-    "voice_lines": 336,
-    "svg_assets": 440,
-    "png_assets": 25,
-    "glb_assets": 309,
+    "voice_lines": 360,
+    "svg_assets": 480,
+    "png_assets": 26,
+    "glb_assets": 334,
     "audio_assets": 37,
-    "manifest_references": 1151
+    "manifest_references": 1241
   },
   "cards_by_phase": {
-    "attack": 35,
-    "defense": 30,
+    "attack": 42,
+    "defense": 35,
     "magic": 29,
-    "utility": 34
+    "utility": 38
   },
   "cards_by_rarity": {
-    "enhanced": 18,
-    "exceptional": 14,
-    "legendary": 14,
-    "normal": 31,
-    "rare": 36,
-    "unique": 15
+    "enhanced": 20,
+    "exceptional": 16,
+    "legendary": 16,
+    "normal": 35,
+    "rare": 40,
+    "unique": 17
   },
   "items_by_slot": {
     "alchemy": 4,
@@ -36,15 +36,15 @@
     "offhand": 2,
     "relic": 4,
     "talisman": 6,
-    "weapon": 96
+    "weapon": 120
   },
   "items_by_rarity": {
-    "enhanced": 19,
-    "exceptional": 23,
-    "legendary": 22,
-    "normal": 23,
-    "rare": 22,
-    "unique": 19
+    "enhanced": 23,
+    "exceptional": 27,
+    "legendary": 26,
+    "normal": 27,
+    "rare": 26,
+    "unique": 23
   },
   "enemies_by_role": {
     "assassin": 14,
@@ -92,23 +92,23 @@
     }
   },
   "asset_manifest": {
-    "card_icons": 128,
-    "item_icons": 128,
+    "card_icons": 144,
+    "item_icons": 152,
     "enemy_icons": 140,
-    "item_models": 128,
+    "item_models": 152,
     "enemy_models": 140,
-    "character_models": 4,
+    "character_models": 5,
     "country_icons": 14,
     "country_models": 14,
     "prop_models": 22,
     "dice_models": 1,
     "ui_icons": 21,
     "vfx": 8,
-    "raster": 20,
+    "raster": 21,
     "logo": 1,
     "animation_profiles": 1,
     "audio": 37,
-    "voice": 336,
+    "voice": 360,
     "cinematic_plates": 5,
     "narrative_manifests": 3
   },

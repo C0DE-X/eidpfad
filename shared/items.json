@@ -13,7 +13,7 @@
         "attack_dice": 0,
         "damage_per_hit": 0
       },
-      "description": "Eine normal-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Abgenutzte Zwillingsklingen ist eine gewöhnliche Zwillingsklingen-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Kreuzschnitt“ frei.",
       "granted_card": "kreuzschnitt",
       "art": "res://assets/items/worn_dual_blades.svg",
       "model": "res://assets/models/items/worn_dual_blades.glb"
@@ -30,7 +30,7 @@
         "attack_dice": 0,
         "damage_per_hit": 1
       },
-      "description": "Eine normal-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Krähenmesser ist eine gewöhnliche Zwillingsklingen-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Sehnenhieb“ frei.",
       "granted_card": "sehnenhieb",
       "art": "res://assets/items/krahenmesser.svg",
       "model": "res://assets/models/items/krahenmesser.glb"
@@ -47,7 +47,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine normal-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Kupferzähne ist eine gewöhnliche Zwillingsklingen-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Roter Reigen“ frei.",
       "granted_card": "roter_reigen",
       "art": "res://assets/items/kupferzahne.svg",
       "model": "res://assets/models/items/kupferzahne.glb"
@@ -64,7 +64,7 @@
         "attack_dice": 0,
         "damage_per_hit": 0
       },
-      "description": "Eine normal-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Moorhaken ist eine gewöhnliche Zwillingsklingen-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Gekreuzte Klingen“ frei.",
       "granted_card": "gekreuzte_klingen",
       "art": "res://assets/items/moorhaken.svg",
       "model": "res://assets/models/items/moorhaken.glb"
@@ -81,7 +81,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine rare-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Dornschwestern ist eine seltene Zwillingsklingen-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Klingenfokus“ frei.",
       "granted_card": "klingenfokus",
       "art": "res://assets/items/dornschwestern.svg",
       "model": "res://assets/models/items/dornschwestern.glb"
@@ -99,7 +99,7 @@
         "damage_per_hit": 0,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine rare-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Salzklingen ist eine seltene Zwillingsklingen-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Aderlass“ frei.",
       "granted_card": "aderlass",
       "art": "res://assets/items/salzklingen.svg",
       "model": "res://assets/models/items/salzklingen.glb"
@@ -116,7 +116,7 @@
         "attack_dice": 0,
         "damage_per_hit": 1
       },
-      "description": "Eine rare-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Spiegelpaar ist eine seltene Zwillingsklingen-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Schulter an Schulter“ frei.",
       "granted_card": "schulter_an_schulter",
       "art": "res://assets/items/spiegelpaar.svg",
       "model": "res://assets/models/items/spiegelpaar.glb"
@@ -133,7 +133,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine rare-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Glutdolche ist eine seltene Zwillingsklingen-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Tausend Schnitte“ frei.",
       "granted_card": "tausend_schnitte",
       "art": "res://assets/items/glutdolche.svg",
       "model": "res://assets/models/items/glutdolche.glb"
@@ -150,7 +150,7 @@
         "attack_dice": 1,
         "damage_per_hit": 1
       },
-      "description": "Eine enhanced-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Frostfang-Duo ist eine verbesserte Zwillingsklingen-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Ätzende Schneiden“ frei.",
       "granted_card": "atzende_schneiden",
       "art": "res://assets/items/frostfang_duo.svg",
       "model": "res://assets/models/items/frostfang_duo.glb"
@@ -168,7 +168,7 @@
         "damage_per_hit": 2,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine enhanced-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sturmtänzer ist eine verbesserte Zwillingsklingen-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Schattenstich“ frei.",
       "granted_card": "schattenstich",
       "art": "res://assets/items/sturmtanzer.svg",
       "model": "res://assets/models/items/sturmtanzer.glb"
@@ -186,7 +186,7 @@
         "damage_per_hit": 0,
         "block_dice": 1
       },
-      "description": "Eine enhanced-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Wurzelreißer ist eine verbesserte Zwillingsklingen-Waffe aus Nachtkrone. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Wirbelparade“ frei.",
       "granted_card": "wirbelparade",
       "art": "res://assets/items/wurzelreier.svg",
       "model": "res://assets/models/items/wurzelreier.glb"
@@ -203,7 +203,7 @@
         "attack_dice": 1,
         "damage_per_hit": 1
       },
-      "description": "Eine enhanced-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Nachtfinken ist eine verbesserte Zwillingsklingen-Waffe aus Sturmmarsch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Klingenfalle“ frei.",
       "granted_card": "klingenfalle",
       "art": "res://assets/items/nachtfinken.svg",
       "model": "res://assets/models/items/nachtfinken.glb"
@@ -220,7 +220,7 @@
         "attack_dice": 1,
         "damage_per_hit": 0
       },
-      "description": "Eine exceptional-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Flutklingen ist eine außergewöhnliche Zwillingsklingen-Waffe aus Versunkener Bund. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Tanz der Narben“ frei.",
       "granted_card": "tanz_der_narben",
       "art": "res://assets/items/flutklingen.svg",
       "model": "res://assets/models/items/flutklingen.glb"
@@ -238,7 +238,7 @@
         "damage_per_hit": 1,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine exceptional-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Knochensicheln ist eine außergewöhnliche Zwillingsklingen-Waffe aus Weltennaht. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Letzter Herzschlag“ frei.",
       "granted_card": "letzter_herzschlag",
       "art": "res://assets/items/knochensicheln.svg",
       "model": "res://assets/models/items/knochensicheln.glb"
@@ -256,7 +256,7 @@
         "damage_per_hit": 2,
         "block_dice": 1
       },
-      "description": "Eine exceptional-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sonnenzwillinge ist eine außergewöhnliche Zwillingsklingen-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Blitzreflex“ frei.",
       "granted_card": "blitzreflex",
       "art": "res://assets/items/sonnenzwillinge.svg",
       "model": "res://assets/models/items/sonnenzwillinge.glb"
@@ -274,7 +274,7 @@
         "damage_per_hit": 0,
         "block_break": 1
       },
-      "description": "Eine exceptional-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Aschenreigen ist eine außergewöhnliche Zwillingsklingen-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, Trefferschaden und schaltet „Blutsbrüder“ frei.",
       "granted_card": "blutsbruder",
       "art": "res://assets/items/aschenreigen.svg",
       "model": "res://assets/models/items/aschenreigen.glb"
@@ -292,7 +292,7 @@
         "damage_per_hit": 2,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Duellantenhaken ist eine legendäre Zwillingsklingen-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Kreuzschnitt“ frei.",
       "granted_card": "kreuzschnitt",
       "art": "res://assets/items/duelist_hooks.svg",
       "model": "res://assets/models/items/duelist_hooks.glb"
@@ -311,7 +311,7 @@
         "hit_threshold_modifier": -1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Runenpaar ist eine legendäre Zwillingsklingen-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Sehnenhieb“ frei.",
       "granted_card": "sehnenhieb",
       "art": "res://assets/items/runenpaar.svg",
       "model": "res://assets/models/items/runenpaar.glb"
@@ -330,7 +330,7 @@
         "block_dice": 1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sternenschnitter ist eine legendäre Zwillingsklingen-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Roter Reigen“ frei.",
       "granted_card": "roter_reigen",
       "art": "res://assets/items/sternenschnitter.svg",
       "model": "res://assets/models/items/sternenschnitter.glb"
@@ -349,7 +349,7 @@
         "block_break": 1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Blutmondklingen ist eine legendäre Zwillingsklingen-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Gekreuzte Klingen“ frei.",
       "granted_card": "gekreuzte_klingen",
       "art": "res://assets/items/blutmondklingen.svg",
       "model": "res://assets/models/items/blutmondklingen.glb"
@@ -367,7 +367,7 @@
         "damage_per_hit": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Eidbrecher-Duo ist eine einzigartige Zwillingsklingen-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Klingenfokus“ frei.",
       "granted_card": "klingenfokus",
       "art": "res://assets/items/eidbrecher_duo.svg",
       "model": "res://assets/models/items/eidbrecher_duo.glb"
@@ -386,7 +386,7 @@
         "hit_threshold_modifier": -1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Schweigende Schwestern ist eine einzigartige Zwillingsklingen-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Aderlass“ frei.",
       "granted_card": "aderlass",
       "art": "res://assets/items/schweigende_schwestern.svg",
       "model": "res://assets/models/items/schweigende_schwestern.glb"
@@ -405,7 +405,7 @@
         "block_dice": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Weltennahtmesser ist eine einzigartige Zwillingsklingen-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Schulter an Schulter“ frei.",
       "granted_card": "schulter_an_schulter",
       "art": "res://assets/items/weltennahtmesser.svg",
       "model": "res://assets/models/items/weltennahtmesser.glb"
@@ -424,7 +424,7 @@
         "block_break": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Erste und Letzte Klinge ist eine einzigartige Zwillingsklingen-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Tausend Schnitte“ frei.",
       "granted_card": "tausend_schnitte",
       "art": "res://assets/items/erste_und_letzte_klinge.svg",
       "model": "res://assets/models/items/erste_und_letzte_klinge.glb"
@@ -441,7 +441,7 @@
         "attack_dice": 0,
         "damage_per_hit": 0
       },
-      "description": "Eine normal-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Söldneraxt ist eine gewöhnliche Axt-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Eisenbrecher“ frei.",
       "granted_card": "eisenbrecher",
       "art": "res://assets/items/worn_axe.svg",
       "model": "res://assets/models/items/worn_axe.glb"
@@ -458,7 +458,7 @@
         "attack_dice": 0,
         "damage_per_hit": 1
       },
-      "description": "Eine normal-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Krähenbeil ist eine gewöhnliche Axt-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Schädelspalter“ frei.",
       "granted_card": "schadelspalter",
       "art": "res://assets/items/krahenbeil.svg",
       "model": "res://assets/models/items/krahenbeil.glb"
@@ -475,7 +475,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine normal-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Kupferhacke ist eine gewöhnliche Axt-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Standhalten“ frei.",
       "granted_card": "standhalten",
       "art": "res://assets/items/kupferhacke.svg",
       "model": "res://assets/models/items/kupferhacke.glb"
@@ -492,7 +492,7 @@
         "attack_dice": 0,
         "damage_per_hit": 0
       },
-      "description": "Eine normal-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Moorspalter ist eine gewöhnliche Axt-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Urteil des Henkers“ frei.",
       "granted_card": "urteil_des_henkers",
       "art": "res://assets/items/moorspalter.svg",
       "model": "res://assets/models/items/moorspalter.glb"
@@ -509,7 +509,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine rare-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Dornbeißer ist eine seltene Axt-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Schwerer Atem“ frei.",
       "granted_card": "schwerer_atem",
       "art": "res://assets/items/dornbeier.svg",
       "model": "res://assets/models/items/dornbeier.glb"
@@ -527,7 +527,7 @@
         "damage_per_hit": 0,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine rare-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Salzbeil ist eine seltene Axt-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Kniespalter“ frei.",
       "granted_card": "kniespalter",
       "art": "res://assets/items/salzbeil.svg",
       "model": "res://assets/models/items/salzbeil.glb"
@@ -544,7 +544,7 @@
         "attack_dice": 0,
         "damage_per_hit": 1
       },
-      "description": "Eine rare-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Spiegelaxt ist eine seltene Axt-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Eiserner Wall“ frei.",
       "granted_card": "eiserner_wall",
       "art": "res://assets/items/spiegelaxt.svg",
       "model": "res://assets/models/items/spiegelaxt.glb"
@@ -561,7 +561,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine rare-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Glutschneide ist eine seltene Axt-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Berserkersturm“ frei.",
       "granted_card": "berserkersturm",
       "art": "res://assets/items/glutschneide.svg",
       "model": "res://assets/models/items/glutschneide.glb"
@@ -578,7 +578,7 @@
         "attack_dice": 1,
         "damage_per_hit": 1
       },
-      "description": "Eine enhanced-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Axt des Winterfürsten ist eine verbesserte Axt-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Schleifstein“ frei.",
       "granted_card": "schleifstein",
       "art": "res://assets/items/winter_lord_axe.svg",
       "model": "res://assets/models/items/winter_lord_axe.glb"
@@ -596,7 +596,7 @@
         "damage_per_hit": 2,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine enhanced-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Donnerkeil ist eine verbesserte Axt-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Riss im Panzer“ frei.",
       "granted_card": "riss_im_panzer",
       "art": "res://assets/items/donnerkeil.svg",
       "model": "res://assets/models/items/donnerkeil.glb"
@@ -614,7 +614,7 @@
         "damage_per_hit": 0,
         "block_dice": 1
       },
-      "description": "Eine enhanced-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Wurzelspalter ist eine verbesserte Axt-Waffe aus Nachtkrone. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Gegenschlag“ frei.",
       "granted_card": "gegenschlag",
       "art": "res://assets/items/wurzelspalter.svg",
       "model": "res://assets/models/items/wurzelspalter.glb"
@@ -631,7 +631,7 @@
         "attack_dice": 1,
         "damage_per_hit": 1
       },
-      "description": "Eine enhanced-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Nachtbeil ist eine verbesserte Axt-Waffe aus Sturmmarsch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Fallbeilfalle“ frei.",
       "granted_card": "fallbeilfalle",
       "art": "res://assets/items/nachtbeil.svg",
       "model": "res://assets/models/items/nachtbeil.glb"
@@ -648,7 +648,7 @@
         "attack_dice": 1,
         "damage_per_hit": 0
       },
-      "description": "Eine exceptional-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Fluthammer ist eine außergewöhnliche Axt-Waffe aus Versunkener Bund. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Sturm des Henkers“ frei.",
       "granted_card": "sturm_des_henkers",
       "art": "res://assets/items/fluthammer.svg",
       "model": "res://assets/models/items/fluthammer.glb"
@@ -666,7 +666,7 @@
         "damage_per_hit": 1,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine exceptional-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Knochenbrecher ist eine außergewöhnliche Axt-Waffe aus Weltennaht. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Weltenriss“ frei.",
       "granted_card": "weltenriss",
       "art": "res://assets/items/knochenbrecher.svg",
       "model": "res://assets/models/items/knochenbrecher.glb"
@@ -684,7 +684,7 @@
         "damage_per_hit": 2,
         "block_dice": 1
       },
-      "description": "Eine exceptional-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sonnenaxt ist eine außergewöhnliche Axt-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Schildhaken“ frei.",
       "granted_card": "schildhaken",
       "art": "res://assets/items/sonnenaxt.svg",
       "model": "res://assets/models/items/sonnenaxt.glb"
@@ -702,7 +702,7 @@
         "damage_per_hit": 0,
         "block_break": 1
       },
-      "description": "Eine exceptional-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Aschenhenker ist eine außergewöhnliche Axt-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, Trefferschaden und schaltet „Unbeugsamer Eid“ frei.",
       "granted_card": "unbeugsamer_eid",
       "art": "res://assets/items/aschenhenker.svg",
       "model": "res://assets/models/items/aschenhenker.glb"
@@ -720,7 +720,7 @@
         "damage_per_hit": 2,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Richtbeil ist eine legendäre Axt-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Eisenbrecher“ frei.",
       "granted_card": "eisenbrecher",
       "art": "res://assets/items/richtbeil.svg",
       "model": "res://assets/models/items/richtbeil.glb"
@@ -739,7 +739,7 @@
         "hit_threshold_modifier": -1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Runenspalter ist eine legendäre Axt-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Schädelspalter“ frei.",
       "granted_card": "schadelspalter",
       "art": "res://assets/items/runenspalter.svg",
       "model": "res://assets/models/items/runenspalter.glb"
@@ -758,7 +758,7 @@
         "block_dice": 1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sternenfall ist eine legendäre Axt-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Standhalten“ frei.",
       "granted_card": "standhalten",
       "art": "res://assets/items/sternenfall.svg",
       "model": "res://assets/models/items/sternenfall.glb"
@@ -777,7 +777,7 @@
         "block_break": 1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Blutmondbeil ist eine legendäre Axt-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Urteil des Henkers“ frei.",
       "granted_card": "urteil_des_henkers",
       "art": "res://assets/items/blutmondbeil.svg",
       "model": "res://assets/models/items/blutmondbeil.glb"
@@ -795,7 +795,7 @@
         "damage_per_hit": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Eidspalter ist eine einzigartige Axt-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Schwerer Atem“ frei.",
       "granted_card": "schwerer_atem",
       "art": "res://assets/items/eidspalter.svg",
       "model": "res://assets/models/items/eidspalter.glb"
@@ -814,7 +814,7 @@
         "hit_threshold_modifier": -1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Schweigende Axt ist eine einzigartige Axt-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Kniespalter“ frei.",
       "granted_card": "kniespalter",
       "art": "res://assets/items/schweigende_axt.svg",
       "model": "res://assets/models/items/schweigende_axt.glb"
@@ -833,7 +833,7 @@
         "block_dice": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Wegspalter ist eine einzigartige Axt-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Eiserner Wall“ frei.",
       "granted_card": "eiserner_wall",
       "art": "res://assets/items/worldsplitter.svg",
       "model": "res://assets/models/items/worldsplitter.glb"
@@ -852,7 +852,7 @@
         "block_break": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Axt des ersten Namens ist eine einzigartige Axt-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Berserkersturm“ frei.",
       "granted_card": "berserkersturm",
       "art": "res://assets/items/axt_des_ersten_namens.svg",
       "model": "res://assets/models/items/axt_des_ersten_namens.glb"
@@ -869,7 +869,7 @@
         "attack_dice": 0,
         "damage_per_hit": 0
       },
-      "description": "Eine normal-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Eschenbogen ist eine gewöhnliche Langbogen-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Jagdschuss“ frei.",
       "granted_card": "jagdschuss",
       "art": "res://assets/items/worn_bow.svg",
       "model": "res://assets/models/items/worn_bow.glb"
@@ -886,7 +886,7 @@
         "attack_dice": 0,
         "damage_per_hit": 1
       },
-      "description": "Eine normal-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Krähenbogen ist eine gewöhnliche Langbogen-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Durchbohrender Pfeil“ frei.",
       "granted_card": "durchbohrender_pfeil",
       "art": "res://assets/items/krahenbogen.svg",
       "model": "res://assets/models/items/krahenbogen.glb"
@@ -903,7 +903,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine normal-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Kupfersehne ist eine gewöhnliche Langbogen-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Deckungsfeuer“ frei.",
       "granted_card": "deckungsfeuer",
       "art": "res://assets/items/kupfersehne.svg",
       "model": "res://assets/models/items/kupfersehne.glb"
@@ -920,7 +920,7 @@
         "attack_dice": 0,
         "damage_per_hit": 0
       },
-      "description": "Eine normal-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Moorweide ist eine gewöhnliche Langbogen-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Ruhige Hand“ frei.",
       "granted_card": "ruhige_hand",
       "art": "res://assets/items/moorweide.svg",
       "model": "res://assets/models/items/moorweide.glb"
@@ -937,7 +937,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine rare-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Dornenbogen ist eine seltene Langbogen-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Falkenblick“ frei.",
       "granted_card": "falkenblick",
       "art": "res://assets/items/dornenbogen.svg",
       "model": "res://assets/models/items/dornenbogen.glb"
@@ -955,7 +955,7 @@
         "damage_per_hit": 0,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine rare-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Salzläufer ist eine seltene Langbogen-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Blutpfeil“ frei.",
       "granted_card": "blutpfeil",
       "art": "res://assets/items/salzlaufer.svg",
       "model": "res://assets/models/items/salzlaufer.glb"
@@ -972,7 +972,7 @@
         "attack_dice": 0,
         "damage_per_hit": 1
       },
-      "description": "Eine rare-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Spiegelbogen ist eine seltene Langbogen-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Gemeinsame Deckung“ frei.",
       "granted_card": "gemeinsame_deckung",
       "art": "res://assets/items/spiegelbogen.svg",
       "model": "res://assets/models/items/spiegelbogen.glb"
@@ -989,7 +989,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine rare-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Glutsehne ist eine seltene Langbogen-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Pfeilregen“ frei.",
       "granted_card": "pfeilregen",
       "art": "res://assets/items/glutsehne.svg",
       "model": "res://assets/models/items/glutsehne.glb"
@@ -1006,7 +1006,7 @@
         "attack_dice": 1,
         "damage_per_hit": 1
       },
-      "description": "Eine enhanced-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Frostweide ist eine verbesserte Langbogen-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Harzspitze“ frei.",
       "granted_card": "harzspitze",
       "art": "res://assets/items/frostweide.svg",
       "model": "res://assets/models/items/frostweide.glb"
@@ -1024,7 +1024,7 @@
         "damage_per_hit": 2,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine enhanced-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sturmbogen ist eine verbesserte Langbogen-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Schattenpfeil“ frei.",
       "granted_card": "schattenpfeil",
       "art": "res://assets/items/sturmbogen.svg",
       "model": "res://assets/models/items/sturmbogen.glb"
@@ -1042,7 +1042,7 @@
         "damage_per_hit": 0,
         "block_dice": 1
       },
-      "description": "Eine enhanced-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Wurzelbogen ist eine verbesserte Langbogen-Waffe aus Nachtkrone. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Abfangschuss“ frei.",
       "granted_card": "abfangschuss",
       "art": "res://assets/items/wurzelbogen.svg",
       "model": "res://assets/models/items/wurzelbogen.glb"
@@ -1059,7 +1059,7 @@
         "attack_dice": 1,
         "damage_per_hit": 1
       },
-      "description": "Eine enhanced-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Nachtfeder ist eine verbesserte Langbogen-Waffe aus Sturmmarsch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Drahtfalle“ frei.",
       "granted_card": "drahtfalle",
       "art": "res://assets/items/nachtfeder.svg",
       "model": "res://assets/models/items/nachtfeder.glb"
@@ -1076,7 +1076,7 @@
         "attack_dice": 1,
         "damage_per_hit": 0
       },
-      "description": "Eine exceptional-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Flutbogen ist eine außergewöhnliche Langbogen-Waffe aus Versunkener Bund. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Sonnenhagel“ frei.",
       "granted_card": "sonnenhagel",
       "art": "res://assets/items/flutbogen.svg",
       "model": "res://assets/models/items/flutbogen.glb"
@@ -1094,7 +1094,7 @@
         "damage_per_hit": 1,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine exceptional-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Knochensehne ist eine außergewöhnliche Langbogen-Waffe aus Weltennaht. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Schweigender Horizont“ frei.",
       "granted_card": "schweigender_horizont",
       "art": "res://assets/items/knochensehne.svg",
       "model": "res://assets/models/items/knochensehne.glb"
@@ -1112,7 +1112,7 @@
         "damage_per_hit": 2,
         "block_dice": 1
       },
-      "description": "Eine exceptional-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sonnenstecher ist eine außergewöhnliche Langbogen-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Rückwärtsschritt“ frei.",
       "granted_card": "ruckwartsschritt",
       "art": "res://assets/items/sun_piercer.svg",
       "model": "res://assets/models/items/sun_piercer.glb"
@@ -1130,7 +1130,7 @@
         "damage_per_hit": 0,
         "block_break": 1
       },
-      "description": "Eine exceptional-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Aschenbogen ist eine außergewöhnliche Langbogen-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, Trefferschaden und schaltet „Jägerbund“ frei.",
       "granted_card": "jagerbund",
       "art": "res://assets/items/aschenbogen.svg",
       "model": "res://assets/models/items/aschenbogen.glb"
@@ -1148,7 +1148,7 @@
         "damage_per_hit": 2,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Jägerkönig ist eine legendäre Langbogen-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Jagdschuss“ frei.",
       "granted_card": "jagdschuss",
       "art": "res://assets/items/jagerkonig.svg",
       "model": "res://assets/models/items/jagerkonig.glb"
@@ -1167,7 +1167,7 @@
         "hit_threshold_modifier": -1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Runenweide ist eine legendäre Langbogen-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Durchbohrender Pfeil“ frei.",
       "granted_card": "durchbohrender_pfeil",
       "art": "res://assets/items/runenweide.svg",
       "model": "res://assets/models/items/runenweide.glb"
@@ -1186,7 +1186,7 @@
         "block_dice": 1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sternenbogen ist eine legendäre Langbogen-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Deckungsfeuer“ frei.",
       "granted_card": "deckungsfeuer",
       "art": "res://assets/items/sternenbogen.svg",
       "model": "res://assets/models/items/sternenbogen.glb"
@@ -1205,7 +1205,7 @@
         "block_break": 1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Blutmondsehne ist eine legendäre Langbogen-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Ruhige Hand“ frei.",
       "granted_card": "ruhige_hand",
       "art": "res://assets/items/blutmondsehne.svg",
       "model": "res://assets/models/items/blutmondsehne.glb"
@@ -1223,7 +1223,7 @@
         "damage_per_hit": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Eidbogen ist eine einzigartige Langbogen-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Falkenblick“ frei.",
       "granted_card": "falkenblick",
       "art": "res://assets/items/eidbogen.svg",
       "model": "res://assets/models/items/eidbogen.glb"
@@ -1242,7 +1242,7 @@
         "hit_threshold_modifier": -1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Schweigende Sonne ist eine einzigartige Langbogen-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Blutpfeil“ frei.",
       "granted_card": "blutpfeil",
       "art": "res://assets/items/schweigende_sonne.svg",
       "model": "res://assets/models/items/schweigende_sonne.glb"
@@ -1261,7 +1261,7 @@
         "block_dice": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Horizontbrecher ist eine einzigartige Langbogen-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Gemeinsame Deckung“ frei.",
       "granted_card": "gemeinsame_deckung",
       "art": "res://assets/items/horizontbrecher.svg",
       "model": "res://assets/models/items/horizontbrecher.glb"
@@ -1280,7 +1280,7 @@
         "block_break": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Bogen des ersten Lichts ist eine einzigartige Langbogen-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Pfeilregen“ frei.",
       "granted_card": "pfeilregen",
       "art": "res://assets/items/bogen_des_ersten_lichts.svg",
       "model": "res://assets/models/items/bogen_des_ersten_lichts.glb"
@@ -1297,7 +1297,7 @@
         "attack_dice": 0,
         "damage_per_hit": 0
       },
-      "description": "Eine normal-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Feldarmbrust ist eine gewöhnliche Armbrust-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Bolzenhagel“ frei.",
       "granted_card": "bolzenhagel",
       "art": "res://assets/items/worn_crossbow.svg",
       "model": "res://assets/models/items/worn_crossbow.glb"
@@ -1314,7 +1314,7 @@
         "attack_dice": 0,
         "damage_per_hit": 1
       },
-      "description": "Eine normal-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Krähenwerfer ist eine gewöhnliche Armbrust-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Schattenbolzen“ frei.",
       "granted_card": "schattenbolzen",
       "art": "res://assets/items/krahenwerfer.svg",
       "model": "res://assets/models/items/krahenwerfer.glb"
@@ -1331,7 +1331,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine normal-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Kupferspanner ist eine gewöhnliche Armbrust-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Stahlkolben-Parade“ frei.",
       "granted_card": "stahlkolben_parade",
       "art": "res://assets/items/kupferspanner.svg",
       "model": "res://assets/models/items/kupferspanner.glb"
@@ -1348,7 +1348,7 @@
         "attack_dice": 0,
         "damage_per_hit": 0
       },
-      "description": "Eine normal-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Moorbolzer ist eine gewöhnliche Armbrust-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Schnellladen“ frei.",
       "granted_card": "schnellladen",
       "art": "res://assets/items/moorbolzer.svg",
       "model": "res://assets/models/items/moorbolzer.glb"
@@ -1365,7 +1365,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine rare-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Dornspanner ist eine seltene Armbrust-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Zielmechanik“ frei.",
       "granted_card": "zielmechanik",
       "art": "res://assets/items/dornspanner.svg",
       "model": "res://assets/models/items/dornspanner.glb"
@@ -1383,7 +1383,7 @@
         "damage_per_hit": 0,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine rare-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Salzwerfer ist eine seltene Armbrust-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Widerhaken“ frei.",
       "granted_card": "widerhaken",
       "art": "res://assets/items/salzwerfer.svg",
       "model": "res://assets/models/items/salzwerfer.glb"
@@ -1400,7 +1400,7 @@
         "attack_dice": 0,
         "damage_per_hit": 1
       },
-      "description": "Eine rare-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Spiegelarmbrust ist eine seltene Armbrust-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Mobile Barrikade“ frei.",
       "granted_card": "mobile_barrikade",
       "art": "res://assets/items/spiegelarmbrust.svg",
       "model": "res://assets/models/items/spiegelarmbrust.glb"
@@ -1417,7 +1417,7 @@
         "attack_dice": 0,
         "damage_per_hit": 2
       },
-      "description": "Eine rare-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Glutbolzer ist eine seltene Armbrust-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Salve“ frei.",
       "granted_card": "salve",
       "art": "res://assets/items/glutbolzer.svg",
       "model": "res://assets/models/items/glutbolzer.glb"
@@ -1434,7 +1434,7 @@
         "attack_dice": 1,
         "damage_per_hit": 1
       },
-      "description": "Eine enhanced-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Frostspanner ist eine verbesserte Armbrust-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Säurebolzen“ frei.",
       "granted_card": "saurebolzen",
       "art": "res://assets/items/frostspanner.svg",
       "model": "res://assets/models/items/frostspanner.glb"
@@ -1452,7 +1452,7 @@
         "damage_per_hit": 2,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine enhanced-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sturmspanner ist eine verbesserte Armbrust-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Panzerbrecher“ frei.",
       "granted_card": "panzerbrecher",
       "art": "res://assets/items/storm_crossbow.svg",
       "model": "res://assets/models/items/storm_crossbow.glb"
@@ -1470,7 +1470,7 @@
         "damage_per_hit": 0,
         "block_dice": 1
       },
-      "description": "Eine enhanced-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Wurzelwerfer ist eine verbesserte Armbrust-Waffe aus Nachtkrone. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Notkolben“ frei.",
       "granted_card": "notkolben",
       "art": "res://assets/items/wurzelwerfer.svg",
       "model": "res://assets/models/items/wurzelwerfer.glb"
@@ -1487,7 +1487,7 @@
         "attack_dice": 1,
         "damage_per_hit": 1
       },
-      "description": "Eine enhanced-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Nachtbolzen ist eine verbesserte Armbrust-Waffe aus Sturmmarsch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Sprengfalle“ frei.",
       "granted_card": "sprengfalle",
       "art": "res://assets/items/nachtbolzen.svg",
       "model": "res://assets/models/items/nachtbolzen.glb"
@@ -1504,7 +1504,7 @@
         "attack_dice": 1,
         "damage_per_hit": 0
       },
-      "description": "Eine exceptional-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Flutspanner ist eine außergewöhnliche Armbrust-Waffe aus Versunkener Bund. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Sturmspanner“ frei.",
       "granted_card": "sturmspanner",
       "art": "res://assets/items/flutspanner.svg",
       "model": "res://assets/models/items/flutspanner.glb"
@@ -1522,7 +1522,7 @@
         "damage_per_hit": 1,
         "hit_threshold_modifier": -1
       },
-      "description": "Eine exceptional-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Knochenwerfer ist eine außergewöhnliche Armbrust-Waffe aus Weltennaht. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Schwarzer Donner“ frei.",
       "granted_card": "schwarzer_donner",
       "art": "res://assets/items/knochenwerfer.svg",
       "model": "res://assets/models/items/knochenwerfer.glb"
@@ -1540,7 +1540,7 @@
         "damage_per_hit": 2,
         "block_dice": 1
       },
-      "description": "Eine exceptional-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sonnenarmbrust ist eine außergewöhnliche Armbrust-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Deckungssprung“ frei.",
       "granted_card": "deckungssprung",
       "art": "res://assets/items/sonnenarmbrust.svg",
       "model": "res://assets/models/items/sonnenarmbrust.glb"
@@ -1558,7 +1558,7 @@
         "damage_per_hit": 0,
         "block_break": 1
       },
-      "description": "Eine exceptional-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Aschenbolzer ist eine außergewöhnliche Armbrust-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, Trefferschaden und schaltet „Synchronfeuer“ frei.",
       "granted_card": "synchronfeuer",
       "art": "res://assets/items/aschenbolzer.svg",
       "model": "res://assets/models/items/aschenbolzer.glb"
@@ -1576,7 +1576,7 @@
         "damage_per_hit": 2,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Belagerer ist eine legendäre Armbrust-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Bolzenhagel“ frei.",
       "granted_card": "bolzenhagel",
       "art": "res://assets/items/belagerer.svg",
       "model": "res://assets/models/items/belagerer.glb"
@@ -1595,7 +1595,7 @@
         "hit_threshold_modifier": -1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Runenspanner ist eine legendäre Armbrust-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Schattenbolzen“ frei.",
       "granted_card": "schattenbolzen",
       "art": "res://assets/items/runenspanner.svg",
       "model": "res://assets/models/items/runenspanner.glb"
@@ -1614,7 +1614,7 @@
         "block_dice": 1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Sternenwerfer ist eine legendäre Armbrust-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Stahlkolben-Parade“ frei.",
       "granted_card": "stahlkolben_parade",
       "art": "res://assets/items/sternenwerfer.svg",
       "model": "res://assets/models/items/sternenwerfer.glb"
@@ -1633,7 +1633,7 @@
         "block_break": 1,
         "critical_min": 11
       },
-      "description": "Eine legendary-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Blutmondbolzer ist eine legendäre Armbrust-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Schnellladen“ frei.",
       "granted_card": "schnellladen",
       "art": "res://assets/items/blutmondbolzer.svg",
       "model": "res://assets/models/items/blutmondbolzer.glb"
@@ -1651,7 +1651,7 @@
         "damage_per_hit": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Eidarmbrust ist eine einzigartige Armbrust-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Zielmechanik“ frei.",
       "granted_card": "zielmechanik",
       "art": "res://assets/items/eidarmbrust.svg",
       "model": "res://assets/models/items/eidarmbrust.glb"
@@ -1670,7 +1670,7 @@
         "hit_threshold_modifier": -1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Schwarzer Donner ist eine einzigartige Armbrust-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Widerhaken“ frei.",
       "granted_card": "widerhaken",
       "art": "res://assets/items/schwarzer_donner.svg",
       "model": "res://assets/models/items/schwarzer_donner.glb"
@@ -1689,7 +1689,7 @@
         "block_dice": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Nahtspanner ist eine einzigartige Armbrust-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Mobile Barrikade“ frei.",
       "granted_card": "mobile_barrikade",
       "art": "res://assets/items/nahtspanner.svg",
       "model": "res://assets/models/items/nahtspanner.glb"
@@ -1708,10 +1708,438 @@
         "block_break": 1,
         "critical_min": 11
       },
-      "description": "Eine unique-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "description": "Armbrust des letzten Wortes ist eine einzigartige Armbrust-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Salve“ frei.",
       "granted_card": "salve",
       "art": "res://assets/items/armbrust_des_letzten_wortes.svg",
       "model": "res://assets/models/items/armbrust_des_letzten_wortes.glb"
+    },
+    {
+      "id": "worn_longsword",
+      "name": "Abgenutztes Langschwert",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "longsword",
+      "country_affinity": "nebelmark",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Abgenutztes Langschwert ist eine gewöhnliche Langschwert-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Gerader Hieb“ frei.",
+      "granted_card": "gerader_hieb",
+      "art": "res://assets/items/worn_longsword.svg",
+      "model": "res://assets/models/items/longsword/worn_longsword.glb"
+    },
+    {
+      "id": "krahenschwert",
+      "name": "Krähenschwert",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "longsword",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Krähenschwert ist eine gewöhnliche Langschwert-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Halbschwert“ frei.",
+      "granted_card": "halbschwert",
+      "art": "res://assets/items/krahenschwert.svg",
+      "model": "res://assets/models/items/longsword/krahenschwert.glb"
+    },
+    {
+      "id": "kupferklinge",
+      "name": "Kupferklinge",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "longsword",
+      "country_affinity": "frostreiche",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Kupferklinge ist eine gewöhnliche Langschwert-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Klingenwacht“ frei.",
+      "granted_card": "klingenwacht",
+      "art": "res://assets/items/kupferklinge.svg",
+      "model": "res://assets/models/items/longsword/kupferklinge.glb"
+    },
+    {
+      "id": "moorschwert",
+      "name": "Moorschwert",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "longsword",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Moorschwert ist eine gewöhnliche Langschwert-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Hohe Hut“ frei.",
+      "granted_card": "hohe_hut",
+      "art": "res://assets/items/moorschwert.svg",
+      "model": "res://assets/models/items/longsword/moorschwert.glb"
+    },
+    {
+      "id": "dornenschneide",
+      "name": "Dornenschneide",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "longsword",
+      "country_affinity": "aschenlande",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Dornenschneide ist eine seltene Langschwert-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Mordschlag“ frei.",
+      "granted_card": "mordschlag",
+      "art": "res://assets/items/dornenschneide.svg",
+      "model": "res://assets/models/items/longsword/dornenschneide.glb"
+    },
+    {
+      "id": "salzstahl",
+      "name": "Salzstahl",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "longsword",
+      "country_affinity": "dornwall",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Salzstahl ist eine seltene Langschwert-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Blutrinne“ frei.",
+      "granted_card": "blutrinne",
+      "art": "res://assets/items/salzstahl.svg",
+      "model": "res://assets/models/items/longsword/salzstahl.glb"
+    },
+    {
+      "id": "spiegelschwert",
+      "name": "Spiegelschwert",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "longsword",
+      "country_affinity": "glassteppe",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Spiegelschwert ist eine seltene Langschwert-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Schützender Stahl“ frei.",
+      "granted_card": "schutzender_stahl",
+      "art": "res://assets/items/spiegelschwert.svg",
+      "model": "res://assets/models/items/longsword/spiegelschwert.glb"
+    },
+    {
+      "id": "glutklinge",
+      "name": "Glutklinge",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "longsword",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Glutklinge ist eine seltene Langschwert-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Zornhau“ frei.",
+      "granted_card": "zornhau",
+      "art": "res://assets/items/glutklinge.svg",
+      "model": "res://assets/models/items/longsword/glutklinge.glb"
+    },
+    {
+      "id": "froststahl",
+      "name": "Froststahl",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "longsword",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Froststahl ist eine verbesserte Langschwert-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Geölte Klinge“ frei.",
+      "granted_card": "geolte_klinge",
+      "art": "res://assets/items/froststahl.svg",
+      "model": "res://assets/models/items/longsword/froststahl.glb"
+    },
+    {
+      "id": "sturmklinge",
+      "name": "Sturmklinge",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "longsword",
+      "country_affinity": "knochental",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Sturmklinge ist eine verbesserte Langschwert-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Durchwechseln“ frei.",
+      "granted_card": "durchwechseln",
+      "art": "res://assets/items/sturmklinge.svg",
+      "model": "res://assets/models/items/longsword/sturmklinge.glb"
+    },
+    {
+      "id": "wurzelschwert",
+      "name": "Wurzelschwert",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "longsword",
+      "country_affinity": "nachtkrone",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_dice": 1
+      },
+      "description": "Wurzelschwert ist eine verbesserte Langschwert-Waffe aus Nachtkrone. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Kronparade“ frei.",
+      "granted_card": "kronparade",
+      "art": "res://assets/items/wurzelschwert.svg",
+      "model": "res://assets/models/items/longsword/wurzelschwert.glb"
+    },
+    {
+      "id": "nachtschneide",
+      "name": "Nachtschneide",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "longsword",
+      "country_affinity": "sturmmarsch",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Nachtschneide ist eine verbesserte Langschwert-Waffe aus Sturmmarsch. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Klingenwall“ frei.",
+      "granted_card": "klingenwall",
+      "art": "res://assets/items/nachtschneide.svg",
+      "model": "res://assets/models/items/longsword/nachtschneide.glb"
+    },
+    {
+      "id": "flutstahl",
+      "name": "Flutstahl",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "longsword",
+      "country_affinity": "versunkener_bund",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0
+      },
+      "description": "Flutstahl ist eine außergewöhnliche Langschwert-Waffe aus Versunkener Bund. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden und schaltet „Meisterhau“ frei.",
+      "granted_card": "meisterhau",
+      "art": "res://assets/items/flutstahl.svg",
+      "model": "res://assets/models/items/longsword/flutstahl.glb"
+    },
+    {
+      "id": "knochenschwert",
+      "name": "Knochenschwert",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "longsword",
+      "country_affinity": "weltennaht",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Knochenschwert ist eine außergewöhnliche Langschwert-Waffe aus Weltennaht. Sie prägt den Kampfstil mit Angriffswürfel, Trefferschaden, Trefferchance und schaltet „Eidstahl“ frei.",
+      "granted_card": "eidstahl",
+      "art": "res://assets/items/knochenschwert.svg",
+      "model": "res://assets/models/items/longsword/knochenschwert.glb"
+    },
+    {
+      "id": "sonnenklinge",
+      "name": "Sonnenklinge",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "longsword",
+      "country_affinity": "nebelmark",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "block_dice": 1
+      },
+      "description": "Sonnenklinge ist eine außergewöhnliche Langschwert-Waffe aus Nebelmark. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, Trefferschaden und schaltet „Nachreisen“ frei.",
+      "granted_card": "nachreisen",
+      "art": "res://assets/items/sonnenklinge.svg",
+      "model": "res://assets/models/items/longsword/sonnenklinge.glb"
+    },
+    {
+      "id": "aschenschwert",
+      "name": "Aschenschwert",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "longsword",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_break": 1
+      },
+      "description": "Aschenschwert ist eine außergewöhnliche Langschwert-Waffe aus Sonnenbruch. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, Trefferschaden und schaltet „Bund der Schwerter“ frei.",
+      "granted_card": "bund_der_schwerter",
+      "art": "res://assets/items/aschenschwert.svg",
+      "model": "res://assets/models/items/longsword/aschenschwert.glb"
+    },
+    {
+      "id": "fechtmeister",
+      "name": "Fechtmeister",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "longsword",
+      "country_affinity": "frostreiche",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "critical_min": 11
+      },
+      "description": "Fechtmeister ist eine legendäre Langschwert-Waffe aus Frostreiche. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Gerader Hieb“ frei.",
+      "granted_card": "gerader_hieb",
+      "art": "res://assets/items/fechtmeister.svg",
+      "model": "res://assets/models/items/longsword/fechtmeister.glb"
+    },
+    {
+      "id": "runenstahl",
+      "name": "Runenstahl",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "longsword",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Runenstahl ist eine legendäre Langschwert-Waffe aus Splitterinseln. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Halbschwert“ frei.",
+      "granted_card": "halbschwert",
+      "art": "res://assets/items/runenstahl.svg",
+      "model": "res://assets/models/items/longsword/runenstahl.glb"
+    },
+    {
+      "id": "sternenschwert",
+      "name": "Sternenschwert",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "longsword",
+      "country_affinity": "aschenlande",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Sternenschwert ist eine legendäre Langschwert-Waffe aus Aschenlande. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Klingenwacht“ frei.",
+      "granted_card": "klingenwacht",
+      "art": "res://assets/items/sternenschwert.svg",
+      "model": "res://assets/models/items/longsword/sternenschwert.glb"
+    },
+    {
+      "id": "blutmondklinge",
+      "name": "Blutmondklinge",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "longsword",
+      "country_affinity": "dornwall",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Blutmondklinge ist eine legendäre Langschwert-Waffe aus Dornwall. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Hohe Hut“ frei.",
+      "granted_card": "hohe_hut",
+      "art": "res://assets/items/blutmondklinge.svg",
+      "model": "res://assets/models/items/longsword/blutmondklinge.glb"
+    },
+    {
+      "id": "eidschwert",
+      "name": "Eidschwert",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "longsword",
+      "country_affinity": "glassteppe",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "critical_min": 11
+      },
+      "description": "Eidschwert ist eine einzigartige Langschwert-Waffe aus Glassteppe. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden und schaltet „Mordschlag“ frei.",
+      "granted_card": "mordschlag",
+      "art": "res://assets/items/eidschwert.svg",
+      "model": "res://assets/models/items/longsword/eidschwert.glb"
+    },
+    {
+      "id": "schweigende_klinge",
+      "name": "Schweigende Klinge",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "longsword",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Schweigende Klinge ist eine einzigartige Langschwert-Waffe aus Tiefenwald. Sie prägt den Kampfstil mit Angriffswürfel, kritische Treffer, Trefferschaden, Trefferchance und schaltet „Blutrinne“ frei.",
+      "granted_card": "blutrinne",
+      "art": "res://assets/items/schweigende_klinge.svg",
+      "model": "res://assets/models/items/longsword/schweigende_klinge.glb"
+    },
+    {
+      "id": "nahtschwert",
+      "name": "Nahtschwert",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "longsword",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Nahtschwert ist eine einzigartige Langschwert-Waffe aus Kupferkueste. Sie prägt den Kampfstil mit Angriffswürfel, Blockwürfel, kritische Treffer, Trefferschaden und schaltet „Schützender Stahl“ frei.",
+      "granted_card": "schutzender_stahl",
+      "art": "res://assets/items/nahtschwert.svg",
+      "model": "res://assets/models/items/longsword/nahtschwert.glb"
+    },
+    {
+      "id": "langschwert_des_ersten_eids",
+      "name": "Langschwert des ersten Eids",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "longsword",
+      "country_affinity": "knochental",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Langschwert des ersten Eids ist eine einzigartige Langschwert-Waffe aus Knochental. Sie prägt den Kampfstil mit Angriffswürfel, Blockbruch, kritische Treffer, Trefferschaden und schaltet „Zornhau“ frei.",
+      "granted_card": "zornhau",
+      "art": "res://assets/items/langschwert_des_ersten_eids.svg",
+      "model": "res://assets/models/items/longsword/langschwert_des_ersten_eids.glb"
     },
     {
       "id": "travel_leathers",

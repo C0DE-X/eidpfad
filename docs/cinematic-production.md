@@ -40,7 +40,7 @@ Godot-Busse: Master, Music, Ambience, SFX, Voice und UI. Voice senkt Musik und A
 
 - zwei Windows-Clients spielen dieselbe Cinematic-Reihenfolge
 - Skip und Reconnect verlieren keine Gameplay-Ereignisse
-- Voice-Datei und Untertitel stimmen für alle 336 IDs überein
+- Voice-Datei und Untertitel stimmen für alle 360 IDs überein
 - 16:9, 21:9 und 1280×720 schneiden Untertitel nicht ab
 - Studio-Voice wird auf Lautheit, Klicks, Atemschnitt und Aussprache geprüft
 - Facial Close-ups erst nach Skin-, Face-Rig- und Viseme-Produktion einsetzen

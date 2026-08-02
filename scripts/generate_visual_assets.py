@@ -37,7 +37,7 @@ PHASE_COLORS = {
     "utility": "#9b814d",
 }
 SCHOOL_COLORS = {
-    "dual_blades": "#b15050", "axe": "#9c6c43", "bow": "#66865e", "crossbow": "#70848a",
+    "dual_blades": "#b15050", "axe": "#9c6c43", "bow": "#66865e", "crossbow": "#70848a", "longsword": "#8d846f",
     "rune": "#65a5b4", "ember": "#c66a3f", "veil": "#78699e", "blood": "#a43f54",
     "universal": "#a68e60",
 }
@@ -104,6 +104,7 @@ SYMBOLS = {
     "axe": '<path d="m236 414 32-4-4-183 55-17 70-72-26-48-104 28-27 66zm28-222 72-21-36 56z"/>',
     "bow": '<path d="M160 84c122 66 122 278 0 344l-26-42c85-48 85-212 0-260zm4 22 208 300-18 12-208-300z"/>',
     "crossbow": '<path d="M104 130c104 42 200 42 304 0l18 48c-62 26-114 38-148 39v199h-44V217c-34-1-86-13-148-39zm64 85h176v40H168z"/>',
+    "longsword": '<path d="m238 80h36l-8 238 72 18v32h-72v72h-36v-72h-72v-32l72-18z"/>',
     "rune": '<path d="M164 390V122h54v86l76-86h68l-94 103 106 165h-67l-77-123-12 13v110z"/>',
     "ember": '<path d="M262 76c18 82-59 92-32 168 18-28 38-44 43-82 78 76 106 141 57 211-39 56-129 62-169 5-42-59-6-120 35-157-9 69 25 91 45 105-17-73 68-111 21-250z"/>',
     "veil": '<path d="M256 96c82 0 148 66 148 148s-66 148-148 148S108 326 108 244 174 96 256 96zm0 58c-50 0-90 40-90 90s40 90 90 90c-49-36-48-144 0-180z" fill-rule="evenodd"/>',
@@ -497,17 +498,24 @@ class GlbBuilder:
         self.mesh_sources.clear()
 
     def _install_embedded_texture(self) -> None:
-        # 4x4 neutral weave. Base-color factors retain each material's palette.
+        # A deterministic weave unique to the asset. Base-color factors retain
+        # each material's palette while the pattern prevents equipment variants
+        # from sharing one anonymous placeholder texture.
+        texture_size = 8
+        pattern = digest(self.name)
         rows = bytearray()
-        for y in range(4):
+        for y in range(texture_size):
             rows.append(0)
-            for x in range(4):
-                value = 210 if (x + y) % 2 == 0 else 176
-                rows.extend((value, value, value, 255))
+            for x in range(texture_size):
+                weave = pattern[(x * 3 + y * 5) % len(pattern)]
+                value = 148 + weave % 80
+                warm = min(255, value + (pattern[0] % 13))
+                cool = max(0, value - (pattern[1] % 11))
+                rows.extend((warm, value, cool, 255))
         raw = bytes(rows)
         def chunk(kind: bytes, data: bytes) -> bytes:
             return struct.pack(">I", len(data)) + kind + data + struct.pack(">I", zlib.crc32(kind + data) & 0xFFFFFFFF)
-        png = b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", 4, 4, 8, 6, 0, 0, 0)) + chunk(b"IDAT", zlib.compress(raw, 9)) + chunk(b"IEND", b"")
+        png = b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", texture_size, texture_size, 8, 6, 0, 0, 0)) + chunk(b"IDAT", zlib.compress(raw, 9)) + chunk(b"IEND", b"")
         view = self._append(png, None)
         self.images = [{"name": "embedded_weave", "bufferView": view, "mimeType": "image/png"}]
         self.samplers = [{"magFilter": 9729, "minFilter": 9987, "wrapS": 10497, "wrapT": 10497}]
@@ -689,7 +697,15 @@ def materials(primary: str, accent: str) -> tuple[Material, Material, Material, 
     )
 
 
-def add_weapon(builder: GlbBuilder, school: str, x: float, y: float, palette: tuple[Material, Material, Material, Material], mirrored: bool = False) -> None:
+def add_weapon(
+    builder: GlbBuilder,
+    school: str,
+    x: float,
+    y: float,
+    palette: tuple[Material, Material, Material, Material],
+    mirrored: bool = False,
+    variant: int = 0,
+) -> None:
     _, accent, metal, dark = palette
     direction = -1 if mirrored else 1
     if school == "axe":
@@ -704,6 +720,25 @@ def add_weapon(builder: GlbBuilder, school: str, x: float, y: float, palette: tu
         builder.shape("cylinder", "crossbow_stock", dark, (x, y, 0), (.04, .52, .04), qz(-8*direction))
         builder.shape("cube", "crossbow_limbs", accent, (x+.04*direction, y+.22, 0), (.38, .035, .04), qz(-8*direction))
         builder.shape("cylinder", "crossbow_bolt", metal, (x, y+.20, .05), (.012, .34, .012), qz(-8*direction))
+    elif school == "longsword":
+        style = variant % 6
+        blade_length = .56 + (variant % 5) * .035
+        blade_width = .055 + (variant % 4) * .009
+        tilt = (-11 + variant % 7) * direction
+        builder.shape("cube", "longsword_blade", metal, (x, y+.16, 0), (blade_width, blade_length, .035 + style*.003), qz(tilt))
+        builder.shape("cone", "longsword_point", metal, (x-.01*direction, y+.16+blade_length, 0), (blade_width, .13 + style*.012, .04), qz(tilt))
+        builder.shape("cube", "longsword_fuller", accent, (x, y+.19, .041), (.012 + style*.002, blade_length*.72, .009), qz(tilt))
+        if style in {0, 3}:
+            builder.shape("cube", "longsword_guard", accent, (x, y-.43, 0), (.23 + style*.018, .035, .055), qz(tilt))
+        elif style in {1, 4}:
+            for side in (-1, 1):
+                builder.shape("cylinder", "longsword_guard", accent, (x+.12*side, y-.40, 0), (.028, .16, .028), qz((72 + style*3)*side))
+        else:
+            builder.shape("cube", "longsword_guard", accent, (x, y-.43, 0), (.27, .03, .05), qz(tilt + 8))
+            builder.shape("sphere", "longsword_guard_ring", dark, (x, y-.42, 0), (.10, .07, .06))
+        builder.shape("cylinder", "longsword_grip", dark, (x-.02*direction, y-.61, 0), (.035 + style*.003, .19, .04), qz(tilt))
+        pommel_shape = ("sphere", "d12", "cylinder")[style % 3]
+        builder.shape(pommel_shape, "longsword_pommel", accent, (x-.04*direction, y-.83, 0), (.07, .08, .06), qz(tilt))
     else:
         for offset in (-.08,.08):
             builder.shape("cube", "blade", metal, (x+offset*direction, y+.24, 0), (.045, .48, .055), qz((-12 if offset < 0 else 12)*direction))
@@ -849,6 +884,7 @@ def make_character_models() -> list[str]:
         ("pathfinder", "#293f38", "#6d8d75", "bow", "marksman"),
         ("duelist", "#472d36", "#a85b68", "dual_blades", "assassin"),
         ("arbalist", "#343c40", "#6d8f98", "crossbow", "marksman"),
+        ("swordmaster", "#353832", "#a99a72", "longsword", "defender"),
     ]
     paths=[]
     for name, primary, accent, weapon, role in specs:
@@ -880,7 +916,14 @@ def make_enemy_model(enemy: dict[str, Any]) -> str:
 def make_item_model(item: dict[str, Any]) -> str:
     accent=RARITY_COLORS[item["rarity"]]; palette=materials("#3b3430",accent); builder=GlbBuilder(item["id"])
     cloth, bright, metal, dark=palette; slot=item["slot"]
-    if slot == "weapon": add_weapon(builder,str(item.get("weapon_school","dual_blades")),0,0.75,palette)
+    if slot == "weapon": add_weapon(
+        builder,
+        str(item.get("weapon_school", "dual_blades")),
+        0,
+        0.75,
+        palette,
+        variant=digest(item["id"])[1],
+    )
     elif slot == "armor":
         builder.shape("cylinder","armor_body",cloth,(0,.85,0),(.44,.60,.24)); builder.shape("sphere","pauldrons",metal,(0,1.40,0),(.62,.20,.28)); builder.shape("cube","chest_rune",bright,(0,.92,.25),(.13,.22,.025))
     elif slot == "talisman":
@@ -892,8 +935,9 @@ def make_item_model(item: dict[str, Any]) -> str:
     else:
         builder.shape("d12","relic_core",bright,(0,.78,0),(.38,.52,.30)); builder.shape("cylinder","relic_base",metal,(0,.22,0),(.42,.18,.42)); builder.shape("cone","relic_crown",dark,(0,1.35,0),(.26,.34,.26))
     add_hover_animations(builder)
-    path=ASSETS/"models"/"items"/f"{item['id']}.glb"; builder.save(path)
-    return f"res://assets/models/items/{item['id']}.glb"
+    model_directory = "items/longsword" if item.get("weapon_school") == "longsword" else "items"
+    path=ASSETS/"models"/model_directory/f"{item['id']}.glb"; builder.save(path)
+    return f"res://assets/models/{model_directory}/{item['id']}.glb"
 
 
 def make_country_models() -> list[str]:

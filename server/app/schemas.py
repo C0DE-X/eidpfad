@@ -5,8 +5,9 @@ from pydantic import BaseModel, ConfigDict, Field, TypeAdapter
 from .combat_protocol import CooperationResponseMessage, PlayCardMessage, ReactionMessage
 
 
-Weapon = Literal["dual_blades", "axe", "bow", "crossbow"]
+Weapon = Literal["dual_blades", "axe", "bow", "crossbow", "longsword"]
 Magic = Literal["rune", "ember", "veil", "blood"]
+GameMode = Literal["singleplayer", "multiplayer"]
 CampaignLength = Literal["expedition", "fieldzug", "saga"]
 CampaignStatus = Literal["waiting", "playing", "paused", "completed"]
 
@@ -50,6 +51,7 @@ class CharacterChoice(BaseModel):
 
 
 class CampaignCreate(CharacterChoice):
+    game_mode: GameMode = "multiplayer"
     campaign_length: CampaignLength = "fieldzug"
     seed: int | None = Field(default=None, ge=0, le=2**31 - 1)
 
@@ -64,6 +66,7 @@ class CampaignView(BaseModel):
     status: CampaignStatus
     campaign_length: CampaignLength
     world_tier: int
+    game_mode: GameMode
     members: list[str]
 
 

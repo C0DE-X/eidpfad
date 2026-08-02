@@ -6,6 +6,7 @@ const CHARACTER_MODELS := {
 	"bow": "res://assets/models/characters/pathfinder.glb",
 	"dual_blades": "res://assets/models/characters/duelist.glb",
 	"crossbow": "res://assets/models/characters/arbalist.glb",
+	"longsword": "res://assets/models/characters/swordmaster.glb",
 }
 const FIGURE_PROFILE_PATH := "res://assets/animations/figure_profiles.json"
 

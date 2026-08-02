@@ -1,10 +1,10 @@
 # Eidpfad
 
-Spielbarer, inhaltlich ausgebauter Vertical Slice fuer ein kooperatives,
-rundenbasiertes Dark-Fantasy-Kartenspiel fuer zwei Spieler.
+Spielbarer, inhaltlich ausgebauter Vertical Slice fuer ein rundenbasiertes
+Dark-Fantasy-Kartenspiel im Singleplayer oder kooperativen Zweispielermodus.
 
 Der Repository-Stand ist fuer GitHub vorbereitet. Die binaeren Laufzeitassets
-werden ueber Git LFS verwaltet; die Anleitung fuer den ersten Import steht in
+werden deterministisch aus den eingecheckten Generatoren erzeugt; die Anleitung steht in
 [`docs/github.md`](docs/github.md).
 
 ## Zielplattformen
@@ -32,6 +32,12 @@ curl http://127.0.0.1:8080/health/ready
 
 Die lokale Serveradresse im Client lautet `http://127.0.0.1:8080`. API-Dokumente
 sind in der Entwicklungsumgebung unter `http://127.0.0.1:8080/docs` verfuegbar.
+Vor dem ersten Godot-Start werden Abhaengigkeiten und Laufzeitassets erzeugt:
+
+```bash
+make setup
+make content
+```
 
 ## Ubuntu-VPS starten
 
@@ -51,6 +57,8 @@ Caddy fordert das TLS-Zertifikat automatisch an und leitet HTTPS sowie WSS an
 den internen Server weiter. Im Windows-Client wird danach
 `https://game.example.com` eingetragen. Weitere Details stehen in
 [`docs/deployment.md`](docs/deployment.md).
+Profilverwaltung, vollständige Backups und die Wiederherstellung einzelner
+Charaktere sind in [`docs/server-administration.md`](docs/server-administration.md) beschrieben.
 
 ## Windows-11-Client bauen
 
@@ -76,26 +84,27 @@ die WebSocket-URL geschrieben, sondern als Bearer-Header beim Handshake gesendet
 ## Implementierter Spielstand
 
 - vier Phasen: Angriff, Verteidigung, Magie und Vorbereitung
-- fuenf Aktionspunkte pro Spieler und Runde, gemeinsam ueber alle Phasen
+- unveraenderliche Moduswahl beim Kampagnenstart: Singleplayer oder Multiplayer
+- fuenf Aktionspunkte pro Spieler und Runde, ueber alle Phasen
 - serverautoritatives W12-System mit kritischen Doppelerfolgen
 - Ausruestungs-, Ruestungs- und Talentboni auf Treffer- und Blockpools
 - animierte, nacheinander dargestellte Treffer-, Block-, Magie- und Bannwuerfe
-- 128 Karten in vier Phasen, neun Schulen und sechs Seltenheiten
-- 128 Gegenstaende mit 96 Waffen und 32 Ruestungs-/Supportobjekten
+- 144 Karten in vier Phasen, zehn Schulen und sechs Seltenheiten
+- 152 Gegenstaende mit 120 Waffen und 32 Ruestungs-/Supportobjekten
 - 140 Gegner: zehn Namen pro Land, acht Körperfamilien und 14 aktive Regionsmechaniken
 - deterministische Welten mit 6, 9 oder 13 Laendern und je drei Szenarien
 - zwei bis drei Gegnerwellen je Szenario ohne regionale Wiederholung
 - Szenariotypen, Laenderbosse und vierstufiger finaler Boss
-- vollstaendige Heilung und gemeinsamer Savepoint nach abgeschlossenen Szenarien
+- vollstaendige Heilung und Savepoint nach abgeschlossenen Szenarien
 - Bossbeute in den Stufen normal, selten, verbessert, aussergewoehnlich,
   legendaer und unique
 - PostgreSQL-Persistenz nach jeder gueltigen Aktion
 - 2.5D-Weltdiorama mit kompletter Route, echten GLB-Modellen und festem Charakterbereich rechts unten
-- 309 animierte 3D-Modelle: 140 Gegner, 128 Gegenstaende, vier Waffencharaktere, Laender, Bossziele, Props und W12
+- 334 animierte 3D-Modelle: 140 Gegner, 152 Gegenstaende, fuenf Waffencharaktere, Laender, Bossziele, Props und W12
 - Figuren mit sieben Gelenken, Skin/Weights, Bind-Pose, eingebetteter Textur, LOD und 14 Animationsclips
-- 440 semantische SVG-Assets, 25 Rasterbilder, 8 VFX-Overlays und ein eigenes Logo
-- 48 datengetriebene Motion-Comic-/Realtime-Cinematics mit serverpersistiertem Zwei-Spieler-Ack
-- 336 deutsche Voice-/Untertitelzeilen fuer Plot, Laender, Bosse, vier Helden, Endings und Tutorial
+- 480 semantische SVG-Assets, 26 Rasterbilder, 8 VFX-Overlays und ein eigenes Logo
+- 48 datengetriebene Motion-Comic-/Realtime-Cinematics mit serverpersistiertem Teilnehmer-Ack
+- 360 deutsche Voice-/Untertitelzeilen fuer Plot, Laender, Bosse, fuenf Helden, Endings und Tutorial
 - 18 Audio-Cues, 13 laengere Stereo-Atmosphaeren und 6 dynamische Stereo-Musikbetten
 - vollstaendiger Bossvertrag, vier Endings, Legacy-Transfer, Charakterlevel und New Game+
 - Kampagnenbrowser, Lobby/Ready, Pause/Reconnect und Profilwiederherstellung
@@ -114,12 +123,12 @@ make setup
 make validate
 ```
 
-Der aktuelle Satz umfasst 101 Tests fuer Regeln, Match-Lifecycle, Recovery,
+Der aktuelle Satz umfasst 110 Tests fuer Regeln, Match-Lifecycle, Recovery,
 Persistenz, Szenarioziele, Bossvertrag und Postgame. Der Projektvalidator prueft
-zusaetzlich 1.151 Manifestreferenzen, 309 GLB-Strukturen, 336 Voice-Dauern,
+zusaetzlich 1.241 Manifestreferenzen, 334 GLB-Strukturen, 360 Voice-Dauern,
 48 Cinematic-Timelines, PNG/SVG/WAV-Dateien, Raritaeten und jede Kampagnenlaenge.
-Der Referenzlauf bis New Game+ kann mit
-`python scripts/virtual_release_playthrough.py --campaign-length saga` wiederholt werden.
+Die Referenzlaeufe fuer beide Spielmodi bis New Game+ koennen mit
+`make release-playtest` wiederholt werden.
 
 ## Projektstruktur
 
@@ -150,11 +159,10 @@ Platzhalter, sind aber keine manuell gesculpteten Hero-Assets mit Motion Capture
 Facial Rig oder Visemen. Die deutschen Offline-Produktionsstimmen sind
 vollstaendig eingebunden und koennen anhand stabiler Line-IDs durch
 Studioaufnahmen ersetzt werden. Cinematics sind Motion-Comic-/Realtime-Sequenzen
-mit serverseitigem Zwei-Client-Ack.
+mit serverseitigem Ack aller Kampagnenteilnehmer.
 
 Der lokale Docker-Compose-Stack und der Serverstart wurden im ersten realen
-Setup erreicht. Ein erneuter vollstaendiger Godot-Import nach den drei
-GDScript-Parsefixes, der Windows-Export, das VPS-Deployment und ein echter
+Setup erreicht. Der Windows-Export, das VPS-Deployment und ein echter
 Zwei-PC-Test bleiben zwingende Release-Gates. Die GitHub-CI prueft Import und
 Containerbuild bei kuenftigen Commits automatisch. Details stehen in
 [`docs/asset-audit.md`](docs/asset-audit.md),

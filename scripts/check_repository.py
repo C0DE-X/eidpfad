@@ -10,7 +10,7 @@ import sys
 
 
 MAX_GIT_BLOB_SIZE = 95 * 1024 * 1024
-LFS_SUFFIXES = {".glb", ".png", ".wav"}
+GENERATED_BINARY_SUFFIXES = {".glb", ".png", ".wav"}
 IGNORED_PARTS = {".godot", ".venv", "__pycache__", "dist", "node_modules"}
 REQUIRED_FILES = {
     ".gitattributes",
@@ -23,7 +23,6 @@ REQUIRED_FILES = {
     "docker-compose.yml",
     "server/pyproject.toml",
 }
-LFS_POINTER_HEADER = b"version https://git-lfs.github.com/spec/v1\n"
 
 
 def git(*args: str, input_text: str | None = None, check: bool = True) -> subprocess.CompletedProcess[str]:
@@ -65,18 +64,6 @@ def object_sizes(object_ids: set[str]) -> dict[str, int]:
             raise RuntimeError(f"Unexpected Git object type for {object_id}: {object_type}")
         sizes[object_id] = int(size)
     return sizes
-
-
-def lfs_attributes(paths: list[str]) -> dict[str, str]:
-    if not paths:
-        return {}
-    result = git("check-attr", "--stdin", "filter", input_text="\n".join(paths) + "\n")
-    attributes: dict[str, str] = {}
-    for line in result.stdout.splitlines():
-        path, attribute, value = line.rsplit(": ", 2)
-        if attribute == "filter":
-            attributes[path] = value
-    return attributes
 
 
 def is_forbidden(path: str) -> bool:
@@ -125,22 +112,17 @@ def main() -> int:
     for path, size in oversized:
         errors.append(f"Git blob exceeds 95 MiB: {path} ({size / 1024 / 1024:.1f} MiB)")
 
-    lfs_paths = sorted(path for path in entries if PurePosixPath(path).suffix.lower() in LFS_SUFFIXES)
-    attributes = lfs_attributes(lfs_paths)
-    object_cache: dict[str, bytes] = {}
-    for path in lfs_paths:
-        if attributes.get(path) != "lfs":
-            errors.append(f"Binary asset is not covered by Git LFS attributes: {path}")
-            continue
-        object_id = entries[path]
-        if object_id not in object_cache:
-            object_cache[object_id] = subprocess.run(
-                ["git", "cat-file", "blob", object_id],
-                check=True,
-                stdout=subprocess.PIPE,
-            ).stdout
-        if not object_cache[object_id].startswith(LFS_POINTER_HEADER):
-            errors.append(f"Binary asset is stored as a regular Git blob instead of an LFS pointer: {path}")
+    generated_binaries = sorted(
+        path for path in entries
+        if path.startswith("client/assets/")
+        and PurePosixPath(path).suffix.lower() in GENERATED_BINARY_SUFFIXES
+    )
+    if generated_binaries:
+        errors.append(
+            "Generated runtime binaries must not be tracked; run `make content` after checkout: "
+            + ", ".join(generated_binaries[:8])
+            + (f" (+{len(generated_binaries) - 8} more)" if len(generated_binaries) > 8 else "")
+        )
 
     if errors:
         print("Repository check failed:", file=sys.stderr)
@@ -152,7 +134,7 @@ def main() -> int:
     largest_blob = max(sizes.values(), default=0)
     print(
         f"Repository check passed: {len(entries)} tracked files, "
-        f"{len(lfs_paths)} LFS assets, largest Git blob {largest_blob / 1024:.1f} KiB."
+        f"no generated runtime binaries, largest Git blob {largest_blob / 1024:.1f} KiB."
     )
     print("Tracked file groups: " + ", ".join(f"{key}={value}" for key, value in sorted(suffixes.items())))
     return 0

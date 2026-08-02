@@ -17,6 +17,7 @@ var device_token := ""
 var campaign_id := ""
 var invite_code := ""
 var campaign_status := ""
+var game_mode := ""
 var local_ready := false
 
 var _http: HTTPRequest
@@ -24,6 +25,7 @@ var _socket := WebSocketPeer.new()
 var _pending_action := ""
 var _last_socket_state := WebSocketPeer.STATE_CLOSED
 var _ready_request_pending := false
+var _requested_game_mode := ""
 
 
 func _ready() -> void:
@@ -124,14 +126,16 @@ func list_campaigns() -> void:
 	_request("list_campaigns", "/api/v1/campaigns", HTTPClient.METHOD_GET, null, true)
 
 
-func create_campaign(weapon: String, magic: String, campaign_length: String, seed: Variant = null) -> void:
-	var body := {"weapon": weapon, "magic": magic, "campaign_length": campaign_length}
-	if seed != null:
-		body["seed"] = seed
+func create_campaign(weapon: String, magic: String, campaign_length: String, selected_game_mode: String, campaign_seed: Variant = null) -> void:
+	_requested_game_mode = selected_game_mode
+	var body := {"weapon": weapon, "magic": magic, "campaign_length": campaign_length, "game_mode": selected_game_mode}
+	if campaign_seed != null:
+		body["seed"] = campaign_seed
 	_request("create_campaign", "/api/v1/campaigns", HTTPClient.METHOD_POST, body, true)
 
 
 func join_campaign(code: String, weapon: String, magic: String) -> void:
+	_requested_game_mode = "multiplayer"
 	_request(
 		"join_campaign",
 		"/api/v1/campaigns/join",
@@ -200,10 +204,13 @@ func claim_loot(item_id: String) -> void:
 
 
 func react(card_id: String = "", target_ids: Array[String] = []) -> void:
+	var selected_card_id: Variant = null
+	if not card_id.is_empty():
+		selected_card_id = card_id
 	_send({
 		"type": "react",
 		"protocol_version": PROTOCOL_VERSION,
-		"card_id": card_id if not card_id.is_empty() else null,
+		"card_id": selected_card_id,
 		"target_ids": target_ids,
 	})
 
@@ -253,6 +260,15 @@ func select_campaign(campaign: Dictionary) -> void:
 	campaign_id = str(campaign.get("campaign_id", ""))
 	invite_code = str(campaign.get("invite_code", ""))
 	campaign_status = str(campaign.get("status", ""))
+	game_mode = str(campaign.get("game_mode", ""))
+
+
+func clear_campaign_selection() -> void:
+	disconnect_campaign()
+	campaign_id = ""
+	invite_code = ""
+	campaign_status = ""
+	game_mode = ""
 
 
 func _request(
@@ -301,9 +317,11 @@ func _on_request_completed(
 	var parsed = JSON.parse_string(body.get_string_from_utf8())
 	var payload: Variant = parsed if parsed != null else {}
 	if result != HTTPRequest.RESULT_SUCCESS:
+		_requested_game_mode = ""
 		api_failed.emit(action, "Der Server ist nicht erreichbar (Netzwerkfehler %s)" % result)
 		return
 	if response_code < 200 or response_code >= 300:
+		_requested_game_mode = ""
 		var detail := "HTTP %s" % response_code
 		if payload is Dictionary:
 			detail = str(payload.get("detail", detail))
@@ -311,6 +329,16 @@ func _on_request_completed(
 		return
 
 	if payload is Dictionary:
+		if action == "create_campaign" or action == "join_campaign":
+			var returned_mode := str(payload.get("game_mode", ""))
+			if returned_mode != _requested_game_mode:
+				var requested_mode := _requested_game_mode
+				_requested_game_mode = ""
+				api_failed.emit(
+					action,
+					"Servermodus %s stimmt nicht mit der Auswahl %s überein; Kampagne nicht übernommen" % [returned_mode, requested_mode],
+				)
+				return
 		if action == "create_profile" or action == "recover_profile":
 			profile_id = str(payload.get("profile_id", ""))
 			device_token = str(payload.get("device_token", ""))
@@ -322,6 +350,9 @@ func _on_request_completed(
 		elif action == "create_campaign" or action == "join_campaign":
 			campaign_id = str(payload.get("campaign_id", ""))
 			invite_code = str(payload.get("invite_code", ""))
+			campaign_status = str(payload.get("status", ""))
+			game_mode = str(payload.get("game_mode", ""))
+			_requested_game_mode = ""
 	api_succeeded.emit(action, payload)
 
 
@@ -331,6 +362,7 @@ func _track_socket_event(payload: Dictionary) -> void:
 		campaign_status = new_status
 		campaign_status_changed.emit(campaign_status)
 	if str(payload.get("type", "")) == "lobby":
+		game_mode = str(payload.get("game_mode", game_mode))
 		_ready_request_pending = false
 		var ready_members: Array = payload.get("ready", [])
 		_set_local_ready(profile_id in ready_members)

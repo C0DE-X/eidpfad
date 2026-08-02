@@ -68,6 +68,7 @@ class GameState:
     seed: int
     players: dict[str, PlayerState]
     turn_order: list[str]
+    game_mode: str = "multiplayer"
     content_version: int = 2
     campaign_length: str = "fieldzug"
     world_tier: int = 1
@@ -128,10 +129,13 @@ class GameState:
 
     @classmethod
     def from_dict(cls, value: dict[str, Any]) -> GameState:
+        players = {key: PlayerState(**player) for key, player in value["players"].items()}
         return cls(
             seed=value["seed"],
-            players={key: PlayerState(**player) for key, player in value["players"].items()},
-            turn_order=value["turn_order"], content_version=value.get("content_version", 1), campaign_length=value.get("campaign_length", "fieldzug"),
+            players=players,
+            turn_order=value["turn_order"],
+            game_mode=value.get("game_mode", "singleplayer" if len(players) == 1 else "multiplayer"),
+            content_version=value.get("content_version", 1), campaign_length=value.get("campaign_length", "fieldzug"),
             world_tier=value.get("world_tier", 1), world=value.get("world", {}),
             scenario_index=value.get("scenario_index", 0), phase_index=value.get("phase_index", 0),
             active_slot=value.get("active_slot", 0), starter_index=value.get("starter_index", 0),

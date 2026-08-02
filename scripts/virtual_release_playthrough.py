@@ -27,22 +27,32 @@ PARTNER = "p2"
 
 
 class ReleaseBot:
-    def __init__(self, seed: int, campaign_length: str, action_limit: int) -> None:
+    def __init__(
+        self,
+        seed: int,
+        campaign_length: str,
+        action_limit: int,
+        game_mode: str,
+        host_weapon: str = "longsword",
+        partner_weapon: str = "bow",
+    ) -> None:
         self.cards = CardCatalog(ROOT / "shared" / "cards.json")
         self.items = ItemCatalog(ROOT / "shared" / "items.json")
         self.enemies = EnemyCatalog(ROOT / "shared" / "enemies.json")
+        self.player_ids = (HOST,) if game_mode == "singleplayer" else (HOST, PARTNER)
+        loadouts = {HOST: {"weapon": host_weapon, "magic": "ember"}}
+        if game_mode == "multiplayer":
+            loadouts[PARTNER] = {"weapon": partner_weapon, "magic": "rune"}
         self.runtime = CampaignRuntime.new(
             campaign_id=f"release-playtest-{seed}",
             seed=seed,
-            loadouts={
-                HOST: {"weapon": "axe", "magic": "ember"},
-                PARTNER: {"weapon": "bow", "magic": "rune"},
-            },
+            loadouts=loadouts,
             cards=self.cards,
             items=self.items,
             enemies=self.enemies,
             campaign_length=campaign_length,
             world_tier=1,
+            game_mode=game_mode,
         )
         self.action_limit = action_limit
         self.actions = 0
@@ -63,7 +73,7 @@ class ReleaseBot:
     def clear_media(self) -> None:
         while self.runtime.cinematics.state.active is not None:
             cinematic_id = self.runtime.cinematics.state.active.cinematic_id
-            for player_id in (HOST, PARTNER):
+            for player_id in self.player_ids:
                 active = self.runtime.cinematics.state.active
                 if active is not None and player_id not in active.acknowledged_players:
                     self.take(self.runtime.cinematic_ack(player_id, cinematic_id))
@@ -96,6 +106,7 @@ class ReleaseBot:
             "status": "complete",
             "seed": int(self.runtime.game.state.seed),
             "campaign_length": self.runtime.game.state.world.get("campaign_length", "unknown"),
+            "game_mode": self.runtime.game_mode,
             "actions": self.actions,
             "scenario_count": original_scenario_count,
             "scenario_completions": self.events["scenario_completed"],
@@ -113,15 +124,15 @@ class ReleaseBot:
         if postgame is None:
             return False
         if postgame.state.phase == "ending_vote":
-            for player_id in (HOST, PARTNER):
+            for player_id in self.player_ids:
                 if player_id not in postgame.state.ending_votes:
                     self.take(self.runtime.submit_ending(player_id, "seal"))
         elif postgame.state.phase == "legacy_selection":
-            for player_id in (HOST, PARTNER):
+            for player_id in self.player_ids:
                 if player_id not in postgame.state.legacy_selections:
                     self.take(self.runtime.select_legacy(player_id, postgame.state.legacy_options[player_id][0]))
         elif postgame.state.phase == "new_game_plus":
-            for player_id in (HOST, PARTNER):
+            for player_id in self.player_ids:
                 if player_id not in postgame.state.new_game_confirmations:
                     self.take(self.runtime.confirm_new_game_plus(player_id))
         elif postgame.state.phase == "complete":
@@ -133,7 +144,7 @@ class ReleaseBot:
         contract = self.runtime.boss_contract
         if contract is None or contract.state.stage != "final_oath":
             return False
-        for player_id in (HOST, PARTNER):
+        for player_id in self.player_ids:
             if player_id not in contract.state.final_oath_contributions:
                 self.take(self.runtime.commit_final_oath(player_id))
         return True
@@ -156,12 +167,12 @@ class ReleaseBot:
         state = self.runtime.game.state
         if state.awaiting_scenario_choice:
             scenario_id = str(state.available_scenarios[0]["id"])
-            for player_id in (HOST, PARTNER):
+            for player_id in self.player_ids:
                 if player_id not in state.scenario_votes:
                     self.take(self.runtime.choose_scenario(player_id, scenario_id))
             return True
         if state.pending_loot:
-            for player_id in (HOST, PARTNER):
+            for player_id in self.player_ids:
                 if player_id not in state.loot_claims and state.pending_loot:
                     self.take(self.runtime.claim_loot(player_id, state.pending_loot[0]))
             return True
@@ -188,15 +199,24 @@ class ReleaseBot:
             and self.cards.get(card_id).get("kind") != "reaction"
         ]
         reserve = 2 if state.phase == "attack" else 1 if state.phase == "magic" else 0
+        needs_hunt_preparation = (
+            objective.get("kind") == "prepare_hunt"
+            and objective.get("current", 0) < 1
+            and state.round_number == 1
+            and state.phase != "utility"
+        )
+        if needs_hunt_preparation:
+            reserve = max(reserve, 1)
         playable = [
             card_id for card_id in playable
             if player.action_points - self.cards.get(card_id)["action_point_cost"] >= reserve
         ]
-        ally = next(value for key, value in state.players.items() if key != player.profile_id)
-        playable = [
-            card_id for card_id in playable
-            if self.cards.get(card_id).get("kind") != "cooperation" or ally.action_points >= 1
-        ]
+        allies = [value for key, value in state.players.items() if key != player.profile_id]
+        if allies:
+            playable = [
+                card_id for card_id in playable
+                if self.cards.get(card_id).get("kind") != "cooperation" or allies[0].action_points >= 1
+            ]
         playable.sort(
             key=lambda card_id: any(
                 effect["type"] in {"dice_attack", "dice_magic_damage"}
@@ -222,9 +242,19 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--seed", type=int, default=17)
     parser.add_argument("--campaign-length", choices=("expedition", "fieldzug", "saga"), default="expedition")
+    parser.add_argument("--game-mode", choices=("singleplayer", "multiplayer"), default="multiplayer")
+    parser.add_argument("--host-weapon", choices=("dual_blades", "axe", "bow", "crossbow", "longsword"), default="longsword")
+    parser.add_argument("--partner-weapon", choices=("dual_blades", "axe", "bow", "crossbow", "longsword"), default="bow")
     parser.add_argument("--action-limit", type=int, default=25_000)
     args = parser.parse_args()
-    report = ReleaseBot(args.seed, args.campaign_length, args.action_limit).run()
+    report = ReleaseBot(
+        args.seed,
+        args.campaign_length,
+        args.action_limit,
+        args.game_mode,
+        args.host_weapon,
+        args.partner_weapon,
+    ).run()
     print(json.dumps(report, ensure_ascii=False, sort_keys=True))
 
 

@@ -15,10 +15,30 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 30
     steps:
-      - name: Check out source and LFS assets
+      - name: Check out source
         uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
         with:
-          lfs: true
+          python-version: "3.13"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Generate runtime assets
+        shell: pwsh
+        run: |
+          python scripts/generate_content.py
+          python scripts/generate_audio.py
+          python scripts/generate_raster_assets.py
+          python scripts/generate_narrative.py
+          npm ci --ignore-scripts
+          npm run voice
+          python scripts/generate_visual_assets.py
 
       - name: Download verified Godot editor and export templates
         id: godot

@@ -29,6 +29,11 @@
       "speed": 148,
       "pitch": 27
     },
+    "swordmaster": {
+      "voice": "de+m5",
+      "speed": 154,
+      "pitch": 34
+    },
     "mentor": {
       "voice": "de+f2",
       "speed": 162,
@@ -213,46 +218,46 @@
     {
       "id": "plot_07",
       "speaker": "narrator",
-      "text": "Die Reliquie zerbrach zwischen uns und brannte ihr Zeichen in zwei Hände.",
+      "text": "Die Reliquie zerbrach und brannte ihr Zeichen in die Hand ihres letzten Trägers.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/narrator/plot_07.wav",
-      "duration_ms": 4120,
+      "duration_ms": 4369,
       "sample_rate": 22050
     },
     {
       "id": "plot_08",
       "speaker": "narrator",
-      "text": "Seit dieser Nacht öffnet sich kein Eidpfad für einen von uns allein.",
+      "text": "Seit dieser Nacht öffnet sich jeder Eidpfad nur noch für dieses Zeichen.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/narrator/plot_08.wav",
-      "duration_ms": 3873,
+      "duration_ms": 4102,
       "sample_rate": 22050
     },
     {
       "id": "plot_09",
       "speaker": "pathfinder",
-      "text": "Wir sind keine Erwählten. Wir sind Söldner mit einem unbezahlten Auftrag.",
+      "text": "Hier marschieren keine Erwählten, sondern Söldner mit einem unbezahlten Auftrag.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/pathfinder/plot_09.wav",
-      "duration_ms": 4617,
+      "duration_ms": 4709,
       "sample_rate": 22050
     },
     {
       "id": "plot_10",
       "speaker": "vanguard",
-      "text": "Solange einer von uns steht, bleibt der Weg offen.",
+      "text": "Solange der Graue Eid steht, bleibt der Weg offen.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/vanguard/plot_10.wav",
-      "duration_ms": 3174,
+      "duration_ms": 3334,
       "sample_rate": 22050
     },
     {
       "id": "plot_11",
       "speaker": "narrator",
-      "text": "Solange beide zurückkehren, ist kein Scheitern endgültig.",
+      "text": "Solange sein Träger zurückkehrt, ist kein Scheitern endgültig.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/narrator/plot_11.wav",
-      "duration_ms": 3502,
+      "duration_ms": 3802,
       "sample_rate": 22050
     },
     {
@@ -330,10 +335,10 @@
     {
       "id": "plot_20",
       "speaker": "vanguard",
-      "text": "Teilt den Schlag. Vereint die Würfel. Sprecht den letzten Eid.",
+      "text": "Sammelt die Kraft. Werft die Würfel. Sprecht den letzten Eid.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/vanguard/plot_20.wav",
-      "duration_ms": 4483,
+      "duration_ms": 4155,
       "sample_rate": 22050
     },
     {
@@ -420,19 +425,19 @@
     {
       "id": "plot_30",
       "speaker": "vanguard",
-      "text": "Er beginnt erneut, sobald zwei Schritte denselben Weg wählen.",
+      "text": "Er beginnt erneut, sobald sein Zeichen den nächsten Weg wählt.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/vanguard/plot_30.wav",
-      "duration_ms": 4057,
+      "duration_ms": 4089,
       "sample_rate": 22050
     },
     {
       "id": "plot_31",
       "speaker": "narrator",
-      "text": "Der Wegstein antwortet auf beide Zeichen.",
+      "text": "Der Wegstein antwortet auf das Zeichen.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/narrator/plot_31.wav",
-      "duration_ms": 2483,
+      "duration_ms": 2353,
       "sample_rate": 22050
     },
     {
@@ -456,10 +461,10 @@
     {
       "id": "plot_34",
       "speaker": "vanguard",
-      "text": "Unsere Vorräte sind knapp, doch unser Eid ist vollständig.",
+      "text": "Die Vorräte sind knapp, doch der Eid ist vollständig.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/vanguard/plot_34.wav",
-      "duration_ms": 3594,
+      "duration_ms": 3259,
       "sample_rate": 22050
     },
     {
@@ -483,37 +488,37 @@
     {
       "id": "plot_37",
       "speaker": "narrator",
-      "text": "Ein Rückschlag führt uns zum letzten gemeinsamen Savepoint zurück.",
+      "text": "Ein Rückschlag führt zum letzten sicheren Wegstein zurück.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/narrator/plot_37.wav",
-      "duration_ms": 4082,
+      "duration_ms": 3462,
       "sample_rate": 22050
     },
     {
       "id": "plot_38",
       "speaker": "narrator",
-      "text": "Der Tod trennt uns nicht. Er zwingt uns nur, gemeinsam besser zu werden.",
+      "text": "Der Tod beendet den Auftrag nicht. Er verlangt nur einen besseren Versuch.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/narrator/plot_38.wav",
-      "duration_ms": 4491,
+      "duration_ms": 4468,
       "sample_rate": 22050
     },
     {
       "id": "plot_39",
       "speaker": "pathfinder",
-      "text": "Atmet durch. Ordnet eure Karten. Der Pfad wartet.",
+      "text": "Atem holen. Karten ordnen. Der Pfad wartet.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/pathfinder/plot_39.wav",
-      "duration_ms": 3567,
+      "duration_ms": 3397,
       "sample_rate": 22050
     },
     {
       "id": "plot_40",
       "speaker": "narrator",
-      "text": "Zwei Söldner. Ein Auftrag. Unzählige Welten.",
+      "text": "Der Graue Eid. Ein Auftrag. Unzählige Welten.",
       "category": "plot",
       "asset": "res://assets/voice/de-DE/narrator/plot_40.wav",
-      "duration_ms": 3479,
+      "duration_ms": 3339,
       "sample_rate": 22050
     },
     {
@@ -537,10 +542,10 @@
     {
       "id": "country_nebelmark_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_nebelmark_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -564,10 +569,10 @@
     {
       "id": "country_sonnenbruch_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_sonnenbruch_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -591,10 +596,10 @@
     {
       "id": "country_frostreiche_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_frostreiche_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -618,10 +623,10 @@
     {
       "id": "country_splitterinseln_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_splitterinseln_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -645,10 +650,10 @@
     {
       "id": "country_aschenlande_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_aschenlande_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -672,10 +677,10 @@
     {
       "id": "country_dornwall_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_dornwall_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -699,10 +704,10 @@
     {
       "id": "country_glassteppe_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_glassteppe_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -726,10 +731,10 @@
     {
       "id": "country_tiefenwald_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_tiefenwald_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -753,10 +758,10 @@
     {
       "id": "country_kupferkueste_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_kupferkueste_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -780,10 +785,10 @@
     {
       "id": "country_knochental_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_knochental_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -807,10 +812,10 @@
     {
       "id": "country_nachtkrone_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_nachtkrone_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -834,10 +839,10 @@
     {
       "id": "country_sturmmarsch_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_sturmmarsch_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -861,10 +866,10 @@
     {
       "id": "country_versunkener_bund_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_versunkener_bund_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -888,10 +893,10 @@
     {
       "id": "country_weltennaht_3",
       "speaker": "vanguard",
-      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "text": "Was hier jagt, hat gelernt, unvorsichtige Reisende zu verschlucken.",
       "category": "country",
       "asset": "res://assets/voice/de-DE/vanguard/country_weltennaht_3.wav",
-      "duration_ms": 5534,
+      "duration_ms": 4381,
       "sample_rate": 22050
     },
     {
@@ -906,19 +911,19 @@
     {
       "id": "scenario_ambush_2",
       "speaker": "vanguard",
-      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "text": "Ausrüstung, Position und Aktionspunkte müssen vor dem ersten Zug stimmen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/vanguard/scenario_ambush_2.wav",
-      "duration_ms": 5822,
+      "duration_ms": 5015,
       "sample_rate": 22050
     },
     {
       "id": "scenario_ambush_3",
       "speaker": "pathfinder",
-      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "text": "Schwächen lassen sich mit der richtigen Kartenfolge ausgleichen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/pathfinder/scenario_ambush_3.wav",
-      "duration_ms": 3781,
+      "duration_ms": 3444,
       "sample_rate": 22050
     },
     {
@@ -933,19 +938,19 @@
     {
       "id": "scenario_raid_2",
       "speaker": "vanguard",
-      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "text": "Ausrüstung, Position und Aktionspunkte müssen vor dem ersten Zug stimmen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/vanguard/scenario_raid_2.wav",
-      "duration_ms": 5822,
+      "duration_ms": 5015,
       "sample_rate": 22050
     },
     {
       "id": "scenario_raid_3",
       "speaker": "pathfinder",
-      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "text": "Schwächen lassen sich mit der richtigen Kartenfolge ausgleichen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/pathfinder/scenario_raid_3.wav",
-      "duration_ms": 3781,
+      "duration_ms": 3444,
       "sample_rate": 22050
     },
     {
@@ -960,19 +965,19 @@
     {
       "id": "scenario_village_2",
       "speaker": "vanguard",
-      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "text": "Ausrüstung, Position und Aktionspunkte müssen vor dem ersten Zug stimmen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/vanguard/scenario_village_2.wav",
-      "duration_ms": 5822,
+      "duration_ms": 5015,
       "sample_rate": 22050
     },
     {
       "id": "scenario_village_3",
       "speaker": "pathfinder",
-      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "text": "Schwächen lassen sich mit der richtigen Kartenfolge ausgleichen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/pathfinder/scenario_village_3.wav",
-      "duration_ms": 3781,
+      "duration_ms": 3444,
       "sample_rate": 22050
     },
     {
@@ -987,19 +992,19 @@
     {
       "id": "scenario_caravan_2",
       "speaker": "vanguard",
-      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "text": "Ausrüstung, Position und Aktionspunkte müssen vor dem ersten Zug stimmen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/vanguard/scenario_caravan_2.wav",
-      "duration_ms": 5822,
+      "duration_ms": 5015,
       "sample_rate": 22050
     },
     {
       "id": "scenario_caravan_3",
       "speaker": "pathfinder",
-      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "text": "Schwächen lassen sich mit der richtigen Kartenfolge ausgleichen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/pathfinder/scenario_caravan_3.wav",
-      "duration_ms": 3781,
+      "duration_ms": 3444,
       "sample_rate": 22050
     },
     {
@@ -1014,19 +1019,19 @@
     {
       "id": "scenario_hunt_2",
       "speaker": "vanguard",
-      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "text": "Ausrüstung, Position und Aktionspunkte müssen vor dem ersten Zug stimmen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/vanguard/scenario_hunt_2.wav",
-      "duration_ms": 5822,
+      "duration_ms": 5015,
       "sample_rate": 22050
     },
     {
       "id": "scenario_hunt_3",
       "speaker": "pathfinder",
-      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "text": "Schwächen lassen sich mit der richtigen Kartenfolge ausgleichen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/pathfinder/scenario_hunt_3.wav",
-      "duration_ms": 3781,
+      "duration_ms": 3444,
       "sample_rate": 22050
     },
     {
@@ -1041,19 +1046,19 @@
     {
       "id": "scenario_ruin_2",
       "speaker": "vanguard",
-      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "text": "Ausrüstung, Position und Aktionspunkte müssen vor dem ersten Zug stimmen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/vanguard/scenario_ruin_2.wav",
-      "duration_ms": 5822,
+      "duration_ms": 5015,
       "sample_rate": 22050
     },
     {
       "id": "scenario_ruin_3",
       "speaker": "pathfinder",
-      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "text": "Schwächen lassen sich mit der richtigen Kartenfolge ausgleichen.",
       "category": "scenario",
       "asset": "res://assets/voice/de-DE/pathfinder/scenario_ruin_3.wav",
-      "duration_ms": 3781,
+      "duration_ms": 3444,
       "sample_rate": 22050
     },
     {
@@ -1671,10 +1676,10 @@
     {
       "id": "bark_pathfinder_09",
       "speaker": "pathfinder",
-      "text": "Bleib hinter mir.",
+      "text": "Deckung halten.",
       "category": "hero_bark",
       "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_09.wav",
-      "duration_ms": 1250,
+      "duration_ms": 1045,
       "sample_rate": 22050
     },
     {
@@ -1725,10 +1730,10 @@
     {
       "id": "bark_pathfinder_15",
       "speaker": "pathfinder",
-      "text": "Jetzt gemeinsam.",
+      "text": "Jetzt zählt jeder Treffer.",
       "category": "hero_bark",
       "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_15.wav",
-      "duration_ms": 1285,
+      "duration_ms": 1776,
       "sample_rate": 22050
     },
     {
@@ -1761,10 +1766,10 @@
     {
       "id": "bark_pathfinder_19",
       "speaker": "pathfinder",
-      "text": "Die Beute gehört uns beiden.",
+      "text": "Beute gesichert.",
       "category": "hero_bark",
       "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_19.wav",
-      "duration_ms": 1694,
+      "duration_ms": 1087,
       "sample_rate": 22050
     },
     {
@@ -1941,10 +1946,10 @@
     {
       "id": "bark_vanguard_15",
       "speaker": "vanguard",
-      "text": "Gemeinsam zuschlagen.",
+      "text": "Jetzt zuschlagen.",
       "category": "hero_bark",
       "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_15.wav",
-      "duration_ms": 1641,
+      "duration_ms": 1408,
       "sample_rate": 22050
     },
     {
@@ -2157,10 +2162,10 @@
     {
       "id": "bark_duelist_15",
       "speaker": "duelist",
-      "text": "Beide Seiten, jetzt.",
+      "text": "Doppelschlag, jetzt.",
       "category": "hero_bark",
       "asset": "res://assets/voice/de-DE/duelist/bark_duelist_15.wav",
-      "duration_ms": 1719,
+      "duration_ms": 1536,
       "sample_rate": 22050
     },
     {
@@ -2458,6 +2463,222 @@
       "category": "hero_bark",
       "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_24.wav",
       "duration_ms": 2115,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_01",
+      "speaker": "swordmaster",
+      "text": "Die Klinge steht bereit.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_01.wav",
+      "duration_ms": 1511,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_02",
+      "speaker": "swordmaster",
+      "text": "Gerade Linie.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_02.wav",
+      "duration_ms": 1025,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_03",
+      "speaker": "swordmaster",
+      "text": "Halbschwertgriff.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_03.wav",
+      "duration_ms": 1285,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_04",
+      "speaker": "swordmaster",
+      "text": "Die Hut hält.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_04.wav",
+      "duration_ms": 1075,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_05",
+      "speaker": "swordmaster",
+      "text": "Der Ort ist gewählt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_05.wav",
+      "duration_ms": 1394,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_06",
+      "speaker": "swordmaster",
+      "text": "Kein Schritt zu viel.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_06.wav",
+      "duration_ms": 1583,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_07",
+      "speaker": "swordmaster",
+      "text": "Die Rüstung gibt nach.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_07.wav",
+      "duration_ms": 1516,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_08",
+      "speaker": "swordmaster",
+      "text": "Der nächste Hieb entscheidet.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_08.wav",
+      "duration_ms": 1710,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_09",
+      "speaker": "swordmaster",
+      "text": "Parade gesetzt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_09.wav",
+      "duration_ms": 1280,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_10",
+      "speaker": "swordmaster",
+      "text": "Ein Atemzug.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_10.wav",
+      "duration_ms": 1182,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_11",
+      "speaker": "swordmaster",
+      "text": "Der Stahl trägt Runen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_11.wav",
+      "duration_ms": 1573,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_12",
+      "speaker": "swordmaster",
+      "text": "Der Pfad kennt diese Klinge.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_12.wav",
+      "duration_ms": 1711,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_13",
+      "speaker": "swordmaster",
+      "text": "Noch eine Welle.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_13.wav",
+      "duration_ms": 984,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_14",
+      "speaker": "swordmaster",
+      "text": "Das Muster ist erkannt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_14.wav",
+      "duration_ms": 1391,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_15",
+      "speaker": "swordmaster",
+      "text": "Jetzt fällt das Urteil.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_15.wav",
+      "duration_ms": 1612,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_16",
+      "speaker": "swordmaster",
+      "text": "Der Treffer war flach.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_16.wav",
+      "duration_ms": 1299,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_17",
+      "speaker": "swordmaster",
+      "text": "Der Stand bleibt fest.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_17.wav",
+      "duration_ms": 1527,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_18",
+      "speaker": "swordmaster",
+      "text": "Saubere Parade.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_18.wav",
+      "duration_ms": 1276,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_19",
+      "speaker": "swordmaster",
+      "text": "Wähle nach Balance.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_19.wav",
+      "duration_ms": 1343,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_20",
+      "speaker": "swordmaster",
+      "text": "Dieser Stahl erinnert sich.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_20.wav",
+      "duration_ms": 1506,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_21",
+      "speaker": "swordmaster",
+      "text": "Ein neuer Pfad.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_21.wav",
+      "duration_ms": 1103,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_22",
+      "speaker": "swordmaster",
+      "text": "Die Spur kreuzt sich.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_22.wav",
+      "duration_ms": 1444,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_23",
+      "speaker": "swordmaster",
+      "text": "Im Maß bleiben.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_23.wav",
+      "duration_ms": 1162,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_swordmaster_24",
+      "speaker": "swordmaster",
+      "text": "Für den ersten Eid.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/swordmaster/bark_swordmaster_24.wav",
+      "duration_ms": 1427,
       "sample_rate": 22050
     },
     {
@@ -3012,10 +3233,10 @@
     {
       "id": "tutorial_02",
       "speaker": "mentor",
-      "text": "Eure fünf Aktionspunkte gelten gemeinsam für alle vier Phasen.",
+      "text": "Die fünf Aktionspunkte gelten übergreifend für alle vier Phasen.",
       "category": "tutorial",
       "asset": "res://assets/voice/de-DE/mentor/tutorial_02.wav",
-      "duration_ms": 4086,
+      "duration_ms": 4018,
       "sample_rate": 22050
     },
     {
@@ -3048,10 +3269,10 @@
     {
       "id": "tutorial_06",
       "speaker": "mentor",
-      "text": "Beide Spieler müssen ihre Beute wählen, bevor die Reise weitergeht.",
+      "text": "Jeder Kampagnencharakter muss seine Beute wählen, bevor die Reise weitergeht.",
       "category": "tutorial",
       "asset": "res://assets/voice/de-DE/mentor/tutorial_06.wav",
-      "duration_ms": 3785,
+      "duration_ms": 4383,
       "sample_rate": 22050
     },
     {
@@ -3066,10 +3287,10 @@
     {
       "id": "tutorial_08",
       "speaker": "mentor",
-      "text": "Fällt ein Söldner, kehrt das Team zum letzten gemeinsamen Savepoint zurück.",
+      "text": "Fällt ein Söldner, kehrt die Kampagne zum letzten sicheren Wegstein zurück.",
       "category": "tutorial",
       "asset": "res://assets/voice/de-DE/mentor/tutorial_08.wav",
-      "duration_ms": 4950,
+      "duration_ms": 4630,
       "sample_rate": 22050
     },
     {
@@ -3129,19 +3350,19 @@
     {
       "id": "ending_bind_1",
       "speaker": "duelist",
-      "text": "Wir binden die Krone an unseren gemeinsamen Eid.",
+      "text": "Wir binden die Krone an den Grauen Eid.",
       "category": "ending",
       "asset": "res://assets/voice/de-DE/duelist/ending_bind_1.wav",
-      "duration_ms": 2773,
+      "duration_ms": 2329,
       "sample_rate": 22050
     },
     {
       "id": "ending_bind_2",
       "speaker": "narrator",
-      "text": "Ihre Macht bleibt, doch sie gehorcht fortan zwei Stimmen.",
+      "text": "Ihre Macht bleibt, doch sie gehorcht fortan seinem Zeichen.",
       "category": "ending",
       "asset": "res://assets/voice/de-DE/narrator/ending_bind_2.wav",
-      "duration_ms": 3333,
+      "duration_ms": 3454,
       "sample_rate": 22050
     },
     {
@@ -3165,19 +3386,19 @@
     {
       "id": "legacy_1",
       "speaker": "arbalist",
-      "text": "Ein Relikt pro Söldner übersteht das Weltenecho.",
+      "text": "Das stärkste Relikt jedes Söldners übersteht das Weltenecho.",
       "category": "legacy",
       "asset": "res://assets/voice/de-DE/arbalist/legacy_1.wav",
-      "duration_ms": 2865,
+      "duration_ms": 3619,
       "sample_rate": 22050
     },
     {
       "id": "legacy_2",
       "speaker": "narrator",
-      "text": "Zwei Vermächtnisse werden in die Karte der nächsten Welt geschrieben.",
+      "text": "Die Vermächtnisse werden in die Karte der nächsten Welt geschrieben.",
       "category": "legacy",
       "asset": "res://assets/voice/de-DE/narrator/legacy_2.wav",
-      "duration_ms": 3709,
+      "duration_ms": 3435,
       "sample_rate": 22050
     }
   ]

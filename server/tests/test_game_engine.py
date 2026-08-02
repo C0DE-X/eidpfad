@@ -32,6 +32,42 @@ class GameEngineTests(unittest.TestCase):
         with self.assertRaises(RuleViolation):
             self.engine.play_card("player-two", "eisenbrecher")
 
+    def test_singleplayer_deck_and_rewards_exclude_multiplayer_cards(self) -> None:
+        solo = GameEngine.new(
+            seed=17,
+            loadouts={"solo": {"weapon": "longsword", "magic": "rune"}},
+            catalog=CATALOG,
+            items=ITEMS,
+            enemies=ENEMIES,
+            campaign_length="expedition",
+            game_mode="singleplayer",
+        )
+        player = solo.state.players["solo"]
+        initial_cards = player.hand + player.deck
+        self.assertTrue(initial_cards)
+        self.assertTrue(all(CATALOG.is_solo_compatible(CATALOG.get(card_id)) for card_id in initial_cards))
+
+        for _ in range(20):
+            solo._grant_progression_cards()
+        all_cards = player.hand + player.deck + player.discard + player.exhausted
+        self.assertTrue(all(CATALOG.is_solo_compatible(CATALOG.get(card_id)) for card_id in all_cards))
+
+    def test_singleplayer_encounters_scale_for_one_character(self) -> None:
+        solo = GameEngine.new(
+            seed=42,
+            loadouts={"player-one": {"weapon": "longsword", "magic": "ember"}},
+            catalog=CATALOG,
+            items=ITEMS,
+            enemies=ENEMIES,
+            campaign_length="expedition",
+            game_mode="singleplayer",
+        )
+        self.assertEqual(solo.state.enemy.enemy_id, self.engine.state.enemy.enemy_id)
+        self.assertLess(solo.state.enemy.hp, self.engine.state.enemy.hp)
+        self.assertLessEqual(solo.state.enemy.armor, self.engine.state.enemy.armor)
+        self.assertLessEqual(solo.state.enemy.attack_dice, self.engine.state.enemy.attack_dice)
+        self.assertLessEqual(solo.state.enemy.damage_per_hit, self.engine.state.enemy.damage_per_hit)
+
     def test_card_consumes_action_points_and_moves_to_discard(self) -> None:
         player = self.engine.state.players["player-one"]
         player.hand = ["kreuzschnitt"]

@@ -203,6 +203,7 @@ def create_campaign(
         owner_profile_id=profile.id,
         seed=request.seed if request.seed is not None else randbelow(2**31),
         campaign_length=request.campaign_length,
+        game_mode=request.game_mode,
     )
     db.add(campaign)
     db.flush()
@@ -230,6 +231,8 @@ def join_campaign(
     campaign = db.scalar(select(Campaign).where(Campaign.invite_code == code).with_for_update())
     if campaign is None:
         raise HTTPException(status_code=404, detail="Campaign not found")
+    if campaign.game_mode == "singleplayer":
+        raise HTTPException(status_code=409, detail="Singleplayer campaigns cannot be joined")
 
     existing = db.scalar(
         select(CampaignMember).where(
@@ -326,6 +329,9 @@ async def _handle_message(db: Session, campaign_id: str, profile_id: str, messag
     if message.type == "ready":
         if campaign.status == "completed":
             raise RuleViolation("Completed campaigns cannot be readied or resumed")
+        if message.ready and not _all_required_players_connected(campaign, member_ids):
+            requirement = "the solo player" if campaign.game_mode == "singleplayer" else "both players"
+            raise RuleViolation(f"Cannot ready until {requirement} are connected")
 
         changed = lobbies.set_ready(campaign_id, profile_id, message.ready)
         transition_payload: dict | None = None
@@ -339,7 +345,7 @@ async def _handle_message(db: Session, campaign_id: str, profile_id: str, messag
                 "state": _load_existing_game(db, campaign).client_view(profile_id),
                 "campaign_status": campaign.status,
             }
-        elif message.ready and lobbies.all_ready(campaign_id, member_ids):
+        elif message.ready and _all_required_players_ready(campaign, member_ids):
             if campaign.status == "waiting":
                 game = _load_or_start_game(db, campaign)
                 campaign.status = "playing"
@@ -370,8 +376,8 @@ async def _handle_message(db: Session, campaign_id: str, profile_id: str, messag
         raise RuleViolation("The campaign is completed")
     if campaign.status != "playing":
         raise RuleViolation("The campaign is paused or has not started")
-    if not lobbies.all_ready(campaign_id, member_ids):
-        raise RuleViolation("Both connected players must be ready")
+    if not _all_required_players_ready(campaign, member_ids):
+        raise RuleViolation("All required players must be connected and ready")
 
     game = runtime_games.get(campaign_id)
     if game is None:
@@ -441,6 +447,7 @@ def _load_or_start_game(db: Session, campaign: Campaign) -> CampaignRuntime:
             items=content.items,
             enemies=content.enemies,
             fallback_loadouts=_campaign_loadouts(db, campaign.id),
+            game_mode=campaign.game_mode,
         )
     else:
         game = CampaignRuntime.new(
@@ -452,6 +459,7 @@ def _load_or_start_game(db: Session, campaign: Campaign) -> CampaignRuntime:
             enemies=content.enemies,
             campaign_length=campaign.campaign_length,
             world_tier=campaign.world_tier,
+            game_mode=campaign.game_mode,
         )
     runtime_games[campaign.id] = game
     return game
@@ -543,7 +551,10 @@ async def _broadcast_lobby(db: Session, campaign_id: str) -> None:
                 for row in member_rows
             ],
             "campaign_status": campaign.status,
-            "can_ready": campaign.status in {"waiting", "paused"} and len(members) == 2,
+            "game_mode": campaign.game_mode,
+            "can_ready": campaign.status in {"waiting", "paused"} and (
+                len(members) == 1 if campaign.game_mode == "singleplayer" else len(members) == 2
+            ),
             "can_pause": campaign.status == "playing",
         },
     )
@@ -563,7 +574,7 @@ async def _initialize_connection(
     )
     # A process restart loses volatile ready/socket state. Normalize a formerly
     # playing campaign to paused as soon as a member reconnects alone.
-    if campaign.status == "playing" and not lobbies.all_connected(campaign_id, member_ids):
+    if campaign.status == "playing" and not _all_required_players_connected(campaign, member_ids):
         campaign.status = "paused"
         lobbies.clear_ready(campaign_id)
         db.commit()
@@ -612,8 +623,19 @@ def _campaign_view(db: Session, campaign: Campaign) -> CampaignView:
         status=campaign.status,
         campaign_length=campaign.campaign_length,
         world_tier=campaign.world_tier,
+        game_mode=campaign.game_mode,
         members=members,
     )
+
+
+def _all_required_players_connected(campaign: Campaign, member_ids: list[str]) -> bool:
+    if campaign.game_mode == "singleplayer":
+        return len(member_ids) == 1 and set(member_ids) <= set(lobbies.connections.get(campaign.id, {}))
+    return lobbies.all_connected(campaign.id, member_ids)
+
+
+def _all_required_players_ready(campaign: Campaign, member_ids: list[str]) -> bool:
+    return _all_required_players_connected(campaign, member_ids) and set(member_ids) <= lobbies.ready.get(campaign.id, set())
 
 
 def _new_invite_code(db: Session) -> str:

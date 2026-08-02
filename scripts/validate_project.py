@@ -109,11 +109,18 @@ def validate(report_path: Path | None) -> dict[str, Any]:
     require(len({entry["art"] for entry in card_entries + item_entries + enemy_entries}) == len(card_entries + item_entries + enemy_entries), "Every catalog entry needs unique 2D art")
     require(len({entry["model"] for entry in item_entries + enemy_entries}) == len(item_entries + enemy_entries), "Every item and enemy needs a unique 3D model")
 
-    for weapon in ("dual_blades", "axe", "bow", "crossbow"):
+    for weapon in ("dual_blades", "axe", "bow", "crossbow", "longsword"):
         for magic in ("rune", "ember", "veil", "blood"):
             deck = cards.starter_deck(weapon, magic)
             require(len(deck) == 18, f"Starter deck {weapon}/{magic} needs 18 cards")
             require({cards.get(card_id)["phase"] for card_id in deck} == set(PHASES), f"Starter deck {weapon}/{magic} misses a phase")
+            solo_deck = cards.starter_deck(weapon, magic, game_mode="singleplayer")
+            require(solo_deck, f"Solo starter deck {weapon}/{magic} is empty")
+            require(all(cards.is_solo_compatible(cards.get(card_id)) for card_id in solo_deck), f"Solo starter deck {weapon}/{magic} contains multiplayer effects")
+
+    visible_card_text = " ".join(str(entry.get("text", "")).lower() for entry in card_entries)
+    for untranslated_status in ("aimed", "exposed", "coordinated"):
+        require(untranslated_status not in visible_card_text, f"Card text exposes untranslated status: {untranslated_status}")
 
     body_families = {"humanoid", "quadruped", "serpent", "arthropod", "harpy", "spirit", "swarm", "giant"}
     for enemy in enemy_entries:
@@ -151,7 +158,7 @@ def validate(report_path: Path | None) -> dict[str, Any]:
     }:
         width, height = png_size(local_asset(path))
         require(width / height > 1.6, f"Background is not landscape: {path}")
-    for name in ("vanguard", "pathfinder", "duelist", "arbalist"):
+    for name in ("vanguard", "pathfinder", "duelist", "arbalist", "swordmaster"):
         width, height = png_size(ROOT / "client" / "assets" / "portraits" / f"{name}.png")
         require(height > width, f"Portrait is not vertical: {name}")
 
@@ -183,6 +190,16 @@ def validate(report_path: Path | None) -> dict[str, Any]:
     for model_path in required_assets["item_models"]:
         clips = {animation.get("name") for animation in glb_document(local_asset(model_path)).get("animations", [])}
         require({"loot_hover", "reveal"} <= clips, f"Loot model misses reveal animations: {model_path}")
+    longsword_models = [
+        local_asset(entry["model"])
+        for entry in item_entries
+        if entry.get("weapon_school") == "longsword"
+    ]
+    require(len(longsword_models) == 24, "Longsword school needs exactly 24 item models")
+    require(
+        len({hashlib.sha256(path.read_bytes()).hexdigest() for path in longsword_models}) == len(longsword_models),
+        "Longsword models must have distinct geometry, material or texture data",
+    )
     for model_path in required_assets["country_models"] + required_assets["prop_models"]:
         clips = {animation.get("name") for animation in glb_document(local_asset(model_path)).get("animations", [])}
         require("ambient" in clips, f"Environment model lacks ambient animation: {model_path}")
@@ -199,7 +216,7 @@ def validate(report_path: Path | None) -> dict[str, Any]:
     generated_pngs = list((ROOT / "client" / "assets").rglob("*.png"))
     generated_glbs = list((ROOT / "client" / "assets" / "models").rglob("*.glb"))
     generated_wavs = list((ROOT / "client" / "assets" / "audio").glob("*.wav"))
-    require(len(generated_glbs) >= 299, "The complete 3D gameplay library needs at least 299 models")
+    require(len(generated_glbs) == 334, "The complete 3D gameplay library needs exactly 334 models")
     actual_glb_resources = {"res://" + str(path.relative_to(ROOT / "client")) for path in generated_glbs}
     manifest_glbs = {path for paths in required_assets.values() for path in paths if path.endswith(".glb")}
     require(actual_glb_resources == manifest_glbs, "GLB library contains missing or orphaned files")
@@ -213,7 +230,7 @@ def validate(report_path: Path | None) -> dict[str, Any]:
 
     voice_manifest = json.loads((ROOT / "shared" / "narrative" / "voice_manifest.de-DE.json").read_text(encoding="utf-8"))
     voice_lines = voice_manifest.get("lines", [])
-    require(len(voice_lines) == 336 and len({line["id"] for line in voice_lines}) == 336, "German voice manifest must contain 336 unique lines")
+    require(len(voice_lines) == 360 and len({line["id"] for line in voice_lines}) == 360, "German voice manifest must contain 360 unique lines")
     voice_paths: set[str] = set()
     for line in voice_lines:
         path = local_asset(line["asset"])

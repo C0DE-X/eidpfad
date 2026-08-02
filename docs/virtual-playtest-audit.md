@@ -66,8 +66,8 @@ Alle drei Fälle besitzen Regressionstests.
 | vollständiger Bossvertrag | implementiert und getestet |
 | Ending, Legacy und New Game+ | implementiert und getestet |
 | serverpersistierte Cinematics/Acks | implementiert und getestet |
-| alle Runtime-Assets referenziert | 1.151/1.151 vorhanden |
-| 3D-Modellstruktur | 309/309 intern und offiziell valide |
+| alle Runtime-Assets referenziert | 1.241/1.241 vorhanden |
+| 3D-Modellstruktur | 334/334 intern valide |
 | Windows-/Docker-/Zwei-PC-Runtime | extern noch auszuführen |
 
 ## Release-Gates außerhalb dieser Umgebung

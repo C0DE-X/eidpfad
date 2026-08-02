@@ -14,6 +14,7 @@ setup:
 content:
 	$(PYTHON) scripts/generate_content.py
 	$(PYTHON) scripts/generate_audio.py
+	$(PYTHON) scripts/generate_raster_assets.py
 	$(PYTHON) scripts/generate_narrative.py
 	$(NPM) ci --ignore-scripts
 	$(NPM) run voice
@@ -38,7 +39,8 @@ server-test:
 	PYTHONPATH=server $(PYTHON) -m unittest discover -s server/tests -v
 
 release-playtest:
-	PYTHONPATH=server $(PYTHON) scripts/virtual_release_playthrough.py --campaign-length saga --seed 23
+	PYTHONPATH=server $(PYTHON) scripts/virtual_release_playthrough.py --campaign-length saga --seed 23 --game-mode multiplayer
+	PYTHONPATH=server $(PYTHON) scripts/virtual_release_playthrough.py --campaign-length saga --seed 17 --game-mode singleplayer
 
 client-windows:
 	mkdir -p dist/client

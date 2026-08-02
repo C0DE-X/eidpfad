@@ -20,10 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Check out source without hydrating LFS assets
+      - name: Check out source
         uses: actions/checkout@v7
 
-      - name: Check Git blobs and LFS pointers
+      - name: Check repository contents
         run: python3 scripts/check_repository.py
 
   validate:
@@ -31,10 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Check out source and LFS assets
+      - name: Check out source
         uses: actions/checkout@v7
-        with:
-          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -43,8 +41,20 @@ jobs:
           cache: pip
           cache-dependency-path: server/pyproject.toml
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+
       - name: Install server test dependencies
         run: python -m pip install -e './server[dev]'
+
+      - name: Generate runtime assets
+        run: make content PYTHON=python
+
+      - name: Reject generated source drift
+        run: git diff --exit-code -- shared client/assets/asset_manifest.json client/assets/cards client/assets/items client/assets/enemies
 
       - name: Run server tests and content validation
         run: make validate PYTHON=python
@@ -54,10 +64,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-      - name: Check out source and LFS assets
+      - name: Check out source
         uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
         with:
-          lfs: true
+          python-version: "3.13"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Generate runtime assets
+        run: make content PYTHON=python
 
       - name: Download verified Godot editor
         shell: bash

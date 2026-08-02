@@ -49,10 +49,37 @@ class CardCatalog:
         except KeyError as exc:
             raise RuleViolation(f"Unknown card: {card_id}") from exc
 
-    def starter_deck(self, weapon: str, magic: str, size: int = 18) -> list[str]:
+    @staticmethod
+    def is_solo_compatible(card: dict[str, Any]) -> bool:
+        """Return whether a card can resolve without a second player.
+
+        Solo decks deliberately omit cooperation, ally and team effects instead
+        of silently redirecting partner bonuses back to the same character.
+        """
+
+        multiplayer_effects = {
+            "add_block_dice_all",
+            "add_block_dice_ally",
+            "heal_all",
+            "heal_ally",
+            "team_status",
+        }
+        return card.get("kind") != "cooperation" and not any(
+            effect.get("type") in multiplayer_effects for effect in card.get("effects", [])
+        )
+
+    def starter_deck(
+        self,
+        weapon: str,
+        magic: str,
+        size: int = 18,
+        *,
+        game_mode: str = "multiplayer",
+    ) -> list[str]:
         eligible = [
             card for card in self.cards.values()
             if card["school"] in {weapon, magic, "universal"} and card.get("starter", False)
+            and (game_mode != "singleplayer" or self.is_solo_compatible(card))
         ]
         deck: list[str] = []
         for phase in PHASES:
@@ -89,7 +116,7 @@ class CardCatalog:
 
 class ItemCatalog:
     STARTING_WEAPONS = {
-        "dual_blades": "worn_dual_blades", "axe": "worn_axe", "bow": "worn_bow", "crossbow": "worn_crossbow",
+        "dual_blades": "worn_dual_blades", "axe": "worn_axe", "bow": "worn_bow", "crossbow": "worn_crossbow", "longsword": "worn_longsword",
     }
 
     def __init__(self, path: Path | None = None) -> None:

@@ -51,6 +51,7 @@ class Campaign(Base):
     owner_profile_id: Mapped[str] = mapped_column(ForeignKey("profiles.id"), index=True)
     seed: Mapped[int] = mapped_column(BigInteger)
     campaign_length: Mapped[str] = mapped_column(String(20), default="fieldzug")
+    game_mode: Mapped[str] = mapped_column(String(20), default="multiplayer")
     world_tier: Mapped[int] = mapped_column(Integer, default=1)
     status: Mapped[str] = mapped_column(String(20), default="waiting")
     checkpoint_state: Mapped[dict] = mapped_column(JSON, default=dict)

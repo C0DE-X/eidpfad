@@ -22,6 +22,7 @@ var recovery_edit: LineEdit
 var invite_edit: LineEdit
 var seed_edit: LineEdit
 var weapon_select: OptionButton
+var mode_select: OptionButton
 var magic_select: OptionButton
 var length_select: OptionButton
 var campaign_label: Label
@@ -38,6 +39,7 @@ var pass_button: Button
 var portrait_texture: TextureRect
 var portrait_stats: Label
 var partner_stats: Label
+var partner_panel: PanelContainer
 var country_icon: TextureRect
 var enemy_icon: TextureRect
 var log_view: RichTextLabel
@@ -45,6 +47,8 @@ var dice_view: DiceRoller3D
 var world_view: ScenarioStage
 var connection_screen: Control
 var game_screen: Control
+var create_campaign_controls: Array[Control] = []
+var join_campaign_controls: Array[Control] = []
 
 
 func _ready() -> void:
@@ -187,12 +191,28 @@ func _build_connection_panel() -> Control:
 			network.recover_profile(name_edit.text, recovery_edit.text)
 	)
 	column.add_child(recover_button)
+	var mode_label := Label.new()
+	mode_label.text = "Spielmodus (nach Kampagnenerstellung nicht änderbar)"
+	mode_label.add_theme_color_override("font_color", Color("d7c49a"))
+	column.add_child(mode_label)
+	create_campaign_controls.append(mode_label)
+	mode_select = OptionButton.new()
+	mode_select.add_item("Spielmodus wählen …")
+	mode_select.set_item_metadata(0, "")
+	mode_select.set_item_disabled(0, true)
+	mode_select.add_item("Singleplayer · allein spielen")
+	mode_select.set_item_metadata(1, "singleplayer")
+	mode_select.add_item("Multiplayer · zwei Spieler")
+	mode_select.set_item_metadata(2, "multiplayer")
+	column.add_child(mode_select)
+	create_campaign_controls.append(mode_select)
 
 	var choices := HBoxContainer.new()
 	choices.add_theme_constant_override("separation", 7)
 	column.add_child(choices)
+	create_campaign_controls.append(choices)
 	weapon_select = OptionButton.new()
-	for value in ["Zwei Klingen", "Axt", "Langbogen", "Armbrust"]:
+	for value in ["Zwei Klingen", "Axt", "Langbogen", "Armbrust", "Langschwert"]:
 		weapon_select.add_item(value)
 	weapon_select.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	choices.add_child(weapon_select)
@@ -208,21 +228,26 @@ func _build_connection_panel() -> Control:
 	length_select.add_item("Saga · 13 Laender")
 	length_select.select(1)
 	column.add_child(length_select)
+	create_campaign_controls.append(length_select)
 	seed_edit = UIFactory.line_edit("Seed (optional)", "")
 	column.add_child(seed_edit)
+	create_campaign_controls.append(seed_edit)
 	var create_button := UIFactory.button("Neue Kampagne")
 	create_button.icon = UIFactory.texture("res://assets/ui/campaign.svg")
 	create_button.pressed.connect(_create_campaign)
 	column.add_child(create_button)
+	create_campaign_controls.append(create_button)
 
 	invite_edit = UIFactory.line_edit("Einladungscode", settings.invite_code)
 	column.add_child(invite_edit)
+	join_campaign_controls.append(invite_edit)
 	var join_button := UIFactory.button("Kampagne beitreten")
 	join_button.icon = UIFactory.texture("res://assets/ui/connection.svg")
 	join_button.pressed.connect(_join_campaign)
 	column.add_child(join_button)
+	join_campaign_controls.append(join_button)
 	campaign_select = OptionButton.new()
-	campaign_select.add_item("Keine gespeicherte Kampagne")
+	campaign_select.add_item("Neue Kampagne erstellen")
 	campaign_select.set_item_metadata(0, {})
 	campaign_select.item_selected.connect(_select_campaign)
 	column.add_child(campaign_select)
@@ -379,7 +404,7 @@ func _build_game_panel() -> Control:
 	lower.add_theme_constant_override("separation", 10)
 	column.add_child(lower)
 
-	var partner_panel := PanelContainer.new()
+	partner_panel = PanelContainer.new()
 	partner_panel.custom_minimum_size = Vector2(155, 0)
 	partner_panel.add_theme_stylebox_override("panel", UIFactory.panel_style(Color("1c292f")))
 	partner_stats = Label.new()
@@ -438,13 +463,16 @@ func _create_profile() -> void:
 func _create_campaign() -> void:
 	if not network.configure(server_edit.text):
 		return
+	if _game_mode().is_empty():
+		_on_api_failed("create_campaign", "Bitte zuerst Singleplayer oder Multiplayer auswählen")
+		return
 	var seed: Variant = null
 	if not seed_edit.text.strip_edges().is_empty():
 		if not seed_edit.text.strip_edges().is_valid_int():
 			_on_api_failed("create_campaign", "Der Seed muss eine ganze Zahl sein")
 			return
 		seed = int(seed_edit.text)
-	network.create_campaign(_weapon_id(), _magic_id(), _campaign_length(), seed)
+	network.create_campaign(_weapon_id(), _magic_id(), _campaign_length(), _game_mode(), seed)
 
 
 func _join_campaign() -> void:
@@ -466,11 +494,31 @@ func _select_campaign(index: int) -> void:
 	if value is Dictionary and not value.is_empty():
 		network.select_campaign(value)
 		invite_edit.text = network.invite_code
+		_set_selected_campaign_mode(str(value.get("game_mode", "multiplayer")))
+		_sync_settings()
+	else:
+		network.clear_campaign_selection()
+		_set_selected_campaign_mode("")
 		_sync_settings()
 
 
+func _set_selected_campaign_mode(selected_mode: String) -> void:
+	var has_selection := not selected_mode.is_empty()
+	for control in create_campaign_controls:
+		control.visible = not has_selection
+	for control in join_campaign_controls:
+		control.visible = not has_selection
+	if has_selection:
+		mode_select.select(1 if selected_mode == "singleplayer" else 2)
+		campaign_label.text = _campaign_text()
+
+
 func _weapon_id() -> String:
-	return ["dual_blades", "axe", "bow", "crossbow"][weapon_select.selected]
+	return ["dual_blades", "axe", "bow", "crossbow", "longsword"][weapon_select.selected]
+
+
+func _game_mode() -> String:
+	return str(mode_select.get_item_metadata(mode_select.selected))
 
 
 func _magic_id() -> String:
@@ -497,27 +545,33 @@ func _on_api_succeeded(action: String, payload: Variant) -> void:
 		network.list_campaigns()
 	elif action == "list_campaigns" and payload is Array:
 		campaign_select.clear()
-		if payload.is_empty():
-			campaign_select.add_item("Keine gespeicherte Kampagne")
-			campaign_select.set_item_metadata(0, {})
-		else:
-			var selected_index := 0
-			for campaign_value in payload:
-				var campaign: Dictionary = campaign_value
-				var index := campaign_select.item_count
-				campaign_select.add_item("%s · Rang %s · %s" % [campaign.get("campaign_length", ""), campaign.get("world_tier", 1), campaign.get("status", "")])
-				campaign_select.set_item_metadata(index, campaign)
-				if str(campaign.get("campaign_id", "")) == network.campaign_id:
-					selected_index = index
-			campaign_select.select(selected_index)
-			_select_campaign(selected_index)
+		campaign_select.add_item("Neue Kampagne erstellen")
+		campaign_select.set_item_metadata(0, {})
+		var selected_index := 0
+		for campaign_value in payload:
+			var campaign: Dictionary = campaign_value
+			var index := campaign_select.item_count
+			campaign_select.add_item("%s · %s · Rang %s · %s" % [
+				_mode_name(str(campaign.get("game_mode", "multiplayer"))),
+				campaign.get("campaign_length", ""),
+				campaign.get("world_tier", 1),
+				campaign.get("status", ""),
+			])
+			campaign_select.set_item_metadata(index, campaign)
+			if str(campaign.get("campaign_id", "")) == network.campaign_id:
+				selected_index = index
+		campaign_select.select(selected_index)
+		_select_campaign(selected_index)
 	elif action == "create_campaign" or action == "join_campaign":
 		if payload is Dictionary:
-			campaign_label.text = "Kampagne %s\nEinladung: %s" % [
-				payload.get("campaign_id", ""), payload.get("invite_code", "")
+			campaign_label.text = "%s · Kampagne %s\nEinladung: %s" % [
+				_mode_name(str(payload.get("game_mode", "multiplayer"))),
+				payload.get("campaign_id", ""),
+				payload.get("invite_code", ""),
 			]
 			invite_edit.text = str(payload.get("invite_code", ""))
-		_sync_settings()
+			_set_selected_campaign_mode(str(payload.get("game_mode", "multiplayer")))
+			_sync_settings()
 
 
 func _on_api_failed(action: String, message: String) -> void:
@@ -542,7 +596,10 @@ func _on_socket_event(payload: Dictionary) -> void:
 
 
 func _on_connection_changed(connected: bool) -> void:
-	status_label.text = "Verbunden · warte auf Partner" if connected else "Nicht verbunden"
+	status_label.text = (
+		("Verbunden · Solo-Kampagne" if network.game_mode == "singleplayer" else "Verbunden · warte auf Partner")
+		if connected else "Nicht verbunden"
+	)
 	ready_button.disabled = not connected or network.campaign_status == "completed"
 	if not connected:
 		_show_gameplay(false)
@@ -557,8 +614,12 @@ func _on_lobby_changed(payload: Dictionary) -> void:
 			"verbunden" if player.get("connected", false) else "offline",
 			"bereit" if player.get("ready", false) else "wartet",
 		])
-	lobby_label.text = "Lobby\n" + "\n".join(lines)
-	ready_button.disabled = network.campaign_status == "completed"
+	var mode := str(payload.get("game_mode", network.game_mode))
+	lobby_label.text = "%s\n%s" % [_mode_name(mode), "\n".join(lines)]
+	ready_button.disabled = (
+		network.campaign_status == "completed"
+		or (not bool(payload.get("can_ready", false)) and not network.local_ready)
+	)
 
 
 func _on_ready_changed(value: bool) -> void:
@@ -668,15 +729,19 @@ func _render_state() -> void:
 		"axe": "res://assets/portraits/vanguard.png",
 		"bow": "res://assets/portraits/pathfinder.png",
 		"crossbow": "res://assets/portraits/arbalist.png",
+		"longsword": "res://assets/portraits/swordmaster.png",
 	}.get(str(me.get("weapon", "")), "res://assets/portraits/vanguard.png"))
 	portrait_stats.text = "%s\n%s/%s LP  ·  %s AP\n%s + %s" % [
 		settings.display_name if not settings.display_name.is_empty() else "EIGENER SOELDNER",
 		me.get("hp", 0), me.get("max_hp", 0), me.get("action_points", 0),
 		_weapon_name(str(me.get("weapon", ""))), _magic_name(str(me.get("magic", ""))),
 	]
-	partner_stats.text = "PARTNER\n%s/%s LP\n%s AP" % [
-		partner.get("hp", 0), partner.get("max_hp", 0), partner.get("action_points", 0)
-	]
+	var solo := _is_singleplayer()
+	partner_panel.visible = not solo
+	if not solo:
+		partner_stats.text = "PARTNER\n%s/%s LP\n%s AP" % [
+			partner.get("hp", 0), partner.get("max_hp", 0), partner.get("action_points", 0)
+		]
 	_rebuild_actions(me, phase)
 
 
@@ -692,7 +757,7 @@ func _rebuild_actions(me: Dictionary, phase: String) -> void:
 		child.queue_free()
 	var cinematic_state: Dictionary = current_state.get("cinematics", {})
 	if bool(cinematic_state.get("gameplay_blocked", false)):
-		_add_action_button("Warte auf beide Cinematic-Bestätigungen", Callable(), true)
+		_add_action_button("Warte auf Cinematic-Bestätigung" if _is_singleplayer() else "Warte auf beide Cinematic-Bestätigungen", Callable(), true)
 		pass_button.disabled = true
 		return
 
@@ -707,7 +772,7 @@ func _rebuild_actions(me: Dictionary, phase: String) -> void:
 			var option: Dictionary = scenario_value
 			_add_action_button("%s\n%s" % [option.get("title", "Pfad"), option.get("kind", "")], network.choose_scenario.bind(str(option.get("id", ""))))
 		pass_button.disabled = true
-		pass_button.text = "Pfad gemeinsam wählen"
+		pass_button.text = "Pfad wählen" if _is_singleplayer() else "Pfad gemeinsam wählen"
 		return
 
 	var combat: Dictionary = current_state.get("combat", {})
@@ -754,7 +819,7 @@ func _rebuild_actions(me: Dictionary, phase: String) -> void:
 			button.expand_icon = true
 			button.tooltip_text = _item_tooltip(item)
 		pass_button.disabled = true
-		pass_button.text = "Warte auf Partner" if already_claimed else "Beute wählen"
+		pass_button.text = ("Beute übernommen" if _is_singleplayer() else "Warte auf Partner") if already_claimed else "Beute wählen"
 		return
 
 	var definitions: Dictionary = current_state.get("card_definitions", {})
@@ -873,11 +938,21 @@ func _sync_settings() -> void:
 func _campaign_text() -> String:
 	if settings.campaign_id.is_empty():
 		return "Noch keine Kampagne"
-	return "Kampagne %s\nEinladung: %s" % [settings.campaign_id, settings.invite_code]
+	return "%s · Kampagne %s\nEinladung: %s" % [
+		_mode_name(network.game_mode), settings.campaign_id, settings.invite_code
+	]
+
+
+func _mode_name(value: String) -> String:
+	return "Singleplayer" if value == "singleplayer" else "Multiplayer"
+
+
+func _is_singleplayer() -> bool:
+	return str(current_state.get("game_mode", network.game_mode)) == "singleplayer"
 
 
 func _weapon_name(value: String) -> String:
-	return {"dual_blades":"Zwillingsklingen","axe":"Axt","bow":"Langbogen","crossbow":"Armbrust"}.get(value, value)
+	return {"dual_blades":"Zwillingsklingen","axe":"Axt","bow":"Langbogen","crossbow":"Armbrust","longsword":"Langschwert"}.get(value, value)
 
 
 func _magic_name(value: String) -> String:

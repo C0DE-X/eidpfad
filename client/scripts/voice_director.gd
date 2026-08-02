@@ -32,7 +32,7 @@ func play_event(event: Dictionary, state: Dictionary, local_profile_id: String, 
 	if event_type in ["card_played", "player_damaged", "player_healed", "loot_claimed", "scenario_completed"]:
 		var actor_id := str(event.get("actor", event.get("player", local_profile_id)))
 		var actor: Dictionary = state.get("players", {}).get(actor_id, {})
-		var speaker: String = str({"axe":"vanguard", "bow":"pathfinder", "dual_blades":"duelist", "crossbow":"arbalist"}.get(str(actor.get("weapon", "axe")), "vanguard"))
+		var speaker: String = str({"axe":"vanguard", "bow":"pathfinder", "dual_blades":"duelist", "crossbow":"arbalist", "longsword":"swordmaster"}.get(str(actor.get("weapon", "axe")), "vanguard"))
 		var ranges := {"card_played":[1,15], "player_damaged":[16,18], "player_healed":[17,18], "loot_claimed":[19,20], "scenario_completed":[23,24]}
 		var range_value: Array = ranges.get(event_type, [1,24])
 		line_id = "bark_%s_%02d" % [speaker, _select(event, int(range_value[0]), int(range_value[1]))]
