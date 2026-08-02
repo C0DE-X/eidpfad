@@ -38,7 +38,7 @@ server-test:
 	PYTHONPATH=server $(PYTHON) -m unittest discover -s server/tests -v
 
 release-playtest:
-	PYTHONPATH=server $(PYTHON) scripts/virtual_release_playthrough.py --campaign-length saga
+	PYTHONPATH=server $(PYTHON) scripts/virtual_release_playthrough.py --campaign-length saga --seed 23
 
 client-windows:
 	mkdir -p dist/client

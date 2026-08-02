@@ -34,8 +34,9 @@ func _ready() -> void:
 
 func set_game_state(state: Dictionary) -> void:
 	var scenario: Dictionary = state.get("scenario", {})
-	var has_loot := not state.get("pending_loot", []).is_empty()
-	var path := "res://assets/backgrounds/loot_reveal.png" if has_loot else str(scenario.get("background", ""))
+	var pending_loot: Array = state.get("pending_loot", [])
+	var has_loot: bool = not pending_loot.is_empty()
+	var path: String = "res://assets/backgrounds/loot_reveal.png" if has_loot else str(scenario.get("background", ""))
 	if path != _current_background:
 		var image := UIFactory.texture(path)
 		if image != null:

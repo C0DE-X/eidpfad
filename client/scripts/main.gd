@@ -733,7 +733,8 @@ func _rebuild_actions(me: Dictionary, phase: String) -> void:
 	var pending_loot: Array = current_state.get("pending_loot", [])
 	if not pending_loot.is_empty():
 		var definitions: Dictionary = current_state.get("item_definitions", {})
-		var already_claimed := network.profile_id in current_state.get("loot_claims", {})
+		var loot_claims: Dictionary = current_state.get("loot_claims", {})
+		var already_claimed: bool = network.profile_id in loot_claims
 		if already_claimed:
 			_add_equipment_menu(me)
 		for item_id in pending_loot:
