@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "clips": {
+    "idle": {
+      "loop": true,
+      "duration": 2.8,
+      "bob": 0.025,
+      "sway_degrees": 2.0
+    },
+    "combat_idle": {
+      "loop": true,
+      "duration": 1.1
+    },
+    "walk": {
+      "loop": true,
+      "duration": 1.0
+    },
+    "run": {
+      "loop": true,
+      "duration": 0.72
+    },
+    "attack": {
+      "loop": false,
+      "duration": 0.36,
+      "lunge": 0.32,
+      "weapon_swing_degrees": 78.0
+    },
+    "heavy_attack": {
+      "loop": false,
+      "duration": 0.78
+    },
+    "cast": {
+      "loop": false,
+      "duration": 1.15
+    },
+    "guard": {
+      "loop": false,
+      "duration": 0.62
+    },
+    "dodge": {
+      "loop": false,
+      "duration": 0.62
+    },
+    "hit": {
+      "loop": false,
+      "duration": 0.21,
+      "recoil": 0.18,
+      "shake_count": 2
+    },
+    "stagger": {
+      "loop": false,
+      "duration": 0.72
+    },
+    "defeat": {
+      "loop": false,
+      "duration": 1.25,
+      "fall_degrees": 82.0,
+      "fade": true
+    },
+    "spawn": {
+      "loop": false,
+      "duration": 0.72
+    },
+    "victory": {
+      "loop": false,
+      "duration": 1.2
+    },
+    "loot_hover": {
+      "loop": true,
+      "duration": 3.2,
+      "bob": 0.08,
+      "rotation_degrees": 360.0
+    }
+  },
+  "role_speed": {
+    "boss": 0.88,
+    "brute": 0.915,
+    "defender": 0.95,
+    "controller": 0.985,
+    "hexer": 1.02,
+    "elite": 1.055,
+    "beast": 1.09,
+    "marksman": 1.125,
+    "skirmisher": 1.1600000000000001,
+    "assassin": 1.195
+  }
+}

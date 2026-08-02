@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" data-asset-kind="ui">
+<circle cx="256" cy="256" r="230" fill="#10171b" stroke="#867657" stroke-width="8"/>
+<g color="#d7c49a" fill="#d7c49a" stroke-linejoin="round"><ellipse cx="256" cy="112" rx="150" ry="58"/><path d="M106 112v104c0 32 67 58 150 58s150-26 150-58V112M106 216v104c0 32 67 58 150 58s150-26 150-58V216M106 320v80c0 32 67 58 150 58s150-26 150-58v-80" fill="none" stroke="currentColor" stroke-width="34"/></g>
+</svg>

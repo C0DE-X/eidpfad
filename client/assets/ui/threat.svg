@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" data-asset-kind="ui">
+<circle cx="256" cy="256" r="230" fill="#10171b" stroke="#867657" stroke-width="8"/>
+<g color="#d7c49a" fill="#d7c49a" stroke-linejoin="round"><path d="m256 52 205 366H51zm0 112-25 142h50zm0 196a25 25 0 1 0 0 50 25 25 0 0 0 0-50z" fill-rule="evenodd"/></g>
+</svg>

@@ -1,0 +1,1322 @@
+{
+  "version": 1,
+  "cinematics": [
+    {
+      "id": "prologue",
+      "trigger": "campaign_started",
+      "scope": "campaign_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/prologue.png",
+          "duration": 18.0,
+          "motion": "push_in",
+          "lines": [
+            "plot_01",
+            "plot_02",
+            "plot_03",
+            "plot_04",
+            "plot_05",
+            "plot_06",
+            "plot_07",
+            "plot_08"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "plot_01",
+        "plot_02",
+        "plot_03",
+        "plot_04",
+        "plot_05",
+        "plot_06",
+        "plot_07",
+        "plot_08"
+      ]
+    },
+    {
+      "id": "departure",
+      "trigger": "first_scenario",
+      "scope": "campaign_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/journey.png",
+          "duration": 11.0,
+          "motion": "pan_right",
+          "lines": [
+            "plot_09",
+            "plot_10",
+            "plot_11",
+            "plot_12"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "plot_09",
+        "plot_10",
+        "plot_11",
+        "plot_12"
+      ]
+    },
+    {
+      "id": "country_nebelmark",
+      "trigger": "country_entered",
+      "context": "nebelmark",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/moor.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_nebelmark_1",
+            "country_nebelmark_2",
+            "country_nebelmark_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_nebelmark_1",
+        "country_nebelmark_2",
+        "country_nebelmark_3"
+      ]
+    },
+    {
+      "id": "country_sonnenbruch",
+      "trigger": "country_entered",
+      "context": "sonnenbruch",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/desert.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_sonnenbruch_1",
+            "country_sonnenbruch_2",
+            "country_sonnenbruch_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_sonnenbruch_1",
+        "country_sonnenbruch_2",
+        "country_sonnenbruch_3"
+      ]
+    },
+    {
+      "id": "country_frostreiche",
+      "trigger": "country_entered",
+      "context": "frostreiche",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/frost.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_frostreiche_1",
+            "country_frostreiche_2",
+            "country_frostreiche_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_frostreiche_1",
+        "country_frostreiche_2",
+        "country_frostreiche_3"
+      ]
+    },
+    {
+      "id": "country_splitterinseln",
+      "trigger": "country_entered",
+      "context": "splitterinseln",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/coast.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_splitterinseln_1",
+            "country_splitterinseln_2",
+            "country_splitterinseln_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_splitterinseln_1",
+        "country_splitterinseln_2",
+        "country_splitterinseln_3"
+      ]
+    },
+    {
+      "id": "country_aschenlande",
+      "trigger": "country_entered",
+      "context": "aschenlande",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/ash.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_aschenlande_1",
+            "country_aschenlande_2",
+            "country_aschenlande_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_aschenlande_1",
+        "country_aschenlande_2",
+        "country_aschenlande_3"
+      ]
+    },
+    {
+      "id": "country_dornwall",
+      "trigger": "country_entered",
+      "context": "dornwall",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/thorn.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_dornwall_1",
+            "country_dornwall_2",
+            "country_dornwall_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_dornwall_1",
+        "country_dornwall_2",
+        "country_dornwall_3"
+      ]
+    },
+    {
+      "id": "country_glassteppe",
+      "trigger": "country_entered",
+      "context": "glassteppe",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/crystal.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_glassteppe_1",
+            "country_glassteppe_2",
+            "country_glassteppe_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_glassteppe_1",
+        "country_glassteppe_2",
+        "country_glassteppe_3"
+      ]
+    },
+    {
+      "id": "country_tiefenwald",
+      "trigger": "country_entered",
+      "context": "tiefenwald",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/forest.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_tiefenwald_1",
+            "country_tiefenwald_2",
+            "country_tiefenwald_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_tiefenwald_1",
+        "country_tiefenwald_2",
+        "country_tiefenwald_3"
+      ]
+    },
+    {
+      "id": "country_kupferkueste",
+      "trigger": "country_entered",
+      "context": "kupferkueste",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/coast.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_kupferkueste_1",
+            "country_kupferkueste_2",
+            "country_kupferkueste_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_kupferkueste_1",
+        "country_kupferkueste_2",
+        "country_kupferkueste_3"
+      ]
+    },
+    {
+      "id": "country_knochental",
+      "trigger": "country_entered",
+      "context": "knochental",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/bone.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_knochental_1",
+            "country_knochental_2",
+            "country_knochental_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_knochental_1",
+        "country_knochental_2",
+        "country_knochental_3"
+      ]
+    },
+    {
+      "id": "country_nachtkrone",
+      "trigger": "country_entered",
+      "context": "nachtkrone",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/night.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_nachtkrone_1",
+            "country_nachtkrone_2",
+            "country_nachtkrone_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_nachtkrone_1",
+        "country_nachtkrone_2",
+        "country_nachtkrone_3"
+      ]
+    },
+    {
+      "id": "country_sturmmarsch",
+      "trigger": "country_entered",
+      "context": "sturmmarsch",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/storm.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_sturmmarsch_1",
+            "country_sturmmarsch_2",
+            "country_sturmmarsch_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_sturmmarsch_1",
+        "country_sturmmarsch_2",
+        "country_sturmmarsch_3"
+      ]
+    },
+    {
+      "id": "country_versunkener_bund",
+      "trigger": "country_entered",
+      "context": "versunkener_bund",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/sunken.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_versunkener_bund_1",
+            "country_versunkener_bund_2",
+            "country_versunkener_bund_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_versunkener_bund_1",
+        "country_versunkener_bund_2",
+        "country_versunkener_bund_3"
+      ]
+    },
+    {
+      "id": "country_weltennaht",
+      "trigger": "country_entered",
+      "context": "weltennaht",
+      "scope": "country_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/rift.png",
+          "duration": 8.5,
+          "motion": "pan_left",
+          "lines": [
+            "country_weltennaht_1",
+            "country_weltennaht_2",
+            "country_weltennaht_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "country_weltennaht_1",
+        "country_weltennaht_2",
+        "country_weltennaht_3"
+      ]
+    },
+    {
+      "id": "briefing_ambush",
+      "trigger": "scenario_started",
+      "context": "ambush",
+      "scope": "repeatable",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 6.5,
+          "motion": "push_in",
+          "lines": [
+            "scenario_ambush_1",
+            "scenario_ambush_2",
+            "scenario_ambush_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "scenario_ambush_1",
+        "scenario_ambush_2",
+        "scenario_ambush_3"
+      ]
+    },
+    {
+      "id": "briefing_raid",
+      "trigger": "scenario_started",
+      "context": "raid",
+      "scope": "repeatable",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 6.5,
+          "motion": "push_in",
+          "lines": [
+            "scenario_raid_1",
+            "scenario_raid_2",
+            "scenario_raid_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "scenario_raid_1",
+        "scenario_raid_2",
+        "scenario_raid_3"
+      ]
+    },
+    {
+      "id": "briefing_village",
+      "trigger": "scenario_started",
+      "context": "village",
+      "scope": "repeatable",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 6.5,
+          "motion": "push_in",
+          "lines": [
+            "scenario_village_1",
+            "scenario_village_2",
+            "scenario_village_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "scenario_village_1",
+        "scenario_village_2",
+        "scenario_village_3"
+      ]
+    },
+    {
+      "id": "briefing_caravan",
+      "trigger": "scenario_started",
+      "context": "caravan",
+      "scope": "repeatable",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 6.5,
+          "motion": "push_in",
+          "lines": [
+            "scenario_caravan_1",
+            "scenario_caravan_2",
+            "scenario_caravan_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "scenario_caravan_1",
+        "scenario_caravan_2",
+        "scenario_caravan_3"
+      ]
+    },
+    {
+      "id": "briefing_hunt",
+      "trigger": "scenario_started",
+      "context": "hunt",
+      "scope": "repeatable",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 6.5,
+          "motion": "push_in",
+          "lines": [
+            "scenario_hunt_1",
+            "scenario_hunt_2",
+            "scenario_hunt_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "scenario_hunt_1",
+        "scenario_hunt_2",
+        "scenario_hunt_3"
+      ]
+    },
+    {
+      "id": "briefing_ruin",
+      "trigger": "scenario_started",
+      "context": "ruin",
+      "scope": "repeatable",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 6.5,
+          "motion": "push_in",
+          "lines": [
+            "scenario_ruin_1",
+            "scenario_ruin_2",
+            "scenario_ruin_3"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "scenario_ruin_1",
+        "scenario_ruin_2",
+        "scenario_ruin_3"
+      ]
+    },
+    {
+      "id": "boss_nebelmark",
+      "trigger": "boss_started",
+      "context": "nebelmark",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_nebelmark_1",
+            "boss_nebelmark_2",
+            "boss_nebelmark_3",
+            "boss_nebelmark_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_nebelmark_1",
+        "boss_nebelmark_2",
+        "boss_nebelmark_3",
+        "boss_nebelmark_4"
+      ]
+    },
+    {
+      "id": "boss_sonnenbruch",
+      "trigger": "boss_started",
+      "context": "sonnenbruch",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_sonnenbruch_1",
+            "boss_sonnenbruch_2",
+            "boss_sonnenbruch_3",
+            "boss_sonnenbruch_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_sonnenbruch_1",
+        "boss_sonnenbruch_2",
+        "boss_sonnenbruch_3",
+        "boss_sonnenbruch_4"
+      ]
+    },
+    {
+      "id": "boss_frostreiche",
+      "trigger": "boss_started",
+      "context": "frostreiche",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_frostreiche_1",
+            "boss_frostreiche_2",
+            "boss_frostreiche_3",
+            "boss_frostreiche_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_frostreiche_1",
+        "boss_frostreiche_2",
+        "boss_frostreiche_3",
+        "boss_frostreiche_4"
+      ]
+    },
+    {
+      "id": "boss_splitterinseln",
+      "trigger": "boss_started",
+      "context": "splitterinseln",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_splitterinseln_1",
+            "boss_splitterinseln_2",
+            "boss_splitterinseln_3",
+            "boss_splitterinseln_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_splitterinseln_1",
+        "boss_splitterinseln_2",
+        "boss_splitterinseln_3",
+        "boss_splitterinseln_4"
+      ]
+    },
+    {
+      "id": "boss_aschenlande",
+      "trigger": "boss_started",
+      "context": "aschenlande",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_aschenlande_1",
+            "boss_aschenlande_2",
+            "boss_aschenlande_3",
+            "boss_aschenlande_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_aschenlande_1",
+        "boss_aschenlande_2",
+        "boss_aschenlande_3",
+        "boss_aschenlande_4"
+      ]
+    },
+    {
+      "id": "boss_dornwall",
+      "trigger": "boss_started",
+      "context": "dornwall",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_dornwall_1",
+            "boss_dornwall_2",
+            "boss_dornwall_3",
+            "boss_dornwall_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_dornwall_1",
+        "boss_dornwall_2",
+        "boss_dornwall_3",
+        "boss_dornwall_4"
+      ]
+    },
+    {
+      "id": "boss_glassteppe",
+      "trigger": "boss_started",
+      "context": "glassteppe",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_glassteppe_1",
+            "boss_glassteppe_2",
+            "boss_glassteppe_3",
+            "boss_glassteppe_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_glassteppe_1",
+        "boss_glassteppe_2",
+        "boss_glassteppe_3",
+        "boss_glassteppe_4"
+      ]
+    },
+    {
+      "id": "boss_tiefenwald",
+      "trigger": "boss_started",
+      "context": "tiefenwald",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_tiefenwald_1",
+            "boss_tiefenwald_2",
+            "boss_tiefenwald_3",
+            "boss_tiefenwald_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_tiefenwald_1",
+        "boss_tiefenwald_2",
+        "boss_tiefenwald_3",
+        "boss_tiefenwald_4"
+      ]
+    },
+    {
+      "id": "boss_kupferkueste",
+      "trigger": "boss_started",
+      "context": "kupferkueste",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_kupferkueste_1",
+            "boss_kupferkueste_2",
+            "boss_kupferkueste_3",
+            "boss_kupferkueste_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_kupferkueste_1",
+        "boss_kupferkueste_2",
+        "boss_kupferkueste_3",
+        "boss_kupferkueste_4"
+      ]
+    },
+    {
+      "id": "boss_knochental",
+      "trigger": "boss_started",
+      "context": "knochental",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_knochental_1",
+            "boss_knochental_2",
+            "boss_knochental_3",
+            "boss_knochental_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_knochental_1",
+        "boss_knochental_2",
+        "boss_knochental_3",
+        "boss_knochental_4"
+      ]
+    },
+    {
+      "id": "boss_nachtkrone",
+      "trigger": "boss_started",
+      "context": "nachtkrone",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_nachtkrone_1",
+            "boss_nachtkrone_2",
+            "boss_nachtkrone_3",
+            "boss_nachtkrone_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_nachtkrone_1",
+        "boss_nachtkrone_2",
+        "boss_nachtkrone_3",
+        "boss_nachtkrone_4"
+      ]
+    },
+    {
+      "id": "boss_sturmmarsch",
+      "trigger": "boss_started",
+      "context": "sturmmarsch",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_sturmmarsch_1",
+            "boss_sturmmarsch_2",
+            "boss_sturmmarsch_3",
+            "boss_sturmmarsch_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_sturmmarsch_1",
+        "boss_sturmmarsch_2",
+        "boss_sturmmarsch_3",
+        "boss_sturmmarsch_4"
+      ]
+    },
+    {
+      "id": "boss_versunkener_bund",
+      "trigger": "boss_started",
+      "context": "versunkener_bund",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "$scenario_background",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_versunkener_bund_1",
+            "boss_versunkener_bund_2",
+            "boss_versunkener_bund_3",
+            "boss_versunkener_bund_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_versunkener_bund_1",
+        "boss_versunkener_bund_2",
+        "boss_versunkener_bund_3",
+        "boss_versunkener_bund_4"
+      ]
+    },
+    {
+      "id": "boss_weltennaht",
+      "trigger": "boss_started",
+      "context": "weltennaht",
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/finale.png",
+          "duration": 9.5,
+          "motion": "push_in",
+          "lines": [
+            "boss_weltennaht_1",
+            "boss_weltennaht_2",
+            "boss_weltennaht_3",
+            "boss_weltennaht_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "boss_weltennaht_1",
+        "boss_weltennaht_2",
+        "boss_weltennaht_3",
+        "boss_weltennaht_4"
+      ]
+    },
+    {
+      "id": "final_phase_2",
+      "trigger": "boss_phase",
+      "context": 2,
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/finale.png",
+          "duration": 4.0,
+          "motion": "push_in",
+          "lines": [
+            "final_1"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "final_1"
+      ]
+    },
+    {
+      "id": "final_phase_3",
+      "trigger": "boss_phase",
+      "context": 3,
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/finale.png",
+          "duration": 4.0,
+          "motion": "push_in",
+          "lines": [
+            "final_2"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "final_2"
+      ]
+    },
+    {
+      "id": "final_phase_4",
+      "trigger": "boss_phase",
+      "context": 4,
+      "scope": "scenario_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/finale.png",
+          "duration": 6.0,
+          "motion": "push_in",
+          "lines": [
+            "final_3",
+            "final_4"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "final_3",
+        "final_4"
+      ]
+    },
+    {
+      "id": "final_death",
+      "trigger": "final_boss_defeated",
+      "scope": "campaign_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/finale.png",
+          "duration": 10.0,
+          "motion": "pull_out",
+          "lines": [
+            "plot_13",
+            "plot_14",
+            "plot_15",
+            "plot_16",
+            "plot_17",
+            "plot_18",
+            "plot_19",
+            "plot_20"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "plot_13",
+        "plot_14",
+        "plot_15",
+        "plot_16",
+        "plot_17",
+        "plot_18",
+        "plot_19",
+        "plot_20"
+      ]
+    },
+    {
+      "id": "epilogue",
+      "trigger": "campaign_completed",
+      "scope": "campaign_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/world_echo.png",
+          "duration": 20.0,
+          "motion": "pan_right",
+          "lines": [
+            "plot_21",
+            "plot_22",
+            "plot_23",
+            "plot_24",
+            "plot_25",
+            "plot_26",
+            "plot_27",
+            "plot_28",
+            "plot_29",
+            "plot_30",
+            "plot_31",
+            "plot_32",
+            "plot_33",
+            "plot_34",
+            "plot_35",
+            "plot_36",
+            "plot_37",
+            "plot_38",
+            "plot_39",
+            "plot_40"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "plot_21",
+        "plot_22",
+        "plot_23",
+        "plot_24",
+        "plot_25",
+        "plot_26",
+        "plot_27",
+        "plot_28",
+        "plot_29",
+        "plot_30",
+        "plot_31",
+        "plot_32",
+        "plot_33",
+        "plot_34",
+        "plot_35",
+        "plot_36",
+        "plot_37",
+        "plot_38",
+        "plot_39",
+        "plot_40"
+      ]
+    },
+    {
+      "id": "rollback",
+      "trigger": "rollback",
+      "scope": "repeatable",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/rift.png",
+          "duration": 4.0,
+          "motion": "shake",
+          "lines": [
+            "plot_37",
+            "plot_38"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "plot_37",
+        "plot_38"
+      ]
+    },
+    {
+      "id": "tutorial",
+      "trigger": "manual_tutorial",
+      "scope": "repeatable",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/backgrounds/character_select.png",
+          "duration": 24.0,
+          "motion": "pan_right",
+          "lines": [
+            "tutorial_01",
+            "tutorial_02",
+            "tutorial_03",
+            "tutorial_04",
+            "tutorial_05",
+            "tutorial_06",
+            "tutorial_07",
+            "tutorial_08",
+            "tutorial_09",
+            "tutorial_10"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "tutorial_01",
+        "tutorial_02",
+        "tutorial_03",
+        "tutorial_04",
+        "tutorial_05",
+        "tutorial_06",
+        "tutorial_07",
+        "tutorial_08",
+        "tutorial_09",
+        "tutorial_10"
+      ]
+    },
+    {
+      "id": "ending_seal",
+      "trigger": "ending_resolved",
+      "context": "seal",
+      "scope": "campaign_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/ending_crossroads.png",
+          "duration": 9.0,
+          "motion": "pan_left",
+          "lines": [
+            "ending_seal_1",
+            "ending_seal_2"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "ending_seal_1",
+        "ending_seal_2"
+      ]
+    },
+    {
+      "id": "ending_destroy",
+      "trigger": "ending_resolved",
+      "context": "destroy",
+      "scope": "campaign_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/ending_crossroads.png",
+          "duration": 9.0,
+          "motion": "pan_left",
+          "lines": [
+            "ending_destroy_1",
+            "ending_destroy_2"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "ending_destroy_1",
+        "ending_destroy_2"
+      ]
+    },
+    {
+      "id": "ending_bind",
+      "trigger": "ending_resolved",
+      "context": "bind",
+      "scope": "campaign_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/ending_crossroads.png",
+          "duration": 9.0,
+          "motion": "pan_left",
+          "lines": [
+            "ending_bind_1",
+            "ending_bind_2"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "ending_bind_1",
+        "ending_bind_2"
+      ]
+    },
+    {
+      "id": "ending_dominate",
+      "trigger": "ending_resolved",
+      "context": "dominate",
+      "scope": "campaign_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/ending_crossroads.png",
+          "duration": 9.0,
+          "motion": "pan_left",
+          "lines": [
+            "ending_dominate_1",
+            "ending_dominate_2"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "ending_dominate_1",
+        "ending_dominate_2"
+      ]
+    },
+    {
+      "id": "legacy_transfer",
+      "trigger": "legacy_transfer_ready",
+      "scope": "campaign_once",
+      "skippable": true,
+      "shots": [
+        {
+          "plate": "res://assets/cinematics/world_echo.png",
+          "duration": 8.0,
+          "motion": "push_in",
+          "lines": [
+            "legacy_1",
+            "legacy_2"
+          ],
+          "fade_in": 0.65,
+          "fade_out": 0.65
+        }
+      ],
+      "required_lines": [
+        "legacy_1",
+        "legacy_2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3279 @@
+{
+  "content_version": 3,
+  "cards": [
+    {
+      "id": "kreuzschnitt",
+      "name": "Kreuzschnitt",
+      "kind": "weapon",
+      "school": "dual_blades",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "3 w12 auf 7+; 2 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2
+        }
+      ],
+      "art": "res://assets/cards/kreuzschnitt.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "sehnenhieb",
+      "name": "Sehnenhieb",
+      "kind": "weapon",
+      "school": "dual_blades",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "2 w12 auf 8+; 3 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 8,
+          "damage_per_success": 3
+        }
+      ],
+      "art": "res://assets/cards/sehnenhieb.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "roter_reigen",
+      "name": "Roter Reigen",
+      "kind": "weapon",
+      "school": "dual_blades",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 2,
+      "text": "2 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "armor_per_success": 1
+        }
+      ],
+      "art": "res://assets/cards/roter_reigen.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "gekreuzte_klingen",
+      "name": "Gekreuzte Klingen",
+      "kind": "defense",
+      "school": "dual_blades",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/gekreuzte_klingen.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "klingenfokus",
+      "name": "Klingenfokus",
+      "kind": "utility",
+      "school": "dual_blades",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 3,
+      "text": "Erhalte aimed 1.",
+      "effects": [
+        {
+          "type": "self_status",
+          "status": "aimed",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/klingenfokus.svg",
+      "keywords": [
+        "aimed"
+      ]
+    },
+    {
+      "id": "aderlass",
+      "name": "Aderlass",
+      "kind": "weapon",
+      "school": "dual_blades",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "3 w12 auf 7+; 2 schaden je erfolg; verursache bleeding 2.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2
+        },
+        {
+          "type": "enemy_status",
+          "status": "bleeding",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/aderlass.svg",
+      "keywords": [
+        "bleeding",
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "schulter_an_schulter",
+      "name": "Schulter an Schulter",
+      "kind": "defense",
+      "school": "dual_blades",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "+2 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/schulter_an_schulter.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "tausend_schnitte",
+      "name": "Tausend Schnitte",
+      "kind": "weapon",
+      "school": "dual_blades",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "4 w12 auf 8+; 2 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 2
+        }
+      ],
+      "art": "res://assets/cards/tausend_schnitte.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "atzende_schneiden",
+      "name": "Ätzende Schneiden",
+      "kind": "utility",
+      "school": "dual_blades",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Ätzöl mit 2 ladungen; erschöpfen.",
+      "effects": [
+        {
+          "type": "apply_weapon_coating",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/atzende_schneiden.svg",
+      "keywords": [
+        "apply_weapon_coating",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "schattenstich",
+      "name": "Schattenstich",
+      "kind": "weapon",
+      "school": "dual_blades",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "3 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung; verursache bleeding 1.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "armor_per_success": 1
+        },
+        {
+          "type": "enemy_status",
+          "status": "bleeding",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/schattenstich.svg",
+      "keywords": [
+        "bleeding",
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "wirbelparade",
+      "name": "Wirbelparade",
+      "kind": "defense",
+      "school": "dual_blades",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "+3 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 3
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/wirbelparade.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "klingenfalle",
+      "name": "Klingenfalle",
+      "kind": "utility",
+      "school": "dual_blades",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "Falle mit 2 w12; erschöpfen.",
+      "effects": [
+        {
+          "type": "set_trap",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/klingenfalle.svg",
+      "keywords": [
+        "exhaust",
+        "set_trap"
+      ]
+    },
+    {
+      "id": "tanz_der_narben",
+      "name": "Tanz der Narben",
+      "kind": "weapon",
+      "school": "dual_blades",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 3 schaden je erfolg, bricht 1 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "armor_per_success": 1
+        }
+      ],
+      "art": "res://assets/cards/tanz_der_narben.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "letzter_herzschlag",
+      "name": "Letzter Herzschlag",
+      "kind": "weapon",
+      "school": "dual_blades",
+      "phase": "attack",
+      "action_point_cost": 3,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 3 schaden je erfolg; erschöpfen.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/letzter_herzschlag.svg",
+      "keywords": [
+        "dice_attack",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "blitzreflex",
+      "name": "Blitzreflex",
+      "kind": "reaction",
+      "school": "dual_blades",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/blitzreflex.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "blutsbruder",
+      "name": "Blutsbrüder",
+      "kind": "cooperation",
+      "school": "dual_blades",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "coordinated",
+          "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/blutsbruder.svg",
+      "keywords": [
+        "coordinated",
+        "draw_cards"
+      ]
+    },
+    {
+      "id": "eisenbrecher",
+      "name": "Eisenbrecher",
+      "kind": "weapon",
+      "school": "axe",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "3 w12 auf 7+; 3 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3
+        }
+      ],
+      "art": "res://assets/cards/eisenbrecher.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "schadelspalter",
+      "name": "Schädelspalter",
+      "kind": "weapon",
+      "school": "axe",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "2 w12 auf 8+; 4 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 8,
+          "damage_per_success": 4
+        }
+      ],
+      "art": "res://assets/cards/schadelspalter.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "standhalten",
+      "name": "Standhalten",
+      "kind": "weapon",
+      "school": "axe",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 2,
+      "text": "2 w12 auf 7+; 3 schaden je erfolg, bricht 2 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 3,
+          "armor_per_success": 2
+        }
+      ],
+      "art": "res://assets/cards/standhalten.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "urteil_des_henkers",
+      "name": "Urteil des Henkers",
+      "kind": "defense",
+      "school": "axe",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/urteil_des_henkers.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "schwerer_atem",
+      "name": "Schwerer Atem",
+      "kind": "utility",
+      "school": "axe",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 3,
+      "text": "Erhalte aimed 1.",
+      "effects": [
+        {
+          "type": "self_status",
+          "status": "aimed",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/schwerer_atem.svg",
+      "keywords": [
+        "aimed"
+      ]
+    },
+    {
+      "id": "kniespalter",
+      "name": "Kniespalter",
+      "kind": "weapon",
+      "school": "axe",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "3 w12 auf 7+; 3 schaden je erfolg; verursache exposed 2.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3
+        },
+        {
+          "type": "enemy_status",
+          "status": "exposed",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/kniespalter.svg",
+      "keywords": [
+        "dice_attack",
+        "exposed"
+      ]
+    },
+    {
+      "id": "eiserner_wall",
+      "name": "Eiserner Wall",
+      "kind": "defense",
+      "school": "axe",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "+2 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/eiserner_wall.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "berserkersturm",
+      "name": "Berserkersturm",
+      "kind": "weapon",
+      "school": "axe",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "4 w12 auf 8+; 3 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3
+        }
+      ],
+      "art": "res://assets/cards/berserkersturm.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "schleifstein",
+      "name": "Schleifstein",
+      "kind": "utility",
+      "school": "axe",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Ätzöl mit 2 ladungen; erschöpfen.",
+      "effects": [
+        {
+          "type": "apply_weapon_coating",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/schleifstein.svg",
+      "keywords": [
+        "apply_weapon_coating",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "riss_im_panzer",
+      "name": "Riss im Panzer",
+      "kind": "weapon",
+      "school": "axe",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "3 w12 auf 7+; 3 schaden je erfolg; zerbrich 2 rüstung; verursache exposed 1.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3
+        },
+        {
+          "type": "armor_break",
+          "amount": 2
+        },
+        {
+          "type": "enemy_status",
+          "status": "exposed",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/riss_im_panzer.svg",
+      "keywords": [
+        "armor_break",
+        "dice_attack",
+        "exposed"
+      ]
+    },
+    {
+      "id": "gegenschlag",
+      "name": "Gegenschlag",
+      "kind": "defense",
+      "school": "axe",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "+3 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 3
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/gegenschlag.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "fallbeilfalle",
+      "name": "Fallbeilfalle",
+      "kind": "utility",
+      "school": "axe",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "Falle mit 2 w12; erschöpfen.",
+      "effects": [
+        {
+          "type": "set_trap",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/fallbeilfalle.svg",
+      "keywords": [
+        "exhaust",
+        "set_trap"
+      ]
+    },
+    {
+      "id": "sturm_des_henkers",
+      "name": "Sturm des Henkers",
+      "kind": "weapon",
+      "school": "axe",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 4 schaden je erfolg, bricht 2 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 4,
+          "armor_per_success": 2
+        }
+      ],
+      "art": "res://assets/cards/sturm_des_henkers.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "weltenriss",
+      "name": "Weltenriss",
+      "kind": "weapon",
+      "school": "axe",
+      "phase": "attack",
+      "action_point_cost": 3,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 4 schaden je erfolg; erschöpfen.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 4
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/weltenriss.svg",
+      "keywords": [
+        "dice_attack",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "schildhaken",
+      "name": "Schildhaken",
+      "kind": "reaction",
+      "school": "axe",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/schildhaken.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "unbeugsamer_eid",
+      "name": "Unbeugsamer Eid",
+      "kind": "cooperation",
+      "school": "axe",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "coordinated",
+          "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/unbeugsamer_eid.svg",
+      "keywords": [
+        "coordinated",
+        "draw_cards"
+      ]
+    },
+    {
+      "id": "jagdschuss",
+      "name": "Jagdschuss",
+      "kind": "weapon",
+      "school": "bow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "3 w12 auf 7+; 2 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2
+        }
+      ],
+      "art": "res://assets/cards/jagdschuss.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "durchbohrender_pfeil",
+      "name": "Durchbohrender Pfeil",
+      "kind": "weapon",
+      "school": "bow",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "2 w12 auf 8+; 3 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 8,
+          "damage_per_success": 3
+        }
+      ],
+      "art": "res://assets/cards/durchbohrender_pfeil.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "deckungsfeuer",
+      "name": "Deckungsfeuer",
+      "kind": "weapon",
+      "school": "bow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 2,
+      "text": "2 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "armor_per_success": 1
+        }
+      ],
+      "art": "res://assets/cards/deckungsfeuer.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "ruhige_hand",
+      "name": "Ruhige Hand",
+      "kind": "defense",
+      "school": "bow",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/ruhige_hand.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "falkenblick",
+      "name": "Falkenblick",
+      "kind": "utility",
+      "school": "bow",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 3,
+      "text": "Erhalte aimed 1.",
+      "effects": [
+        {
+          "type": "self_status",
+          "status": "aimed",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/falkenblick.svg",
+      "keywords": [
+        "aimed"
+      ]
+    },
+    {
+      "id": "blutpfeil",
+      "name": "Blutpfeil",
+      "kind": "weapon",
+      "school": "bow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "3 w12 auf 7+; 2 schaden je erfolg; verursache marked 2.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2
+        },
+        {
+          "type": "enemy_status",
+          "status": "marked",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/blutpfeil.svg",
+      "keywords": [
+        "dice_attack",
+        "marked"
+      ]
+    },
+    {
+      "id": "gemeinsame_deckung",
+      "name": "Gemeinsame Deckung",
+      "kind": "defense",
+      "school": "bow",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "+2 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/gemeinsame_deckung.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "pfeilregen",
+      "name": "Pfeilregen",
+      "kind": "weapon",
+      "school": "bow",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "4 w12 auf 8+; 2 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 2
+        }
+      ],
+      "art": "res://assets/cards/pfeilregen.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "harzspitze",
+      "name": "Harzspitze",
+      "kind": "utility",
+      "school": "bow",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Ätzöl mit 2 ladungen; erschöpfen.",
+      "effects": [
+        {
+          "type": "apply_weapon_coating",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/harzspitze.svg",
+      "keywords": [
+        "apply_weapon_coating",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "schattenpfeil",
+      "name": "Schattenpfeil",
+      "kind": "weapon",
+      "school": "bow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "3 w12 auf 7+; 2 schaden je erfolg, bricht 1 rüstung; verursache marked 1.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "armor_per_success": 1
+        },
+        {
+          "type": "enemy_status",
+          "status": "marked",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/schattenpfeil.svg",
+      "keywords": [
+        "dice_attack",
+        "marked"
+      ]
+    },
+    {
+      "id": "abfangschuss",
+      "name": "Abfangschuss",
+      "kind": "defense",
+      "school": "bow",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "+3 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 3
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/abfangschuss.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "drahtfalle",
+      "name": "Drahtfalle",
+      "kind": "utility",
+      "school": "bow",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "Falle mit 2 w12; erschöpfen.",
+      "effects": [
+        {
+          "type": "set_trap",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/drahtfalle.svg",
+      "keywords": [
+        "exhaust",
+        "set_trap"
+      ]
+    },
+    {
+      "id": "sonnenhagel",
+      "name": "Sonnenhagel",
+      "kind": "weapon",
+      "school": "bow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 3 schaden je erfolg, bricht 1 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "armor_per_success": 1
+        }
+      ],
+      "art": "res://assets/cards/sonnenhagel.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "schweigender_horizont",
+      "name": "Schweigender Horizont",
+      "kind": "weapon",
+      "school": "bow",
+      "phase": "attack",
+      "action_point_cost": 3,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 3 schaden je erfolg; erschöpfen.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/schweigender_horizont.svg",
+      "keywords": [
+        "dice_attack",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "ruckwartsschritt",
+      "name": "Rückwärtsschritt",
+      "kind": "reaction",
+      "school": "bow",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/ruckwartsschritt.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "jagerbund",
+      "name": "Jägerbund",
+      "kind": "cooperation",
+      "school": "bow",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "coordinated",
+          "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/jagerbund.svg",
+      "keywords": [
+        "coordinated",
+        "draw_cards"
+      ]
+    },
+    {
+      "id": "bolzenhagel",
+      "name": "Bolzenhagel",
+      "kind": "weapon",
+      "school": "crossbow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "3 w12 auf 7+; 3 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3
+        }
+      ],
+      "art": "res://assets/cards/bolzenhagel.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "schattenbolzen",
+      "name": "Schattenbolzen",
+      "kind": "weapon",
+      "school": "crossbow",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "2 w12 auf 8+; 4 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 8,
+          "damage_per_success": 4
+        }
+      ],
+      "art": "res://assets/cards/schattenbolzen.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "stahlkolben_parade",
+      "name": "Stahlkolben-Parade",
+      "kind": "weapon",
+      "school": "crossbow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 2,
+      "text": "2 w12 auf 7+; 3 schaden je erfolg, bricht 1 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 3,
+          "armor_per_success": 1
+        }
+      ],
+      "art": "res://assets/cards/stahlkolben_parade.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "schnellladen",
+      "name": "Schnellladen",
+      "kind": "defense",
+      "school": "crossbow",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/schnellladen.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "zielmechanik",
+      "name": "Zielmechanik",
+      "kind": "utility",
+      "school": "crossbow",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 3,
+      "text": "Erhalte aimed 1.",
+      "effects": [
+        {
+          "type": "self_status",
+          "status": "aimed",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/zielmechanik.svg",
+      "keywords": [
+        "aimed"
+      ]
+    },
+    {
+      "id": "widerhaken",
+      "name": "Widerhaken",
+      "kind": "weapon",
+      "school": "crossbow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "3 w12 auf 7+; 3 schaden je erfolg; verursache weakened 2.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3
+        },
+        {
+          "type": "enemy_status",
+          "status": "weakened",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/widerhaken.svg",
+      "keywords": [
+        "dice_attack",
+        "weakened"
+      ]
+    },
+    {
+      "id": "mobile_barrikade",
+      "name": "Mobile Barrikade",
+      "kind": "defense",
+      "school": "crossbow",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "+2 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/mobile_barrikade.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "salve",
+      "name": "Salve",
+      "kind": "weapon",
+      "school": "crossbow",
+      "phase": "attack",
+      "action_point_cost": 2,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "4 w12 auf 8+; 3 schaden je erfolg.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3
+        }
+      ],
+      "art": "res://assets/cards/salve.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "saurebolzen",
+      "name": "Säurebolzen",
+      "kind": "utility",
+      "school": "crossbow",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Ätzöl mit 2 ladungen; erschöpfen.",
+      "effects": [
+        {
+          "type": "apply_weapon_coating",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/saurebolzen.svg",
+      "keywords": [
+        "apply_weapon_coating",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "panzerbrecher",
+      "name": "Panzerbrecher",
+      "kind": "weapon",
+      "school": "crossbow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "3 w12 auf 7+; 3 schaden je erfolg, bricht 1 rüstung; verursache weakened 1.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3,
+          "armor_per_success": 1
+        },
+        {
+          "type": "enemy_status",
+          "status": "weakened",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/panzerbrecher.svg",
+      "keywords": [
+        "dice_attack",
+        "weakened"
+      ]
+    },
+    {
+      "id": "notkolben",
+      "name": "Notkolben",
+      "kind": "defense",
+      "school": "crossbow",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "+3 block-w12 für dich; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 3
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/notkolben.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "sprengfalle",
+      "name": "Sprengfalle",
+      "kind": "utility",
+      "school": "crossbow",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "Falle mit 2 w12; erschöpfen.",
+      "effects": [
+        {
+          "type": "set_trap",
+          "amount": 2
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/sprengfalle.svg",
+      "keywords": [
+        "exhaust",
+        "set_trap"
+      ]
+    },
+    {
+      "id": "sturmspanner",
+      "name": "Sturmspanner",
+      "kind": "weapon",
+      "school": "crossbow",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 4 schaden je erfolg, bricht 1 rüstung.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 4,
+          "armor_per_success": 1
+        }
+      ],
+      "art": "res://assets/cards/sturmspanner.svg",
+      "keywords": [
+        "dice_attack"
+      ]
+    },
+    {
+      "id": "schwarzer_donner",
+      "name": "Schwarzer Donner",
+      "kind": "weapon",
+      "school": "crossbow",
+      "phase": "attack",
+      "action_point_cost": 3,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "4 w12 auf 8+; 4 schaden je erfolg; erschöpfen.",
+      "effects": [
+        {
+          "type": "dice_attack",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 4
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/schwarzer_donner.svg",
+      "keywords": [
+        "dice_attack",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "deckungssprung",
+      "name": "Deckungssprung",
+      "kind": "reaction",
+      "school": "crossbow",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/deckungssprung.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "synchronfeuer",
+      "name": "Synchronfeuer",
+      "kind": "cooperation",
+      "school": "crossbow",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "Beide erhalten coordinated 1; ziehe 1 karten.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "coordinated",
+          "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/synchronfeuer.svg",
+      "keywords": [
+        "coordinated",
+        "draw_cards"
+      ]
+    },
+    {
+      "id": "runenkafig",
+      "name": "Runenkäfig",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bound 2.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "bound",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/runenkafig.svg",
+      "keywords": [
+        "bound"
+      ]
+    },
+    {
+      "id": "steinschrift",
+      "name": "Steinschrift",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und bound 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3,
+          "status": "bound",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/steinschrift.svg",
+      "keywords": [
+        "bound"
+      ]
+    },
+    {
+      "id": "zwillingsbann",
+      "name": "Zwillingsbann",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "defense",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+2 block-w12 für beide.",
+      "effects": [
+        {
+          "type": "add_block_dice_all",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/zwillingsbann.svg",
+      "keywords": [
+        "add_block_dice_all"
+      ]
+    },
+    {
+      "id": "runenheilung",
+      "name": "Runenheilung",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "Heile beide um 4.",
+      "effects": [
+        {
+          "type": "heal_all",
+          "amount": 4
+        }
+      ],
+      "art": "res://assets/cards/runenheilung.svg",
+      "keywords": [
+        "heal_all"
+      ]
+    },
+    {
+      "id": "siegelbruch",
+      "name": "Siegelbruch",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und bound 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 8,
+          "damage_per_success": 2,
+          "status": "bound",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/siegelbruch.svg",
+      "keywords": [
+        "bound"
+      ]
+    },
+    {
+      "id": "eidopfer",
+      "name": "Eidopfer",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "magic",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bound 1.",
+      "effects": [
+        {
+          "type": "self_damage",
+          "amount": 3
+        },
+        {
+          "type": "dice_magic_damage",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "bound",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/eidopfer.svg",
+      "keywords": [
+        "bound",
+        "self_damage"
+      ]
+    },
+    {
+      "id": "frostglyphe",
+      "name": "Frostglyphe",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bound 2.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "bound",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/frostglyphe.svg",
+      "keywords": [
+        "bound"
+      ]
+    },
+    {
+      "id": "runenschild",
+      "name": "Runenschild",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/runenschild.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "lebenszeichen",
+      "name": "Lebenszeichen",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Regeneration 2 für 3 runden.",
+      "effects": [
+        {
+          "type": "regeneration",
+          "amount": 2,
+          "rounds": 3
+        }
+      ],
+      "art": "res://assets/cards/lebenszeichen.svg",
+      "keywords": [
+        "regeneration"
+      ]
+    },
+    {
+      "id": "sternenrune",
+      "name": "Sternenrune",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und bound 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "status": "bound",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/sternenrune.svg",
+      "keywords": [
+        "bound"
+      ]
+    },
+    {
+      "id": "wort_des_ursprungs",
+      "name": "Wort des Ursprungs",
+      "kind": "magic",
+      "school": "rune",
+      "phase": "magic",
+      "action_point_cost": 3,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und bound 1; erschöpfen.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "status": "bound",
+          "amount": 1
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/wort_des_ursprungs.svg",
+      "keywords": [
+        "bound",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "gemeinsames_siegel",
+      "name": "Gemeinsames Siegel",
+      "kind": "cooperation",
+      "school": "rune",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "Beide erhalten arcane_link 1; ziehe 1 karten.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "arcane_link",
+          "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/gemeinsames_siegel.svg",
+      "keywords": [
+        "arcane_link",
+        "draw_cards"
+      ]
+    },
+    {
+      "id": "aschemal",
+      "name": "Aschemal",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und burning 2.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "burning",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/aschemal.svg",
+      "keywords": [
+        "burning"
+      ]
+    },
+    {
+      "id": "glutlanze",
+      "name": "Glutlanze",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und burning 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3,
+          "status": "burning",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/glutlanze.svg",
+      "keywords": [
+        "burning"
+      ]
+    },
+    {
+      "id": "flammenbund",
+      "name": "Flammenbund",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "defense",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+2 block-w12 für beide.",
+      "effects": [
+        {
+          "type": "add_block_dice_all",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/flammenbund.svg",
+      "keywords": [
+        "add_block_dice_all"
+      ]
+    },
+    {
+      "id": "warmender_funke",
+      "name": "Wärmender Funke",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "Heile deinen partner um 6.",
+      "effects": [
+        {
+          "type": "heal_ally",
+          "amount": 6
+        }
+      ],
+      "art": "res://assets/cards/warmender_funke.svg",
+      "keywords": [
+        "heal_ally"
+      ]
+    },
+    {
+      "id": "feuersturm",
+      "name": "Feuersturm",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und burning 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 8,
+          "damage_per_success": 2,
+          "status": "burning",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/feuersturm.svg",
+      "keywords": [
+        "burning"
+      ]
+    },
+    {
+      "id": "aschenopfer",
+      "name": "Aschenopfer",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "magic",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und burning 1.",
+      "effects": [
+        {
+          "type": "self_damage",
+          "amount": 3
+        },
+        {
+          "type": "dice_magic_damage",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "burning",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/aschenopfer.svg",
+      "keywords": [
+        "burning",
+        "self_damage"
+      ]
+    },
+    {
+      "id": "brandzeichen",
+      "name": "Brandzeichen",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und burning 2.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "burning",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/brandzeichen.svg",
+      "keywords": [
+        "burning"
+      ]
+    },
+    {
+      "id": "glutpanzer",
+      "name": "Glutpanzer",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/glutpanzer.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "phonixatem",
+      "name": "Phönixatem",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Regeneration 2 für 3 runden.",
+      "effects": [
+        {
+          "type": "regeneration",
+          "amount": 2,
+          "rounds": 3
+        }
+      ],
+      "art": "res://assets/cards/phonixatem.svg",
+      "keywords": [
+        "regeneration"
+      ]
+    },
+    {
+      "id": "sonnenbrand",
+      "name": "Sonnenbrand",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und burning 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "status": "burning",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/sonnenbrand.svg",
+      "keywords": [
+        "burning"
+      ]
+    },
+    {
+      "id": "herz_der_flamme",
+      "name": "Herz der Flamme",
+      "kind": "magic",
+      "school": "ember",
+      "phase": "magic",
+      "action_point_cost": 3,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und burning 1; erschöpfen.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "status": "burning",
+          "amount": 1
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/herz_der_flamme.svg",
+      "keywords": [
+        "burning",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "geteilte_glut",
+      "name": "Geteilte Glut",
+      "kind": "cooperation",
+      "school": "ember",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "Beide erhalten arcane_link 1; ziehe 1 karten.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "arcane_link",
+          "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/geteilte_glut.svg",
+      "keywords": [
+        "arcane_link",
+        "draw_cards"
+      ]
+    },
+    {
+      "id": "schattenfessel",
+      "name": "Schattenfessel",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und weakened 2.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "weakened",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/schattenfessel.svg",
+      "keywords": [
+        "weakened"
+      ]
+    },
+    {
+      "id": "nachtklinge",
+      "name": "Nachtklinge",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und weakened 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3,
+          "status": "weakened",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/nachtklinge.svg",
+      "keywords": [
+        "weakened"
+      ]
+    },
+    {
+      "id": "schleierbund",
+      "name": "Schleierbund",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "defense",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+2 block-w12 für beide.",
+      "effects": [
+        {
+          "type": "add_block_dice_all",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/schleierbund.svg",
+      "keywords": [
+        "add_block_dice_all"
+      ]
+    },
+    {
+      "id": "dammerruhe",
+      "name": "Dämmerruhe",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "Heile deinen partner um 6.",
+      "effects": [
+        {
+          "type": "heal_ally",
+          "amount": 6
+        }
+      ],
+      "art": "res://assets/cards/dammerruhe.svg",
+      "keywords": [
+        "heal_ally"
+      ]
+    },
+    {
+      "id": "leerenriss",
+      "name": "Leerenriss",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und weakened 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 8,
+          "damage_per_success": 2,
+          "status": "weakened",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/leerenriss.svg",
+      "keywords": [
+        "weakened"
+      ]
+    },
+    {
+      "id": "seelenzoll",
+      "name": "Seelenzoll",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "magic",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und weakened 1.",
+      "effects": [
+        {
+          "type": "self_damage",
+          "amount": 3
+        },
+        {
+          "type": "dice_magic_damage",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "weakened",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/seelenzoll.svg",
+      "keywords": [
+        "self_damage",
+        "weakened"
+      ]
+    },
+    {
+      "id": "blindmal",
+      "name": "Blindmal",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und weakened 2.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "weakened",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/blindmal.svg",
+      "keywords": [
+        "weakened"
+      ]
+    },
+    {
+      "id": "spiegelhaut",
+      "name": "Spiegelhaut",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/spiegelhaut.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "nebelheilung",
+      "name": "Nebelheilung",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Regeneration 2 für 3 runden.",
+      "effects": [
+        {
+          "type": "regeneration",
+          "amount": 2,
+          "rounds": 3
+        }
+      ],
+      "art": "res://assets/cards/nebelheilung.svg",
+      "keywords": [
+        "regeneration"
+      ]
+    },
+    {
+      "id": "mondlose_nacht",
+      "name": "Mondlose Nacht",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und weakened 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "status": "weakened",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/mondlose_nacht.svg",
+      "keywords": [
+        "weakened"
+      ]
+    },
+    {
+      "id": "tor_hinter_dem_spiegel",
+      "name": "Tor hinter dem Spiegel",
+      "kind": "magic",
+      "school": "veil",
+      "phase": "magic",
+      "action_point_cost": 3,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und weakened 1; erschöpfen.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "status": "weakened",
+          "amount": 1
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/tor_hinter_dem_spiegel.svg",
+      "keywords": [
+        "exhaust",
+        "weakened"
+      ]
+    },
+    {
+      "id": "zwillingsecho",
+      "name": "Zwillingsecho",
+      "kind": "cooperation",
+      "school": "veil",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "Beide erhalten arcane_link 1; ziehe 1 karten.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "arcane_link",
+          "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/zwillingsecho.svg",
+      "keywords": [
+        "arcane_link",
+        "draw_cards"
+      ]
+    },
+    {
+      "id": "blutschuld",
+      "name": "Blutschuld",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bleeding 2.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "bleeding",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/blutschuld.svg",
+      "keywords": [
+        "bleeding"
+      ]
+    },
+    {
+      "id": "herzstich",
+      "name": "Herzstich",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "3 magie-w12 auf 7+; 3 schaden je ungebanntem erfolg und bleeding 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 3,
+          "status": "bleeding",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/herzstich.svg",
+      "keywords": [
+        "bleeding"
+      ]
+    },
+    {
+      "id": "roter_bund",
+      "name": "Roter Bund",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "defense",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+2 block-w12 für beide.",
+      "effects": [
+        {
+          "type": "add_block_dice_all",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/roter_bund.svg",
+      "keywords": [
+        "add_block_dice_all"
+      ]
+    },
+    {
+      "id": "lebensraub",
+      "name": "Lebensraub",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "Heile deinen partner um 6.",
+      "effects": [
+        {
+          "type": "heal_ally",
+          "amount": 6
+        }
+      ],
+      "art": "res://assets/cards/lebensraub.svg",
+      "keywords": [
+        "heal_ally"
+      ]
+    },
+    {
+      "id": "bluternte",
+      "name": "Bluternte",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "3 magie-w12 auf 8+; 2 schaden je ungebanntem erfolg und bleeding 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 8,
+          "damage_per_success": 2,
+          "status": "bleeding",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/bluternte.svg",
+      "keywords": [
+        "bleeding"
+      ]
+    },
+    {
+      "id": "aderopfer",
+      "name": "Aderopfer",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "magic",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "Verliere 3 leben; 2 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bleeding 1.",
+      "effects": [
+        {
+          "type": "self_damage",
+          "amount": 3
+        },
+        {
+          "type": "dice_magic_damage",
+          "count": 2,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "bleeding",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/aderopfer.svg",
+      "keywords": [
+        "bleeding",
+        "self_damage"
+      ]
+    },
+    {
+      "id": "gerinnungsmal",
+      "name": "Gerinnungsmal",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "3 magie-w12 auf 7+; 2 schaden je ungebanntem erfolg und bleeding 2.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 3,
+          "threshold": 7,
+          "damage_per_success": 2,
+          "status": "bleeding",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/gerinnungsmal.svg",
+      "keywords": [
+        "bleeding"
+      ]
+    },
+    {
+      "id": "knochenpanzer",
+      "name": "Knochenpanzer",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "+2 block-w12 für dich.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/knochenpanzer.svg",
+      "keywords": [
+        "add_block_dice_self"
+      ]
+    },
+    {
+      "id": "schwarzwurzel",
+      "name": "Schwarzwurzel",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Regeneration 2 für 3 runden.",
+      "effects": [
+        {
+          "type": "regeneration",
+          "amount": 2,
+          "rounds": 3
+        }
+      ],
+      "art": "res://assets/cards/schwarzwurzel.svg",
+      "keywords": [
+        "regeneration"
+      ]
+    },
+    {
+      "id": "purpurflut",
+      "name": "Purpurflut",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und bleeding 1.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "status": "bleeding",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/purpurflut.svg",
+      "keywords": [
+        "bleeding"
+      ]
+    },
+    {
+      "id": "erster_eid",
+      "name": "Erster Eid",
+      "kind": "magic",
+      "school": "blood",
+      "phase": "magic",
+      "action_point_cost": 3,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "4 magie-w12 auf 8+; 3 schaden je ungebanntem erfolg und bleeding 1; erschöpfen.",
+      "effects": [
+        {
+          "type": "dice_magic_damage",
+          "count": 4,
+          "threshold": 8,
+          "damage_per_success": 3,
+          "status": "bleeding",
+          "amount": 1
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/erster_eid.svg",
+      "keywords": [
+        "bleeding",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "geteiltes_herz",
+      "name": "Geteiltes Herz",
+      "kind": "cooperation",
+      "school": "blood",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "Beide erhalten arcane_link 1; ziehe 1 karten.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "arcane_link",
+          "amount": 1
+        },
+        {
+          "type": "draw_cards",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/geteiltes_herz.svg",
+      "keywords": [
+        "arcane_link",
+        "draw_cards"
+      ]
+    },
+    {
+      "id": "feldverband",
+      "name": "Feldverband",
+      "kind": "utility",
+      "school": "universal",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": true,
+      "unlock_level": 1,
+      "text": "Heile deinen partner um 6.",
+      "effects": [
+        {
+          "type": "heal_ally",
+          "amount": 6
+        }
+      ],
+      "art": "res://assets/cards/feldverband.svg",
+      "keywords": [
+        "heal_ally"
+      ]
+    },
+    {
+      "id": "letzter_schwur",
+      "name": "Letzter Schwur",
+      "kind": "defense",
+      "school": "universal",
+      "phase": "defense",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 1,
+      "text": "Erhalte last_oath 1; erschöpfen.",
+      "effects": [
+        {
+          "type": "self_status",
+          "status": "last_oath",
+          "amount": 1
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/letzter_schwur.svg",
+      "keywords": [
+        "exhaust",
+        "last_oath"
+      ]
+    },
+    {
+      "id": "gegengift",
+      "name": "Gegengift",
+      "kind": "utility",
+      "school": "universal",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "Entferne einen negativen zustand.",
+      "effects": [
+        {
+          "type": "cleanse",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/gegengift.svg",
+      "keywords": [
+        "cleanse"
+      ]
+    },
+    {
+      "id": "wachposten",
+      "name": "Wachposten",
+      "kind": "reaction",
+      "school": "universal",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "exceptional",
+      "starter": true,
+      "unlock_level": 2,
+      "text": "+1 block-w12 für beide.",
+      "effects": [
+        {
+          "type": "add_block_dice_all",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/wachposten.svg",
+      "keywords": [
+        "add_block_dice_all"
+      ]
+    },
+    {
+      "id": "stahlerner_wille",
+      "name": "Stählerner Wille",
+      "kind": "defense",
+      "school": "universal",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 3,
+      "text": "Erhalte 4 schutz.",
+      "effects": [
+        {
+          "type": "guard_self",
+          "amount": 4
+        }
+      ],
+      "art": "res://assets/cards/stahlerner_wille.svg",
+      "keywords": [
+        "guard_self"
+      ]
+    },
+    {
+      "id": "ablenkungsmanover",
+      "name": "Ablenkungsmanöver",
+      "kind": "cooperation",
+      "school": "universal",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "unique",
+      "starter": true,
+      "unlock_level": 3,
+      "text": "Verursache exposed 1.",
+      "effects": [
+        {
+          "type": "enemy_status",
+          "status": "exposed",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/ablenkungsmanover.svg",
+      "keywords": [
+        "exposed"
+      ]
+    },
+    {
+      "id": "kartenstudium",
+      "name": "Kartenstudium",
+      "kind": "utility",
+      "school": "universal",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "Ziehe 2 karten.",
+      "effects": [
+        {
+          "type": "draw_cards",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/kartenstudium.svg",
+      "keywords": [
+        "draw_cards"
+      ]
+    },
+    {
+      "id": "atem_holen",
+      "name": "Atem holen",
+      "kind": "utility",
+      "school": "universal",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 4,
+      "text": "Erhalte 1 ap; erschöpfen.",
+      "effects": [
+        {
+          "type": "gain_action_points",
+          "amount": 1
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/atem_holen.svg",
+      "keywords": [
+        "exhaust",
+        "gain_action_points"
+      ]
+    },
+    {
+      "id": "gemeinsamer_plan",
+      "name": "Gemeinsamer Plan",
+      "kind": "cooperation",
+      "school": "universal",
+      "phase": "utility",
+      "action_point_cost": 2,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Beide erhalten coordinated 1.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "coordinated",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/gemeinsamer_plan.svg",
+      "keywords": [
+        "coordinated"
+      ]
+    },
+    {
+      "id": "notration",
+      "name": "Notration",
+      "kind": "utility",
+      "school": "universal",
+      "phase": "utility",
+      "action_point_cost": 1,
+      "rarity": "rare",
+      "starter": false,
+      "unlock_level": 5,
+      "text": "Heile dich um 4; erschöpfen.",
+      "effects": [
+        {
+          "type": "heal_self",
+          "amount": 4
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/notration.svg",
+      "keywords": [
+        "exhaust",
+        "heal_self"
+      ]
+    },
+    {
+      "id": "rauchbombe",
+      "name": "Rauchbombe",
+      "kind": "reaction",
+      "school": "universal",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "enhanced",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "+3 block-w12 für dich; erschöpfen.",
+      "effects": [
+        {
+          "type": "add_block_dice_self",
+          "amount": 3
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/rauchbombe.svg",
+      "keywords": [
+        "add_block_dice_self",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "improvisierte_deckung",
+      "name": "Improvisierte Deckung",
+      "kind": "defense",
+      "school": "universal",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "exceptional",
+      "starter": false,
+      "unlock_level": 6,
+      "text": "+2 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "add_block_dice_ally",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/improvisierte_deckung.svg",
+      "keywords": [
+        "add_block_dice_ally"
+      ]
+    },
+    {
+      "id": "eidkraft",
+      "name": "Eidkraft",
+      "kind": "cooperation",
+      "school": "universal",
+      "phase": "magic",
+      "action_point_cost": 2,
+      "rarity": "legendary",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "Beide erhalten oath_power 2.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "oath_power",
+          "amount": 2
+        }
+      ],
+      "art": "res://assets/cards/eidkraft.svg",
+      "keywords": [
+        "oath_power"
+      ]
+    },
+    {
+      "id": "kampfrausch",
+      "name": "Kampfrausch",
+      "kind": "utility",
+      "school": "universal",
+      "phase": "attack",
+      "action_point_cost": 1,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 7,
+      "text": "Erhalte fury 1.",
+      "effects": [
+        {
+          "type": "self_status",
+          "status": "fury",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/kampfrausch.svg",
+      "keywords": [
+        "fury"
+      ]
+    },
+    {
+      "id": "soldnerehre",
+      "name": "Söldnerehre",
+      "kind": "cooperation",
+      "school": "universal",
+      "phase": "defense",
+      "action_point_cost": 1,
+      "rarity": "normal",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "Erhalte 3 schutz; +1 block-w12 für deinen partner.",
+      "effects": [
+        {
+          "type": "guard_self",
+          "amount": 3
+        },
+        {
+          "type": "add_block_dice_ally",
+          "amount": 1
+        }
+      ],
+      "art": "res://assets/cards/soldnerehre.svg",
+      "keywords": [
+        "add_block_dice_ally",
+        "guard_self"
+      ]
+    },
+    {
+      "id": "der_letzte_eid",
+      "name": "Der letzte Eid",
+      "kind": "cooperation",
+      "school": "universal",
+      "phase": "attack",
+      "action_point_cost": 5,
+      "rarity": "unique",
+      "starter": false,
+      "unlock_level": 8,
+      "text": "Beide erhalten final_oath 1; 8 w12 auf 7+; 4 schaden je erfolg; erschöpfen.",
+      "effects": [
+        {
+          "type": "team_status",
+          "status": "final_oath",
+          "amount": 1
+        },
+        {
+          "type": "dice_attack",
+          "count": 8,
+          "threshold": 7,
+          "damage_per_success": 4
+        },
+        {
+          "type": "exhaust"
+        }
+      ],
+      "art": "res://assets/cards/der_letzte_eid.svg",
+      "keywords": [
+        "dice_attack",
+        "exhaust",
+        "final_oath"
+      ]
+    }
+  ]
+}

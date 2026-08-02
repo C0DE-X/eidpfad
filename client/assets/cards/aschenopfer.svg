@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="704" viewBox="0 0 512 704" data-asset-kind="card">
+<defs>
+  <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#673721"/><stop offset="1" stop-color="#0c1114"/></linearGradient>
+  <linearGradient id="rim"><stop stop-color="#d09245"/><stop offset=".5" stop-color="#775ca2"/><stop offset="1" stop-color="#d09245"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#c66a3f" stop-opacity=".55"/><stop offset="1" stop-color="#c66a3f" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="512" height="704" rx="34" fill="#080d10"/>
+<rect x="19" y="19" width="474" height="666" rx="27" fill="url(#bg)" stroke="url(#rim)" stroke-width="6"/>
+<path d="M47 122h418M47 578h418" stroke="#d09245" stroke-opacity=".5" stroke-width="3"/>
+<circle cx="256" cy="337" r="176" fill="url(#glow)"/>
+<g fill="#c66a3f" opacity=".14" transform="translate(0 -1) scale(1.15) translate(-34 -38)"><path d="M262 76c18 82-59 92-32 168 18-28 38-44 43-82 78 76 106 141 57 211-39 56-129 62-169 5-42-59-6-120 35-157-9 69 25 91 45 105-17-73 68-111 21-250z"/></g>
+<g fill="#d09245" stroke="#080d10" stroke-width="8" stroke-linejoin="round" transform="translate(91 100) scale(.64)"><path d="m256 84 31 93 97-20-72 69 67 73-96-25-27 95-27-95-96 25 67-73-72-69 97 20z"/><circle cx="256" cy="226" r="46"/></g>
+<circle cx="76" cy="72" r="25" fill="#775ca2" stroke="#d09245" stroke-width="4"/>
+<path d="M76 57v30M61 72h30" stroke="#f4ead6" stroke-width="6" transform="rotate(67.5 76 72)"/>
+<path d="M70 616h372l-28 36H98z" fill="#644621" stroke="#d09245" stroke-width="3"/>
+<g fill="#f2e9d6" opacity=".92" transform="translate(192 587) scale(.25)"><path d="M262 76c18 82-59 92-32 168 18-28 38-44 43-82 78 76 106 141 57 211-39 56-129 62-169 5-42-59-6-120 35-157-9 69 25 91 45 105-17-73 68-111 21-250z"/></g>
+</svg>

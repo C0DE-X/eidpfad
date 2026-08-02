@@ -1,0 +1,13 @@
+{
+  "name": "eidpfad-asset-pipeline",
+  "private": true,
+  "version": "0.5.0",
+  "description": "Offline voice generation for the Eidpfad game assets",
+  "type": "module",
+  "scripts": {
+    "voice": "node scripts/generate_voice.mjs"
+  },
+  "devDependencies": {
+    "text2wav": "0.0.14"
+  }
+}

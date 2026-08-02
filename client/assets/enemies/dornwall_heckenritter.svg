@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" data-asset-kind="enemy">
+<defs><radialGradient id="bg"><stop stop-color="#4f673e"/><stop offset="1" stop-color="#080d10"/></radialGradient></defs>
+<rect width="512" height="512" rx="36" fill="#080c0f"/>
+<rect x="20" y="20" width="472" height="472" rx="28" fill="url(#bg)" stroke="#a35b67" stroke-width="5"/>
+<circle cx="256" cy="258" r="171" fill="#050809" fill-opacity=".46"/>
+<path d="M150 414c12-99 50-144 106-144s94 45 106 144z" fill="#344429" stroke="#a35b67" stroke-width="6"/>
+<path d="M185 245c0-75 29-126 71-126s71 51 71 126l-28 42h-86z" fill="#75424a" stroke="#0b1012" stroke-width="8"/>
+<path d="m142 230 43 -88 34 94m108-6 43 -88-34 94" fill="none" stroke="#a35b67" stroke-width="10" stroke-linecap="round"/>
+<circle cx="226" cy="228" r="10" fill="#a35b67"/><circle cx="286" cy="228" r="10" fill="#a35b67"/>
+<g fill="#a35b67" opacity=".85" transform="translate(205 303) scale(.20)"><path d="m122 376 78-26 76-180 38-38 22 22-30 45-77 181-73 51zm234 0-78-26-76-180-38-38-22 22 30 45 77 181 73 51z"/></g>
+<path d="M72 450h368" stroke="#a35b67" stroke-opacity=".55" stroke-width="4"/>
+</svg>

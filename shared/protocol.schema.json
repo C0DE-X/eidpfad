@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidpfad.invalid/protocol.schema.json",
+  "title": "Eidpfad WebSocket client message",
+  "$defs": {
+    "base": {
+      "type": "object",
+      "required": ["type", "protocol_version"],
+      "properties": {"protocol_version": {"const": 2}}
+    },
+    "targetIds": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "maxItems": 3,
+      "uniqueItems": true
+    }
+  },
+  "oneOf": [
+    {"type":"object","required":["type","protocol_version","ready"],"properties":{"type":{"const":"ready"},"protocol_version":{"const":2},"ready":{"type":"boolean"}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","card_id"],"properties":{"type":{"const":"play_card"},"protocol_version":{"const":2},"card_id":{"type":"string","minLength":1},"target_id":{"type":["string","null"]},"target_ids":{"$ref":"#/$defs/targetIds"}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version"],"properties":{"type":{"const":"pass_phase"},"protocol_version":{"const":2}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","card_id","target_ids"],"properties":{"type":{"const":"react"},"protocol_version":{"const":2},"card_id":{"type":["string","null"]},"target_ids":{"$ref":"#/$defs/targetIds"}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","accepted"],"properties":{"type":{"const":"confirm_cooperation"},"protocol_version":{"const":2},"accepted":{"type":"boolean"}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","item_id"],"properties":{"type":{"const":"claim_loot"},"protocol_version":{"const":2},"item_id":{"type":"string","minLength":1}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","scenario_id"],"properties":{"type":{"const":"choose_scenario"},"protocol_version":{"const":2},"scenario_id":{"type":"string","minLength":1}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","item_id"],"properties":{"type":{"const":"equip_item"},"protocol_version":{"const":2},"item_id":{"type":"string","minLength":1}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","action"],"properties":{"type":{"const":"scenario_action"},"protocol_version":{"const":2},"action":{"const":"prepare_hunt"}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version"],"properties":{"type":{"const":"commit_final_oath"},"protocol_version":{"const":2}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","choice"],"properties":{"type":{"const":"ending_choice"},"protocol_version":{"const":2},"choice":{"enum":["seal","destroy","bind","dominate"]}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","item_id"],"properties":{"type":{"const":"select_legacy"},"protocol_version":{"const":2},"item_id":{"type":"string","minLength":1}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version"],"properties":{"type":{"const":"confirm_new_game_plus"},"protocol_version":{"const":2}},"additionalProperties":false},
+    {"type":"object","required":["type","protocol_version","cinematic_id","skipped"],"properties":{"type":{"const":"cinematic_ack"},"protocol_version":{"const":2},"cinematic_id":{"type":"string","minLength":1},"skipped":{"type":"boolean"}},"additionalProperties":false}
+  ]
+}

@@ -1,0 +1,9 @@
+# Normalize source files on every platform.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Runtime assets make up most of the repository and belong in Git LFS.
+client/assets/**/*.glb filter=lfs diff=lfs merge=lfs -text
+client/assets/**/*.png filter=lfs diff=lfs merge=lfs -text
+client/assets/**/*.wav filter=lfs diff=lfs merge=lfs -text

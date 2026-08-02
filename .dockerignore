@@ -1,0 +1,12 @@
+# The server image only needs the Python service and shared game data.
+*
+!server/
+!server/**
+!shared/
+!shared/**
+
+# Never copy local environments or bytecode, including below re-included paths.
+server/.venv/
+**/__pycache__/
+**/*.egg-info/
+*.py[cod]

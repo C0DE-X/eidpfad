@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" data-asset-kind="ui">
+<circle cx="256" cy="256" r="230" fill="#10171b" stroke="#867657" stroke-width="8"/>
+<g color="#d7c49a" fill="#d7c49a" stroke-linejoin="round"><path d="M169 257a74 74 0 1 0 0-148 74 74 0 0 0 0 148zm174 0a74 74 0 1 0 0-148 74 74 0 0 0 0 148zM46 422c8-93 52-140 123-140 42 0 76 17 98 51 22-34 55-51 98-51 70 0 114 47 123 140z"/></g>
+</svg>

@@ -1,0 +1,2207 @@
+{
+  "content_version": 2,
+  "items": [
+    {
+      "id": "worn_dual_blades",
+      "name": "Abgenutzte Zwillingsklingen",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "dual_blades",
+      "country_affinity": "nebelmark",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "kreuzschnitt",
+      "art": "res://assets/items/worn_dual_blades.svg",
+      "model": "res://assets/models/items/worn_dual_blades.glb"
+    },
+    {
+      "id": "krahenmesser",
+      "name": "Krähenmesser",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "dual_blades",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine normal-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "sehnenhieb",
+      "art": "res://assets/items/krahenmesser.svg",
+      "model": "res://assets/models/items/krahenmesser.glb"
+    },
+    {
+      "id": "kupferzahne",
+      "name": "Kupferzähne",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "dual_blades",
+      "country_affinity": "frostreiche",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine normal-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "roter_reigen",
+      "art": "res://assets/items/kupferzahne.svg",
+      "model": "res://assets/models/items/kupferzahne.glb"
+    },
+    {
+      "id": "moorhaken",
+      "name": "Moorhaken",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "dual_blades",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "gekreuzte_klingen",
+      "art": "res://assets/items/moorhaken.svg",
+      "model": "res://assets/models/items/moorhaken.glb"
+    },
+    {
+      "id": "dornschwestern",
+      "name": "Dornschwestern",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "dual_blades",
+      "country_affinity": "aschenlande",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "klingenfokus",
+      "art": "res://assets/items/dornschwestern.svg",
+      "model": "res://assets/models/items/dornschwestern.glb"
+    },
+    {
+      "id": "salzklingen",
+      "name": "Salzklingen",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "dual_blades",
+      "country_affinity": "dornwall",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine rare-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "aderlass",
+      "art": "res://assets/items/salzklingen.svg",
+      "model": "res://assets/models/items/salzklingen.glb"
+    },
+    {
+      "id": "spiegelpaar",
+      "name": "Spiegelpaar",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "dual_blades",
+      "country_affinity": "glassteppe",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine rare-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schulter_an_schulter",
+      "art": "res://assets/items/spiegelpaar.svg",
+      "model": "res://assets/models/items/spiegelpaar.glb"
+    },
+    {
+      "id": "glutdolche",
+      "name": "Glutdolche",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "dual_blades",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "tausend_schnitte",
+      "art": "res://assets/items/glutdolche.svg",
+      "model": "res://assets/models/items/glutdolche.glb"
+    },
+    {
+      "id": "frostfang_duo",
+      "name": "Frostfang-Duo",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "dual_blades",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "atzende_schneiden",
+      "art": "res://assets/items/frostfang_duo.svg",
+      "model": "res://assets/models/items/frostfang_duo.glb"
+    },
+    {
+      "id": "sturmtanzer",
+      "name": "Sturmtänzer",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "dual_blades",
+      "country_affinity": "knochental",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine enhanced-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schattenstich",
+      "art": "res://assets/items/sturmtanzer.svg",
+      "model": "res://assets/models/items/sturmtanzer.glb"
+    },
+    {
+      "id": "wurzelreier",
+      "name": "Wurzelreißer",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "dual_blades",
+      "country_affinity": "nachtkrone",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_dice": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "wirbelparade",
+      "art": "res://assets/items/wurzelreier.svg",
+      "model": "res://assets/models/items/wurzelreier.glb"
+    },
+    {
+      "id": "nachtfinken",
+      "name": "Nachtfinken",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "dual_blades",
+      "country_affinity": "sturmmarsch",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "klingenfalle",
+      "art": "res://assets/items/nachtfinken.svg",
+      "model": "res://assets/models/items/nachtfinken.glb"
+    },
+    {
+      "id": "flutklingen",
+      "name": "Flutklingen",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "dual_blades",
+      "country_affinity": "versunkener_bund",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0
+      },
+      "description": "Eine exceptional-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "tanz_der_narben",
+      "art": "res://assets/items/flutklingen.svg",
+      "model": "res://assets/models/items/flutklingen.glb"
+    },
+    {
+      "id": "knochensicheln",
+      "name": "Knochensicheln",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "dual_blades",
+      "country_affinity": "weltennaht",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine exceptional-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "letzter_herzschlag",
+      "art": "res://assets/items/knochensicheln.svg",
+      "model": "res://assets/models/items/knochensicheln.glb"
+    },
+    {
+      "id": "sonnenzwillinge",
+      "name": "Sonnenzwillinge",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "dual_blades",
+      "country_affinity": "nebelmark",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "block_dice": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "blitzreflex",
+      "art": "res://assets/items/sonnenzwillinge.svg",
+      "model": "res://assets/models/items/sonnenzwillinge.glb"
+    },
+    {
+      "id": "aschenreigen",
+      "name": "Aschenreigen",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "dual_blades",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_break": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "blutsbruder",
+      "art": "res://assets/items/aschenreigen.svg",
+      "model": "res://assets/models/items/aschenreigen.glb"
+    },
+    {
+      "id": "duelist_hooks",
+      "name": "Duellantenhaken",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "dual_blades",
+      "country_affinity": "frostreiche",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "kreuzschnitt",
+      "art": "res://assets/items/duelist_hooks.svg",
+      "model": "res://assets/models/items/duelist_hooks.glb"
+    },
+    {
+      "id": "runenpaar",
+      "name": "Runenpaar",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "dual_blades",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "sehnenhieb",
+      "art": "res://assets/items/runenpaar.svg",
+      "model": "res://assets/models/items/runenpaar.glb"
+    },
+    {
+      "id": "sternenschnitter",
+      "name": "Sternenschnitter",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "dual_blades",
+      "country_affinity": "aschenlande",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "roter_reigen",
+      "art": "res://assets/items/sternenschnitter.svg",
+      "model": "res://assets/models/items/sternenschnitter.glb"
+    },
+    {
+      "id": "blutmondklingen",
+      "name": "Blutmondklingen",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "dual_blades",
+      "country_affinity": "dornwall",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "gekreuzte_klingen",
+      "art": "res://assets/items/blutmondklingen.svg",
+      "model": "res://assets/models/items/blutmondklingen.glb"
+    },
+    {
+      "id": "eidbrecher_duo",
+      "name": "Eidbrecher-Duo",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "dual_blades",
+      "country_affinity": "glassteppe",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "klingenfokus",
+      "art": "res://assets/items/eidbrecher_duo.svg",
+      "model": "res://assets/models/items/eidbrecher_duo.glb"
+    },
+    {
+      "id": "schweigende_schwestern",
+      "name": "Schweigende Schwestern",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "dual_blades",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "aderlass",
+      "art": "res://assets/items/schweigende_schwestern.svg",
+      "model": "res://assets/models/items/schweigende_schwestern.glb"
+    },
+    {
+      "id": "weltennahtmesser",
+      "name": "Weltennahtmesser",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "dual_blades",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schulter_an_schulter",
+      "art": "res://assets/items/weltennahtmesser.svg",
+      "model": "res://assets/models/items/weltennahtmesser.glb"
+    },
+    {
+      "id": "erste_und_letzte_klinge",
+      "name": "Erste und Letzte Klinge",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "dual_blades",
+      "country_affinity": "knochental",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule dual_blades; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "tausend_schnitte",
+      "art": "res://assets/items/erste_und_letzte_klinge.svg",
+      "model": "res://assets/models/items/erste_und_letzte_klinge.glb"
+    },
+    {
+      "id": "worn_axe",
+      "name": "Söldneraxt",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "axe",
+      "country_affinity": "nebelmark",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "eisenbrecher",
+      "art": "res://assets/items/worn_axe.svg",
+      "model": "res://assets/models/items/worn_axe.glb"
+    },
+    {
+      "id": "krahenbeil",
+      "name": "Krähenbeil",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "axe",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine normal-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schadelspalter",
+      "art": "res://assets/items/krahenbeil.svg",
+      "model": "res://assets/models/items/krahenbeil.glb"
+    },
+    {
+      "id": "kupferhacke",
+      "name": "Kupferhacke",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "axe",
+      "country_affinity": "frostreiche",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine normal-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "standhalten",
+      "art": "res://assets/items/kupferhacke.svg",
+      "model": "res://assets/models/items/kupferhacke.glb"
+    },
+    {
+      "id": "moorspalter",
+      "name": "Moorspalter",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "axe",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "urteil_des_henkers",
+      "art": "res://assets/items/moorspalter.svg",
+      "model": "res://assets/models/items/moorspalter.glb"
+    },
+    {
+      "id": "dornbeier",
+      "name": "Dornbeißer",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "axe",
+      "country_affinity": "aschenlande",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schwerer_atem",
+      "art": "res://assets/items/dornbeier.svg",
+      "model": "res://assets/models/items/dornbeier.glb"
+    },
+    {
+      "id": "salzbeil",
+      "name": "Salzbeil",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "axe",
+      "country_affinity": "dornwall",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine rare-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "kniespalter",
+      "art": "res://assets/items/salzbeil.svg",
+      "model": "res://assets/models/items/salzbeil.glb"
+    },
+    {
+      "id": "spiegelaxt",
+      "name": "Spiegelaxt",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "axe",
+      "country_affinity": "glassteppe",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine rare-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "eiserner_wall",
+      "art": "res://assets/items/spiegelaxt.svg",
+      "model": "res://assets/models/items/spiegelaxt.glb"
+    },
+    {
+      "id": "glutschneide",
+      "name": "Glutschneide",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "axe",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "berserkersturm",
+      "art": "res://assets/items/glutschneide.svg",
+      "model": "res://assets/models/items/glutschneide.glb"
+    },
+    {
+      "id": "winter_lord_axe",
+      "name": "Axt des Winterfürsten",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "axe",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schleifstein",
+      "art": "res://assets/items/winter_lord_axe.svg",
+      "model": "res://assets/models/items/winter_lord_axe.glb"
+    },
+    {
+      "id": "donnerkeil",
+      "name": "Donnerkeil",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "axe",
+      "country_affinity": "knochental",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine enhanced-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "riss_im_panzer",
+      "art": "res://assets/items/donnerkeil.svg",
+      "model": "res://assets/models/items/donnerkeil.glb"
+    },
+    {
+      "id": "wurzelspalter",
+      "name": "Wurzelspalter",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "axe",
+      "country_affinity": "nachtkrone",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_dice": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "gegenschlag",
+      "art": "res://assets/items/wurzelspalter.svg",
+      "model": "res://assets/models/items/wurzelspalter.glb"
+    },
+    {
+      "id": "nachtbeil",
+      "name": "Nachtbeil",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "axe",
+      "country_affinity": "sturmmarsch",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "fallbeilfalle",
+      "art": "res://assets/items/nachtbeil.svg",
+      "model": "res://assets/models/items/nachtbeil.glb"
+    },
+    {
+      "id": "fluthammer",
+      "name": "Fluthammer",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "axe",
+      "country_affinity": "versunkener_bund",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0
+      },
+      "description": "Eine exceptional-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "sturm_des_henkers",
+      "art": "res://assets/items/fluthammer.svg",
+      "model": "res://assets/models/items/fluthammer.glb"
+    },
+    {
+      "id": "knochenbrecher",
+      "name": "Knochenbrecher",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "axe",
+      "country_affinity": "weltennaht",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine exceptional-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "weltenriss",
+      "art": "res://assets/items/knochenbrecher.svg",
+      "model": "res://assets/models/items/knochenbrecher.glb"
+    },
+    {
+      "id": "sonnenaxt",
+      "name": "Sonnenaxt",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "axe",
+      "country_affinity": "nebelmark",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "block_dice": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schildhaken",
+      "art": "res://assets/items/sonnenaxt.svg",
+      "model": "res://assets/models/items/sonnenaxt.glb"
+    },
+    {
+      "id": "aschenhenker",
+      "name": "Aschenhenker",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "axe",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_break": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "unbeugsamer_eid",
+      "art": "res://assets/items/aschenhenker.svg",
+      "model": "res://assets/models/items/aschenhenker.glb"
+    },
+    {
+      "id": "richtbeil",
+      "name": "Richtbeil",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "axe",
+      "country_affinity": "frostreiche",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "eisenbrecher",
+      "art": "res://assets/items/richtbeil.svg",
+      "model": "res://assets/models/items/richtbeil.glb"
+    },
+    {
+      "id": "runenspalter",
+      "name": "Runenspalter",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "axe",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schadelspalter",
+      "art": "res://assets/items/runenspalter.svg",
+      "model": "res://assets/models/items/runenspalter.glb"
+    },
+    {
+      "id": "sternenfall",
+      "name": "Sternenfall",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "axe",
+      "country_affinity": "aschenlande",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "standhalten",
+      "art": "res://assets/items/sternenfall.svg",
+      "model": "res://assets/models/items/sternenfall.glb"
+    },
+    {
+      "id": "blutmondbeil",
+      "name": "Blutmondbeil",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "axe",
+      "country_affinity": "dornwall",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "urteil_des_henkers",
+      "art": "res://assets/items/blutmondbeil.svg",
+      "model": "res://assets/models/items/blutmondbeil.glb"
+    },
+    {
+      "id": "eidspalter",
+      "name": "Eidspalter",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "axe",
+      "country_affinity": "glassteppe",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schwerer_atem",
+      "art": "res://assets/items/eidspalter.svg",
+      "model": "res://assets/models/items/eidspalter.glb"
+    },
+    {
+      "id": "schweigende_axt",
+      "name": "Schweigende Axt",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "axe",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "kniespalter",
+      "art": "res://assets/items/schweigende_axt.svg",
+      "model": "res://assets/models/items/schweigende_axt.glb"
+    },
+    {
+      "id": "worldsplitter",
+      "name": "Wegspalter",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "axe",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "eiserner_wall",
+      "art": "res://assets/items/worldsplitter.svg",
+      "model": "res://assets/models/items/worldsplitter.glb"
+    },
+    {
+      "id": "axt_des_ersten_namens",
+      "name": "Axt des ersten Namens",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "axe",
+      "country_affinity": "knochental",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule axe; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "berserkersturm",
+      "art": "res://assets/items/axt_des_ersten_namens.svg",
+      "model": "res://assets/models/items/axt_des_ersten_namens.glb"
+    },
+    {
+      "id": "worn_bow",
+      "name": "Eschenbogen",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "bow",
+      "country_affinity": "nebelmark",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "jagdschuss",
+      "art": "res://assets/items/worn_bow.svg",
+      "model": "res://assets/models/items/worn_bow.glb"
+    },
+    {
+      "id": "krahenbogen",
+      "name": "Krähenbogen",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "bow",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine normal-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "durchbohrender_pfeil",
+      "art": "res://assets/items/krahenbogen.svg",
+      "model": "res://assets/models/items/krahenbogen.glb"
+    },
+    {
+      "id": "kupfersehne",
+      "name": "Kupfersehne",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "bow",
+      "country_affinity": "frostreiche",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine normal-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "deckungsfeuer",
+      "art": "res://assets/items/kupfersehne.svg",
+      "model": "res://assets/models/items/kupfersehne.glb"
+    },
+    {
+      "id": "moorweide",
+      "name": "Moorweide",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "bow",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "ruhige_hand",
+      "art": "res://assets/items/moorweide.svg",
+      "model": "res://assets/models/items/moorweide.glb"
+    },
+    {
+      "id": "dornenbogen",
+      "name": "Dornenbogen",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "bow",
+      "country_affinity": "aschenlande",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "falkenblick",
+      "art": "res://assets/items/dornenbogen.svg",
+      "model": "res://assets/models/items/dornenbogen.glb"
+    },
+    {
+      "id": "salzlaufer",
+      "name": "Salzläufer",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "bow",
+      "country_affinity": "dornwall",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine rare-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "blutpfeil",
+      "art": "res://assets/items/salzlaufer.svg",
+      "model": "res://assets/models/items/salzlaufer.glb"
+    },
+    {
+      "id": "spiegelbogen",
+      "name": "Spiegelbogen",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "bow",
+      "country_affinity": "glassteppe",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine rare-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "gemeinsame_deckung",
+      "art": "res://assets/items/spiegelbogen.svg",
+      "model": "res://assets/models/items/spiegelbogen.glb"
+    },
+    {
+      "id": "glutsehne",
+      "name": "Glutsehne",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "bow",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "pfeilregen",
+      "art": "res://assets/items/glutsehne.svg",
+      "model": "res://assets/models/items/glutsehne.glb"
+    },
+    {
+      "id": "frostweide",
+      "name": "Frostweide",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "bow",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "harzspitze",
+      "art": "res://assets/items/frostweide.svg",
+      "model": "res://assets/models/items/frostweide.glb"
+    },
+    {
+      "id": "sturmbogen",
+      "name": "Sturmbogen",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "bow",
+      "country_affinity": "knochental",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine enhanced-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schattenpfeil",
+      "art": "res://assets/items/sturmbogen.svg",
+      "model": "res://assets/models/items/sturmbogen.glb"
+    },
+    {
+      "id": "wurzelbogen",
+      "name": "Wurzelbogen",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "bow",
+      "country_affinity": "nachtkrone",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_dice": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "abfangschuss",
+      "art": "res://assets/items/wurzelbogen.svg",
+      "model": "res://assets/models/items/wurzelbogen.glb"
+    },
+    {
+      "id": "nachtfeder",
+      "name": "Nachtfeder",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "bow",
+      "country_affinity": "sturmmarsch",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "drahtfalle",
+      "art": "res://assets/items/nachtfeder.svg",
+      "model": "res://assets/models/items/nachtfeder.glb"
+    },
+    {
+      "id": "flutbogen",
+      "name": "Flutbogen",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "bow",
+      "country_affinity": "versunkener_bund",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0
+      },
+      "description": "Eine exceptional-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "sonnenhagel",
+      "art": "res://assets/items/flutbogen.svg",
+      "model": "res://assets/models/items/flutbogen.glb"
+    },
+    {
+      "id": "knochensehne",
+      "name": "Knochensehne",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "bow",
+      "country_affinity": "weltennaht",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine exceptional-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schweigender_horizont",
+      "art": "res://assets/items/knochensehne.svg",
+      "model": "res://assets/models/items/knochensehne.glb"
+    },
+    {
+      "id": "sun_piercer",
+      "name": "Sonnenstecher",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "bow",
+      "country_affinity": "nebelmark",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "block_dice": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "ruckwartsschritt",
+      "art": "res://assets/items/sun_piercer.svg",
+      "model": "res://assets/models/items/sun_piercer.glb"
+    },
+    {
+      "id": "aschenbogen",
+      "name": "Aschenbogen",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "bow",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_break": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "jagerbund",
+      "art": "res://assets/items/aschenbogen.svg",
+      "model": "res://assets/models/items/aschenbogen.glb"
+    },
+    {
+      "id": "jagerkonig",
+      "name": "Jägerkönig",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "bow",
+      "country_affinity": "frostreiche",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "jagdschuss",
+      "art": "res://assets/items/jagerkonig.svg",
+      "model": "res://assets/models/items/jagerkonig.glb"
+    },
+    {
+      "id": "runenweide",
+      "name": "Runenweide",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "bow",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "durchbohrender_pfeil",
+      "art": "res://assets/items/runenweide.svg",
+      "model": "res://assets/models/items/runenweide.glb"
+    },
+    {
+      "id": "sternenbogen",
+      "name": "Sternenbogen",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "bow",
+      "country_affinity": "aschenlande",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "deckungsfeuer",
+      "art": "res://assets/items/sternenbogen.svg",
+      "model": "res://assets/models/items/sternenbogen.glb"
+    },
+    {
+      "id": "blutmondsehne",
+      "name": "Blutmondsehne",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "bow",
+      "country_affinity": "dornwall",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "ruhige_hand",
+      "art": "res://assets/items/blutmondsehne.svg",
+      "model": "res://assets/models/items/blutmondsehne.glb"
+    },
+    {
+      "id": "eidbogen",
+      "name": "Eidbogen",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "bow",
+      "country_affinity": "glassteppe",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "falkenblick",
+      "art": "res://assets/items/eidbogen.svg",
+      "model": "res://assets/models/items/eidbogen.glb"
+    },
+    {
+      "id": "schweigende_sonne",
+      "name": "Schweigende Sonne",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "bow",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "blutpfeil",
+      "art": "res://assets/items/schweigende_sonne.svg",
+      "model": "res://assets/models/items/schweigende_sonne.glb"
+    },
+    {
+      "id": "horizontbrecher",
+      "name": "Horizontbrecher",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "bow",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "gemeinsame_deckung",
+      "art": "res://assets/items/horizontbrecher.svg",
+      "model": "res://assets/models/items/horizontbrecher.glb"
+    },
+    {
+      "id": "bogen_des_ersten_lichts",
+      "name": "Bogen des ersten Lichts",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "bow",
+      "country_affinity": "knochental",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule bow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "pfeilregen",
+      "art": "res://assets/items/bogen_des_ersten_lichts.svg",
+      "model": "res://assets/models/items/bogen_des_ersten_lichts.glb"
+    },
+    {
+      "id": "worn_crossbow",
+      "name": "Feldarmbrust",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "crossbow",
+      "country_affinity": "nebelmark",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "bolzenhagel",
+      "art": "res://assets/items/worn_crossbow.svg",
+      "model": "res://assets/models/items/worn_crossbow.glb"
+    },
+    {
+      "id": "krahenwerfer",
+      "name": "Krähenwerfer",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "crossbow",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine normal-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schattenbolzen",
+      "art": "res://assets/items/krahenwerfer.svg",
+      "model": "res://assets/models/items/krahenwerfer.glb"
+    },
+    {
+      "id": "kupferspanner",
+      "name": "Kupferspanner",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "crossbow",
+      "country_affinity": "frostreiche",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine normal-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "stahlkolben_parade",
+      "art": "res://assets/items/kupferspanner.svg",
+      "model": "res://assets/models/items/kupferspanner.glb"
+    },
+    {
+      "id": "moorbolzer",
+      "name": "Moorbolzer",
+      "slot": "weapon",
+      "rarity": "normal",
+      "weapon_school": "crossbow",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 10,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0
+      },
+      "description": "Eine normal-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schnellladen",
+      "art": "res://assets/items/moorbolzer.svg",
+      "model": "res://assets/models/items/moorbolzer.glb"
+    },
+    {
+      "id": "dornspanner",
+      "name": "Dornspanner",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "crossbow",
+      "country_affinity": "aschenlande",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "zielmechanik",
+      "art": "res://assets/items/dornspanner.svg",
+      "model": "res://assets/models/items/dornspanner.glb"
+    },
+    {
+      "id": "salzwerfer",
+      "name": "Salzwerfer",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "crossbow",
+      "country_affinity": "dornwall",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine rare-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "widerhaken",
+      "art": "res://assets/items/salzwerfer.svg",
+      "model": "res://assets/models/items/salzwerfer.glb"
+    },
+    {
+      "id": "spiegelarmbrust",
+      "name": "Spiegelarmbrust",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "crossbow",
+      "country_affinity": "glassteppe",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 1
+      },
+      "description": "Eine rare-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "mobile_barrikade",
+      "art": "res://assets/items/spiegelarmbrust.svg",
+      "model": "res://assets/models/items/spiegelarmbrust.glb"
+    },
+    {
+      "id": "glutbolzer",
+      "name": "Glutbolzer",
+      "slot": "weapon",
+      "rarity": "rare",
+      "weapon_school": "crossbow",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 8,
+      "bonuses": {
+        "attack_dice": 0,
+        "damage_per_hit": 2
+      },
+      "description": "Eine rare-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "salve",
+      "art": "res://assets/items/glutbolzer.svg",
+      "model": "res://assets/models/items/glutbolzer.glb"
+    },
+    {
+      "id": "frostspanner",
+      "name": "Frostspanner",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "crossbow",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "saurebolzen",
+      "art": "res://assets/items/frostspanner.svg",
+      "model": "res://assets/models/items/frostspanner.glb"
+    },
+    {
+      "id": "storm_crossbow",
+      "name": "Sturmspanner",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "crossbow",
+      "country_affinity": "knochental",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine enhanced-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "panzerbrecher",
+      "art": "res://assets/items/storm_crossbow.svg",
+      "model": "res://assets/models/items/storm_crossbow.glb"
+    },
+    {
+      "id": "wurzelwerfer",
+      "name": "Wurzelwerfer",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "crossbow",
+      "country_affinity": "nachtkrone",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_dice": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "notkolben",
+      "art": "res://assets/items/wurzelwerfer.svg",
+      "model": "res://assets/models/items/wurzelwerfer.glb"
+    },
+    {
+      "id": "nachtbolzen",
+      "name": "Nachtbolzen",
+      "slot": "weapon",
+      "rarity": "enhanced",
+      "weapon_school": "crossbow",
+      "country_affinity": "sturmmarsch",
+      "drop_weight": 6,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1
+      },
+      "description": "Eine enhanced-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "sprengfalle",
+      "art": "res://assets/items/nachtbolzen.svg",
+      "model": "res://assets/models/items/nachtbolzen.glb"
+    },
+    {
+      "id": "flutspanner",
+      "name": "Flutspanner",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "crossbow",
+      "country_affinity": "versunkener_bund",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0
+      },
+      "description": "Eine exceptional-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "sturmspanner",
+      "art": "res://assets/items/flutspanner.svg",
+      "model": "res://assets/models/items/flutspanner.glb"
+    },
+    {
+      "id": "knochenwerfer",
+      "name": "Knochenwerfer",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "crossbow",
+      "country_affinity": "weltennaht",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 1,
+        "hit_threshold_modifier": -1
+      },
+      "description": "Eine exceptional-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schwarzer_donner",
+      "art": "res://assets/items/knochenwerfer.svg",
+      "model": "res://assets/models/items/knochenwerfer.glb"
+    },
+    {
+      "id": "sonnenarmbrust",
+      "name": "Sonnenarmbrust",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "crossbow",
+      "country_affinity": "nebelmark",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 2,
+        "block_dice": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "deckungssprung",
+      "art": "res://assets/items/sonnenarmbrust.svg",
+      "model": "res://assets/models/items/sonnenarmbrust.glb"
+    },
+    {
+      "id": "aschenbolzer",
+      "name": "Aschenbolzer",
+      "slot": "weapon",
+      "rarity": "exceptional",
+      "weapon_school": "crossbow",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 4,
+      "bonuses": {
+        "attack_dice": 1,
+        "damage_per_hit": 0,
+        "block_break": 1
+      },
+      "description": "Eine exceptional-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "synchronfeuer",
+      "art": "res://assets/items/aschenbolzer.svg",
+      "model": "res://assets/models/items/aschenbolzer.glb"
+    },
+    {
+      "id": "belagerer",
+      "name": "Belagerer",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "crossbow",
+      "country_affinity": "frostreiche",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "bolzenhagel",
+      "art": "res://assets/items/belagerer.svg",
+      "model": "res://assets/models/items/belagerer.glb"
+    },
+    {
+      "id": "runenspanner",
+      "name": "Runenspanner",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "crossbow",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schattenbolzen",
+      "art": "res://assets/items/runenspanner.svg",
+      "model": "res://assets/models/items/runenspanner.glb"
+    },
+    {
+      "id": "sternenwerfer",
+      "name": "Sternenwerfer",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "crossbow",
+      "country_affinity": "aschenlande",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "stahlkolben_parade",
+      "art": "res://assets/items/sternenwerfer.svg",
+      "model": "res://assets/models/items/sternenwerfer.glb"
+    },
+    {
+      "id": "blutmondbolzer",
+      "name": "Blutmondbolzer",
+      "slot": "weapon",
+      "rarity": "legendary",
+      "weapon_school": "crossbow",
+      "country_affinity": "dornwall",
+      "drop_weight": 2,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine legendary-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "schnellladen",
+      "art": "res://assets/items/blutmondbolzer.svg",
+      "model": "res://assets/models/items/blutmondbolzer.glb"
+    },
+    {
+      "id": "eidarmbrust",
+      "name": "Eidarmbrust",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "crossbow",
+      "country_affinity": "glassteppe",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "zielmechanik",
+      "art": "res://assets/items/eidarmbrust.svg",
+      "model": "res://assets/models/items/eidarmbrust.glb"
+    },
+    {
+      "id": "schwarzer_donner",
+      "name": "Schwarzer Donner",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "crossbow",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 2,
+        "hit_threshold_modifier": -1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "widerhaken",
+      "art": "res://assets/items/schwarzer_donner.svg",
+      "model": "res://assets/models/items/schwarzer_donner.glb"
+    },
+    {
+      "id": "nahtspanner",
+      "name": "Nahtspanner",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "crossbow",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 0,
+        "block_dice": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "mobile_barrikade",
+      "art": "res://assets/items/nahtspanner.svg",
+      "model": "res://assets/models/items/nahtspanner.glb"
+    },
+    {
+      "id": "armbrust_des_letzten_wortes",
+      "name": "Armbrust des letzten Wortes",
+      "slot": "weapon",
+      "rarity": "unique",
+      "weapon_school": "crossbow",
+      "country_affinity": "knochental",
+      "drop_weight": 1,
+      "bonuses": {
+        "attack_dice": 2,
+        "damage_per_hit": 1,
+        "block_break": 1,
+        "critical_min": 11
+      },
+      "description": "Eine unique-Waffe der Schule crossbow; verändert Würfelpool und Kampfrhythmus.",
+      "granted_card": "salve",
+      "art": "res://assets/items/armbrust_des_letzten_wortes.svg",
+      "model": "res://assets/models/items/armbrust_des_letzten_wortes.glb"
+    },
+    {
+      "id": "travel_leathers",
+      "name": "Reiseleder",
+      "slot": "armor",
+      "rarity": "normal",
+      "country_affinity": "nebelmark",
+      "drop_weight": 10,
+      "bonuses": {
+        "block_dice": 2,
+        "block_threshold": 8
+      },
+      "description": "Reiseleder stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/travel_leathers.svg",
+      "model": "res://assets/models/items/travel_leathers.glb"
+    },
+    {
+      "id": "moorwatch_chain",
+      "name": "Moorwacht-Kettenhemd",
+      "slot": "armor",
+      "rarity": "normal",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 10,
+      "bonuses": {
+        "block_dice": 2,
+        "block_threshold": 8
+      },
+      "description": "Moorwacht-Kettenhemd stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/moorwatch_chain.svg",
+      "model": "res://assets/models/items/moorwatch_chain.glb"
+    },
+    {
+      "id": "dornplatten",
+      "name": "Dornplatten",
+      "slot": "armor",
+      "rarity": "normal",
+      "country_affinity": "frostreiche",
+      "drop_weight": 10,
+      "bonuses": {
+        "block_dice": 2,
+        "block_threshold": 8
+      },
+      "description": "Dornplatten stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/dornplatten.svg",
+      "model": "res://assets/models/items/dornplatten.glb"
+    },
+    {
+      "id": "salzschuppen",
+      "name": "Salzschuppen",
+      "slot": "armor",
+      "rarity": "rare",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 8,
+      "bonuses": {
+        "block_dice": 3,
+        "block_threshold": 8
+      },
+      "description": "Salzschuppen stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/salzschuppen.svg",
+      "model": "res://assets/models/items/salzschuppen.glb"
+    },
+    {
+      "id": "frostpanzer",
+      "name": "Frostpanzer",
+      "slot": "armor",
+      "rarity": "rare",
+      "country_affinity": "aschenlande",
+      "drop_weight": 8,
+      "bonuses": {
+        "block_dice": 3,
+        "block_threshold": 8
+      },
+      "description": "Frostpanzer stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/frostpanzer.svg",
+      "model": "res://assets/models/items/frostpanzer.glb"
+    },
+    {
+      "id": "glutmantel",
+      "name": "Glutmantel",
+      "slot": "armor",
+      "rarity": "rare",
+      "country_affinity": "dornwall",
+      "drop_weight": 8,
+      "bonuses": {
+        "block_dice": 3,
+        "block_threshold": 8
+      },
+      "description": "Glutmantel stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/glutmantel.svg",
+      "model": "res://assets/models/items/glutmantel.glb"
+    },
+    {
+      "id": "spiegelharnisch",
+      "name": "Spiegelharnisch",
+      "slot": "armor",
+      "rarity": "enhanced",
+      "country_affinity": "glassteppe",
+      "drop_weight": 6,
+      "bonuses": {
+        "block_dice": 4,
+        "block_threshold": 7
+      },
+      "description": "Spiegelharnisch stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/spiegelharnisch.svg",
+      "model": "res://assets/models/items/spiegelharnisch.glb"
+    },
+    {
+      "id": "sturmbrigantine",
+      "name": "Sturmbrigantine",
+      "slot": "armor",
+      "rarity": "enhanced",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 6,
+      "bonuses": {
+        "block_dice": 4,
+        "block_threshold": 7
+      },
+      "description": "Sturmbrigantine stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/sturmbrigantine.svg",
+      "model": "res://assets/models/items/sturmbrigantine.glb"
+    },
+    {
+      "id": "wurzelrustung",
+      "name": "Wurzelrüstung",
+      "slot": "armor",
+      "rarity": "exceptional",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 4,
+      "bonuses": {
+        "block_dice": 5,
+        "block_threshold": 7,
+        "ward_dice": 1
+      },
+      "description": "Wurzelrüstung stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/wurzelrustung.svg",
+      "model": "res://assets/models/items/wurzelrustung.glb"
+    },
+    {
+      "id": "knochenpanzer",
+      "name": "Knochenpanzer",
+      "slot": "armor",
+      "rarity": "exceptional",
+      "country_affinity": "knochental",
+      "drop_weight": 4,
+      "bonuses": {
+        "block_dice": 5,
+        "block_threshold": 7,
+        "ward_dice": 1
+      },
+      "description": "Knochenpanzer stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/knochenpanzer.svg",
+      "model": "res://assets/models/items/knochenpanzer.glb"
+    },
+    {
+      "id": "nachtwacht",
+      "name": "Nachtwacht",
+      "slot": "armor",
+      "rarity": "exceptional",
+      "country_affinity": "nachtkrone",
+      "drop_weight": 4,
+      "bonuses": {
+        "block_dice": 5,
+        "block_threshold": 7,
+        "ward_dice": 1
+      },
+      "description": "Nachtwacht stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/nachtwacht.svg",
+      "model": "res://assets/models/items/nachtwacht.glb"
+    },
+    {
+      "id": "flutmail",
+      "name": "Flutmail",
+      "slot": "armor",
+      "rarity": "legendary",
+      "country_affinity": "sturmmarsch",
+      "drop_weight": 2,
+      "bonuses": {
+        "block_dice": 5,
+        "block_threshold": 6,
+        "ward_dice": 1
+      },
+      "description": "Flutmail stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/flutmail.svg",
+      "model": "res://assets/models/items/flutmail.glb"
+    },
+    {
+      "id": "colossus_runemail",
+      "name": "Runenpanzer des Kolosses",
+      "slot": "armor",
+      "rarity": "legendary",
+      "country_affinity": "versunkener_bund",
+      "drop_weight": 2,
+      "bonuses": {
+        "block_dice": 5,
+        "block_threshold": 6,
+        "ward_dice": 1
+      },
+      "description": "Runenpanzer des Kolosses stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/colossus_runemail.svg",
+      "model": "res://assets/models/items/colossus_runemail.glb"
+    },
+    {
+      "id": "last_breath_cloak",
+      "name": "Mantel des letzten Atems",
+      "slot": "armor",
+      "rarity": "legendary",
+      "country_affinity": "weltennaht",
+      "drop_weight": 2,
+      "bonuses": {
+        "block_dice": 5,
+        "block_threshold": 6,
+        "ward_dice": 1,
+        "last_oath": 1
+      },
+      "description": "Mantel des letzten Atems stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/last_breath_cloak.svg",
+      "model": "res://assets/models/items/last_breath_cloak.glb"
+    },
+    {
+      "id": "eidwall",
+      "name": "Eidwall",
+      "slot": "armor",
+      "rarity": "unique",
+      "country_affinity": "nebelmark",
+      "drop_weight": 1,
+      "bonuses": {
+        "block_dice": 5,
+        "block_threshold": 6,
+        "ward_dice": 1
+      },
+      "description": "Eidwall stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/eidwall.svg",
+      "model": "res://assets/models/items/eidwall.glb"
+    },
+    {
+      "id": "rustung_ohne_namen",
+      "name": "Rüstung ohne Namen",
+      "slot": "armor",
+      "rarity": "unique",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 1,
+      "bonuses": {
+        "block_dice": 5,
+        "block_threshold": 6,
+        "ward_dice": 1
+      },
+      "description": "Rüstung ohne Namen stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/rustung_ohne_namen.svg",
+      "model": "res://assets/models/items/rustung_ohne_namen.glb"
+    },
+    {
+      "id": "bloodglass_amulet",
+      "name": "Blutglas-Amulett",
+      "slot": "talisman",
+      "rarity": "normal",
+      "country_affinity": "frostreiche",
+      "drop_weight": 10,
+      "bonuses": {
+        "healing": 1,
+        "magic_dice": 1
+      },
+      "description": "Blutglas-Amulett stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/bloodglass_amulet.svg",
+      "model": "res://assets/models/items/bloodglass_amulet.glb"
+    },
+    {
+      "id": "krahenauge",
+      "name": "Krähenauge",
+      "slot": "talisman",
+      "rarity": "rare",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 8,
+      "bonuses": {
+        "healing": 1,
+        "magic_dice": 1
+      },
+      "description": "Krähenauge stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/krahenauge.svg",
+      "model": "res://assets/models/items/krahenauge.glb"
+    },
+    {
+      "id": "sonnenmark",
+      "name": "Sonnenmark",
+      "slot": "talisman",
+      "rarity": "enhanced",
+      "country_affinity": "aschenlande",
+      "drop_weight": 6,
+      "bonuses": {
+        "healing": 2,
+        "magic_dice": 1
+      },
+      "description": "Sonnenmark stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/sonnenmark.svg",
+      "model": "res://assets/models/items/sonnenmark.glb"
+    },
+    {
+      "id": "frostherz",
+      "name": "Frostherz",
+      "slot": "talisman",
+      "rarity": "exceptional",
+      "country_affinity": "dornwall",
+      "drop_weight": 4,
+      "bonuses": {
+        "healing": 2,
+        "magic_dice": 2
+      },
+      "description": "Frostherz stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/frostherz.svg",
+      "model": "res://assets/models/items/frostherz.glb"
+    },
+    {
+      "id": "sturmknoten",
+      "name": "Sturmknoten",
+      "slot": "talisman",
+      "rarity": "legendary",
+      "country_affinity": "glassteppe",
+      "drop_weight": 2,
+      "bonuses": {
+        "healing": 3,
+        "magic_dice": 2
+      },
+      "description": "Sturmknoten stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/sturmknoten.svg",
+      "model": "res://assets/models/items/sturmknoten.glb"
+    },
+    {
+      "id": "wurzelring",
+      "name": "Wurzelring",
+      "slot": "talisman",
+      "rarity": "unique",
+      "country_affinity": "tiefenwald",
+      "drop_weight": 1,
+      "bonuses": {
+        "healing": 3,
+        "magic_dice": 2
+      },
+      "description": "Wurzelring stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/wurzelring.svg",
+      "model": "res://assets/models/items/wurzelring.glb"
+    },
+    {
+      "id": "meisteralchemieset",
+      "name": "Meisteralchemieset",
+      "slot": "alchemy",
+      "rarity": "normal",
+      "country_affinity": "kupferkueste",
+      "drop_weight": 10,
+      "bonuses": {
+        "healing": 2,
+        "ward_dice": 0
+      },
+      "description": "Meisteralchemieset stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/meisteralchemieset.svg",
+      "model": "res://assets/models/items/meisteralchemieset.glb"
+    },
+    {
+      "id": "glutdestille",
+      "name": "Glutdestille",
+      "slot": "alchemy",
+      "rarity": "rare",
+      "country_affinity": "knochental",
+      "drop_weight": 8,
+      "bonuses": {
+        "healing": 3,
+        "ward_dice": 0
+      },
+      "description": "Glutdestille stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/glutdestille.svg",
+      "model": "res://assets/models/items/glutdestille.glb"
+    },
+    {
+      "id": "moorretorte",
+      "name": "Moorretorte",
+      "slot": "alchemy",
+      "rarity": "exceptional",
+      "country_affinity": "nachtkrone",
+      "drop_weight": 4,
+      "bonuses": {
+        "healing": 5,
+        "ward_dice": 1
+      },
+      "description": "Moorretorte stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/moorretorte.svg",
+      "model": "res://assets/models/items/moorretorte.glb"
+    },
+    {
+      "id": "reisender_morser",
+      "name": "Reisender Mörser",
+      "slot": "alchemy",
+      "rarity": "legendary",
+      "country_affinity": "sturmmarsch",
+      "drop_weight": 2,
+      "bonuses": {
+        "healing": 6,
+        "ward_dice": 1
+      },
+      "description": "Reisender Mörser stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/reisender_morser.svg",
+      "model": "res://assets/models/items/reisender_morser.glb"
+    },
+    {
+      "id": "herz_der_aschenbestie",
+      "name": "Herz der Aschenbestie",
+      "slot": "relic",
+      "rarity": "normal",
+      "country_affinity": "versunkener_bund",
+      "drop_weight": 10,
+      "bonuses": {
+        "magic_dice": 1,
+        "critical_min": 12
+      },
+      "description": "Herz der Aschenbestie stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/herz_der_aschenbestie.svg",
+      "model": "res://assets/models/items/herz_der_aschenbestie.glb"
+    },
+    {
+      "id": "splitter_der_krone",
+      "name": "Splitter der Krone",
+      "slot": "relic",
+      "rarity": "rare",
+      "country_affinity": "weltennaht",
+      "drop_weight": 8,
+      "bonuses": {
+        "magic_dice": 1,
+        "critical_min": 12
+      },
+      "description": "Splitter der Krone stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/splitter_der_krone.svg",
+      "model": "res://assets/models/items/splitter_der_krone.glb"
+    },
+    {
+      "id": "erster_wegstein",
+      "name": "Erster Wegstein",
+      "slot": "relic",
+      "rarity": "exceptional",
+      "country_affinity": "nebelmark",
+      "drop_weight": 4,
+      "bonuses": {
+        "magic_dice": 2,
+        "critical_min": 11
+      },
+      "description": "Erster Wegstein stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/erster_wegstein.svg",
+      "model": "res://assets/models/items/erster_wegstein.glb"
+    },
+    {
+      "id": "echo_des_kartografen",
+      "name": "Echo des Kartografen",
+      "slot": "relic",
+      "rarity": "legendary",
+      "country_affinity": "sonnenbruch",
+      "drop_weight": 2,
+      "bonuses": {
+        "magic_dice": 3,
+        "critical_min": 10
+      },
+      "description": "Echo des Kartografen stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/echo_des_kartografen.svg",
+      "model": "res://assets/models/items/echo_des_kartografen.glb"
+    },
+    {
+      "id": "runenschild",
+      "name": "Runenschild",
+      "slot": "offhand",
+      "rarity": "normal",
+      "country_affinity": "frostreiche",
+      "drop_weight": 10,
+      "bonuses": {
+        "block_dice": 1,
+        "ward_dice": 1
+      },
+      "description": "Runenschild stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/runenschild.svg",
+      "model": "res://assets/models/items/runenschild.glb"
+    },
+    {
+      "id": "jagerlaterne",
+      "name": "Jägerlaterne",
+      "slot": "offhand",
+      "rarity": "exceptional",
+      "country_affinity": "splitterinseln",
+      "drop_weight": 4,
+      "bonuses": {
+        "block_dice": 2,
+        "ward_dice": 1
+      },
+      "description": "Jägerlaterne stärkt die kooperative Ausrüstung des Grauen Eids.",
+      "art": "res://assets/items/jagerlaterne.svg",
+      "model": "res://assets/models/items/jagerlaterne.glb"
+    }
+  ],
+  "visual_version": 2
+}

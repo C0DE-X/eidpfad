@@ -1,0 +1,3184 @@
+{
+  "version": 1,
+  "locale": "de-DE",
+  "generator": "offline-espeak-ng",
+  "production_note": "Austauschbare Offline-Produktionsstimmen; IDs, Untertitel und Timings bleiben bei Studioersatz stabil.",
+  "profiles": {
+    "narrator": {
+      "voice": "de+m3",
+      "speed": 150,
+      "pitch": 38
+    },
+    "pathfinder": {
+      "voice": "de+f3",
+      "speed": 172,
+      "pitch": 56
+    },
+    "vanguard": {
+      "voice": "de+m4",
+      "speed": 158,
+      "pitch": 32
+    },
+    "duelist": {
+      "voice": "de+f4",
+      "speed": 181,
+      "pitch": 61
+    },
+    "arbalist": {
+      "voice": "de+m2",
+      "speed": 148,
+      "pitch": 27
+    },
+    "mentor": {
+      "voice": "de+f2",
+      "speed": 162,
+      "pitch": 48
+    },
+    "boss_nebelmark": {
+      "voice": "de+m5",
+      "speed": 137,
+      "pitch": 29
+    },
+    "boss_sonnenbruch": {
+      "voice": "de+m7",
+      "speed": 139,
+      "pitch": 31
+    },
+    "boss_frostreiche": {
+      "voice": "de+m7",
+      "speed": 139,
+      "pitch": 31
+    },
+    "boss_splitterinseln": {
+      "voice": "de+m4",
+      "speed": 142,
+      "pitch": 34
+    },
+    "boss_aschenlande": {
+      "voice": "de+m7",
+      "speed": 139,
+      "pitch": 31
+    },
+    "boss_dornwall": {
+      "voice": "de+m4",
+      "speed": 136,
+      "pitch": 28
+    },
+    "boss_glassteppe": {
+      "voice": "de+m6",
+      "speed": 138,
+      "pitch": 30
+    },
+    "boss_tiefenwald": {
+      "voice": "de+m6",
+      "speed": 138,
+      "pitch": 30
+    },
+    "boss_kupferkueste": {
+      "voice": "de+m2",
+      "speed": 140,
+      "pitch": 32
+    },
+    "boss_knochental": {
+      "voice": "de+m6",
+      "speed": 138,
+      "pitch": 30
+    },
+    "boss_nachtkrone": {
+      "voice": "de+m6",
+      "speed": 138,
+      "pitch": 30
+    },
+    "boss_sturmmarsch": {
+      "voice": "de+m7",
+      "speed": 139,
+      "pitch": 31
+    },
+    "boss_versunkener_bund": {
+      "voice": "de+m6",
+      "speed": 144,
+      "pitch": 36
+    },
+    "boss_weltennaht": {
+      "voice": "de+m6",
+      "speed": 138,
+      "pitch": 30
+    },
+    "enemy_skirmisher": {
+      "voice": "de+m1",
+      "speed": 138,
+      "pitch": 24
+    },
+    "enemy_brute": {
+      "voice": "de+m2",
+      "speed": 142,
+      "pitch": 27
+    },
+    "enemy_defender": {
+      "voice": "de+m3",
+      "speed": 146,
+      "pitch": 30
+    },
+    "enemy_hexer": {
+      "voice": "de+m4",
+      "speed": 150,
+      "pitch": 33
+    },
+    "enemy_marksman": {
+      "voice": "de+m5",
+      "speed": 154,
+      "pitch": 36
+    },
+    "enemy_assassin": {
+      "voice": "de+m6",
+      "speed": 158,
+      "pitch": 39
+    },
+    "enemy_beast": {
+      "voice": "de+m7",
+      "speed": 162,
+      "pitch": 42
+    },
+    "enemy_controller": {
+      "voice": "de+m1",
+      "speed": 166,
+      "pitch": 45
+    },
+    "enemy_elite": {
+      "voice": "de+m2",
+      "speed": 170,
+      "pitch": 48
+    },
+    "enemy_boss": {
+      "voice": "de+m3",
+      "speed": 174,
+      "pitch": 51
+    }
+  },
+  "lines": [
+    {
+      "id": "plot_01",
+      "speaker": "narrator",
+      "text": "Vardra wurde nicht erschaffen. Es wurde zusammengebunden.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_01.wav",
+      "duration_ms": 3341,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_02",
+      "speaker": "narrator",
+      "text": "Sieben Herrscher gaben ihre Namen, damit die Länder nicht im Nichts versanken.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_02.wav",
+      "duration_ms": 4205,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_03",
+      "speaker": "narrator",
+      "text": "Aus ihren Straßen wurden Eidpfade, aus ihren Erinnerungen Wegsteine.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_03.wav",
+      "duration_ms": 4099,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_04",
+      "speaker": "narrator",
+      "text": "Doch jeder gebrochene Eid lockert eine Naht der Welt.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_04.wav",
+      "duration_ms": 2818,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_05",
+      "speaker": "narrator",
+      "text": "Unser Auftrag klang einfach: einen Kartografen und seine Reliquie über die Grenze bringen.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_05.wav",
+      "duration_ms": 5426,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_06",
+      "speaker": "narrator",
+      "text": "Dann kam der Hinterhalt, und mit ihm das Ende des Grauen Eids, wie wir ihn kannten.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_06.wav",
+      "duration_ms": 4602,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_07",
+      "speaker": "narrator",
+      "text": "Die Reliquie zerbrach zwischen uns und brannte ihr Zeichen in zwei Hände.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_07.wav",
+      "duration_ms": 4120,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_08",
+      "speaker": "narrator",
+      "text": "Seit dieser Nacht öffnet sich kein Eidpfad für einen von uns allein.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_08.wav",
+      "duration_ms": 3873,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_09",
+      "speaker": "pathfinder",
+      "text": "Wir sind keine Erwählten. Wir sind Söldner mit einem unbezahlten Auftrag.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/pathfinder/plot_09.wav",
+      "duration_ms": 4617,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_10",
+      "speaker": "vanguard",
+      "text": "Solange einer von uns steht, bleibt der Weg offen.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/vanguard/plot_10.wav",
+      "duration_ms": 3174,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_11",
+      "speaker": "narrator",
+      "text": "Solange beide zurückkehren, ist kein Scheitern endgültig.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_11.wav",
+      "duration_ms": 3502,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_12",
+      "speaker": "vanguard",
+      "text": "Also gehen wir weiter, Land für Land, bis zur Krone ohne Namen.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/vanguard/plot_12.wav",
+      "duration_ms": 4210,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_13",
+      "speaker": "narrator",
+      "text": "Die letzte Wache fällt. Die Weltennaht liegt offen.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_13.wav",
+      "duration_ms": 3101,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_14",
+      "speaker": "narrator",
+      "text": "Vor uns wartet kein König, sondern der Hunger aller vergessenen Namen.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_14.wav",
+      "duration_ms": 3910,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_15",
+      "speaker": "narrator",
+      "text": "Jeder gerettete Ort steht nun an unserer Seite. Jeder verlorene Ort gegen uns.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_15.wav",
+      "duration_ms": 4854,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_16",
+      "speaker": "vanguard",
+      "text": "Dies ist der Auftrag, den niemand bezahlen kann.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/vanguard/plot_16.wav",
+      "duration_ms": 3022,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_17",
+      "speaker": "narrator",
+      "text": "Der erste Eidanker bricht. Die Festung verliert ihre Form.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_17.wav",
+      "duration_ms": 3379,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_18",
+      "speaker": "narrator",
+      "text": "Der zweite Eidanker bricht. Fremde Länder stürzen in die Arena.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_18.wav",
+      "duration_ms": 3946,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_19",
+      "speaker": "narrator",
+      "text": "Der dritte Eidanker bricht. Die Krone zeigt ihr wahres Gesicht.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_19.wav",
+      "duration_ms": 3579,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_20",
+      "speaker": "vanguard",
+      "text": "Teilt den Schlag. Vereint die Würfel. Sprecht den letzten Eid.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/vanguard/plot_20.wav",
+      "duration_ms": 4483,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_21",
+      "speaker": "narrator",
+      "text": "Die Krone ist gebrochen, doch die Pfade schweigen nicht.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_21.wav",
+      "duration_ms": 2982,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_22",
+      "speaker": "narrator",
+      "text": "Hinter der Naht wartet eine andere Möglichkeit derselben Welt.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_22.wav",
+      "duration_ms": 3560,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_23",
+      "speaker": "narrator",
+      "text": "Wir können sie versiegeln, zerstören, binden oder beherrschen.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_23.wav",
+      "duration_ms": 3598,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_24",
+      "speaker": "vanguard",
+      "text": "Keine Wahl macht uns unschuldig. Aber jede Wahl gehört endlich uns.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/vanguard/plot_24.wav",
+      "duration_ms": 4543,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_25",
+      "speaker": "narrator",
+      "text": "Das Weltenecho nimmt unsere Narben, unsere Namen und unsere stärksten Relikte an.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_25.wav",
+      "duration_ms": 4618,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_26",
+      "speaker": "narrator",
+      "text": "Seine Länder liegen anders. Seine Feinde haben aus unserer Reise gelernt.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_26.wav",
+      "duration_ms": 4099,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_27",
+      "speaker": "narrator",
+      "text": "Was wir nicht fanden, kann dort auf uns warten.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_27.wav",
+      "duration_ms": 2914,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_28",
+      "speaker": "narrator",
+      "text": "Was wir nicht retteten, kann dort noch eine zweite Chance erhalten.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_28.wav",
+      "duration_ms": 3788,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_29",
+      "speaker": "narrator",
+      "text": "Der Graue Eid endet nicht mit einem Sieg.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_29.wav",
+      "duration_ms": 2434,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_30",
+      "speaker": "vanguard",
+      "text": "Er beginnt erneut, sobald zwei Schritte denselben Weg wählen.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/vanguard/plot_30.wav",
+      "duration_ms": 4057,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_31",
+      "speaker": "narrator",
+      "text": "Der Wegstein antwortet auf beide Zeichen.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_31.wav",
+      "duration_ms": 2483,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_32",
+      "speaker": "narrator",
+      "text": "Eine neue Karte zeichnet sich aus Licht und Erinnerung.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_32.wav",
+      "duration_ms": 3011,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_33",
+      "speaker": "narrator",
+      "text": "Die Grenzen verschieben sich. Der Seed der Welt steht fest.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_33.wav",
+      "duration_ms": 3516,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_34",
+      "speaker": "vanguard",
+      "text": "Unsere Vorräte sind knapp, doch unser Eid ist vollständig.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/vanguard/plot_34.wav",
+      "duration_ms": 3594,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_35",
+      "speaker": "narrator",
+      "text": "Händler, Fraktionen und Bosse werden sich an unsere Entscheidungen erinnern.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_35.wav",
+      "duration_ms": 4143,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_36",
+      "speaker": "narrator",
+      "text": "Die stärksten Relikte verändern Regeln, nicht nur Zahlen.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_36.wav",
+      "duration_ms": 3407,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_37",
+      "speaker": "narrator",
+      "text": "Ein Rückschlag führt uns zum letzten gemeinsamen Savepoint zurück.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_37.wav",
+      "duration_ms": 4082,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_38",
+      "speaker": "narrator",
+      "text": "Der Tod trennt uns nicht. Er zwingt uns nur, gemeinsam besser zu werden.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_38.wav",
+      "duration_ms": 4491,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_39",
+      "speaker": "pathfinder",
+      "text": "Atmet durch. Ordnet eure Karten. Der Pfad wartet.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/pathfinder/plot_39.wav",
+      "duration_ms": 3567,
+      "sample_rate": 22050
+    },
+    {
+      "id": "plot_40",
+      "speaker": "narrator",
+      "text": "Zwei Söldner. Ein Auftrag. Unzählige Welten.",
+      "category": "plot",
+      "asset": "res://assets/voice/de-DE/narrator/plot_40.wav",
+      "duration_ms": 3479,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_nebelmark_1",
+      "speaker": "narrator",
+      "text": "Nebelmark. Im Moor tragen selbst die Toten noch ihre Eide.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_nebelmark_1.wav",
+      "duration_ms": 3731,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_nebelmark_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Nebelmark ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_nebelmark_2.wav",
+      "duration_ms": 5926,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_nebelmark_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_nebelmark_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_sonnenbruch_1",
+      "speaker": "narrator",
+      "text": "Sonnenbruch. Unter dem weißen Himmel wird jedes Versprechen zu Salz.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_sonnenbruch_1.wav",
+      "duration_ms": 4150,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_sonnenbruch_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Sonnenbruch ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_sonnenbruch_2.wav",
+      "duration_ms": 5887,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_sonnenbruch_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_sonnenbruch_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_frostreiche_1",
+      "speaker": "narrator",
+      "text": "Frostreiche. Das Eis bewahrt Namen, die kein Lebender mehr aussprechen darf.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_frostreiche_1.wav",
+      "duration_ms": 4725,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_frostreiche_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Frostreiche ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_frostreiche_2.wav",
+      "duration_ms": 5992,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_frostreiche_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_frostreiche_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_splitterinseln_1",
+      "speaker": "narrator",
+      "text": "Zersplitterte Inseln. Die Flut gibt heute zurück, was sie gestern verschlang.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_splitterinseln_1.wav",
+      "duration_ms": 4808,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_splitterinseln_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Zersplitterte Inseln ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_splitterinseln_2.wav",
+      "duration_ms": 6495,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_splitterinseln_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_splitterinseln_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_aschenlande_1",
+      "speaker": "narrator",
+      "text": "Aschenlande. Unter der Asche glimmt ein Krieg, der nie endete.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_aschenlande_1.wav",
+      "duration_ms": 3600,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_aschenlande_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Aschenlande ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_aschenlande_2.wav",
+      "duration_ms": 5896,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_aschenlande_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_aschenlande_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_dornwall_1",
+      "speaker": "narrator",
+      "text": "Dornwall. Jede Blüte hier kennt den Geschmack von Blut.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_dornwall_1.wav",
+      "duration_ms": 3320,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_dornwall_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Dornwall ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_dornwall_2.wav",
+      "duration_ms": 5790,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_dornwall_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_dornwall_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_glassteppe_1",
+      "speaker": "narrator",
+      "text": "Glassteppe. Die Steppe zeigt dir nicht dein Gesicht, sondern deine Schuld.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_glassteppe_1.wav",
+      "duration_ms": 4312,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_glassteppe_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Glassteppe ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_glassteppe_2.wav",
+      "duration_ms": 5913,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_glassteppe_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_glassteppe_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_tiefenwald_1",
+      "speaker": "narrator",
+      "text": "Tiefenwald. Die ältesten Wurzeln erinnern sich an die erste Krone.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_tiefenwald_1.wav",
+      "duration_ms": 4040,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_tiefenwald_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Tiefenwald ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_tiefenwald_2.wav",
+      "duration_ms": 6049,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_tiefenwald_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_tiefenwald_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_kupferkueste_1",
+      "speaker": "narrator",
+      "text": "Kupferküste. Zwischen Erz und Gischt wird jeder Handel mit einem Eid besiegelt.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_kupferkueste_1.wav",
+      "duration_ms": 4993,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_kupferkueste_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Kupferküste ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_kupferkueste_2.wav",
+      "duration_ms": 6088,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_kupferkueste_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_kupferkueste_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_knochental_1",
+      "speaker": "narrator",
+      "text": "Knochental. Die Riesen liegen still, doch ihre Träume wandern.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_knochental_1.wav",
+      "duration_ms": 3714,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_knochental_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Knochental ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_knochental_2.wav",
+      "duration_ms": 6034,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_knochental_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_knochental_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_nachtkrone_1",
+      "speaker": "narrator",
+      "text": "Nachtkrone. Hier wird das Sternenlicht von einem bleichen Hof bewacht.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_nachtkrone_1.wav",
+      "duration_ms": 4084,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_nachtkrone_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Nachtkrone ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_nachtkrone_2.wav",
+      "duration_ms": 5953,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_nachtkrone_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_nachtkrone_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_sturmmarsch_1",
+      "speaker": "narrator",
+      "text": "Sturmmarsch. Der Donner spricht schneller als jedes Urteil.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_sturmmarsch_1.wav",
+      "duration_ms": 3102,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_sturmmarsch_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Sturmmarsch ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_sturmmarsch_2.wav",
+      "duration_ms": 5835,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_sturmmarsch_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_sturmmarsch_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_versunkener_bund_1",
+      "speaker": "narrator",
+      "text": "Versunkener Bund. Unter schwarzem Wasser läuten Glocken für Namenlose.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_versunkener_bund_1.wav",
+      "duration_ms": 4332,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_versunkener_bund_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Versunkener Bund ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_versunkener_bund_2.wav",
+      "duration_ms": 6229,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_versunkener_bund_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_versunkener_bund_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_weltennaht_1",
+      "speaker": "narrator",
+      "text": "Weltennaht. Alle Wege enden dort, wo die Welt zusammengenäht wurde.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/narrator/country_weltennaht_1.wav",
+      "duration_ms": 4269,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_weltennaht_2",
+      "speaker": "pathfinder",
+      "text": "Der Wegstein von Weltennaht ist instabil. Wir sichern erst den Pfad und stellen uns dann seinem Hüter.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/pathfinder/country_weltennaht_2.wav",
+      "duration_ms": 5947,
+      "sample_rate": 22050
+    },
+    {
+      "id": "country_weltennaht_3",
+      "speaker": "vanguard",
+      "text": "Bleib in meiner Nähe. Was hier jagt, hat gelernt, einzelne Reisende zu verschlucken.",
+      "category": "country",
+      "asset": "res://assets/voice/de-DE/vanguard/country_weltennaht_3.wav",
+      "duration_ms": 5534,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_ambush_1",
+      "speaker": "pathfinder",
+      "text": "Hinterhalt. Der Weg ist zu still. Sie warten bereits zwischen den Steinen.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_ambush_1.wav",
+      "duration_ms": 4849,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_ambush_2",
+      "speaker": "vanguard",
+      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/vanguard/scenario_ambush_2.wav",
+      "duration_ms": 5822,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_ambush_3",
+      "speaker": "pathfinder",
+      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_ambush_3.wav",
+      "duration_ms": 3781,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_raid_1",
+      "speaker": "pathfinder",
+      "text": "Überfall. Mehrere Wellen rücken nach. Haltet eure stärksten Karten zurück.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_raid_1.wav",
+      "duration_ms": 4881,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_raid_2",
+      "speaker": "vanguard",
+      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/vanguard/scenario_raid_2.wav",
+      "duration_ms": 5822,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_raid_3",
+      "speaker": "pathfinder",
+      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_raid_3.wav",
+      "duration_ms": 3781,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_village_1",
+      "speaker": "pathfinder",
+      "text": "Dorfbefreiung. Die Bewohner sind eingeschlossen. Unser Sieg zählt nur, wenn sie leben.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_village_1.wav",
+      "duration_ms": 5369,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_village_2",
+      "speaker": "vanguard",
+      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/vanguard/scenario_village_2.wav",
+      "duration_ms": 5822,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_village_3",
+      "speaker": "pathfinder",
+      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_village_3.wav",
+      "duration_ms": 3781,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_caravan_1",
+      "speaker": "pathfinder",
+      "text": "Karawanenschutz. Die Wagen dürfen nicht fallen. Wir kämpfen in Bewegung.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_caravan_1.wav",
+      "duration_ms": 4709,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_caravan_2",
+      "speaker": "vanguard",
+      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/vanguard/scenario_caravan_2.wav",
+      "duration_ms": 5822,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_caravan_3",
+      "speaker": "pathfinder",
+      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_caravan_3.wav",
+      "duration_ms": 3781,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_hunt_1",
+      "speaker": "pathfinder",
+      "text": "Monsterjagd. Lest die Spuren, bereitet Fallen vor und gebt der Bestie keinen zweiten Angriff.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_hunt_1.wav",
+      "duration_ms": 5803,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_hunt_2",
+      "speaker": "vanguard",
+      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/vanguard/scenario_hunt_2.wav",
+      "duration_ms": 5822,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_hunt_3",
+      "speaker": "pathfinder",
+      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_hunt_3.wav",
+      "duration_ms": 3781,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_ruin_1",
+      "speaker": "pathfinder",
+      "text": "Verfluchte Ruine. Die Beute ist echt. Der Fluch leider auch.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_ruin_1.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_ruin_2",
+      "speaker": "vanguard",
+      "text": "Prüft Ausrüstung, Position und Aktionspunkte, bevor ihr den ersten Zug bestätigt.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/vanguard/scenario_ruin_2.wav",
+      "duration_ms": 5822,
+      "sample_rate": 22050
+    },
+    {
+      "id": "scenario_ruin_3",
+      "speaker": "pathfinder",
+      "text": "Der Partner kann Schwächen ausgleichen. Plant die Runde gemeinsam.",
+      "category": "scenario",
+      "asset": "res://assets/voice/de-DE/pathfinder/scenario_ruin_3.wav",
+      "duration_ms": 3781,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_nebelmark_1",
+      "speaker": "boss_nebelmark",
+      "text": "Der Hüter von Nebelmark betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_nebelmark/boss_nebelmark_1.wav",
+      "duration_ms": 2762,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_nebelmark_2",
+      "speaker": "boss_nebelmark",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_nebelmark/boss_nebelmark_2.wav",
+      "duration_ms": 4378,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_nebelmark_3",
+      "speaker": "boss_nebelmark",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_nebelmark/boss_nebelmark_3.wav",
+      "duration_ms": 3909,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_nebelmark_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_nebelmark_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_sonnenbruch_1",
+      "speaker": "boss_sonnenbruch",
+      "text": "Der Hüter von Sonnenbruch betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_sonnenbruch/boss_sonnenbruch_1.wav",
+      "duration_ms": 2685,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_sonnenbruch_2",
+      "speaker": "boss_sonnenbruch",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_sonnenbruch/boss_sonnenbruch_2.wav",
+      "duration_ms": 4356,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_sonnenbruch_3",
+      "speaker": "boss_sonnenbruch",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_sonnenbruch/boss_sonnenbruch_3.wav",
+      "duration_ms": 3888,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_sonnenbruch_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_sonnenbruch_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_frostreiche_1",
+      "speaker": "boss_frostreiche",
+      "text": "Der Hüter von Frostreiche betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_frostreiche/boss_frostreiche_1.wav",
+      "duration_ms": 2788,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_frostreiche_2",
+      "speaker": "boss_frostreiche",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_frostreiche/boss_frostreiche_2.wav",
+      "duration_ms": 4356,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_frostreiche_3",
+      "speaker": "boss_frostreiche",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_frostreiche/boss_frostreiche_3.wav",
+      "duration_ms": 3888,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_frostreiche_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_frostreiche_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_splitterinseln_1",
+      "speaker": "boss_splitterinseln",
+      "text": "Der Hüter von Zersplitterte Inseln betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_splitterinseln/boss_splitterinseln_1.wav",
+      "duration_ms": 3390,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_splitterinseln_2",
+      "speaker": "boss_splitterinseln",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_splitterinseln/boss_splitterinseln_2.wav",
+      "duration_ms": 4473,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_splitterinseln_3",
+      "speaker": "boss_splitterinseln",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_splitterinseln/boss_splitterinseln_3.wav",
+      "duration_ms": 4192,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_splitterinseln_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_splitterinseln_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_aschenlande_1",
+      "speaker": "boss_aschenlande",
+      "text": "Der Hüter von Aschenlande betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_aschenlande/boss_aschenlande_1.wav",
+      "duration_ms": 2703,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_aschenlande_2",
+      "speaker": "boss_aschenlande",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_aschenlande/boss_aschenlande_2.wav",
+      "duration_ms": 4356,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_aschenlande_3",
+      "speaker": "boss_aschenlande",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_aschenlande/boss_aschenlande_3.wav",
+      "duration_ms": 3888,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_aschenlande_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_aschenlande_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_dornwall_1",
+      "speaker": "boss_dornwall",
+      "text": "Der Hüter von Dornwall betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_dornwall/boss_dornwall_1.wav",
+      "duration_ms": 2646,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_dornwall_2",
+      "speaker": "boss_dornwall",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_dornwall/boss_dornwall_2.wav",
+      "duration_ms": 4473,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_dornwall_3",
+      "speaker": "boss_dornwall",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_dornwall/boss_dornwall_3.wav",
+      "duration_ms": 4192,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_dornwall_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_dornwall_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_glassteppe_1",
+      "speaker": "boss_glassteppe",
+      "text": "Der Hüter von Glassteppe betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_glassteppe/boss_glassteppe_1.wav",
+      "duration_ms": 2719,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_glassteppe_2",
+      "speaker": "boss_glassteppe",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_glassteppe/boss_glassteppe_2.wav",
+      "duration_ms": 4368,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_glassteppe_3",
+      "speaker": "boss_glassteppe",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_glassteppe/boss_glassteppe_3.wav",
+      "duration_ms": 3923,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_glassteppe_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_glassteppe_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_tiefenwald_1",
+      "speaker": "boss_tiefenwald",
+      "text": "Der Hüter von Tiefenwald betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_tiefenwald/boss_tiefenwald_1.wav",
+      "duration_ms": 2857,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_tiefenwald_2",
+      "speaker": "boss_tiefenwald",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_tiefenwald/boss_tiefenwald_2.wav",
+      "duration_ms": 4368,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_tiefenwald_3",
+      "speaker": "boss_tiefenwald",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_tiefenwald/boss_tiefenwald_3.wav",
+      "duration_ms": 3923,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_tiefenwald_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_tiefenwald_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_kupferkueste_1",
+      "speaker": "boss_kupferkueste",
+      "text": "Der Hüter von Kupferküste betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_kupferkueste/boss_kupferkueste_1.wav",
+      "duration_ms": 2891,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_kupferkueste_2",
+      "speaker": "boss_kupferkueste",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_kupferkueste/boss_kupferkueste_2.wav",
+      "duration_ms": 4371,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_kupferkueste_3",
+      "speaker": "boss_kupferkueste",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_kupferkueste/boss_kupferkueste_3.wav",
+      "duration_ms": 3902,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_kupferkueste_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_kupferkueste_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_knochental_1",
+      "speaker": "boss_knochental",
+      "text": "Der Hüter von Knochental betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_knochental/boss_knochental_1.wav",
+      "duration_ms": 2880,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_knochental_2",
+      "speaker": "boss_knochental",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_knochental/boss_knochental_2.wav",
+      "duration_ms": 4368,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_knochental_3",
+      "speaker": "boss_knochental",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_knochental/boss_knochental_3.wav",
+      "duration_ms": 3923,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_knochental_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_knochental_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_nachtkrone_1",
+      "speaker": "boss_nachtkrone",
+      "text": "Der Hüter von Nachtkrone betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_nachtkrone/boss_nachtkrone_1.wav",
+      "duration_ms": 2759,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_nachtkrone_2",
+      "speaker": "boss_nachtkrone",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_nachtkrone/boss_nachtkrone_2.wav",
+      "duration_ms": 4368,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_nachtkrone_3",
+      "speaker": "boss_nachtkrone",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_nachtkrone/boss_nachtkrone_3.wav",
+      "duration_ms": 3923,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_nachtkrone_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_nachtkrone_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_sturmmarsch_1",
+      "speaker": "boss_sturmmarsch",
+      "text": "Der Hüter von Sturmmarsch betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_sturmmarsch/boss_sturmmarsch_1.wav",
+      "duration_ms": 2622,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_sturmmarsch_2",
+      "speaker": "boss_sturmmarsch",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_sturmmarsch/boss_sturmmarsch_2.wav",
+      "duration_ms": 4356,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_sturmmarsch_3",
+      "speaker": "boss_sturmmarsch",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_sturmmarsch/boss_sturmmarsch_3.wav",
+      "duration_ms": 3888,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_sturmmarsch_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_sturmmarsch_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_versunkener_bund_1",
+      "speaker": "boss_versunkener_bund",
+      "text": "Der Hüter von Versunkener Bund betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_versunkener_bund/boss_versunkener_bund_1.wav",
+      "duration_ms": 3046,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_versunkener_bund_2",
+      "speaker": "boss_versunkener_bund",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_versunkener_bund/boss_versunkener_bund_2.wav",
+      "duration_ms": 4368,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_versunkener_bund_3",
+      "speaker": "boss_versunkener_bund",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_versunkener_bund/boss_versunkener_bund_3.wav",
+      "duration_ms": 3923,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_versunkener_bund_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_versunkener_bund_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_weltennaht_1",
+      "speaker": "boss_weltennaht",
+      "text": "Der Hüter von Weltennaht betritt den Eidkreis.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_weltennaht/boss_weltennaht_1.wav",
+      "duration_ms": 2790,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_weltennaht_2",
+      "speaker": "boss_weltennaht",
+      "text": "Seine erste Verteidigung bricht. Erwartet ein verändertes Angriffsmuster.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_weltennaht/boss_weltennaht_2.wav",
+      "duration_ms": 4368,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_weltennaht_3",
+      "speaker": "boss_weltennaht",
+      "text": "Der Hüter gibt seine wahre Macht frei. Spart nichts mehr auf.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/boss_weltennaht/boss_weltennaht_3.wav",
+      "duration_ms": 3923,
+      "sample_rate": 22050
+    },
+    {
+      "id": "boss_weltennaht_4",
+      "speaker": "narrator",
+      "text": "Der Eidkreis ist still. Der Wegstein erkennt euren Sieg an.",
+      "category": "boss",
+      "asset": "res://assets/voice/de-DE/narrator/boss_weltennaht_4.wav",
+      "duration_ms": 3624,
+      "sample_rate": 22050
+    },
+    {
+      "id": "final_1",
+      "speaker": "boss_weltennaht",
+      "text": "Ich bin die Krone, der ihr eure Namen schuldet.",
+      "category": "final",
+      "asset": "res://assets/voice/de-DE/boss_weltennaht/final_1.wav",
+      "duration_ms": 2626,
+      "sample_rate": 22050
+    },
+    {
+      "id": "final_2",
+      "speaker": "boss_weltennaht",
+      "text": "Jede gerettete Welt ist nur eine weitere Kette.",
+      "category": "final",
+      "asset": "res://assets/voice/de-DE/boss_weltennaht/final_2.wav",
+      "duration_ms": 2818,
+      "sample_rate": 22050
+    },
+    {
+      "id": "final_3",
+      "speaker": "boss_weltennaht",
+      "text": "Brecht meinen Körper. Die Naht selbst wird für mich kämpfen.",
+      "category": "final",
+      "asset": "res://assets/voice/de-DE/boss_weltennaht/final_3.wav",
+      "duration_ms": 3748,
+      "sample_rate": 22050
+    },
+    {
+      "id": "final_4",
+      "speaker": "boss_weltennaht",
+      "text": "Dann sprecht euren letzten Eid, und seht, welcher Name bestehen bleibt.",
+      "category": "final",
+      "asset": "res://assets/voice/de-DE/boss_weltennaht/final_4.wav",
+      "duration_ms": 4434,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_01",
+      "speaker": "pathfinder",
+      "text": "Ich habe freie Sicht.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_01.wav",
+      "duration_ms": 1371,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_02",
+      "speaker": "pathfinder",
+      "text": "Ziel markiert.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_02.wav",
+      "duration_ms": 1192,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_03",
+      "speaker": "pathfinder",
+      "text": "Der Wind steht gut.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_03.wav",
+      "duration_ms": 1360,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_04",
+      "speaker": "pathfinder",
+      "text": "Ich decke dich.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_04.wav",
+      "duration_ms": 954,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_05",
+      "speaker": "pathfinder",
+      "text": "Falle liegt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_05.wav",
+      "duration_ms": 921,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_06",
+      "speaker": "pathfinder",
+      "text": "Ein Schritt nach links.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_06.wav",
+      "duration_ms": 1480,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_07",
+      "speaker": "pathfinder",
+      "text": "Rüstung gebrochen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_07.wav",
+      "duration_ms": 1187,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_08",
+      "speaker": "pathfinder",
+      "text": "Der nächste Pfeil sitzt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_08.wav",
+      "duration_ms": 1546,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_09",
+      "speaker": "pathfinder",
+      "text": "Bleib hinter mir.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_09.wav",
+      "duration_ms": 1250,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_10",
+      "speaker": "pathfinder",
+      "text": "Ich brauche einen Augenblick.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_10.wav",
+      "duration_ms": 1589,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_11",
+      "speaker": "pathfinder",
+      "text": "Magie sammelt sich.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_11.wav",
+      "duration_ms": 1192,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_12",
+      "speaker": "pathfinder",
+      "text": "Der Pfad antwortet.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_12.wav",
+      "duration_ms": 1385,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_13",
+      "speaker": "pathfinder",
+      "text": "Noch eine Welle.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_13.wav",
+      "duration_ms": 960,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_14",
+      "speaker": "pathfinder",
+      "text": "Der Boss wechselt sein Muster.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_14.wav",
+      "duration_ms": 1656,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_15",
+      "speaker": "pathfinder",
+      "text": "Jetzt gemeinsam.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_15.wav",
+      "duration_ms": 1285,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_16",
+      "speaker": "pathfinder",
+      "text": "Ich bin getroffen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_16.wav",
+      "duration_ms": 1129,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_17",
+      "speaker": "pathfinder",
+      "text": "Es geht noch.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_17.wav",
+      "duration_ms": 900,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_18",
+      "speaker": "pathfinder",
+      "text": "Danke. Weiter.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_18.wav",
+      "duration_ms": 1353,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_19",
+      "speaker": "pathfinder",
+      "text": "Die Beute gehört uns beiden.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_19.wav",
+      "duration_ms": 1694,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_20",
+      "speaker": "pathfinder",
+      "text": "Das ist selten.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_20.wav",
+      "duration_ms": 1129,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_21",
+      "speaker": "pathfinder",
+      "text": "Dieser Weg ist neu.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_21.wav",
+      "duration_ms": 1320,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_22",
+      "speaker": "pathfinder",
+      "text": "Ich kenne diese Spuren.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_22.wav",
+      "duration_ms": 1347,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_23",
+      "speaker": "pathfinder",
+      "text": "Nicht stehen bleiben.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_23.wav",
+      "duration_ms": 1387,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_pathfinder_24",
+      "speaker": "pathfinder",
+      "text": "Für den Grauen Eid.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/pathfinder/bark_pathfinder_24.wav",
+      "duration_ms": 1335,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_01",
+      "speaker": "vanguard",
+      "text": "Hinter meinen Schild.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_01.wav",
+      "duration_ms": 1412,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_02",
+      "speaker": "vanguard",
+      "text": "Ich halte die Linie.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_02.wav",
+      "duration_ms": 1265,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_03",
+      "speaker": "vanguard",
+      "text": "Jetzt kommt die Axt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_03.wav",
+      "duration_ms": 1487,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_04",
+      "speaker": "vanguard",
+      "text": "Seine Deckung bricht.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_04.wav",
+      "duration_ms": 1268,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_05",
+      "speaker": "vanguard",
+      "text": "Ich ziehe den Angriff.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_05.wav",
+      "duration_ms": 1390,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_06",
+      "speaker": "vanguard",
+      "text": "Bleib an meiner Seite.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_06.wav",
+      "duration_ms": 1437,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_07",
+      "speaker": "vanguard",
+      "text": "Noch stehe ich.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_07.wav",
+      "duration_ms": 1008,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_08",
+      "speaker": "vanguard",
+      "text": "Der Schlag war nichts.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_08.wav",
+      "duration_ms": 1494,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_09",
+      "speaker": "vanguard",
+      "text": "Runen, jetzt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_09.wav",
+      "duration_ms": 1301,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_10",
+      "speaker": "vanguard",
+      "text": "Ich brauche Heilung.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_10.wav",
+      "duration_ms": 1295,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_11",
+      "speaker": "vanguard",
+      "text": "Der Eid trägt uns.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_11.wav",
+      "duration_ms": 1511,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_12",
+      "speaker": "vanguard",
+      "text": "Keine Gnade für Eidbrecher.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_12.wav",
+      "duration_ms": 1974,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_13",
+      "speaker": "vanguard",
+      "text": "Die nächste Welle gehört mir.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_13.wav",
+      "duration_ms": 1817,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_14",
+      "speaker": "vanguard",
+      "text": "Der Boss wird wütend.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_14.wav",
+      "duration_ms": 1520,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_15",
+      "speaker": "vanguard",
+      "text": "Gemeinsam zuschlagen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_15.wav",
+      "duration_ms": 1641,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_16",
+      "speaker": "vanguard",
+      "text": "Das hat gesessen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_16.wav",
+      "duration_ms": 1193,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_17",
+      "speaker": "vanguard",
+      "text": "Nur ein Kratzer.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_17.wav",
+      "duration_ms": 1191,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_18",
+      "speaker": "vanguard",
+      "text": "Gut abgefangen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_18.wav",
+      "duration_ms": 1272,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_19",
+      "speaker": "vanguard",
+      "text": "Wähle mit Bedacht.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_19.wav",
+      "duration_ms": 1268,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_20",
+      "speaker": "vanguard",
+      "text": "Eine starke Klinge.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_20.wav",
+      "duration_ms": 1268,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_21",
+      "speaker": "vanguard",
+      "text": "Der Wegstein erwacht.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_21.wav",
+      "duration_ms": 1400,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_22",
+      "speaker": "vanguard",
+      "text": "Hier stimmt etwas nicht.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_22.wav",
+      "duration_ms": 1710,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_23",
+      "speaker": "vanguard",
+      "text": "Vorwärts.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_23.wav",
+      "duration_ms": 1034,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_vanguard_24",
+      "speaker": "vanguard",
+      "text": "Auftrag zu Ende bringen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/vanguard/bark_vanguard_24.wav",
+      "duration_ms": 1803,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_01",
+      "speaker": "duelist",
+      "text": "Die linke Klinge zuerst.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_01.wav",
+      "duration_ms": 1685,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_02",
+      "speaker": "duelist",
+      "text": "Zu langsam.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_02.wav",
+      "duration_ms": 1072,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_03",
+      "speaker": "duelist",
+      "text": "Ich bin schon hinter ihm.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_03.wav",
+      "duration_ms": 1576,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_04",
+      "speaker": "duelist",
+      "text": "Deckung ist nur eine Einladung.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_04.wav",
+      "duration_ms": 1868,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_05",
+      "speaker": "duelist",
+      "text": "Wir schneiden einen Weg.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_05.wav",
+      "duration_ms": 1585,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_06",
+      "speaker": "duelist",
+      "text": "Halte ihn einen Herzschlag.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_06.wav",
+      "duration_ms": 1643,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_07",
+      "speaker": "duelist",
+      "text": "Meine Klingen antworten.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_07.wav",
+      "duration_ms": 1516,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_08",
+      "speaker": "duelist",
+      "text": "Der nächste Schnitt entscheidet.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_08.wav",
+      "duration_ms": 1762,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_09",
+      "speaker": "duelist",
+      "text": "Ich lenke sie ab.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_09.wav",
+      "duration_ms": 1124,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_10",
+      "speaker": "duelist",
+      "text": "Ein kurzer Atemzug.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_10.wav",
+      "duration_ms": 1619,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_11",
+      "speaker": "duelist",
+      "text": "Das Blutzeichen glüht.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_11.wav",
+      "duration_ms": 1426,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_12",
+      "speaker": "duelist",
+      "text": "Der Pfad kennt meinen Schritt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_12.wav",
+      "duration_ms": 1760,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_13",
+      "speaker": "duelist",
+      "text": "Noch mehr Ziele.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_13.wav",
+      "duration_ms": 1136,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_14",
+      "speaker": "duelist",
+      "text": "Sein Rhythmus bricht.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_14.wav",
+      "duration_ms": 1252,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_15",
+      "speaker": "duelist",
+      "text": "Beide Seiten, jetzt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_15.wav",
+      "duration_ms": 1719,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_16",
+      "speaker": "duelist",
+      "text": "Nur gestreift.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_16.wav",
+      "duration_ms": 1239,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_17",
+      "speaker": "duelist",
+      "text": "Ich tanze noch.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_17.wav",
+      "duration_ms": 1028,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_18",
+      "speaker": "duelist",
+      "text": "Sauber aufgefangen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_18.wav",
+      "duration_ms": 1365,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_19",
+      "speaker": "duelist",
+      "text": "Nimm, was zu deinem Stil passt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_19.wav",
+      "duration_ms": 2315,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_20",
+      "speaker": "duelist",
+      "text": "Diese Schneide hat Geschichte.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_20.wav",
+      "duration_ms": 1576,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_21",
+      "speaker": "duelist",
+      "text": "Eine Abzweigung.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_21.wav",
+      "duration_ms": 1179,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_22",
+      "speaker": "duelist",
+      "text": "Spuren auf Augenhöhe.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_22.wav",
+      "duration_ms": 1490,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_23",
+      "speaker": "duelist",
+      "text": "Bleib in Bewegung.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_23.wav",
+      "duration_ms": 1365,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_duelist_24",
+      "speaker": "duelist",
+      "text": "Unser Eid, unser Tempo.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/duelist/bark_duelist_24.wav",
+      "duration_ms": 1745,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_01",
+      "speaker": "arbalist",
+      "text": "Bolzen geladen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_01.wav",
+      "duration_ms": 1251,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_02",
+      "speaker": "arbalist",
+      "text": "Ziel im Visier.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_02.wav",
+      "duration_ms": 1292,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_03",
+      "speaker": "arbalist",
+      "text": "Windkorrektur steht.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_03.wav",
+      "duration_ms": 1487,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_04",
+      "speaker": "arbalist",
+      "text": "Ich sichere die Flanke.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_04.wav",
+      "duration_ms": 1375,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_05",
+      "speaker": "arbalist",
+      "text": "Der Mechanismus hält.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_05.wav",
+      "duration_ms": 1385,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_06",
+      "speaker": "arbalist",
+      "text": "Nicht in meine Schusslinie.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_06.wav",
+      "duration_ms": 1450,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_07",
+      "speaker": "arbalist",
+      "text": "Panzerplatte gesprengt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_07.wav",
+      "duration_ms": 1527,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_08",
+      "speaker": "arbalist",
+      "text": "Der nächste Bolzen durchschlägt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_08.wav",
+      "duration_ms": 1929,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_09",
+      "speaker": "arbalist",
+      "text": "Ich halte Abstand.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_09.wav",
+      "duration_ms": 1319,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_10",
+      "speaker": "arbalist",
+      "text": "Nachladen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_10.wav",
+      "duration_ms": 845,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_11",
+      "speaker": "arbalist",
+      "text": "Runenladung bereit.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_11.wav",
+      "duration_ms": 1389,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_12",
+      "speaker": "arbalist",
+      "text": "Die Sehne antwortet.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_12.wav",
+      "duration_ms": 1341,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_13",
+      "speaker": "arbalist",
+      "text": "Welle bestätigt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_13.wav",
+      "duration_ms": 1188,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_14",
+      "speaker": "arbalist",
+      "text": "Neue Bossfrequenz.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_14.wav",
+      "duration_ms": 1431,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_15",
+      "speaker": "arbalist",
+      "text": "Auf mein Signal.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_15.wav",
+      "duration_ms": 1256,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_16",
+      "speaker": "arbalist",
+      "text": "Treffer eingesteckt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_16.wav",
+      "duration_ms": 1414,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_17",
+      "speaker": "arbalist",
+      "text": "System bleibt stabil.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_17.wav",
+      "duration_ms": 1774,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_18",
+      "speaker": "arbalist",
+      "text": "Gute Deckung.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_18.wav",
+      "duration_ms": 955,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_19",
+      "speaker": "arbalist",
+      "text": "Prüf die Mechanik.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_19.wav",
+      "duration_ms": 1220,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_20",
+      "speaker": "arbalist",
+      "text": "Seltene Fertigung.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_20.wav",
+      "duration_ms": 1322,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_21",
+      "speaker": "arbalist",
+      "text": "Neue Route vermessen.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_21.wav",
+      "duration_ms": 1377,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_22",
+      "speaker": "arbalist",
+      "text": "Ich sehe den Hinterhalt.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_22.wav",
+      "duration_ms": 1531,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_23",
+      "speaker": "arbalist",
+      "text": "Position wechseln.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_23.wav",
+      "duration_ms": 1564,
+      "sample_rate": 22050
+    },
+    {
+      "id": "bark_arbalist_24",
+      "speaker": "arbalist",
+      "text": "Der Auftrag trifft ins Schwarze.",
+      "category": "hero_bark",
+      "asset": "res://assets/voice/de-DE/arbalist/bark_arbalist_24.wav",
+      "duration_ms": 2115,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_skirmisher_1",
+      "speaker": "enemy_skirmisher",
+      "text": "Schneller!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_skirmisher/enemy_skirmisher_1.wav",
+      "duration_ms": 732,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_skirmisher_2",
+      "speaker": "enemy_skirmisher",
+      "text": "Umkreisen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_skirmisher/enemy_skirmisher_2.wav",
+      "duration_ms": 965,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_skirmisher_3",
+      "speaker": "enemy_skirmisher",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_skirmisher/enemy_skirmisher_3.wav",
+      "duration_ms": 1042,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_skirmisher_4",
+      "speaker": "enemy_skirmisher",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_skirmisher/enemy_skirmisher_4.wav",
+      "duration_ms": 753,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_skirmisher_5",
+      "speaker": "enemy_skirmisher",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_skirmisher/enemy_skirmisher_5.wav",
+      "duration_ms": 818,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_skirmisher_6",
+      "speaker": "enemy_skirmisher",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_skirmisher/enemy_skirmisher_6.wav",
+      "duration_ms": 1767,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_brute_1",
+      "speaker": "enemy_brute",
+      "text": "Zerbrechen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_brute/enemy_brute_1.wav",
+      "duration_ms": 957,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_brute_2",
+      "speaker": "enemy_brute",
+      "text": "Knochen zu Staub!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_brute/enemy_brute_2.wav",
+      "duration_ms": 1472,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_brute_3",
+      "speaker": "enemy_brute",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_brute/enemy_brute_3.wav",
+      "duration_ms": 1030,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_brute_4",
+      "speaker": "enemy_brute",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_brute/enemy_brute_4.wav",
+      "duration_ms": 752,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_brute_5",
+      "speaker": "enemy_brute",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_brute/enemy_brute_5.wav",
+      "duration_ms": 829,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_brute_6",
+      "speaker": "enemy_brute",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_brute/enemy_brute_6.wav",
+      "duration_ms": 1763,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_defender_1",
+      "speaker": "enemy_defender",
+      "text": "Kein Durchgang!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_defender/enemy_defender_1.wav",
+      "duration_ms": 1123,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_defender_2",
+      "speaker": "enemy_defender",
+      "text": "Haltet die Linie!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_defender/enemy_defender_2.wav",
+      "duration_ms": 1215,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_defender_3",
+      "speaker": "enemy_defender",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_defender/enemy_defender_3.wav",
+      "duration_ms": 1000,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_defender_4",
+      "speaker": "enemy_defender",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_defender/enemy_defender_4.wav",
+      "duration_ms": 741,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_defender_5",
+      "speaker": "enemy_defender",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_defender/enemy_defender_5.wav",
+      "duration_ms": 816,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_defender_6",
+      "speaker": "enemy_defender",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_defender/enemy_defender_6.wav",
+      "duration_ms": 1748,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_hexer_1",
+      "speaker": "enemy_hexer",
+      "text": "Eure Namen vergehen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_hexer/enemy_hexer_1.wav",
+      "duration_ms": 1560,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_hexer_2",
+      "speaker": "enemy_hexer",
+      "text": "Der Fluch findet euch!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_hexer/enemy_hexer_2.wav",
+      "duration_ms": 1546,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_hexer_3",
+      "speaker": "enemy_hexer",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_hexer/enemy_hexer_3.wav",
+      "duration_ms": 1076,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_hexer_4",
+      "speaker": "enemy_hexer",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_hexer/enemy_hexer_4.wav",
+      "duration_ms": 790,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_hexer_5",
+      "speaker": "enemy_hexer",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_hexer/enemy_hexer_5.wav",
+      "duration_ms": 862,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_hexer_6",
+      "speaker": "enemy_hexer",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_hexer/enemy_hexer_6.wav",
+      "duration_ms": 1818,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_marksman_1",
+      "speaker": "enemy_marksman",
+      "text": "Ziel erfasst!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_marksman/enemy_marksman_1.wav",
+      "duration_ms": 1114,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_marksman_2",
+      "speaker": "enemy_marksman",
+      "text": "Kein Entkommen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_marksman/enemy_marksman_2.wav",
+      "duration_ms": 1197,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_marksman_3",
+      "speaker": "enemy_marksman",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_marksman/enemy_marksman_3.wav",
+      "duration_ms": 1043,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_marksman_4",
+      "speaker": "enemy_marksman",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_marksman/enemy_marksman_4.wav",
+      "duration_ms": 761,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_marksman_5",
+      "speaker": "enemy_marksman",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_marksman/enemy_marksman_5.wav",
+      "duration_ms": 841,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_marksman_6",
+      "speaker": "enemy_marksman",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_marksman/enemy_marksman_6.wav",
+      "duration_ms": 1771,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_assassin_1",
+      "speaker": "enemy_assassin",
+      "text": "Zu spät.",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_assassin/enemy_assassin_1.wav",
+      "duration_ms": 937,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_assassin_2",
+      "speaker": "enemy_assassin",
+      "text": "Ein Atemzug genügt.",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_assassin/enemy_assassin_2.wav",
+      "duration_ms": 1595,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_assassin_3",
+      "speaker": "enemy_assassin",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_assassin/enemy_assassin_3.wav",
+      "duration_ms": 1023,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_assassin_4",
+      "speaker": "enemy_assassin",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_assassin/enemy_assassin_4.wav",
+      "duration_ms": 758,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_assassin_5",
+      "speaker": "enemy_assassin",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_assassin/enemy_assassin_5.wav",
+      "duration_ms": 815,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_assassin_6",
+      "speaker": "enemy_assassin",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_assassin/enemy_assassin_6.wav",
+      "duration_ms": 1764,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_beast_1",
+      "speaker": "enemy_beast",
+      "text": "Rrraah!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_beast/enemy_beast_1.wav",
+      "duration_ms": 952,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_beast_2",
+      "speaker": "enemy_beast",
+      "text": "Grrrrauw!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_beast/enemy_beast_2.wav",
+      "duration_ms": 1179,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_beast_3",
+      "speaker": "enemy_beast",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_beast/enemy_beast_3.wav",
+      "duration_ms": 1042,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_beast_4",
+      "speaker": "enemy_beast",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_beast/enemy_beast_4.wav",
+      "duration_ms": 738,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_beast_5",
+      "speaker": "enemy_beast",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_beast/enemy_beast_5.wav",
+      "duration_ms": 814,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_beast_6",
+      "speaker": "enemy_beast",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_beast/enemy_beast_6.wav",
+      "duration_ms": 1735,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_controller_1",
+      "speaker": "enemy_controller",
+      "text": "Beugt euch!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_controller/enemy_controller_1.wav",
+      "duration_ms": 985,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_controller_2",
+      "speaker": "enemy_controller",
+      "text": "Der Kreis schließt sich!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_controller/enemy_controller_2.wav",
+      "duration_ms": 1461,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_controller_3",
+      "speaker": "enemy_controller",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_controller/enemy_controller_3.wav",
+      "duration_ms": 1042,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_controller_4",
+      "speaker": "enemy_controller",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_controller/enemy_controller_4.wav",
+      "duration_ms": 753,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_controller_5",
+      "speaker": "enemy_controller",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_controller/enemy_controller_5.wav",
+      "duration_ms": 818,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_controller_6",
+      "speaker": "enemy_controller",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_controller/enemy_controller_6.wav",
+      "duration_ms": 1767,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_elite_1",
+      "speaker": "enemy_elite",
+      "text": "Ihr endet hier!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_elite/enemy_elite_1.wav",
+      "duration_ms": 1136,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_elite_2",
+      "speaker": "enemy_elite",
+      "text": "Prüft euren Eid!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_elite/enemy_elite_2.wav",
+      "duration_ms": 1402,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_elite_3",
+      "speaker": "enemy_elite",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_elite/enemy_elite_3.wav",
+      "duration_ms": 1030,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_elite_4",
+      "speaker": "enemy_elite",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_elite/enemy_elite_4.wav",
+      "duration_ms": 752,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_elite_5",
+      "speaker": "enemy_elite",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_elite/enemy_elite_5.wav",
+      "duration_ms": 829,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_elite_6",
+      "speaker": "enemy_elite",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_elite/enemy_elite_6.wav",
+      "duration_ms": 1763,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_boss_1",
+      "speaker": "enemy_boss",
+      "text": "Kniet vor dem Hüter!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_boss/enemy_boss_1.wav",
+      "duration_ms": 1422,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_boss_2",
+      "speaker": "enemy_boss",
+      "text": "Dieses Land gehört mir!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_boss/enemy_boss_2.wav",
+      "duration_ms": 1578,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_boss_3",
+      "speaker": "enemy_boss",
+      "text": "Vorwärts!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_boss/enemy_boss_3.wav",
+      "duration_ms": 1000,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_boss_4",
+      "speaker": "enemy_boss",
+      "text": "Jetzt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_boss/enemy_boss_4.wav",
+      "duration_ms": 741,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_boss_5",
+      "speaker": "enemy_boss",
+      "text": "Ihr fallt!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_boss/enemy_boss_5.wav",
+      "duration_ms": 816,
+      "sample_rate": 22050
+    },
+    {
+      "id": "enemy_boss_6",
+      "speaker": "enemy_boss",
+      "text": "Der Wegstein wird schweigen!",
+      "category": "enemy_bark",
+      "asset": "res://assets/voice/de-DE/enemy_boss/enemy_boss_6.wav",
+      "duration_ms": 1748,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_01",
+      "speaker": "mentor",
+      "text": "Jede Runde besitzt Angriff, Verteidigung, Magie und Vorbereitung.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_01.wav",
+      "duration_ms": 4151,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_02",
+      "speaker": "mentor",
+      "text": "Eure fünf Aktionspunkte gelten gemeinsam für alle vier Phasen.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_02.wav",
+      "duration_ms": 4086,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_03",
+      "speaker": "mentor",
+      "text": "Ein Wurf von zwölf zählt als kritischer Doppelerfolg.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_03.wav",
+      "duration_ms": 3234,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_04",
+      "speaker": "mentor",
+      "text": "Blockwürfel entfernen Treffer, Bannwürfel entfernen Magieerfolge.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_04.wav",
+      "duration_ms": 3634,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_05",
+      "speaker": "mentor",
+      "text": "Ausrüstung kann Werte erhöhen und neue Karten freischalten.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_05.wav",
+      "duration_ms": 3487,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_06",
+      "speaker": "mentor",
+      "text": "Beide Spieler müssen ihre Beute wählen, bevor die Reise weitergeht.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_06.wav",
+      "duration_ms": 3785,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_07",
+      "speaker": "mentor",
+      "text": "Nach einem Szenario werden Leben und Aktionspunkte vollständig erneuert.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_07.wav",
+      "duration_ms": 4357,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_08",
+      "speaker": "mentor",
+      "text": "Fällt ein Söldner, kehrt das Team zum letzten gemeinsamen Savepoint zurück.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_08.wav",
+      "duration_ms": 4950,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_09",
+      "speaker": "mentor",
+      "text": "Untertitel, Stimmen und Dynamikbereich lassen sich getrennt einstellen.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_09.wav",
+      "duration_ms": 3938,
+      "sample_rate": 22050
+    },
+    {
+      "id": "tutorial_10",
+      "speaker": "mentor",
+      "text": "Cinematics können übersprungen werden; wichtige Hinweise bleiben im Log erhalten.",
+      "category": "tutorial",
+      "asset": "res://assets/voice/de-DE/mentor/tutorial_10.wav",
+      "duration_ms": 4703,
+      "sample_rate": 22050
+    },
+    {
+      "id": "ending_seal_1",
+      "speaker": "duelist",
+      "text": "Wir versiegeln die Naht. Kein Name soll sie wieder öffnen.",
+      "category": "ending",
+      "asset": "res://assets/voice/de-DE/duelist/ending_seal_1.wav",
+      "duration_ms": 3574,
+      "sample_rate": 22050
+    },
+    {
+      "id": "ending_seal_2",
+      "speaker": "narrator",
+      "text": "Die Pfade werden still, aber ihre Welt bleibt frei.",
+      "category": "ending",
+      "asset": "res://assets/voice/de-DE/narrator/ending_seal_2.wav",
+      "duration_ms": 3190,
+      "sample_rate": 22050
+    },
+    {
+      "id": "ending_destroy_1",
+      "speaker": "duelist",
+      "text": "Wir zerstören die Krone und jeden Weg, der zu ihr führt.",
+      "category": "ending",
+      "asset": "res://assets/voice/de-DE/duelist/ending_destroy_1.wav",
+      "duration_ms": 3730,
+      "sample_rate": 22050
+    },
+    {
+      "id": "ending_destroy_2",
+      "speaker": "narrator",
+      "text": "Ein Teil der Welt vergeht, damit der Rest ohne Ketten leben kann.",
+      "category": "ending",
+      "asset": "res://assets/voice/de-DE/narrator/ending_destroy_2.wav",
+      "duration_ms": 3693,
+      "sample_rate": 22050
+    },
+    {
+      "id": "ending_bind_1",
+      "speaker": "duelist",
+      "text": "Wir binden die Krone an unseren gemeinsamen Eid.",
+      "category": "ending",
+      "asset": "res://assets/voice/de-DE/duelist/ending_bind_1.wav",
+      "duration_ms": 2773,
+      "sample_rate": 22050
+    },
+    {
+      "id": "ending_bind_2",
+      "speaker": "narrator",
+      "text": "Ihre Macht bleibt, doch sie gehorcht fortan zwei Stimmen.",
+      "category": "ending",
+      "asset": "res://assets/voice/de-DE/narrator/ending_bind_2.wav",
+      "duration_ms": 3333,
+      "sample_rate": 22050
+    },
+    {
+      "id": "ending_dominate_1",
+      "speaker": "duelist",
+      "text": "Wir nehmen den namenlosen Thron für uns.",
+      "category": "ending",
+      "asset": "res://assets/voice/de-DE/duelist/ending_dominate_1.wav",
+      "duration_ms": 2652,
+      "sample_rate": 22050
+    },
+    {
+      "id": "ending_dominate_2",
+      "speaker": "narrator",
+      "text": "Die Pfade knien – und jede kommende Welt wird unser Urteil kennen.",
+      "category": "ending",
+      "asset": "res://assets/voice/de-DE/narrator/ending_dominate_2.wav",
+      "duration_ms": 3857,
+      "sample_rate": 22050
+    },
+    {
+      "id": "legacy_1",
+      "speaker": "arbalist",
+      "text": "Ein Relikt pro Söldner übersteht das Weltenecho.",
+      "category": "legacy",
+      "asset": "res://assets/voice/de-DE/arbalist/legacy_1.wav",
+      "duration_ms": 2865,
+      "sample_rate": 22050
+    },
+    {
+      "id": "legacy_2",
+      "speaker": "narrator",
+      "text": "Zwei Vermächtnisse werden in die Karte der nächsten Welt geschrieben.",
+      "category": "legacy",
+      "asset": "res://assets/voice/de-DE/narrator/legacy_2.wav",
+      "duration_ms": 3709,
+      "sample_rate": 22050
+    }
+  ]
+}

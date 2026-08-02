@@ -1,0 +1,123 @@
+{
+  "content_versions": {
+    "cards": 3,
+    "items": 2,
+    "enemies": 2
+  },
+  "counts": {
+    "cards": 128,
+    "items": 128,
+    "enemies": 140,
+    "cinematics": 48,
+    "voice_lines": 336,
+    "svg_assets": 440,
+    "png_assets": 25,
+    "glb_assets": 309,
+    "audio_assets": 37,
+    "manifest_references": 1151
+  },
+  "cards_by_phase": {
+    "attack": 35,
+    "defense": 30,
+    "magic": 29,
+    "utility": 34
+  },
+  "cards_by_rarity": {
+    "enhanced": 18,
+    "exceptional": 14,
+    "legendary": 14,
+    "normal": 31,
+    "rare": 36,
+    "unique": 15
+  },
+  "items_by_slot": {
+    "alchemy": 4,
+    "armor": 16,
+    "offhand": 2,
+    "relic": 4,
+    "talisman": 6,
+    "weapon": 96
+  },
+  "items_by_rarity": {
+    "enhanced": 19,
+    "exceptional": 23,
+    "legendary": 22,
+    "normal": 23,
+    "rare": 22,
+    "unique": 19
+  },
+  "enemies_by_role": {
+    "assassin": 14,
+    "beast": 14,
+    "boss": 14,
+    "brute": 14,
+    "controller": 14,
+    "defender": 14,
+    "elite": 14,
+    "hexer": 14,
+    "marksman": 14,
+    "skirmisher": 14
+  },
+  "enemies_per_country": {
+    "aschenlande": 10,
+    "dornwall": 10,
+    "frostreiche": 10,
+    "glassteppe": 10,
+    "knochental": 10,
+    "kupferkueste": 10,
+    "nachtkrone": 10,
+    "nebelmark": 10,
+    "sonnenbruch": 10,
+    "splitterinseln": 10,
+    "sturmmarsch": 10,
+    "tiefenwald": 10,
+    "versunkener_bund": 10,
+    "weltennaht": 10
+  },
+  "worlds": {
+    "expedition": {
+      "countries": 6,
+      "scenarios": 18,
+      "encounters": 42
+    },
+    "fieldzug": {
+      "countries": 9,
+      "scenarios": 27,
+      "encounters": 63
+    },
+    "saga": {
+      "countries": 13,
+      "scenarios": 39,
+      "encounters": 91
+    }
+  },
+  "asset_manifest": {
+    "card_icons": 128,
+    "item_icons": 128,
+    "enemy_icons": 140,
+    "item_models": 128,
+    "enemy_models": 140,
+    "character_models": 4,
+    "country_icons": 14,
+    "country_models": 14,
+    "prop_models": 22,
+    "dice_models": 1,
+    "ui_icons": 21,
+    "vfx": 8,
+    "raster": 20,
+    "logo": 1,
+    "animation_profiles": 1,
+    "audio": 37,
+    "voice": 336,
+    "cinematic_plates": 5,
+    "narrative_manifests": 3
+  },
+  "rendering_decisions": {
+    "cards_items_ui": "2D SVG: sharp text-adjacent information and fast recognition",
+    "portraits_backgrounds": "2D raster: cinematic identity and atmosphere without runtime geometry cost",
+    "characters_enemies_equipment": "High-detail runtime GLB: dense procedural geometry and embedded named animation clips",
+    "countries_props_dice": "3D GLB: 2.5D depth, lighting, reusable scenery and physical rolls",
+    "effects": "2D SVG overlays combined with 3D lights/particles"
+  },
+  "status": "complete"
+}

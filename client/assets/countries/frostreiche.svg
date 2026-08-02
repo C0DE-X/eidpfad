@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" data-asset-kind="country">
+<defs><radialGradient id="g"><stop stop-color="#587b91"/><stop offset="1" stop-color="#080d10"/></radialGradient></defs>
+<circle cx="256" cy="256" r="232" fill="#080c0f" stroke="#b8d8de" stroke-width="9"/>
+<circle cx="256" cy="256" r="202" fill="url(#g)" stroke="#b8d8de" stroke-opacity=".45" stroke-width="4"/>
+<g color="#b8d8de" fill="#b8d8de" transform="translate(52 52) scale(.8)"><path d="M256 80v352M103 168l306 176M409 168 103 344M256 80l-34 58m34-58 34 58M103 168l68 2m-68-2 32 60M409 168l-68 2m68-2-32 60" fill="none" stroke="currentColor" stroke-width="24"/></g>
+<path d="M118 430c90-26 186-26 276 0" fill="none" stroke="#b8d8de" stroke-width="8"/>
+<circle cx="256" cy="52" r="13" fill="#b8d8de"/>
+</svg>
