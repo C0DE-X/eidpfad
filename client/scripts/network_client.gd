@@ -126,14 +126,9 @@ func list_campaigns() -> void:
 	_request("list_campaigns", "/api/v1/campaigns", HTTPClient.METHOD_GET, null, true)
 
 
-<<<<<<< Updated upstream
 func create_campaign(weapon: String, magic: String, campaign_length: String, selected_game_mode: String, campaign_seed: Variant = null) -> void:
 	_requested_game_mode = selected_game_mode
 	var body := {"weapon": weapon, "magic": magic, "campaign_length": campaign_length, "game_mode": selected_game_mode}
-=======
-func create_campaign(weapon: String, magic: String, campaign_length: String, campaign_seed: Variant = null) -> void:
-	var body := {"weapon": weapon, "magic": magic, "campaign_length": campaign_length}
->>>>>>> Stashed changes
 	if campaign_seed != null:
 		body["seed"] = campaign_seed
 	_request("create_campaign", "/api/v1/campaigns", HTTPClient.METHOD_POST, body, true)
