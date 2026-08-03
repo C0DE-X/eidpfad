@@ -463,25 +463,16 @@ func _create_profile() -> void:
 func _create_campaign() -> void:
 	if not network.configure(server_edit.text):
 		return
-<<<<<<< Updated upstream
 	if _game_mode().is_empty():
 		_on_api_failed("create_campaign", "Bitte zuerst Singleplayer oder Multiplayer auswählen")
 		return
 	var seed: Variant = null
-=======
-	var campaign_seed: Variant = null
->>>>>>> Stashed changes
 	if not seed_edit.text.strip_edges().is_empty():
 		if not seed_edit.text.strip_edges().is_valid_int():
 			_on_api_failed("create_campaign", "Der Seed muss eine ganze Zahl sein")
 			return
-<<<<<<< Updated upstream
 		seed = int(seed_edit.text)
 	network.create_campaign(_weapon_id(), _magic_id(), _campaign_length(), _game_mode(), seed)
-=======
-		campaign_seed = int(seed_edit.text)
-	network.create_campaign(_weapon_id(), _magic_id(), _campaign_length(), campaign_seed)
->>>>>>> Stashed changes
 
 
 func _join_campaign() -> void:

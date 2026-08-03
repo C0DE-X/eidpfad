@@ -66,6 +66,21 @@ def object_sizes(object_ids: set[str]) -> dict[str, int]:
     return sizes
 
 
+def unresolved_conflicts() -> list[str]:
+    result = git(
+        "grep",
+        "--cached",
+        "-n",
+        "-I",
+        "-E",
+        r"^(<{7}|={7}|>{7})( |$)",
+        check=False,
+    )
+    if result.returncode not in {0, 1}:
+        raise RuntimeError(result.stderr.strip() or "git grep failed")
+    return result.stdout.splitlines()
+
+
 def is_forbidden(path: str) -> bool:
     pure_path = PurePosixPath(path)
     if any(part in IGNORED_PARTS for part in pure_path.parts):
@@ -102,6 +117,10 @@ def main() -> int:
     forbidden = sorted(path for path in entries if is_forbidden(path))
     if forbidden:
         errors.append("Generated or local files are staged/tracked: " + ", ".join(forbidden))
+
+    conflicts = unresolved_conflicts()
+    if conflicts:
+        errors.append("Unresolved VCS conflict markers:\n  " + "\n  ".join(conflicts))
 
     sizes = object_sizes(set(entries.values()))
     oversized = sorted(
