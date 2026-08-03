@@ -140,11 +140,11 @@ func _create_die(color: Color) -> Node3D:
 
 func _tint_model(node: Node, color: Color) -> void:
 	if node is MeshInstance3D:
-		var material := StandardMaterial3D.new()
-		material.albedo_color = color
-		material.metallic = 0.42
-		material.roughness = 0.38
-		(node as MeshInstance3D).material_override = material
+		var model_material := StandardMaterial3D.new()
+		model_material.albedo_color = color
+		model_material.metallic = 0.42
+		model_material.roughness = 0.38
+		(node as MeshInstance3D).material_override = model_material
 	for child in node.get_children():
 		_tint_model(child, color)
 
@@ -177,10 +177,10 @@ func _face_center(face_index: int) -> Vector3:
 	return center / float(D12_FACES[face_index].size())
 
 
-func _add_face(root: Node3D, value: String, position: Vector3, normal: Vector3, color: Color) -> void:
+func _add_face(root: Node3D, value: String, face_position: Vector3, normal: Vector3, color: Color) -> void:
 	var label := Label3D.new()
 	label.text = value
-	label.position = position
+	label.position = face_position
 	var up := Vector3.UP if abs(normal.dot(Vector3.UP)) < 0.95 else Vector3.FORWARD
 	label.basis = Basis.looking_at(-normal, up)
 	label.font_size = 68

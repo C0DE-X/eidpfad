@@ -400,12 +400,12 @@ func _instantiate_model(path: String) -> Node3D:
 	return packed.instantiate() as Node3D
 
 
-func _add_box(position: Vector3, size: Vector3, color: Color) -> void:
+func _add_box(box_position: Vector3, box_size: Vector3, color: Color) -> void:
 	var mesh := MeshInstance3D.new()
 	var box := BoxMesh.new()
-	box.size = size
+	box.size = box_size
 	mesh.mesh = box
-	mesh.position = position
+	mesh.position = box_position
 	mesh.material_override = _material(color, 0.92)
 	_world.add_child(mesh)
 
@@ -482,7 +482,7 @@ func _set_marker_color(marker: Node3D, marker_index: int, active_index: int) -> 
 
 
 func _material(color: Color, roughness: float) -> StandardMaterial3D:
-	var material := StandardMaterial3D.new()
-	material.albedo_color = color
-	material.roughness = roughness
-	return material
+	var surface_material := StandardMaterial3D.new()
+	surface_material.albedo_color = color
+	surface_material.roughness = roughness
+	return surface_material

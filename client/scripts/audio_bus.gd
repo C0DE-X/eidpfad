@@ -85,8 +85,8 @@ func play_ui_click() -> void:
 	play_event({"type": "ui_click"})
 
 
-func _play_loop(player: AudioStreamPlayer, name: String) -> void:
-	var path := "res://assets/audio/%s.wav" % name
+func _play_loop(player: AudioStreamPlayer, loop_name: String) -> void:
+	var path := "res://assets/audio/%s.wav" % loop_name
 	if not ResourceLoader.exists(path):
 		return
 	var stream := load(path)
