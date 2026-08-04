@@ -23,6 +23,12 @@
 | Figure-Clips | 14 je Figur | Idle, Walk, Run, Attack, Cast, Guard, Dodge, Hit, Defeat, Spawn, Victory und Varianten |
 | UI/VFX/Logo | 21 + 8 + 1 | HUD, Feedback, Boss/Postgame, Branding |
 | Raster | 26 | 13 Biome, Screens, fünf Portraits und fünf Cinematic-Plates |
+
+Das Hauptmenü verwendet ein kuratiertes, originales Dark-Fantasy-Key-Art mit
+bewusst ruhiger linker Navigationsfläche. Die eingecheckte Designquelle unter
+`assets/concepts/main_menu_background.png` wird vom Rastergenerator bytegenau
+nach `client/assets/backgrounds/main_menu.png` übernommen; Texte und Buttons
+bleiben native Godot-Controls.
 | Voice | 360 | Plot, Länder, Szenarien, 14 Bosse, fünf Helden, Gegner, Endings, Tutorial |
 | Cinematics | 48 | Prolog, Länder, Szenarien, Bosse, vier Endings, Legacy, Rollback, Tutorial |
 | Audio ohne Voice | 37 | 18 SFX, 13 Stereo-Ambiences, sechs Stereo-Musikzustände |

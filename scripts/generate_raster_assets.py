@@ -2,14 +2,15 @@
 """Generate deterministic cinematic backgrounds and character portraits.
 
 The raster library is rebuilt during CI and packaging.  Keeping the source
-algorithm in Git avoids external binary storage while retaining unique,
-high-resolution key art for every referenced scene.
+algorithm and the curated main-menu source in Git avoids external binary
+storage while retaining unique, high-resolution key art for every scene.
 """
 
 from __future__ import annotations
 
 import hashlib
 import math
+import shutil
 import struct
 import zlib
 from pathlib import Path
@@ -17,6 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "client" / "assets"
+MAIN_MENU_SOURCE = ROOT / "assets" / "concepts" / "main_menu_background.png"
 
 BACKGROUND_NAMES = (
     "ash", "bone", "character_select", "coast", "crystal", "desert", "forest",
@@ -187,7 +189,12 @@ def render_portrait(name: str, path: Path, primary_hex: str, accent_hex: str, we
 
 def main() -> None:
     for name in BACKGROUND_NAMES:
-        render_landscape(name, ASSETS / "backgrounds" / f"{name}.png")
+        destination = ASSETS / "backgrounds" / f"{name}.png"
+        if name == "main_menu":
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(MAIN_MENU_SOURCE, destination)
+        else:
+            render_landscape(name, destination)
     for name in CINEMATIC_NAMES:
         render_landscape(f"cinematic-{name}", ASSETS / "cinematics" / f"{name}.png")
     for name, (primary, accent, weapon) in PORTRAITS.items():

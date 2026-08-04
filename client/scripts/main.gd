@@ -17,16 +17,21 @@ var _presentation_queue: Array[Dictionary] = []
 var _presenting := false
 
 var server_edit: LineEdit
+var options_server_edit: LineEdit
 var name_edit: LineEdit
 var recovery_edit: LineEdit
 var invite_edit: LineEdit
 var seed_edit: LineEdit
 var weapon_select: OptionButton
-var mode_select: OptionButton
 var magic_select: OptionButton
 var length_select: OptionButton
+var campaign_view_title: Label
+var campaign_view_description: Label
+var campaign_start_button: Button
+var multiplayer_join_box: Control
 var campaign_label: Label
 var campaign_select: OptionButton
+var continue_campaign_button: Button
 var ready_button: Button
 var lobby_label: Label
 var status_label: Label
@@ -47,8 +52,12 @@ var dice_view: DiceRoller3D
 var world_view: ScenarioStage
 var connection_screen: Control
 var game_screen: Control
-var create_campaign_controls: Array[Control] = []
-var join_campaign_controls: Array[Control] = []
+var submenu_panel: PanelContainer
+var submenu_views: Dictionary = {}
+var _selected_mode := ""
+var _pending_menu_after_profile := ""
+var _auto_ready_after_connect := false
+var _campaigns: Array[Dictionary] = []
 
 
 func _ready() -> void:
@@ -84,7 +93,8 @@ func _ready() -> void:
 	cinematic.cinematic_started.connect(func(_id: String) -> void: game_audio.set_voice_active(true))
 	cinematic.cinematic_finished.connect(func(cinematic_id: String, skipped: bool) -> void:
 		game_audio.set_voice_active(false)
-		var active: Dictionary = current_state.get("cinematics", {}).get("active", {})
+		var cinematic_state := _as_dictionary(current_state.get("cinematics", {}))
+		var active := _as_dictionary(cinematic_state.get("active", {}))
 		if str(active.get("cinematic_id", "")) == cinematic_id:
 			network.cinematic_ack(cinematic_id, skipped)
 	)
@@ -109,7 +119,7 @@ func _build_ui() -> void:
 	add_child(background)
 	move_child(background, 0)
 	var veil := ColorRect.new()
-	veil.color = Color(0.025, 0.035, 0.04, 0.50)
+	veil.color = Color(0.015, 0.020, 0.025, 0.22)
 	veil.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(veil)
 	move_child(veil, 1)
@@ -125,92 +135,182 @@ func _build_ui() -> void:
 	var root := HBoxContainer.new()
 	root.add_theme_constant_override("separation", 20)
 	margin.add_child(root)
-	connection_screen = _build_connection_panel()
+	connection_screen = _build_main_menu()
 	game_screen = _build_game_panel()
 	root.add_child(connection_screen)
 	root.add_child(game_screen)
 	game_screen.hide()
 
 
-func _build_connection_panel() -> Control:
-	var panel := PanelContainer.new()
-	panel.custom_minimum_size = Vector2(330, 0)
-	panel.add_theme_stylebox_override("panel", UIFactory.panel_style(Color(0.09, 0.13, 0.15, 0.94)))
-	var margin := MarginContainer.new()
-	margin.add_theme_constant_override("margin_left", 18)
-	margin.add_theme_constant_override("margin_right", 18)
-	margin.add_theme_constant_override("margin_top", 18)
-	margin.add_theme_constant_override("margin_bottom", 18)
+func _build_main_menu() -> Control:
+	var screen := HBoxContainer.new()
+	screen.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	screen.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	screen.add_theme_constant_override("separation", 20)
+
+	var navigation := PanelContainer.new()
+	navigation.custom_minimum_size = Vector2(350, 0)
+	navigation.add_theme_stylebox_override("panel", UIFactory.panel_style(Color(0.035, 0.045, 0.050, 0.88)))
+	var nav_margin := MarginContainer.new()
+	for side in ["left", "right", "top", "bottom"]:
+		nav_margin.add_theme_constant_override("margin_%s" % side, 26)
+	navigation.add_child(nav_margin)
+	var nav_column := VBoxContainer.new()
+	nav_column.add_theme_constant_override("separation", 10)
+	nav_margin.add_child(nav_column)
+
+	var logo := TextureRect.new()
+	logo.texture = UIFactory.texture("res://assets/logo/eidpfad.svg")
+	logo.custom_minimum_size = Vector2(96, 96)
+	logo.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	logo.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	nav_column.add_child(logo)
+	var title := UIFactory.heading("EIDPFAD", 42)
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	nav_column.add_child(title)
+	var subtitle := Label.new()
+	subtitle.text = "DIE KRONE OHNE NAMEN"
+	subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	subtitle.add_theme_color_override("font_color", Color("89979d"))
+	nav_column.add_child(subtitle)
+	var title_separator := HSeparator.new()
+	title_separator.custom_minimum_size.y = 18
+	nav_column.add_child(title_separator)
+
+	var solo_button := _menu_button("EINZELSPIELER", "res://assets/ui/character.svg")
+	solo_button.pressed.connect(_open_mode_menu.bind("singleplayer"))
+	nav_column.add_child(solo_button)
+	var multiplayer_button := _menu_button("MEHRSPIELER", "res://assets/ui/connection.svg")
+	multiplayer_button.pressed.connect(_open_mode_menu.bind("multiplayer"))
+	nav_column.add_child(multiplayer_button)
+	var resume_button := _menu_button("FORTSETZEN", "res://assets/ui/campaign.svg")
+	resume_button.pressed.connect(_open_continue_menu)
+	nav_column.add_child(resume_button)
+	var options_button := _menu_button("OPTIONEN", "res://assets/ui/armor.svg")
+	options_button.pressed.connect(_show_submenu.bind("options"))
+	nav_column.add_child(options_button)
+	var quit_button := _menu_button("BEENDEN", "res://assets/ui/threat.svg")
+	quit_button.pressed.connect(func() -> void: get_tree().quit())
+	nav_column.add_child(quit_button)
+
+	var nav_spacer := Control.new()
+	nav_spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	nav_column.add_child(nav_spacer)
+	status_label = Label.new()
+	status_label.text = "Bereit"
+	status_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	status_label.add_theme_color_override("font_color", Color("c8b98e"))
+	nav_column.add_child(status_label)
+	log_view = RichTextLabel.new()
+	log_view.bbcode_enabled = true
+	log_view.scroll_following = true
+	log_view.custom_minimum_size = Vector2(0, 92)
+	log_view.add_theme_color_override("default_color", Color("8c989c"))
+	nav_column.add_child(log_view)
+	screen.add_child(navigation)
+
+	submenu_panel = PanelContainer.new()
+	submenu_panel.custom_minimum_size = Vector2(510, 0)
+	submenu_panel.add_theme_stylebox_override("panel", UIFactory.panel_style(Color(0.055, 0.070, 0.075, 0.94)))
 	var scroll := ScrollContainer.new()
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
 	scroll.follow_focus = true
-	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	panel.add_child(scroll)
+	submenu_panel.add_child(scroll)
+	var submenu_margin := MarginContainer.new()
+	for side in ["left", "right", "top", "bottom"]:
+		submenu_margin.add_theme_constant_override("margin_%s" % side, 26)
+	submenu_margin.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.add_child(submenu_margin)
+	var submenu_host := VBoxContainer.new()
+	submenu_host.add_theme_constant_override("separation", 12)
+	submenu_margin.add_child(submenu_host)
 
-	margin.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	scroll.add_child(margin)
+	for entry in [
+		["profile", _build_profile_view()],
+		["campaign", _build_campaign_view()],
+		["continue", _build_continue_view()],
+		["options", _build_options_view()],
+		["lobby", _build_lobby_view()],
+	]:
+		var view: Control = entry[1]
+		view.hide()
+		submenu_views[entry[0]] = view
+		submenu_host.add_child(view)
+	submenu_panel.hide()
+	screen.add_child(submenu_panel)
 
+	var open_space := Control.new()
+	open_space.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	screen.add_child(open_space)
+	_append_log("Client bereit.")
+	return screen
+
+
+func _menu_button(caption: String, icon_path: String) -> Button:
+	var button := UIFactory.button(caption)
+	button.icon = UIFactory.texture(icon_path)
+	button.custom_minimum_size = Vector2(0, 56)
+	button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+	button.add_theme_font_size_override("font_size", 20)
+	button.add_theme_color_override("font_color", Color("d8d0bb"))
+	button.add_theme_color_override("font_hover_color", Color("f0d990"))
+	button.add_theme_stylebox_override("normal", UIFactory.panel_style(Color(0.02, 0.03, 0.035, 0.12)))
+	button.add_theme_stylebox_override("hover", UIFactory.panel_style(Color(0.20, 0.16, 0.10, 0.64)))
+	return button
+
+
+func _view_column(title: String, description: String) -> VBoxContainer:
 	var column := VBoxContainer.new()
-	column.add_theme_constant_override("separation", 9)
-	margin.add_child(column)
-
-	var title_row := HBoxContainer.new()
-	title_row.add_theme_constant_override("separation", 10)
-	column.add_child(title_row)
-	var logo := TextureRect.new()
-	logo.texture = UIFactory.texture("res://assets/logo/eidpfad.svg")
-	logo.custom_minimum_size = Vector2(52, 52)
-	logo.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	logo.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	title_row.add_child(logo)
-	title_row.add_child(UIFactory.heading("EIDPFAD", 34))
-	var subtitle := Label.new()
-	subtitle.text = "Die Krone ohne Namen"
-	subtitle.add_theme_color_override("font_color", Color("89979d"))
-	column.add_child(subtitle)
+	column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	column.add_theme_constant_override("separation", 12)
+	column.add_child(UIFactory.heading(title, 28))
+	var copy := Label.new()
+	copy.text = description
+	copy.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	copy.add_theme_color_override("font_color", Color("aab3b5"))
+	column.add_child(copy)
 	column.add_child(HSeparator.new())
+	return column
 
-	server_edit = UIFactory.line_edit("https://spiel.example.de", settings.server_url)
-	server_edit.tooltip_text = "Fuer einen VPS sollte eine HTTPS-Adresse mit gueltigem Zertifikat verwendet werden."
+
+func _build_profile_view() -> Control:
+	var column := _view_column("PROFIL", "Ein lokales Profil verbindet deinen Fortschritt sicher mit dem Spielserver.")
+	server_edit = UIFactory.line_edit("http://127.0.0.1:8080", settings.server_url)
+	server_edit.tooltip_text = "Lokal: http://127.0.0.1:8080 · VPS: HTTPS-Adresse mit gueltigem Zertifikat"
 	column.add_child(server_edit)
 	name_edit = UIFactory.line_edit("Spielername", settings.display_name)
 	column.add_child(name_edit)
-	var profile_button := UIFactory.button("Profil anlegen")
+	var profile_button := UIFactory.button("Profil anlegen und weiter")
 	profile_button.icon = UIFactory.texture("res://assets/ui/server.svg")
 	profile_button.pressed.connect(_create_profile)
 	column.add_child(profile_button)
+	column.add_child(UIFactory.heading("PROFIL WIEDERHERSTELLEN", 16))
 	recovery_edit = UIFactory.line_edit("Wiederherstellungscode", "")
 	recovery_edit.secret = true
 	column.add_child(recovery_edit)
 	var recover_button := UIFactory.button("Profil wiederherstellen")
 	recover_button.icon = UIFactory.texture("res://assets/ui/legacy.svg")
-	recover_button.pressed.connect(func() -> void:
-		if network.configure(server_edit.text):
-			network.recover_profile(name_edit.text, recovery_edit.text)
-	)
+	recover_button.pressed.connect(_recover_profile)
 	column.add_child(recover_button)
-	var mode_label := Label.new()
-	mode_label.text = "Spielmodus (nach Kampagnenerstellung nicht änderbar)"
-	mode_label.add_theme_color_override("font_color", Color("d7c49a"))
-	column.add_child(mode_label)
-	create_campaign_controls.append(mode_label)
-	mode_select = OptionButton.new()
-	mode_select.add_item("Spielmodus wählen …")
-	mode_select.set_item_metadata(0, "")
-	mode_select.set_item_disabled(0, true)
-	mode_select.add_item("Singleplayer · allein spielen")
-	mode_select.set_item_metadata(1, "singleplayer")
-	mode_select.add_item("Multiplayer · zwei Spieler")
-	mode_select.set_item_metadata(2, "multiplayer")
-	column.add_child(mode_select)
-	create_campaign_controls.append(mode_select)
+	return column
+
+
+func _build_campaign_view() -> Control:
+	var column := VBoxContainer.new()
+	column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	column.add_theme_constant_override("separation", 12)
+	campaign_view_title = UIFactory.heading("NEUE KAMPAGNE", 28)
+	column.add_child(campaign_view_title)
+	campaign_view_description = Label.new()
+	campaign_view_description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	campaign_view_description.add_theme_color_override("font_color", Color("aab3b5"))
+	column.add_child(campaign_view_description)
+	column.add_child(HSeparator.new())
 
 	var choices := HBoxContainer.new()
-	choices.add_theme_constant_override("separation", 7)
+	choices.add_theme_constant_override("separation", 8)
 	column.add_child(choices)
-	create_campaign_controls.append(choices)
 	weapon_select = OptionButton.new()
 	for value in ["Zwei Klingen", "Axt", "Langbogen", "Armbrust", "Langschwert"]:
 		weapon_select.add_item(value)
@@ -221,59 +321,60 @@ func _build_connection_panel() -> Control:
 		magic_select.add_item(value)
 	magic_select.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	choices.add_child(magic_select)
-
 	length_select = OptionButton.new()
 	length_select.add_item("Expedition · 6 Laender")
 	length_select.add_item("Feldzug · 9 Laender")
 	length_select.add_item("Saga · 13 Laender")
 	length_select.select(1)
 	column.add_child(length_select)
-	create_campaign_controls.append(length_select)
 	seed_edit = UIFactory.line_edit("Seed (optional)", "")
 	column.add_child(seed_edit)
-	create_campaign_controls.append(seed_edit)
-	var create_button := UIFactory.button("Neue Kampagne")
-	create_button.icon = UIFactory.texture("res://assets/ui/campaign.svg")
-	create_button.pressed.connect(_create_campaign)
-	column.add_child(create_button)
-	create_campaign_controls.append(create_button)
+	campaign_start_button = UIFactory.button("Kampagne starten")
+	campaign_start_button.icon = UIFactory.texture("res://assets/ui/ready.svg")
+	campaign_start_button.custom_minimum_size.y = 48
+	campaign_start_button.pressed.connect(_create_campaign)
+	column.add_child(campaign_start_button)
 
+	multiplayer_join_box = VBoxContainer.new()
+	multiplayer_join_box.add_theme_constant_override("separation", 10)
+	multiplayer_join_box.add_child(HSeparator.new())
+	multiplayer_join_box.add_child(UIFactory.heading("LOBBY BEITRETEN", 16))
 	invite_edit = UIFactory.line_edit("Einladungscode", settings.invite_code)
-	column.add_child(invite_edit)
-	join_campaign_controls.append(invite_edit)
+	multiplayer_join_box.add_child(invite_edit)
 	var join_button := UIFactory.button("Kampagne beitreten")
 	join_button.icon = UIFactory.texture("res://assets/ui/connection.svg")
 	join_button.pressed.connect(_join_campaign)
-	column.add_child(join_button)
-	join_campaign_controls.append(join_button)
+	multiplayer_join_box.add_child(join_button)
+	column.add_child(multiplayer_join_box)
+	return column
+
+
+func _build_continue_view() -> Control:
+	var column := _view_column("FORTSETZEN", "Waehle eine gespeicherte Kampagne. Singleplayer wird automatisch verbunden und fortgesetzt.")
 	campaign_select = OptionButton.new()
-	campaign_select.add_item("Neue Kampagne erstellen")
+	campaign_select.add_item("Kampagnen werden geladen …")
 	campaign_select.set_item_metadata(0, {})
 	campaign_select.item_selected.connect(_select_campaign)
 	column.add_child(campaign_select)
-	var connect_button := UIFactory.button("Mit Kampagne verbinden")
-	connect_button.icon = UIFactory.texture("res://assets/ui/connection.svg")
-	connect_button.pressed.connect(_connect_campaign)
-	column.add_child(connect_button)
-	ready_button = UIFactory.button("Bereit")
-	ready_button.icon = UIFactory.texture("res://assets/ui/ready.svg")
-	ready_button.disabled = true
-	ready_button.pressed.connect(func() -> void: network.send_ready(not network.local_ready))
-	column.add_child(ready_button)
-	lobby_label = Label.new()
-	lobby_label.text = "Lobby: nicht verbunden"
-	lobby_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	column.add_child(lobby_label)
+	continue_campaign_button = UIFactory.button("Ausgewaehlte Kampagne fortsetzen")
+	continue_campaign_button.icon = UIFactory.texture("res://assets/ui/connection.svg")
+	continue_campaign_button.disabled = true
+	continue_campaign_button.pressed.connect(_continue_campaign)
+	column.add_child(continue_campaign_button)
+	var refresh_button := UIFactory.button("Liste aktualisieren")
+	refresh_button.pressed.connect(func() -> void: network.list_campaigns())
+	column.add_child(refresh_button)
+	return column
 
-	campaign_label = Label.new()
-	campaign_label.text = _campaign_text()
-	campaign_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	campaign_label.add_theme_color_override("font_color", Color("d7c49a"))
-	column.add_child(campaign_label)
-	status_label = Label.new()
-	status_label.text = "Nicht verbunden"
-	column.add_child(status_label)
-	column.add_child(UIFactory.heading("AUDIO & ZUGÄNGLICHKEIT", 15))
+
+func _build_options_view() -> Control:
+	var column := _view_column("OPTIONEN", "Netzwerk, Audio, Untertitel und Darstellungsqualitaet.")
+	options_server_edit = UIFactory.line_edit("http://127.0.0.1:8080", settings.server_url)
+	column.add_child(options_server_edit)
+	var save_server_button := UIFactory.button("Serveradresse speichern")
+	save_server_button.pressed.connect(_save_server_settings)
+	column.add_child(save_server_button)
+	column.add_child(UIFactory.heading("AUDIO & ZUGAENGLICHKEIT", 16))
 	column.add_child(_audio_slider("Master", "Master", settings.master_db))
 	column.add_child(_audio_slider("Musik", "Music", settings.music_db))
 	column.add_child(_audio_slider("Stimmen", "Voice", settings.voice_db))
@@ -288,9 +389,9 @@ func _build_connection_panel() -> Control:
 	)
 	column.add_child(subtitle_toggle)
 	var quality_select := OptionButton.new()
-	quality_select.add_item("3D-Qualität: Performance · 75 %")
-	quality_select.add_item("3D-Qualität: Hoch · 100 %")
-	quality_select.add_item("3D-Qualität: Ultra · 125 %")
+	quality_select.add_item("3D-Qualitaet: Performance · 75 %")
+	quality_select.add_item("3D-Qualitaet: Hoch · 100 %")
+	quality_select.add_item("3D-Qualitaet: Ultra · 125 %")
 	quality_select.select(0 if settings.render_scale < 0.9 else 2 if settings.render_scale > 1.1 else 1)
 	quality_select.item_selected.connect(func(index: int) -> void:
 		settings.render_scale = [0.75, 1.0, 1.25][index]
@@ -299,22 +400,91 @@ func _build_connection_panel() -> Control:
 		settings.save_to_disk()
 	)
 	column.add_child(quality_select)
-	var tutorial_button := UIFactory.button("Sprach-Tutorial starten")
-	tutorial_button.pressed.connect(func() -> void:
-		if cinematic != null:
-			cinematic.play_id("tutorial", current_state.get("scenario", {}))
-	)
-	column.add_child(tutorial_button)
+	var profile_button := UIFactory.button("Profil verwalten")
+	profile_button.pressed.connect(_show_submenu.bind("profile"))
+	column.add_child(profile_button)
+	return column
 
-	log_view = RichTextLabel.new()
-	log_view.bbcode_enabled = true
-	log_view.scroll_following = true
-	log_view.custom_minimum_size = Vector2(0, 120)
-	log_view.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	log_view.add_theme_color_override("default_color", Color("aeb8bd"))
-	column.add_child(log_view)
-	_append_log("Client bereit.")
-	return panel
+
+func _build_lobby_view() -> Control:
+	var column := _view_column("LOBBY", "Singleplayer startet automatisch. Im Multiplayer muessen beide Spieler verbunden und bereit sein.")
+	campaign_label = Label.new()
+	campaign_label.text = _campaign_text()
+	campaign_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	campaign_label.add_theme_color_override("font_color", Color("d7c49a"))
+	column.add_child(campaign_label)
+	lobby_label = Label.new()
+	lobby_label.text = "Lobby: nicht verbunden"
+	lobby_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	column.add_child(lobby_label)
+	ready_button = UIFactory.button("Bereit")
+	ready_button.icon = UIFactory.texture("res://assets/ui/ready.svg")
+	ready_button.disabled = true
+	ready_button.pressed.connect(func() -> void: network.send_ready(not network.local_ready))
+	column.add_child(ready_button)
+	var disconnect_button := UIFactory.button("Verbindung trennen")
+	disconnect_button.pressed.connect(func() -> void:
+		network.disconnect_campaign()
+		_auto_ready_after_connect = false
+		_show_submenu("continue")
+	)
+	column.add_child(disconnect_button)
+	return column
+
+
+func _show_submenu(name: String) -> void:
+	if not submenu_views.has(name):
+		return
+	for view_value in submenu_views.values():
+		var view: Control = view_value
+		view.visible = view == submenu_views[name]
+	submenu_panel.show()
+
+
+func _open_mode_menu(mode: String) -> void:
+	_selected_mode = mode
+	if network.device_token.is_empty():
+		_pending_menu_after_profile = "campaign"
+		_show_submenu("profile")
+		status_label.text = "Bitte zuerst ein Profil anlegen oder wiederherstellen."
+		return
+	campaign_view_title.text = "EINZELSPIELER" if mode == "singleplayer" else "MEHRSPIELER"
+	campaign_view_description.text = (
+		"Erstelle eine eigene Kampagne. Verbindung und Bereitschaft erfolgen beim Start automatisch."
+		if mode == "singleplayer"
+		else "Erstelle eine Lobby oder tritt mit einem Einladungscode bei. Der Modus bleibt fuer diese Kampagne fest."
+	)
+	campaign_start_button.text = "Einzelspieler starten" if mode == "singleplayer" else "Multiplayer-Lobby erstellen"
+	multiplayer_join_box.visible = mode == "multiplayer"
+	_show_submenu("campaign")
+
+
+func _open_continue_menu() -> void:
+	if network.device_token.is_empty():
+		_pending_menu_after_profile = "continue"
+		_show_submenu("profile")
+		status_label.text = "Zum Fortsetzen wird dein Profil benoetigt."
+		return
+	_show_submenu("continue")
+	if network.configure(settings.server_url):
+		status_label.text = "Kampagnen werden geladen …"
+		network.list_campaigns()
+
+
+func _save_server_settings() -> void:
+	if network.configure(options_server_edit.text):
+		settings.server_url = network.server_url
+		server_edit.text = settings.server_url
+		settings.save_to_disk()
+		status_label.text = "Serveradresse gespeichert."
+
+
+func _recover_profile() -> void:
+	if name_edit.text.strip_edges().is_empty() or recovery_edit.text.strip_edges().is_empty():
+		_on_api_failed("recover_profile", "Spielername und Wiederherstellungscode fehlen")
+		return
+	if network.configure(server_edit.text):
+		network.recover_profile(name_edit.text, recovery_edit.text)
 
 
 func _audio_slider(label_text: String, bus_name: String, value: float) -> Control:
@@ -359,7 +529,10 @@ func _build_game_panel() -> Control:
 	column.add_child(header)
 	var lobby_button := UIFactory.button("LOBBY")
 	lobby_button.icon = UIFactory.texture("res://assets/ui/campaign.svg")
-	lobby_button.pressed.connect(func() -> void: _show_gameplay(false))
+	lobby_button.pressed.connect(func() -> void:
+		_show_gameplay(false)
+		_show_submenu("lobby")
+	)
 	header.add_child(lobby_button)
 	country_icon = TextureRect.new()
 	country_icon.custom_minimum_size = Vector2(46, 46)
@@ -456,12 +629,20 @@ func _build_game_panel() -> Control:
 
 
 func _create_profile() -> void:
+	if name_edit.text.strip_edges().is_empty():
+		_on_api_failed("create_profile", "Bitte einen Spielernamen eingeben")
+		return
 	if network.configure(server_edit.text):
+		settings.server_url = network.server_url
 		network.create_profile(name_edit.text)
 
 
 func _create_campaign() -> void:
-	if not network.configure(server_edit.text):
+	if network.device_token.is_empty():
+		_pending_menu_after_profile = "campaign"
+		_show_submenu("profile")
+		return
+	if not network.configure(settings.server_url):
 		return
 	if _game_mode().is_empty():
 		_on_api_failed("create_campaign", "Bitte zuerst Singleplayer oder Multiplayer auswählen")
@@ -472,19 +653,41 @@ func _create_campaign() -> void:
 			_on_api_failed("create_campaign", "Der Seed muss eine ganze Zahl sein")
 			return
 		campaign_seed = int(seed_edit.text)
+	status_label.text = "Kampagne wird erstellt …"
+	campaign_start_button.disabled = true
 	network.create_campaign(_weapon_id(), _magic_id(), _campaign_length(), _game_mode(), campaign_seed)
 
 
 func _join_campaign() -> void:
-	if network.configure(server_edit.text):
+	if invite_edit.text.strip_edges().is_empty():
+		_on_api_failed("join_campaign", "Bitte einen Einladungscode eingeben")
+		return
+	if network.configure(settings.server_url):
+		_selected_mode = "multiplayer"
+		status_label.text = "Lobby wird gesucht …"
 		network.join_campaign(invite_edit.text, _weapon_id(), _magic_id())
 
 
 func _connect_campaign() -> void:
-	if network.configure(server_edit.text):
+	if network.configure(settings.server_url):
 		_sync_settings()
 		status_label.text = "Verbindung wird aufgebaut …"
 		network.connect_campaign()
+
+
+func _continue_campaign() -> void:
+	if campaign_select == null or campaign_select.selected < 0:
+		return
+	var value = campaign_select.get_item_metadata(campaign_select.selected)
+	if not value is Dictionary or value.is_empty():
+		_on_api_failed("continue", "Bitte eine Kampagne auswaehlen")
+		return
+	network.select_campaign(value)
+	_set_selected_campaign_mode(str(value.get("game_mode", "multiplayer")))
+	_auto_ready_after_connect = network.game_mode == "singleplayer"
+	_sync_settings()
+	_show_submenu("lobby")
+	_connect_campaign()
 
 
 func _select_campaign(index: int) -> void:
@@ -493,23 +696,15 @@ func _select_campaign(index: int) -> void:
 	var value = campaign_select.get_item_metadata(index)
 	if value is Dictionary and not value.is_empty():
 		network.select_campaign(value)
-		invite_edit.text = network.invite_code
+		if invite_edit != null:
+			invite_edit.text = network.invite_code
 		_set_selected_campaign_mode(str(value.get("game_mode", "multiplayer")))
-		_sync_settings()
-	else:
-		network.clear_campaign_selection()
-		_set_selected_campaign_mode("")
 		_sync_settings()
 
 
 func _set_selected_campaign_mode(selected_mode: String) -> void:
-	var has_selection := not selected_mode.is_empty()
-	for control in create_campaign_controls:
-		control.visible = not has_selection
-	for control in join_campaign_controls:
-		control.visible = not has_selection
-	if has_selection:
-		mode_select.select(1 if selected_mode == "singleplayer" else 2)
+	_selected_mode = selected_mode
+	if campaign_label != null:
 		campaign_label.text = _campaign_text()
 
 
@@ -518,7 +713,7 @@ func _weapon_id() -> String:
 
 
 func _game_mode() -> String:
-	return str(mode_select.get_item_metadata(mode_select.selected))
+	return _selected_mode
 
 
 func _magic_id() -> String:
@@ -538,18 +733,24 @@ func _on_api_succeeded(action: String, payload: Variant) -> void:
 			_append_log("[color=#e2c27b]Wiederherstellungscode – jetzt sicher notieren:[/color] %s" % recovery_code)
 			recovery_edit.text = ""
 		_sync_settings()
-		network.list_campaigns()
+		status_label.text = "Profil %s ist bereit." % settings.display_name
+		var next_menu := _pending_menu_after_profile
+		_pending_menu_after_profile = ""
+		if next_menu == "campaign":
+			_open_mode_menu(_selected_mode)
+		elif next_menu == "continue":
+			_open_continue_menu()
 	elif action == "validate_profile" and payload is Dictionary:
 		settings.display_name = str(payload.get("display_name", settings.display_name))
 		name_edit.text = settings.display_name
-		network.list_campaigns()
+		status_label.text = "Profil %s verbunden." % settings.display_name
 	elif action == "list_campaigns" and payload is Array:
+		_campaigns.clear()
 		campaign_select.clear()
-		campaign_select.add_item("Neue Kampagne erstellen")
-		campaign_select.set_item_metadata(0, {})
 		var selected_index := 0
 		for campaign_value in payload:
 			var campaign: Dictionary = campaign_value
+			_campaigns.append(campaign)
 			var index := campaign_select.item_count
 			campaign_select.add_item("%s · %s · Rang %s · %s" % [
 				_mode_name(str(campaign.get("game_mode", "multiplayer"))),
@@ -560,8 +761,17 @@ func _on_api_succeeded(action: String, payload: Variant) -> void:
 			campaign_select.set_item_metadata(index, campaign)
 			if str(campaign.get("campaign_id", "")) == network.campaign_id:
 				selected_index = index
-		campaign_select.select(selected_index)
-		_select_campaign(selected_index)
+		if _campaigns.is_empty():
+			campaign_select.add_item("Keine gespeicherte Kampagne")
+			campaign_select.set_item_metadata(0, {})
+			campaign_select.set_item_disabled(0, true)
+			continue_campaign_button.disabled = true
+			status_label.text = "Noch keine Kampagne vorhanden."
+		else:
+			campaign_select.select(selected_index)
+			_select_campaign(selected_index)
+			continue_campaign_button.disabled = false
+			status_label.text = "%s Kampagne(n) geladen." % _campaigns.size()
 	elif action == "create_campaign" or action == "join_campaign":
 		if payload is Dictionary:
 			campaign_label.text = "%s · Kampagne %s\nEinladung: %s" % [
@@ -572,12 +782,23 @@ func _on_api_succeeded(action: String, payload: Variant) -> void:
 			invite_edit.text = str(payload.get("invite_code", ""))
 			_set_selected_campaign_mode(str(payload.get("game_mode", "multiplayer")))
 			_sync_settings()
+			campaign_start_button.disabled = false
+			_auto_ready_after_connect = network.game_mode == "singleplayer"
+			_show_submenu("lobby")
+			_connect_campaign()
 
 
 func _on_api_failed(action: String, message: String) -> void:
 	_append_log("[color=#cf7068]%s: %s[/color]" % [action, message])
+	status_label.text = message
+	if campaign_start_button != null:
+		campaign_start_button.disabled = false
 	if action == "validate_profile":
 		settings.clear_session()
+		network.profile_id = ""
+		network.device_token = ""
+		network.campaign_id = ""
+		network.invite_code = ""
 		status_label.text = "Gespeichertes Profil ist nicht mehr gueltig"
 
 
@@ -600,9 +821,12 @@ func _on_connection_changed(connected: bool) -> void:
 		("Verbunden · Solo-Kampagne" if network.game_mode == "singleplayer" else "Verbunden · warte auf Partner")
 		if connected else "Nicht verbunden"
 	)
-	ready_button.disabled = not connected or network.campaign_status == "completed"
+	if ready_button != null:
+		ready_button.disabled = not connected or network.campaign_status == "completed"
 	if not connected:
 		_show_gameplay(false)
+	elif network.game_mode == "multiplayer":
+		_show_submenu("lobby")
 
 
 func _on_lobby_changed(payload: Dictionary) -> void:
@@ -620,6 +844,9 @@ func _on_lobby_changed(payload: Dictionary) -> void:
 		network.campaign_status == "completed"
 		or (not bool(payload.get("can_ready", false)) and not network.local_ready)
 	)
+	if mode == "singleplayer" and _auto_ready_after_connect and bool(payload.get("can_ready", false)) and not network.local_ready:
+		status_label.text = "Singleplayer wird gestartet …"
+		network.send_ready(true)
 
 
 func _on_ready_changed(value: bool) -> void:
@@ -667,7 +894,8 @@ func _present_event(event: Dictionary) -> void:
 
 
 func _play_authoritative_cinematic(state: Dictionary) -> void:
-	var active: Dictionary = state.get("cinematics", {}).get("active", {})
+	var cinematic_state := _as_dictionary(state.get("cinematics", {}))
+	var active := _as_dictionary(cinematic_state.get("active", {}))
 	var cinematic_id := str(active.get("cinematic_id", ""))
 	if not cinematic_id.is_empty() and not cinematic.is_playing():
 		await cinematic.play_authoritative(cinematic_id, state.get("scenario", {}))
@@ -699,7 +927,8 @@ func _render_state() -> void:
 		scenario_label.tooltip_text = "%s: %s" % [weather_effect.get("weather", "Wetter"), weather_effect.get("text", "")]
 	country_icon.texture = UIFactory.texture(str(scenario.get("art", "")))
 	var enemy: Dictionary = current_state.get("enemy", {})
-	var boss: Dictionary = current_state.get("boss_contract", {})
+	var boss_value = current_state.get("boss_contract", {})
+	var boss: Dictionary = boss_value if boss_value is Dictionary else {}
 	if boss.is_empty():
 		enemy_label.text = "%s  %s/%s LP  ·  Rüstung %s  ·  %s verbleibend" % [
 			enemy.get("name", "Gegner"), enemy.get("hp", 0), enemy.get("max_hp", 0), enemy.get("armor", 0),
@@ -761,7 +990,8 @@ func _rebuild_actions(me: Dictionary, phase: String) -> void:
 		pass_button.disabled = true
 		return
 
-	var postgame: Dictionary = current_state.get("postgame", {})
+	var postgame_value = current_state.get("postgame", {})
+	var postgame: Dictionary = postgame_value if postgame_value is Dictionary else {}
 	if not postgame.is_empty():
 		_build_postgame_actions(postgame)
 		return
@@ -775,8 +1005,8 @@ func _rebuild_actions(me: Dictionary, phase: String) -> void:
 		pass_button.text = "Pfad wählen" if _is_singleplayer() else "Pfad gemeinsam wählen"
 		return
 
-	var combat: Dictionary = current_state.get("combat", {})
-	var cooperation: Dictionary = combat.get("cooperation", {})
+	var combat := _as_dictionary(current_state.get("combat", {}))
+	var cooperation := _as_dictionary(combat.get("cooperation", {}))
 	if not cooperation.is_empty():
 		if str(cooperation.get("actor", "")) != network.profile_id:
 			_add_action_button("Kooperation bestätigen", network.confirm_cooperation.bind(true))
@@ -785,7 +1015,7 @@ func _rebuild_actions(me: Dictionary, phase: String) -> void:
 			_add_action_button("Warte auf Partnerbestätigung", Callable(), true)
 		pass_button.disabled = true
 		return
-	var reaction: Dictionary = combat.get("reaction_window", {})
+	var reaction := _as_dictionary(combat.get("reaction_window", {}))
 	if not reaction.is_empty():
 		var responded: Array = reaction.get("responded", [])
 		if network.profile_id in responded:
@@ -945,6 +1175,10 @@ func _campaign_text() -> String:
 
 func _mode_name(value: String) -> String:
 	return "Singleplayer" if value == "singleplayer" else "Multiplayer"
+
+
+func _as_dictionary(value: Variant) -> Dictionary:
+	return value if value is Dictionary else {}
 
 
 func _is_singleplayer() -> bool:

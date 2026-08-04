@@ -17,6 +17,9 @@ und an alle Teilnehmer der Kampagne verteilt.
 - REST erzeugt Profile, erstellt Kampagnen, tritt per Einladungscode bei und
   liefert fortsetzbare Kampagnen.
 - Ein WebSocket pro Spieler uebertraegt Lobby- und Spielereignisse.
+- Der Godot-Client reserviert vor dem Handshake einen 8-MiB-Eingangspuffer, weil
+  der erste autoritative Zustand auch Karten-, Gegenstands-, Gegner- und
+  Weltdefinitionen enthaelt und damit groesser als Godots 64-KiB-Standard ist.
 - Der native Client sendet sein Geraete-Token im `Authorization: Bearer`-Header
   des WebSocket-Handshakes. Es steht nicht in Query-Parametern oder Logs.
 - Protokollversion 2 verwendet eine strikt diskriminierte Nachrichtenunion fuer Ready,

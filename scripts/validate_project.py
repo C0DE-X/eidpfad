@@ -158,6 +158,11 @@ def validate(report_path: Path | None) -> dict[str, Any]:
     }:
         width, height = png_size(local_asset(path))
         require(width / height > 1.6, f"Background is not landscape: {path}")
+    require(
+        (ROOT / "assets" / "concepts" / "main_menu_background.png").read_bytes()
+        == (ROOT / "client" / "assets" / "backgrounds" / "main_menu.png").read_bytes(),
+        "Generated main-menu background differs from its checked-in design source",
+    )
     for name in ("vanguard", "pathfinder", "duelist", "arbalist", "swordmaster"):
         width, height = png_size(ROOT / "client" / "assets" / "portraits" / f"{name}.png")
         require(height > width, f"Portrait is not vertical: {name}")
@@ -213,7 +218,11 @@ def validate(report_path: Path | None) -> dict[str, Any]:
     require(world_models <= set(required_assets["country_models"] + required_assets["prop_models"]), "Generated worlds reference models outside the manifest")
 
     generated_svgs = list((ROOT / "client" / "assets").rglob("*.svg"))
-    generated_pngs = list((ROOT / "client" / "assets").rglob("*.png"))
+    generated_pngs = [
+        path
+        for path in (ROOT / "client" / "assets").rglob("*.png")
+        if not path.name.endswith("_embedded_weave.png")
+    ]
     generated_glbs = list((ROOT / "client" / "assets" / "models").rglob("*.glb"))
     generated_wavs = list((ROOT / "client" / "assets" / "audio").glob("*.wav"))
     require(len(generated_glbs) == 334, "The complete 3D gameplay library needs exactly 334 models")

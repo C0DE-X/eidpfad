@@ -64,7 +64,9 @@ Der Workflow `CI` startet bei jedem Pull Request und bei Pushes nach `main`:
 - Repository- und Generatorhygiene
 - 110 Server-Regressions- und Integrationstests plus Assetvalidator
 - Import mit der in `.godot-version` festgelegten Godot-Version, einschliesslich
-  Ablehnung von GDScript-Parserfehlern
+  Ablehnung von GDScript-Parserfehlern und bekannten Warnungsklassen
+- echter Client-/Server-Smoke-Test fuer Hauptmenue, Singleplayer-Start und
+  `Fortsetzen` aus einem isolierten Benutzerprofil
 - Compose-Konfigurationspruefung und Build des Servercontainers
 
 Der Workflow `Windows client` kann unter **Actions -> Windows client -> Run
@@ -80,7 +82,9 @@ parse` und `Server container` verpflichtend sein.
 ## Reproduzierbarkeit
 
 `make content` erzeugt Karten-/Gegenstandsdefinitionen, Rasterbilder, Audio,
-Voice und GLB-Modelle deterministisch. Aenderungen an eingecheckten generierten
+Voice und GLB-Modelle deterministisch. Das kuratierte Menue-Key-Art liegt als
+Designquelle unter `assets/concepts/` und wird bytegenau in die Laufzeitassets
+uebernommen. Aenderungen an eingecheckten generierten
 JSON-/SVG-Quellen werden von der CI mit `git diff --exit-code` erkannt. So bleibt
 ein frischer Clone ohne externe Assetablage vollstaendig baubar.
 

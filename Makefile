@@ -1,4 +1,4 @@
-.PHONY: setup content voice server-build server-up server-down server-test release-playtest client-windows repository-check validate ci package
+.PHONY: setup content voice server-build server-up server-down server-test release-playtest client-smoke client-windows repository-check validate ci package
 
 VENV ?= .venv
 BOOTSTRAP_PYTHON ?= python3
@@ -41,6 +41,9 @@ server-test:
 release-playtest:
 	PYTHONPATH=server $(PYTHON) scripts/virtual_release_playthrough.py --campaign-length saga --seed 23 --game-mode multiplayer
 	PYTHONPATH=server $(PYTHON) scripts/virtual_release_playthrough.py --campaign-length saga --seed 17 --game-mode singleplayer
+
+client-smoke:
+	$(PYTHON) scripts/run_client_menu_smoke.py --godot "$(GODOT)"
 
 client-windows:
 	mkdir -p dist/client

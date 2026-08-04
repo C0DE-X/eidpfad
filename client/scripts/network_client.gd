@@ -153,6 +153,9 @@ func connect_campaign() -> void:
 		api_failed.emit("connect", "Die Verbindung wird bereits aufgebaut")
 		return
 	_socket = WebSocketPeer.new()
+	# The authoritative initial state includes the complete card, item, enemy and
+	# world definitions. Godot's 64 KiB default cannot hold that first packet.
+	_socket.inbound_buffer_size = 8 * 1024 * 1024
 	_socket.handshake_headers = PackedStringArray(["Authorization: Bearer %s" % device_token])
 	_socket.heartbeat_interval = 15.0
 	_socket.max_queued_packets = 256
@@ -334,10 +337,11 @@ func _on_request_completed(
 			detail = "%s: %s" % [detail, _response_excerpt(body_text)]
 		api_failed.emit(action, detail)
 		return
-	if not payload is Dictionary:
+	var payload_has_expected_shape := payload is Array if action == "list_campaigns" else payload is Dictionary
+	if not payload_has_expected_shape:
 		_requested_game_mode = ""
 		var content_type := _response_content_type(response_headers)
-		var response_description := "leere Antwort" if body_text.is_empty() else "ungueltiges JSON"
+		var response_description := "leere Antwort" if body_text.is_empty() else "unerwartetes JSON-Format"
 		if not content_type.is_empty():
 			response_description += " (%s)" % content_type
 		api_failed.emit(action, "Der Server lieferte %s (HTTP %s)" % [response_description, response_code])
