@@ -466,13 +466,13 @@ func _create_campaign() -> void:
 	if _game_mode().is_empty():
 		_on_api_failed("create_campaign", "Bitte zuerst Singleplayer oder Multiplayer auswählen")
 		return
-	var seed: Variant = null
+	var campaign_seed: Variant = null
 	if not seed_edit.text.strip_edges().is_empty():
 		if not seed_edit.text.strip_edges().is_valid_int():
 			_on_api_failed("create_campaign", "Der Seed muss eine ganze Zahl sein")
 			return
-		seed = int(seed_edit.text)
-	network.create_campaign(_weapon_id(), _magic_id(), _campaign_length(), _game_mode(), seed)
+		campaign_seed = int(seed_edit.text)
+	network.create_campaign(_weapon_id(), _magic_id(), _campaign_length(), _game_mode(), campaign_seed)
 
 
 func _join_campaign() -> void:
@@ -807,13 +807,13 @@ func _rebuild_actions(me: Dictionary, phase: String) -> void:
 
 	var pending_loot: Array = current_state.get("pending_loot", [])
 	if not pending_loot.is_empty():
-		var definitions: Dictionary = current_state.get("item_definitions", {})
+		var loot_definitions: Dictionary = current_state.get("item_definitions", {})
 		var loot_claims: Dictionary = current_state.get("loot_claims", {})
 		var already_claimed: bool = network.profile_id in loot_claims
 		if already_claimed:
 			_add_equipment_menu(me)
 		for item_id in pending_loot:
-			var item: Dictionary = definitions.get(item_id, {})
+			var item: Dictionary = loot_definitions.get(item_id, {})
 			var button := _add_action_button("%s\n%s" % [item.get("name", item_id), str(item.get("rarity", "")).to_upper()], network.claim_loot.bind(str(item_id)), already_claimed)
 			button.icon = UIFactory.texture(str(item.get("art", "")))
 			button.expand_icon = true
@@ -822,14 +822,14 @@ func _rebuild_actions(me: Dictionary, phase: String) -> void:
 		pass_button.text = ("Beute übernommen" if _is_singleplayer() else "Warte auf Partner") if already_claimed else "Beute wählen"
 		return
 
-	var definitions: Dictionary = current_state.get("card_definitions", {})
+	var card_definitions: Dictionary = current_state.get("card_definitions", {})
 	var active := str(current_state.get("active_player", "")) == network.profile_id
 	var objective_state: Dictionary = current_state.get("scenario_objective", {})
 	var objective: Dictionary = objective_state.get("objective", {})
 	if active and str(objective.get("kind", "")) == "prepare_hunt" and int(objective.get("current", 0)) < 1 and phase == "utility":
 		_add_action_button("Fährte vorbereiten · 1 AP", network.perform_scenario_action.bind("prepare_hunt"), int(me.get("action_points", 0)) < 1)
 	for card_id in me.get("hand", []):
-		var card: Dictionary = definitions.get(card_id, {})
+		var card: Dictionary = card_definitions.get(card_id, {})
 		var cost := int(card.get("action_point_cost", 0))
 		var button := _add_action_button("%s  [%s AP]" % [card.get("name", card_id), cost], _play_card.bind(str(card_id), card))
 		button.icon = UIFactory.texture(str(card.get("art", "")))
@@ -848,9 +848,9 @@ func _build_postgame_actions(postgame: Dictionary) -> void:
 		for choice in ["seal", "destroy", "bind", "dominate"]:
 			_add_action_button({"seal":"Versiegeln", "destroy":"Vernichten", "bind":"Binden", "dominate":"Beherrschen"}[choice], network.submit_ending.bind(choice))
 	elif postgame_phase == "legacy_selection":
-		var definitions: Dictionary = current_state.get("item_definitions", {})
+		var legacy_definitions: Dictionary = current_state.get("item_definitions", {})
 		for item_id in postgame.get("legacy_options", []):
-			var item: Dictionary = definitions.get(item_id, {})
+			var item: Dictionary = legacy_definitions.get(item_id, {})
 			_add_action_button("Vermächtnis: %s" % item.get("name", item_id), network.select_legacy.bind(str(item_id)))
 	elif postgame_phase == "new_game_plus":
 		_add_action_button("New Game+ · Weltrang %s" % postgame.get("next_world_tier", 2), network.confirm_new_game_plus)
@@ -895,7 +895,7 @@ func _add_equipment_menu(me: Dictionary) -> void:
 	var inventory: Array = me.get("inventory", [])
 	if inventory.is_empty():
 		return
-	var definitions: Dictionary = current_state.get("item_definitions", {})
+	var equipment_definitions: Dictionary = current_state.get("item_definitions", {})
 	var equipped: Dictionary = me.get("equipment", {})
 	var menu := MenuButton.new()
 	menu.text = "Ausrüstung"
@@ -904,7 +904,7 @@ func _add_equipment_menu(me: Dictionary) -> void:
 	var item_ids: Array[String] = []
 	for item_id_value in inventory:
 		var item_id := str(item_id_value)
-		var item: Dictionary = definitions.get(item_id, {})
+		var item: Dictionary = equipment_definitions.get(item_id, {})
 		var is_equipped := item_id in equipped.values()
 		var label := "%s%s · %s" % ["✓ " if is_equipped else "", item.get("name", item_id), item.get("slot", "")]
 		menu.get_popup().add_item(label)

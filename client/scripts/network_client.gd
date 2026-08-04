@@ -309,51 +309,88 @@ func _send(payload: Dictionary) -> bool:
 func _on_request_completed(
 	result: int,
 	response_code: int,
-	_headers: PackedStringArray,
+	response_headers: PackedStringArray,
 	body: PackedByteArray,
 ) -> void:
 	var action := _pending_action
 	_pending_action = ""
-	var parsed = JSON.parse_string(body.get_string_from_utf8())
-	var payload: Variant = parsed if parsed != null else {}
 	if result != HTTPRequest.RESULT_SUCCESS:
 		_requested_game_mode = ""
-		api_failed.emit(action, "Der Server ist nicht erreichbar (Netzwerkfehler %s)" % result)
+		api_failed.emit(action, _network_error_message(result))
 		return
+
+	var body_text := body.get_string_from_utf8().strip_edges()
+	var payload: Variant = null
+	if not body_text.is_empty():
+		var json := JSON.new()
+		if json.parse(body_text) == OK:
+			payload = json.data
 	if response_code < 200 or response_code >= 300:
 		_requested_game_mode = ""
 		var detail := "HTTP %s" % response_code
 		if payload is Dictionary:
 			detail = str(payload.get("detail", detail))
+		elif not body_text.is_empty():
+			detail = "%s: %s" % [detail, _response_excerpt(body_text)]
 		api_failed.emit(action, detail)
 		return
+	if not payload is Dictionary:
+		_requested_game_mode = ""
+		var content_type := _response_content_type(response_headers)
+		var response_description := "leere Antwort" if body_text.is_empty() else "ungueltiges JSON"
+		if not content_type.is_empty():
+			response_description += " (%s)" % content_type
+		api_failed.emit(action, "Der Server lieferte %s (HTTP %s)" % [response_description, response_code])
+		return
 
-	if payload is Dictionary:
-		if action == "create_campaign" or action == "join_campaign":
-			var returned_mode := str(payload.get("game_mode", ""))
-			if returned_mode != _requested_game_mode:
-				var requested_mode := _requested_game_mode
-				_requested_game_mode = ""
-				api_failed.emit(
-					action,
-					"Servermodus %s stimmt nicht mit der Auswahl %s überein; Kampagne nicht übernommen" % [returned_mode, requested_mode],
-				)
-				return
-		if action == "create_profile" or action == "recover_profile":
-			profile_id = str(payload.get("profile_id", ""))
-			device_token = str(payload.get("device_token", ""))
-			if action == "recover_profile":
-				campaign_id = ""
-				invite_code = ""
-		elif action == "rotate_device_token":
-			device_token = str(payload.get("device_token", ""))
-		elif action == "create_campaign" or action == "join_campaign":
-			campaign_id = str(payload.get("campaign_id", ""))
-			invite_code = str(payload.get("invite_code", ""))
-			campaign_status = str(payload.get("status", ""))
-			game_mode = str(payload.get("game_mode", ""))
+	if action == "create_campaign" or action == "join_campaign":
+		var returned_mode := str(payload.get("game_mode", ""))
+		if returned_mode != _requested_game_mode:
+			var requested_mode := _requested_game_mode
 			_requested_game_mode = ""
+			api_failed.emit(
+				action,
+				"Servermodus %s stimmt nicht mit der Auswahl %s überein; Kampagne nicht übernommen" % [returned_mode, requested_mode],
+			)
+			return
+	if action == "create_profile" or action == "recover_profile":
+		profile_id = str(payload.get("profile_id", ""))
+		device_token = str(payload.get("device_token", ""))
+		if action == "recover_profile":
+			campaign_id = ""
+			invite_code = ""
+	elif action == "rotate_device_token":
+		device_token = str(payload.get("device_token", ""))
+	elif action == "create_campaign" or action == "join_campaign":
+		campaign_id = str(payload.get("campaign_id", ""))
+		invite_code = str(payload.get("invite_code", ""))
+		campaign_status = str(payload.get("status", ""))
+		game_mode = str(payload.get("game_mode", ""))
+		_requested_game_mode = ""
 	api_succeeded.emit(action, payload)
+
+
+func _network_error_message(result: int) -> String:
+	if result == HTTPRequest.RESULT_TLS_HANDSHAKE_ERROR:
+		return "TLS-Verbindung fehlgeschlagen. Serveradresse und Port muessen HTTPS sprechen; Reverse-Proxy, Zertifikat, Hostnamen und Systemzeit pruefen"
+	if result == HTTPRequest.RESULT_CANT_RESOLVE:
+		return "Der Servername konnte nicht aufgeloest werden"
+	if result == HTTPRequest.RESULT_CANT_CONNECT:
+		return "Die Verbindung zum Server konnte nicht hergestellt werden"
+	if result == HTTPRequest.RESULT_TIMEOUT:
+		return "Die Serveranfrage hat das Zeitlimit ueberschritten"
+	return "Der Server ist nicht erreichbar (Netzwerkfehler %s)" % result
+
+
+func _response_content_type(headers: PackedStringArray) -> String:
+	for header in headers:
+		if header.to_lower().begins_with("content-type:"):
+			return header.get_slice(":", 1).strip_edges()
+	return ""
+
+
+func _response_excerpt(body_text: String) -> String:
+	return body_text.replace("\r", " ").replace("\n", " ").left(240)
 
 
 func _track_socket_event(payload: Dictionary) -> void:
