@@ -39,6 +39,14 @@ make setup
 make content
 ```
 
+Danach `client/project.godot` mit der Version aus `.godot-version` oeffnen. Das
+Startmenue trennt die Ablaufe bewusst in `Einzelspieler`, `Mehrspieler`,
+`Fortsetzen` und `Optionen`. Beim ersten Start wird einmalig ein Profil angelegt.
+Ein neuer Singleplayer-Lauf verbindet sich anschliessend automatisch, bestaetigt
+die Solo-Bereitschaft und wechselt mit dem ersten autoritativen Zustand ins Spiel.
+`Fortsetzen` laedt die zum Profil gehoerenden Kampagnen und nimmt eine Solo-Partie
+ohne separate Lobby-Schritte wieder auf.
+
 ## Ubuntu-VPS starten
 
 1. Einen DNS-A/AAAA-Eintrag, beispielsweise `game.example.com`, auf den VPS setzen.
@@ -129,6 +137,16 @@ zusaetzlich 1.241 Manifestreferenzen, 334 GLB-Strukturen, 360 Voice-Dauern,
 48 Cinematic-Timelines, PNG/SVG/WAV-Dateien, Raritaeten und jede Kampagnenlaenge.
 Die Referenzlaeufe fuer beide Spielmodi bis New Game+ koennen mit
 `make release-playtest` wiederholt werden.
+
+Mit installiertem Godot prueft der reale Client-/Server-Smoke-Test zusaetzlich
+den kompletten Menueweg aus einem leeren Benutzerverzeichnis:
+
+```bash
+make client-smoke GODOT=/pfad/zu/Godot_v4.7.1-stable_linux.x86_64
+```
+
+Der Test legt ein Profil an, startet Singleplayer bis zum ersten Spielzustand,
+trennt die Verbindung und laedt dieselbe Kampagne ueber `Fortsetzen` erneut.
 
 ## Projektstruktur
 

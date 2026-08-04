@@ -32,6 +32,9 @@ build/
 client/assets/**/*.glb
 client/assets/**/*.png
 client/assets/**/*.wav
+client/assets/**/*.glb.import
+client/assets/**/*.png.import
+client/assets/**/*.wav.import
 
 # Editors and operating systems
 .idea/

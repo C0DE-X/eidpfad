@@ -186,7 +186,7 @@ func _rebuild_route(route: Array) -> void:
 	var columns := 7
 	var rows := ceili(float(route.size()) / columns)
 	for index in route.size():
-		var row := int(index / columns)
+		var row := floori(float(index) / float(columns))
 		var offset := index % columns
 		var column := offset if row % 2 == 0 else columns - 1 - offset
 		var x := -4.8 + float(column) * 1.6

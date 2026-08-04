@@ -69,7 +69,11 @@ func set_context(state: Dictionary) -> void:
 	if ambience_name != _ambience_name:
 		_ambience_name = ambience_name
 		_play_loop(_ambience, ambience_name)
-	var music_name := "music_world_echo" if not state.get("postgame", {}).is_empty() else "music_exploration" if bool(state.get("awaiting_scenario_choice", false)) else "music_finale" if bool(scenario.get("is_final", false)) else "music_boss" if bool(scenario.get("is_boss", false)) else "music_combat"
+	var postgame_value = state.get("postgame", {})
+	var has_postgame := false
+	if postgame_value is Dictionary:
+		has_postgame = not postgame_value.is_empty()
+	var music_name := "music_world_echo" if has_postgame else "music_exploration" if bool(state.get("awaiting_scenario_choice", false)) else "music_finale" if bool(scenario.get("is_final", false)) else "music_boss" if bool(scenario.get("is_boss", false)) else "music_combat"
 	if music_name != _music_name:
 		_music_name = music_name
 		_play_loop(_music, music_name)
